@@ -8,6 +8,34 @@ import { ThemeToggle } from "@/components/ThemToggle";
 import { ThemeProvider } from "@/components/them-provider";
 import "./globals.css";
 
+const introduction = [
+  { title: "Overview", url: "/overview  " },
+  { title: "Statement", url: "/statement  " },
+];
+
+const ConceptualIdentity = [{ title: "Brand Prism", url: "/brand-prism  " }];
+
+const VerbalIdentity = [
+  { title: "Tone Of Voice", url: "/ton-of-voice  " },
+  { title: "Tagline", url: "/tagline  " },
+];
+
+const VisualIdentity = [
+  { title: "Design Principles", url: "/design-principles  " },
+  { title: "Logo", url: "/logo  " },
+  { title: "Mascot", url: "/mascot  " },
+  { title: "Color", url: "/color  " },
+  { title: "Typography", url: "/typography  " },
+  { title: "Identity In Use", url: "/identity-in-use  " },
+];
+
+const groups = [
+  { label: "Introduction", items: introduction },
+  { label: "Conceptual identity", items: ConceptualIdentity },
+  { label: "Verbal identity", items: VerbalIdentity },
+  { label: "Visual identity", items: VisualIdentity },
+];
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,7 +58,7 @@ export default function RootLayout({
       >
         <ThemeProvider defaultTheme="light">
           <SidebarProvider>
-            <AppSidebar />
+            <AppSidebar groups={groups} />
             <div className="flex-1 p-4 w-[calc(100vw-18rem)]">
               <div className="flex justify-between items-center p-4">
                 <div className="flex">
