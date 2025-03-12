@@ -30,6 +30,7 @@ export interface SocialLink {
 
 //Overview
 export interface OverviewItems {
+  group?: string;
   title: string;
   desc: string | MDXRemoteSerializeResult;
 }

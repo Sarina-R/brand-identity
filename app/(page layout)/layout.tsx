@@ -20,7 +20,7 @@ export default function RootLayout({
   const hasMedia = section?.video || section?.img;
 
   return (
-    <>
+    <div className="space-y-8">
       {/* Main Container */}
       <div
         className={`relative min-h-[50vh] flex flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden ${
@@ -98,6 +98,12 @@ export default function RootLayout({
       </div>
 
       {children}
-    </>
+
+      <footer className="bg-neutral-100 h-20 rounded-2xl font-bold px-4 items-center w-full flex">
+        <h3 className="text-right w-full hover:cursor-pointer">
+          Link to next page {">"}
+        </h3>
+      </footer>
+    </div>
   );
 }
