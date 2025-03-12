@@ -7,6 +7,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ThemeToggle } from "@/components/ThemToggle";
 import { ThemeProvider } from "@/components/them-provider";
 import "./globals.css";
+import { DataProvider } from "@/hooks/DataProvider";
 
 const introduction = [
   { title: "Overview", url: "/overview  " },
@@ -73,7 +74,7 @@ export default function RootLayout({
                   <ThemeToggle />
                 </div>
               </div>
-              {children}
+              <DataProvider>{children}</DataProvider>
             </div>
           </SidebarProvider>
         </ThemeProvider>

@@ -1,56 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { ApiResponse, Overview } from "../type";
 import { motion } from "framer-motion";
-import { API_URLS } from "../api/url";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
 import { useMDXComponents1 } from "@/mdx-component";
+import { useData } from "@/hooks/DataProvider";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [data, setData] = useState<ApiResponse>();
+  const { data, loading } = useData();
   const mdxComponents = useMDXComponents1({});
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get(API_URLS.BRANDING);
-        const result: ApiResponse = response.data;
-
-        const section = result.sections.find((sec) => sec.type === "overview");
-        if (section) {
-          const serializedSection = { ...section };
-          if (section.title) {
-            serializedSection.title = await serialize(section.title as string);
-          }
-          if (section.description) {
-            serializedSection.description = await serialize(
-              section.description as string
-            );
-          }
-          setData({
-            ...result,
-            sections: result.sections.map((sec) =>
-              sec.type === "overview" ? serializedSection : sec
-            ),
-          });
-        } else {
-          setData(result);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-    fetchData();
-  }, []);
-
-  if (!data) return <div>Loading...</div>;
+  if (loading || !data) return <div>Loading...</div>;
 
   const { primaryColor } = data.brand;
   const section = data.sections.find((sec) => sec.type === "overview");
@@ -60,8 +23,9 @@ export default function RootLayout({
     <>
       {/* Main Container */}
       <div
-        className={`relative min-h-[50vh] flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden
-          ${hasMedia ? "block" : "md:flex"}`}
+        className={`relative min-h-[50vh] flex flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden ${
+          hasMedia ? "block" : "md:flex"
+        }`}
         style={{ backgroundColor: primaryColor }}
       >
         {/* Pattern */}
@@ -133,7 +97,6 @@ export default function RootLayout({
         )}
       </div>
 
-      {/* Page Content */}
       {children}
     </>
   );
