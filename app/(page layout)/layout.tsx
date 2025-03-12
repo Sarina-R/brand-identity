@@ -60,7 +60,8 @@ export default function RootLayout({
     <>
       {/* Main Container */}
       <div
-        className="relative min-h-[50vh] flex flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden"
+        className={`relative min-h-[50vh] flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden
+          ${hasMedia ? "block" : "md:flex"}`}
         style={{ backgroundColor: primaryColor }}
       >
         {/* Pattern */}
@@ -79,7 +80,13 @@ export default function RootLayout({
         )}
 
         {/* Text Content */}
-        <div className="relative text-left bottom-[-5rem] text-black">
+        <div
+          className={`relative text-left text-black ${
+            hasMedia
+              ? "bottom-1 lg:bottom-[-20rem]"
+              : "md:bottom-[-5rem] bottom-[-14rem]"
+          }`}
+        >
           <h1 className="font-bold md:font-black text-display-lg lg:text-4xl text-3xl m-0">
             {section?.title && (
               <MDXRemote
@@ -100,14 +107,14 @@ export default function RootLayout({
 
         {/* Media */}
         {hasMedia && (
-          <div className="relative flex justify-center items-center">
+          <div className="relative flex right-0 w-full justify-end">
             {section?.video ? (
               <motion.video
                 src={section.video}
                 autoPlay
                 loop
                 muted
-                className="max-w-full h-auto rounded-lg shadow-lg"
+                className="max-w-full h-auto rounded-lg shadow-lg max-h-[50vh]"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
@@ -116,52 +123,12 @@ export default function RootLayout({
               <motion.img
                 src={section.img}
                 alt="Overview Image"
-                className="max-w-full h-auto rounded-lg shadow-lg"
+                className="max-w-full h-auto rounded-lg shadow-lg max-h-[50vh]"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
               />
             ) : null}
-          </div>
-        )}
-
-        {/* Scroll) */}
-        {!hasMedia && (
-          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 hidden lg:block">
-            <svg
-              width="20"
-              height="36"
-              viewBox="0 0 20 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="mouse"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M9.92833 26.333V26.333C5.01833 26.333 1 22.3147 1 17.4047V10.2613C1 5.35134 5.01833 1.33301 9.92833 1.33301V1.33301C14.8383 1.33301 18.8567 5.35134 18.8567 10.2613V17.4047C18.8567 22.3147 14.8383 26.333 9.92833 26.333Z"
-                stroke="#0A0B0C"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M4.92822 31.333L9.92822 34.6663L14.9282 31.333"
-                stroke="#0A0B0C"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M9.92806 8.47656V12.0482"
-                stroke="#0A0B0C"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mouse-wheel"
-              />
-            </svg>
-            <div className="text-body-lg text-center"> Scroll </div>
           </div>
         )}
       </div>
