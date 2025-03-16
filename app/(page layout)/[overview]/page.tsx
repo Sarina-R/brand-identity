@@ -4,7 +4,6 @@ import { useData } from "@/hooks/DataProvider";
 import OverviewSection from "@/components/dynamic-section/OverviewSection";
 import { usePathname } from "next/navigation";
 import StatementSection from "@/components/dynamic-section/StatementSection";
-import BrandPrism from "@/components/dynamic-section/BrandPrism";
 
 const Page = () => {
   const { data, loading } = useData();

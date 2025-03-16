@@ -171,12 +171,12 @@ export default function RootLayout({
     <div className="space-y-8">
       {renderSectionContent()}
       {children}
-      <footer className="bg-neutral-100 h-20 rounded-2xl font-bold px-4 items-center w-full flex">
+      <footer className="bg-neutral-100 dark:bg-neutral-900 h-20 rounded-2xl font-bold px-4 items-center w-full flex">
         <h3 className="text-right w-full hover:cursor-pointer">
           {nextItem ? (
             <Link
               href={`/${nextItem.id}`}
-              className="text-gray-800 hover:text-gray-600"
+              className="text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
             >
               Next: {nextItem.title} {">"}
             </Link>

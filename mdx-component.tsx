@@ -57,14 +57,9 @@ export function useMDXComponents({
 
     // Paragraph
     p: ({ children }) => (
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-base leading-relaxed text-neutral-700 dark:text-neutral-300 mb-4"
-      >
+      <p className="text-base leading-relaxed text-neutral-700 dark:text-neutral-300 mb-4">
         {children}
-      </motion.p>
+      </p>
     ),
 
     // Image

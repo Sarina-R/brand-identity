@@ -25,7 +25,7 @@ export interface Menu {
 //Overview
 export interface OverviewItems {
   group?: string;
-  title: string;
+  title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
   MDXComponent?: string | MDXRemoteSerializeResult;
 }
