@@ -56,6 +56,24 @@ const data = {
         desc: "Welcome to the **FIRA CUP 2025**, where innovation meets excellence in robotics and artificial intelligence. This prestigious competition will take place at the Tehran International Exhibition Center, a venue that embodies Iran’s commitment to hosting world-class events and fostering technological progress.",
         img: "",
       },
+
+      style: "1",
+    },
+    {
+      type: "statement",
+      title: "Brand Introduction",
+      description: "FIRA CUP 2025 - IRAN, TEHRAN",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      video: "",
+      items: {
+        group: "introduction",
+        title: "overview",
+        desc: "Welcome to the **FIRA CUP 2025**, where innovation meets excellence in robotics and artificial intelligence. This prestigious competition will take place at the Tehran International Exhibition Center, a venue that embodies Iran’s commitment to hosting world-class events and fostering technological progress.",
+        img: "",
+      },
+
       style: "1",
     },
   ],
