@@ -3,6 +3,8 @@
 import { useData } from "@/hooks/DataProvider";
 import OverviewSection from "@/components/dynamic-section/OverviewSection";
 import { usePathname } from "next/navigation";
+import StatementSection from "@/components/dynamic-section/StatementSection";
+import BrandPrism from "@/components/dynamic-section/BrandPrism";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -29,10 +31,10 @@ const Page = () => {
             serializedDesc={section.items?.desc}
           />
         );
-      // case "statement":
-      //   return <div>Statement Section (To be implemented)</div>;
+      case "statement":
+        return <StatementSection key={section.type} section={section} />;
       // case "brand_prism":
-      //   return <div>Brand Prism Section (To be implemented)</div>;
+      //   return <BrandPrism section={section} />;
       // case "tone_of_voice":
       //   return <div>Tone of Voice Section (To be implemented)</div>;
       // case "tagline":

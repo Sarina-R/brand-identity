@@ -2,15 +2,11 @@
 
 import { motion } from "framer-motion";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { useMDXComponents1 } from "@/mdx-component";
+import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
+import { Overview } from "@/app/type";
 
 interface OverviewProps {
-  section: {
-    items: {
-      group?: string;
-      title?: string;
-    };
-  };
+  section: Overview;
   serializedDesc: MDXRemoteSerializeResult | string;
 }
 
@@ -18,7 +14,8 @@ const OverviewSection: React.FC<OverviewProps> = ({
   section,
   serializedDesc,
 }) => {
-  const mdxComponents = useMDXComponents1({});
+  const mdxComponents = useMDXComponents({});
+  const mdxComponents1 = useMDXComponents1({});
 
   return (
     <section className="flex flex-col md:flex-row gap-4 lg:px-24 md:px-12 px-6 py-12">
@@ -47,12 +44,16 @@ const OverviewSection: React.FC<OverviewProps> = ({
             <div className="prose prose-lg text-gray-700">
               <MDXRemote
                 {...(serializedDesc as MDXRemoteSerializeResult)}
-                components={mdxComponents}
+                components={mdxComponents1}
               />
             </div>
           )}
         </motion.div>
       </div>
+      <MDXRemote
+        {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
+        components={mdxComponents}
+      />
     </section>
   );
 };

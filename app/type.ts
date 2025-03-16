@@ -27,6 +27,7 @@ export interface OverviewItems {
   group?: string;
   title: string;
   desc: string | MDXRemoteSerializeResult;
+  MDXComponent?: string | MDXRemoteSerializeResult;
 }
 
 export interface Overview {
@@ -37,10 +38,49 @@ export interface Overview {
   img?: string;
   video?: string;
   items: OverviewItems;
+  style: number;
+}
+
+// Statement
+export interface StatementItems {
+  MDXComponent?: string | MDXRemoteSerializeResult;
+  title: string | MDXRemoteSerializeResult;
+  items: string[];
+  desc: string | MDXRemoteSerializeResult;
+}
+
+export interface Statement {
+  type: "statement";
+  title: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  description?: string | MDXRemoteSerializeResult;
+  items: StatementItems;
+  style: number;
+}
+
+// BrandPrism
+export interface StatementItems {
+  MDXComponent?: string | MDXRemoteSerializeResult;
+  title: string | MDXRemoteSerializeResult;
+  items: string[];
+  desc: string | MDXRemoteSerializeResult;
+}
+
+export interface BrandPrism {
+  type: "brand_prism";
+  title: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  description?: string | MDXRemoteSerializeResult;
+  items: StatementItems;
+  style: number;
 }
 
 // All
-export type Section = Overview;
+export type Section = Overview | Statement | BrandPrism;
 
 export interface ApiResponse {
   brand: Brand;

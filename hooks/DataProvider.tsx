@@ -46,12 +46,17 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 section.description as string
               );
             }
-
             if (section.items?.desc) {
               serializedSection.items = {
                 ...section.items,
                 desc: await serialize(section.items.desc as string),
               };
+            }
+
+            if (section.items?.MDXComponent) {
+              serializedSection.items.MDXComponent = await serialize(
+                section.items.MDXComponent
+              );
             }
 
             return serializedSection;
