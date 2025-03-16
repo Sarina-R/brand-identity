@@ -6,7 +6,41 @@ const data = {
     primaryColor: "#fdb713",
     logo: "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
   },
-  patterns: {},
+  menu: {
+    Introduction: {
+      items: [
+        { id: "overview", title: "Overview", type: "overview" },
+        { id: "statement", title: "Statement", type: "statement" },
+      ],
+    },
+    "Conceptual identity": {
+      items: [{ id: "brand-prism", title: "Brand Prism", type: "brand_prism" }],
+    },
+    "Verbal identity": {
+      items: [
+        { id: "tone-of-voice", title: "Tone Of Voice", type: "tone_of_voice" },
+        { id: "tagline", title: "Tagline", type: "tagline" },
+      ],
+    },
+    "Visual identity": {
+      items: [
+        {
+          id: "design-principles",
+          title: "Design Principles",
+          type: "design_principles",
+        },
+        { id: "logo", title: "Logo", type: "logo" },
+        { id: "mascot", title: "Mascot", type: "mascot" },
+        { id: "color", title: "Color", type: "color" },
+        { id: "typography", title: "Typography", type: "typography" },
+        {
+          id: "identity-in-use",
+          title: "Identity In Use",
+          type: "identity_in_use",
+        },
+      ],
+    },
+  },
   sections: [
     {
       type: "overview",
@@ -22,7 +56,6 @@ const data = {
         desc: "Welcome to the **FIRA CUP 2025**, where innovation meets excellence in robotics and artificial intelligence. This prestigious competition will take place at the Tehran International Exhibition Center, a venue that embodies Iran’s commitment to hosting world-class events and fostering technological progress.",
         img: "",
       },
-
       style: "1",
     },
   ],

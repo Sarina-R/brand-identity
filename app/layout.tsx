@@ -1,41 +1,17 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidbar";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { ThemeToggle } from "@/components/ThemToggle";
-import { ThemeProvider } from "@/components/them-provider";
-import "./globals.css";
 import { DataProvider } from "@/hooks/DataProvider";
-
-const introduction = [
-  { title: "Overview", url: "/overview  " },
-  { title: "Statement", url: "/statement  " },
-];
-
-const ConceptualIdentity = [{ title: "Brand Prism", url: "/brand-prism  " }];
-
-const VerbalIdentity = [
-  { title: "Tone Of Voice", url: "/ton-of-voice  " },
-  { title: "Tagline", url: "/tagline  " },
-];
-
-const VisualIdentity = [
-  { title: "Design Principles", url: "/design-principles  " },
-  { title: "Logo", url: "/logo  " },
-  { title: "Mascot", url: "/mascot  " },
-  { title: "Color", url: "/color  " },
-  { title: "Typography", url: "/typography  " },
-  { title: "Identity In Use", url: "/identity-in-use  " },
-];
-
-const groups = [
-  { label: "Introduction", items: introduction },
-  { label: "Conceptual identity", items: ConceptualIdentity },
-  { label: "Verbal identity", items: VerbalIdentity },
-  { label: "Visual identity", items: VisualIdentity },
-];
+import { ThemeProvider } from "@/components/them-provider";
+import { AppSidebar } from "@/components/app-sidbar";
+import { ThemeToggle } from "@/components/ThemToggle";
+import axios from "axios";
+import "./globals.css";
+import { API_URLS } from "./api/url";
+import { ApiResponse, MenuGroup, MenuItem } from "./type";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,9 +25,38 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const [groups, setGroups] = useState<
+    {
+      label: string;
+      items: MenuItem[];
+    }[]
+  >([]);
+
+  useEffect(() => {
+    const fetchSidebarData = async () => {
+      try {
+        const response = await axios.get<ApiResponse>(API_URLS.BRANDING);
+        const data = response.data;
+
+        const transformedGroups = Object.entries(data.menu).map(
+          ([key, value]: [string, MenuGroup]) => ({
+            label: key,
+            items: value.items,
+          })
+        );
+
+        setGroups(transformedGroups);
+      } catch (error) {
+        console.error("Failed to fetch sidebar data:", error);
+      }
+    };
+
+    fetchSidebarData();
+  }, []);
+
   return (
     <html lang="en">
       <body
@@ -62,17 +67,11 @@ export default function RootLayout({
             <AppSidebar groups={groups} />
             <div className="flex-1 p-4 w-[calc(100vw-18rem)]">
               <div className="flex justify-between items-center p-4">
-                <div className="flex">
-                  <div className="hover:cursor-pointer">
-                    <SidebarTrigger />
-                  </div>
-                  <div className="hover:cursor-pointer">
-                    <Breadcrumbs />
-                  </div>
+                <div className="flex items-center gap-2">
+                  <SidebarTrigger />
+                  <Breadcrumbs />
                 </div>
-                <div>
-                  <ThemeToggle />
-                </div>
+                <ThemeToggle />
               </div>
               <DataProvider>{children}</DataProvider>
             </div>

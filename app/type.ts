@@ -7,26 +7,20 @@ export interface Brand {
   logo: string;
 }
 
-// top Bar
-export interface SocialLink {
-  name: string;
-  icon: string;
-  url: string;
+// Menu
+export interface MenuItem {
+  id: string;
+  title: string;
+  type: string;
 }
-// export interface NavItem {
-//   name: string;
-//   path?: string;
-//   MarkDownItem: string | MDXRemoteSerializeResult;
-//   dropdown?: NavItem[];
-// }
-// export interface Menu {
-//   topBar: {
-//     linkText: string;
-//     linkUrl: string;
-//     socials: SocialLink[];
-//   };
-//   navItems: NavItem[];
-// }
+
+export interface MenuGroup {
+  items: MenuItem[];
+}
+
+export interface Menu {
+  [key: string]: MenuGroup;
+}
 
 //Overview
 export interface OverviewItems {
@@ -50,6 +44,6 @@ export type Section = Overview;
 
 export interface ApiResponse {
   brand: Brand;
-  //   menu: Menu;
+  menu: Menu;
   sections: Section[];
 }

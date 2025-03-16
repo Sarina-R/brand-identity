@@ -11,8 +11,9 @@ import {
 } from "@/components/ui/sidebar";
 
 type SidebarItem = {
+  id: string;
   title: string;
-  url: string;
+  type: string;
 };
 
 type SidebarGroup = {
@@ -34,9 +35,9 @@ export function AppSidebar({ groups }: AppSidebarProps) {
             <SidebarGroupContent>
               <SidebarMenu>
                 {group.items.map((item) => (
-                  <SidebarMenuItem key={item.title}>
+                  <SidebarMenuItem key={item.id}>
                     <SidebarMenuButton asChild>
-                      <Link href={item.url}>
+                      <Link href={`/${item.id}`}>
                         .<span>{item.title}</span>
                       </Link>
                     </SidebarMenuButton>
