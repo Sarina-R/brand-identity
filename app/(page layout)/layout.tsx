@@ -2,12 +2,11 @@
 
 import { motion } from "framer-motion";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { serialize } from "next-mdx-remote/serialize";
 import { useMDXComponents1 } from "@/mdx-component";
 import { useData } from "@/hooks/DataProvider";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function RootLayout({
   children,
@@ -17,15 +16,10 @@ export default function RootLayout({
   const { data, loading } = useData();
   const pathname = usePathname();
   const mdxComponents = useMDXComponents1({});
-  const [serializedContent, setSerializedContent] = useState<{
-    title: MDXRemoteSerializeResult | null;
-    description: MDXRemoteSerializeResult | null;
-  }>({ title: null, description: null });
 
   useEffect(() => {
     async function serializeSectionContent() {
       if (loading || !data) {
-        setSerializedContent({ title: null, description: null });
         return;
       }
 
@@ -35,28 +29,8 @@ export default function RootLayout({
       const section = data.sections.find((sec) => sec.type === currentType);
 
       if (!section) {
-        setSerializedContent({ title: null, description: null });
         return;
       }
-
-      const titleSerialized =
-        section?.title && typeof section.title === "string"
-          ? await serialize(section.title)
-          : section?.items?.title && typeof section.items.title === "string"
-          ? await serialize(section.items.title)
-          : null;
-
-      const descSerialized =
-        section?.description && typeof section.description === "string"
-          ? await serialize(section.description)
-          : section?.items?.desc && typeof section.items.desc === "string"
-          ? await serialize(section.items.desc)
-          : null;
-
-      setSerializedContent({
-        title: titleSerialized,
-        description: descSerialized,
-      });
     }
     serializeSectionContent().catch((error) => {
       console.error("Error serializing content:", error);

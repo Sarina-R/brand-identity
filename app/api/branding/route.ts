@@ -45,7 +45,7 @@ const data = {
     {
       type: "overview",
       title: "Brand Introduction",
-      description: "FIRA CUP 2025 - IRAN, TEHRAN",
+      description: "FIRA CUP 2025 - **IRAN, TEHRAN**",
       pattern:
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
