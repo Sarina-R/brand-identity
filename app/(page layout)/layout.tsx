@@ -104,7 +104,7 @@ export default function RootLayout({
             <div
               className={`relative text-left text-black ${
                 hasMedia
-                  ? "bottom-1 lg:bottom-[-20rem]"
+                  ? "bottom-1 lg:bottom-[-5rem] md:bottom-[-7rem]"
                   : "md:bottom-[-5rem] bottom-[-14rem]"
               }`}
             >
