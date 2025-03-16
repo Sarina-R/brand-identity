@@ -29,7 +29,12 @@ const OverviewSection: React.FC<OverviewProps> = ({
           {section?.items?.group}
         </p>
         <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-          {section?.items?.title}
+          {section.items?.title && (
+            <MDXRemote
+              {...(section.items.title as MDXRemoteSerializeResult)}
+              components={mdxComponents1}
+            />
+          )}{" "}
         </h3>
       </motion.div>
 
