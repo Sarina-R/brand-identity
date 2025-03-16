@@ -7,13 +7,9 @@ import { Overview } from "@/app/type";
 
 interface OverviewProps {
   section: Overview;
-  serializedDesc: MDXRemoteSerializeResult | string;
 }
 
-const OverviewSection: React.FC<OverviewProps> = ({
-  section,
-  serializedDesc,
-}) => {
+const OverviewSection: React.FC<OverviewProps> = ({ section }) => {
   const mdxComponents = useMDXComponents({});
   const mdxComponents1 = useMDXComponents1({});
 
@@ -28,13 +24,13 @@ const OverviewSection: React.FC<OverviewProps> = ({
         <p className="text-neutral-500 text-sm uppercase tracking-wider mb-2">
           {section?.items?.group}
         </p>
-        <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <h3 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
           {section.items?.title && (
             <MDXRemote
               {...(section.items.title as MDXRemoteSerializeResult)}
               components={mdxComponents1}
             />
-          )}{" "}
+          )}
         </h3>
       </motion.div>
 
@@ -45,20 +41,22 @@ const OverviewSection: React.FC<OverviewProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          {serializedDesc && (
-            <div className="prose prose-lg text-gray-700">
+          {section.items.desc && (
+            <div className="prose prose-lg text-neutral-700 dark:text-neutral-300">
               <MDXRemote
-                {...(serializedDesc as MDXRemoteSerializeResult)}
+                {...(section.items.desc as MDXRemoteSerializeResult)}
                 components={mdxComponents1}
               />
             </div>
           )}
         </motion.div>
       </div>
-      <MDXRemote
-        {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
-        components={mdxComponents}
-      />
+      {section.items.MDXComponent && (
+        <MDXRemote
+          {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
+          components={mdxComponents}
+        />
+      )}
     </section>
   );
 };

@@ -23,13 +23,7 @@ const Page = () => {
 
     switch (section.type) {
       case "overview":
-        return (
-          <OverviewSection
-            key={section.type}
-            section={section}
-            serializedDesc={section.items?.desc}
-          />
-        );
+        return <OverviewSection key={section.type} section={section} />;
       case "statement":
         return <StatementSection key={section.type} section={section} />;
       // case "brand_prism":
