@@ -28,7 +28,7 @@ const Page = () => {
       case "statement":
         return <StatementSection key={section.type} section={section} />;
       case "brand_prism":
-        return <BrandPrism />;
+        return <BrandPrism key={section.type} section={section} />;
       // case "tone_of_voice":
       //   return <div>Tone of Voice Section (To be implemented)</div>;
       // case "tagline":

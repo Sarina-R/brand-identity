@@ -61,10 +61,16 @@ export interface Statement {
 }
 
 // BrandPrism
-export interface StatementItems {
+export interface BrandPrismChartItems {
+  title: string;
+  key: string;
+  description: string;
+}
+
+export interface BrandPrismItems {
   MDXComponent?: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
-  items: string[];
+  prismBrand: BrandPrismChartItems[];
   desc: string | MDXRemoteSerializeResult;
 }
 
@@ -75,7 +81,7 @@ export interface BrandPrism {
   img?: string;
   video?: string;
   description?: string | MDXRemoteSerializeResult;
-  items: StatementItems;
+  items: BrandPrismItems;
   style: number;
 }
 

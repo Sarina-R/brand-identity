@@ -95,17 +95,54 @@ const data = {
     },
     {
       type: "brand_prism",
-      title: "brand_prism Section",
-      description: "FIRA CUP 2025 - IRAN, TEHRAN",
+      title: "Brand Prism Section",
+      description: "",
       pattern:
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
-      video: "",
+      // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
       items: {
-        MDXComponent: item1,
-        title: "What leads us to the idea of dynamic identity:",
-        items: ["item1", "item2", "item3", "item4"],
+        MDXComponent: "",
+        title: "What **leads** us to the idea of dynamic identity:",
         desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
+        prismBrand: [
+          {
+            title: "Physique",
+            key: "physique",
+            description:
+              "Physique describes the physical characteristics of your brand—that is, everything your customers can visually perceive about you. Logo, style guide, iconography, color palette, and the presentation of the product itself all go into this category.",
+          },
+          {
+            title: "Personality",
+            key: "personality",
+            description:
+              "If physique is the face of your brand, personality is the voice. Your brand personality not only addresses what you say but how you say it, and it is not limited to verbal communication.",
+          },
+          {
+            title: "Culture",
+            key: "culture",
+            description:
+              "Culture is your brand’s origin story. Where was your brand born? Where does it live? What is the belief system and values it ascribes to and why?",
+          },
+          {
+            title: "Relationship",
+            key: "relationship",
+            description:
+              "Relationship is the engagement between a brand and consumers.This is about more than a monetary transaction: think about how your brand maintains a healthy relationship with its customers from the initial interaction to the after purchase period.",
+          },
+          {
+            title: "Self-Image",
+            key: "selfImage",
+            description:
+              "Self-image is how customers visualize their ideal selves. Understanding this allows brands to cater to their customers more effectively. Consider how their purchases and interactions with you improve their lives.",
+          },
+          {
+            title: "Reflection",
+            key: "relationship",
+            description:
+              "Reflection describes who you want your customer to be. Who would you ideally like to reach? Specificity is key here. For a company that is selling biodegradable cosmetics products, it could be working women in their 20s who live in cosmopolitan areas and adhere to a vegan diet.",
+          },
+        ],
       },
 
       style: "1",
