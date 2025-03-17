@@ -38,7 +38,7 @@ const ActiveSectionDetails = ({
 
   return (
     <motion.div
-      className="mt-4 p-4 border border-neutral-400 rounded-lg shadow-lg bg-white dark:bg-neutral-800"
+      className="mt-4 p-4 border border-neutral-400 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
@@ -54,9 +54,12 @@ const ActiveSectionDetails = ({
 };
 
 const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-  const mdxComponents = useMDXComponents({});
   const brandPrismItems = section.items?.prismBrand || [];
+  const [activeSection, setActiveSection] = useState<string | null>(
+    brandPrismItems.length > 0 ? brandPrismItems[0].title : null
+  );
+
+  const mdxComponents = useMDXComponents({});
 
   const positions = [
     { x: 105, y: 12 },
@@ -69,10 +72,10 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
 
   return (
     <div className="flex flex-col items-center space-y-16 sm:px-6 px-2">
-      <div className="lg:flex p-6 justify-center items-center">
+      <div className="lg:flex p-6 justify-center items-center ">
         <svg
           viewBox="0 0 300 300"
-          className="w-100 h-80 lg:w-2/3 m-auto"
+          className="w-100 h-80 lg:w-3/5 m-auto"
           style={
             {
               "--hexagon-bg": "rgba(255, 255, 255, 0.1)",
@@ -141,7 +144,7 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
           })}
         </svg>
 
-        <div className="lg:w-1/3">
+        <div className="lg:w-2/5">
           <ActiveSectionDetails
             activeSection={activeSection}
             brandPrismItems={brandPrismItems}
