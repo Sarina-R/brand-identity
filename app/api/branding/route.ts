@@ -17,6 +17,10 @@ const item1 = `
     </div>
   `;
 
+const item2 = `Alibaba's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
+"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Alibaba's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
+Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Alibaba’s brand identity.`;
+
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
@@ -102,7 +106,7 @@ const data = {
       img: "",
       // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
       items: {
-        MDXComponent: "",
+        MDXComponent: item2,
         title: "What **leads** us to the idea of dynamic identity:",
         desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
         prismBrand: [

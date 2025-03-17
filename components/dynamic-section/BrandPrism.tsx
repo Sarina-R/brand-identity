@@ -9,6 +9,50 @@ interface BrandPrismProps {
   primaryColor: string;
 }
 
+const RECT_WIDTH = 90;
+const RECT_HEIGHT = 30;
+const TEXT_OFFSET_Y = 20;
+
+const getRectanglePosition = (position: { x: number; y: number }) => {
+  const centerX = position.x + RECT_WIDTH / 2;
+  const centerY = position.y + RECT_HEIGHT / 2;
+  const rotatedCenterX = centerY;
+  const rotatedCenterY = 300 - centerX;
+  const rectX = rotatedCenterX - RECT_WIDTH / 2;
+  const rectY = rotatedCenterY - RECT_HEIGHT / 2;
+  return { rectX, rectY };
+};
+
+const ActiveSectionDetails = ({
+  activeSection,
+  brandPrismItems,
+}: {
+  activeSection: string | null;
+  brandPrismItems: BrandPrism["items"]["prismBrand"];
+}) => {
+  if (!activeSection) return null;
+  const activeItem = brandPrismItems.find(
+    (item) => item.title === activeSection
+  );
+  if (!activeItem) return null;
+
+  return (
+    <motion.div
+      className="mt-4 p-4 border border-neutral-400 rounded-lg shadow-lg bg-white dark:bg-neutral-800"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h3 className="text-lg font-bold text-black dark:text-white">
+        {activeSection}
+      </h3>
+      <p className="text-neutral-700 dark:text-neutral-300">
+        {activeItem.description}
+      </p>
+    </motion.div>
+  );
+};
+
 const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const mdxComponents = useMDXComponents({});
@@ -24,111 +68,95 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
   ];
 
   return (
-    <div className="flex flex-col items-center">
-      <svg
-        viewBox="0 0 300 300"
-        className="w-100 h-80"
-        style={
-          {
-            "--hexagon-bg": "rgba(255, 255, 255, 0.6)",
-            "--hexagon-stroke": "rgba(0, 0, 0, 0.3)",
-          } as React.CSSProperties
-        }
-        data-theme="light dark"
-      >
-        {/* hexagon */}
-        <g transform="rotate(90 150 150)">
-          <motion.path
-            d="M 95 25 L 205 25 Q 225 25 237.024 47.5 L 285.024 127.5 Q 300 150 285.024 172.5 L 237.024 252.5 Q 225 275 205 275 L 95 275 Q 75 275 62.976 252.5 L 14.976 172.5 Q 0 150 14.976 127.5 L 62.976 47.5 Q 75 25 95 25 Z"
-            fill="var(--hexagon-bg)"
-            stroke="var(--hexagon-stroke)"
-            strokeWidth="1"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
-        </g>
-
-        {/* Rectangles */}
-        {brandPrismItems.map((item, index) => {
-          const position = positions[index] || { x: 125, y: 125 };
-          const centerX = position.x + 45;
-          const centerY = position.y + 15;
-          const rotatedCenterX = centerY;
-          const rotatedCenterY = 300 - centerX;
-          const rectX = rotatedCenterX - 45;
-          const rectY = rotatedCenterY - 15;
-
-          return (
-            <motion.g
-              key={index}
-              onClick={() => setActiveSection(item.title)}
-              className="cursor-pointer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <motion.rect
-                x={rectX}
-                y={rectY}
-                width="90"
-                height="30"
-                rx="10"
-                fill={activeSection === item.title ? primaryColor : "white"}
-                stroke={
-                  activeSection === item.title
-                    ? "none"
-                    : "var(--hexagon-stroke)"
-                }
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.text
-                x={rectX + 45}
-                y={rectY + 20}
-                fontSize="12"
-                fontWeight="bold"
-                textAnchor="middle"
-                fill="black"
-                stroke="none"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-              >
-                {item.title}
-              </motion.text>
-            </motion.g>
-          );
-        })}
-      </svg>
-
-      {activeSection && (
-        <motion.div
-          className="mt-4 p-4 border border-gray-400 rounded-lg shadow-lg bg-white dark:bg-gray-800"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <h3 className="text-lg font-bold text-black dark:text-white">
-            {activeSection}
-          </h3>
-          <p className="text-gray-700 dark:text-gray-300">
+    <div className="flex flex-col items-center space-y-16 sm:px-6 px-2">
+      <div className="lg:flex p-6 justify-center items-center">
+        <svg
+          viewBox="0 0 300 300"
+          className="w-100 h-80 lg:w-2/3 m-auto"
+          style={
             {
-              brandPrismItems.find((item) => item.title === activeSection)
-                ?.description
-            }
-          </p>
-        </motion.div>
-      )}
+              "--hexagon-bg": "rgba(255, 255, 255, 0.1)",
+              "--hexagon-stroke": "rgba(0, 0, 0, 0.3)",
+            } as React.CSSProperties
+          }
+          data-theme="light dark"
+        >
+          {/* Hexagon */}
+          <g transform="rotate(90 150 150)">
+            <motion.path
+              d="M 95 25 L 205 25 Q 225 25 237.024 47.5 L 285.024 127.5 Q 300 150 285.024 172.5 L 237.024 252.5 Q 225 275 205 275 L 95 275 Q 75 275 62.976 252.5 L 14.976 172.5 Q 0 150 14.976 127.5 L 62.976 47.5 Q 75 25 95 25 Z"
+              fill="var(--hexagon-bg)"
+              stroke="var(--hexagon-stroke)"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          </g>
 
-      {section.items.MDXComponent && (
-        <MDXRemote
-          {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
-          components={mdxComponents}
-        />
-      )}
+          {/* Rectangles */}
+          {brandPrismItems.map((item, index) => {
+            const position = positions[index] || { x: 125, y: 125 };
+            const { rectX, rectY } = getRectanglePosition(position);
+            const isActive = activeSection === item.title;
+
+            return (
+              <motion.g
+                key={index}
+                onClick={() => setActiveSection(item.title)}
+                className="cursor-pointer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <motion.rect
+                  x={rectX}
+                  y={rectY}
+                  width={RECT_WIDTH}
+                  height={RECT_HEIGHT}
+                  rx="10"
+                  fill={isActive ? primaryColor : "white"}
+                  stroke={isActive ? "none" : "var(--hexagon-stroke)"}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.text
+                  x={rectX + RECT_WIDTH / 2}
+                  y={rectY + TEXT_OFFSET_Y}
+                  fontSize="12"
+                  fontWeight="bold"
+                  textAnchor="middle"
+                  fill="black"
+                  stroke="none"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  {item.title}
+                </motion.text>
+              </motion.g>
+            );
+          })}
+        </svg>
+
+        <div className="lg:w-1/3">
+          <ActiveSectionDetails
+            activeSection={activeSection}
+            brandPrismItems={brandPrismItems}
+          />
+        </div>
+      </div>
+
+      <div className="sm:px-6 px-4">
+        {section.items.MDXComponent && (
+          <MDXRemote
+            {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
+            components={mdxComponents}
+          />
+        )}
+      </div>
     </div>
   );
 };
