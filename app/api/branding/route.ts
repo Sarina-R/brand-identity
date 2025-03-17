@@ -86,7 +86,6 @@ const data = {
       video: "",
       items: {
         MDXComponent: item1,
-        group: "introduction",
         title: "What **leads** us to the idea of dynamic identity:",
         items: ["item1", "item2", "item3", "item4"],
         desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
@@ -104,8 +103,7 @@ const data = {
       video: "",
       items: {
         MDXComponent: item1,
-        group: "introduction",
-        title: "What leads us to the idea of ​​dynamic identity:",
+        title: "What leads us to the idea of dynamic identity:",
         items: ["item1", "item2", "item3", "item4"],
         desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
       },

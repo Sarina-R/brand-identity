@@ -4,6 +4,7 @@ import { useData } from "@/hooks/DataProvider";
 import OverviewSection from "@/components/dynamic-section/OverviewSection";
 import { usePathname } from "next/navigation";
 import StatementSection from "@/components/dynamic-section/StatementSection";
+import BrandPrism from "@/components/dynamic-section/BrandPrism";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -26,8 +27,8 @@ const Page = () => {
         return <OverviewSection key={section.type} section={section} />;
       case "statement":
         return <StatementSection key={section.type} section={section} />;
-      // case "brand_prism":
-      //   return <BrandPrism section={section} />;
+      case "brand_prism":
+        return <BrandPrism />;
       // case "tone_of_voice":
       //   return <div>Tone of Voice Section (To be implemented)</div>;
       // case "tagline":
