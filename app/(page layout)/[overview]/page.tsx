@@ -5,6 +5,7 @@ import OverviewSection from "@/components/dynamic-section/OverviewSection";
 import { usePathname } from "next/navigation";
 import StatementSection from "@/components/dynamic-section/StatementSection";
 import BrandPrism from "@/components/dynamic-section/BrandPrism";
+import ToneOfVoiceSection from "@/components/dynamic-section/ToneOfVoiceSection";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -36,7 +37,13 @@ const Page = () => {
           />
         );
       case "tone_of_voice":
-        return <div>Tone of Voice Section (To be implemented)</div>;
+        return (
+          <ToneOfVoiceSection
+            key={section.type}
+            section={section}
+            primaryColor={data.brand.primaryColor}
+          />
+        );
       // case "tagline":
       //   return <div>Tagline Section (To be implemented)</div>;
       // case "design_principles":

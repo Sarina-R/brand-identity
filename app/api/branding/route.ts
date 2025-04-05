@@ -21,16 +21,16 @@ const item2 = `Alibaba's brand personality is defined based on the Magician arch
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Alibaba's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Alibaba’s brand identity.`;
 
-const item3 = `    <div className="w-full px-6 py-10 space-y-10 text-gray-800">
-      <h1 className="text-4xl font-bold text-center">About Pokémon</h1>
-      <p className="max-w-3xl mx-auto text-lg leading-relaxed text-center">
+const item3 = `    <div className="w-full px-6 py-10 space-y-10 text-neutral-800">
+      <h1 className="text-4xl font-bold">About Pokémon</h1>
+      <p className="max-w-3xl mx-auto text-lg leading-relaxed">
         The pink Pokémon, however, appeared among some users due to unforeseen bugs such as the Dealer bug. 
         It was therefore perceived by the public as a secret character, fueling many myths and rumors. 
         This is why, and to the surprise of the development team, Satoshi Tajiri decided to expose Mew 
         in the Japanese magazine CoroCoro Comics in the spring of 1996 and to launch the 
         "Legendary Pokémon Offer" contest in April: twenty winners were to be selected to receive Mew.
       </p>
-      <h2 className="text-2xl font-semibold text-center">Mew's Myth and Reveal</h2>
+      <h2 className="text-2xl font-semibold">Mew's Myth and Reveal</h2>
       <div className="w-full overflow-x-auto">
         <img
           src="https://cdn.alibaba.ir/cms/uploads/dominate_tone_5ec412f50a.svg"
@@ -184,7 +184,7 @@ const data = {
         sliderContent: [
           {
             id: "1001",
-            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+            // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
             title: "Friendly Vibe",
             description:
               '**Today**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
