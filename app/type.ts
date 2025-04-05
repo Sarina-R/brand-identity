@@ -24,10 +24,11 @@ export interface Menu {
 
 //Overview
 export interface OverviewItems {
+  MDXComponent?: string | MDXRemoteSerializeResult;
   group?: string;
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
-  MDXComponent?: string | MDXRemoteSerializeResult;
+  content?: [];
 }
 
 export interface Overview {
@@ -47,6 +48,7 @@ export interface StatementItems {
   title: string | MDXRemoteSerializeResult;
   items: string[];
   desc: string | MDXRemoteSerializeResult;
+  content?: [];
 }
 
 export interface Statement {
@@ -63,15 +65,15 @@ export interface Statement {
 // BrandPrism
 export interface BrandPrismChartItems {
   title: string;
-  key: string;
   description: string;
+  key: string;
 }
 
 export interface BrandPrismItems {
   MDXComponent?: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
-  prismBrand: BrandPrismChartItems[];
   desc: string | MDXRemoteSerializeResult;
+  prismBrand: BrandPrismChartItems[];
 }
 
 export interface BrandPrism {
@@ -85,8 +87,34 @@ export interface BrandPrism {
   style: number;
 }
 
+// tone of voice
+export interface SliderContent {
+  id: string;
+  svg: string;
+  title: string | MDXRemoteSerializeResult;
+  description: string | MDXRemoteSerializeResult;
+}
+
+export interface TonOfVoiceItems {
+  MDXComponent?: string | MDXRemoteSerializeResult;
+  title: string | MDXRemoteSerializeResult;
+  desc: string | MDXRemoteSerializeResult;
+  sliderContent: SliderContent[];
+}
+
+export interface ToneOfVoice {
+  type: "tone_of_voice";
+  title: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  description?: string | MDXRemoteSerializeResult;
+  items: TonOfVoiceItems;
+  style: number;
+}
+
 // All
-export type Section = Overview | Statement | BrandPrism;
+export type Section = Overview | Statement | BrandPrism | ToneOfVoice;
 
 export interface ApiResponse {
   brand: Brand;

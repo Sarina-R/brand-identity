@@ -21,6 +21,25 @@ const item2 = `Alibaba's brand personality is defined based on the Magician arch
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Alibaba's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Alibaba’s brand identity.`;
 
+const item3 = `    <div className="w-full px-6 py-10 space-y-10 text-gray-800">
+      <h1 className="text-4xl font-bold text-center">About Pokémon</h1>
+      <p className="max-w-3xl mx-auto text-lg leading-relaxed text-center">
+        The pink Pokémon, however, appeared among some users due to unforeseen bugs such as the Dealer bug. 
+        It was therefore perceived by the public as a secret character, fueling many myths and rumors. 
+        This is why, and to the surprise of the development team, Satoshi Tajiri decided to expose Mew 
+        in the Japanese magazine CoroCoro Comics in the spring of 1996 and to launch the 
+        "Legendary Pokémon Offer" contest in April: twenty winners were to be selected to receive Mew.
+      </p>
+      <h2 className="text-2xl font-semibold text-center">Mew's Myth and Reveal</h2>
+      <div className="w-full overflow-x-auto">
+        <img
+          src="https://cdn.alibaba.ir/cms/uploads/dominate_tone_5ec412f50a.svg"
+          alt="Mew reveal chart"
+          className="min-w-[900px] max-w-none mx-auto"
+        />
+      </div>
+    </div>`;
+
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
@@ -78,7 +97,7 @@ const data = {
         img: "",
       },
 
-      style: "1",
+      style: 1,
     },
     {
       type: "statement",
@@ -95,7 +114,7 @@ const data = {
         desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
       },
 
-      style: "1",
+      style: 1,
     },
     {
       type: "brand_prism",
@@ -149,7 +168,45 @@ const data = {
         ],
       },
 
-      style: "1",
+      style: 1,
+    },
+    {
+      type: "tone_of_voice",
+      title: "Tone Of Voice",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      items: {
+        MDXComponent: item3,
+        title: "What **leads** us to the idea of dynamic identity:",
+        desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
+        sliderContent: [
+          {
+            id: "1001",
+            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+            title: "Friendly Vibe",
+            description:
+              '**Today**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
+          },
+          {
+            id: "1002",
+            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+            title: "Mew Vibe",
+            description:
+              '**Mew**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
+          },
+          {
+            id: "1003",
+            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+            title: "Mew Mew Vibe",
+            description:
+              '**Mew Mew**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
+          },
+        ],
+
+        style: 1,
+      },
     },
   ],
 };

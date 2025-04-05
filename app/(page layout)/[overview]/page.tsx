@@ -35,8 +35,8 @@ const Page = () => {
             primaryColor={data.brand.primaryColor || "black"}
           />
         );
-      // case "tone_of_voice":
-      //   return <div>Tone of Voice Section (To be implemented)</div>;
+      case "tone_of_voice":
+        return <div>Tone of Voice Section (To be implemented)</div>;
       // case "tagline":
       //   return <div>Tagline Section (To be implemented)</div>;
       // case "design_principles":
