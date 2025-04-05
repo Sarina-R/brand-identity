@@ -7,11 +7,18 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { Handshake, Home, Settings, User } from "lucide-react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { ToneOfVoice } from "@/app/type";
+import { SliderContent, ToneOfVoice } from "@/app/type";
 import { lighten } from "polished";
 import { serialize } from "next-mdx-remote/serialize";
 import "swiper/css/pagination";
 import "swiper/css";
+
+type SlideCardProps = {
+  svg?: string;
+  title: string | MDXRemoteSerializeResult;
+  description: string | MDXRemoteSerializeResult;
+  primaryColor: string;
+};
 
 const ToneOfVoiceSection = ({
   section,
@@ -24,12 +31,14 @@ const ToneOfVoiceSection = ({
   const mdxComponents1 = useMDXComponents1({});
   const sliderContent = section.items.sliderContent || [];
   const [isDesktop, setIsDesktop] = useState(false);
-  const [serializedContent, setSerializedContent] = useState<any[]>([]);
+  const [serializedContent, setSerializedContent] = useState<SliderContent[]>(
+    []
+  );
 
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
 
-  const onAutoplayTimeLeft = (_: any, time: number, progress: number) => {
+  const onAutoplayTimeLeft = (_: unknown, time: number, progress: number) => {
     if (progressCircle.current) {
       progressCircle.current.style.setProperty(
         "--progress",
@@ -117,7 +126,7 @@ const ToneOfVoiceSection = ({
 
             {isDesktop && (
               <div
-                className="hidden md:flex items-center gap-2 absolute bottom-6 right-6 z-10"
+                className="hidden md:flex items-center gap-2 absolute bottom-6 xl:left-12 left-8 z-10"
                 slot="container-end"
               >
                 <svg
@@ -153,27 +162,29 @@ const ToneOfVoiceSection = ({
   );
 };
 
-function SlideCard({
+const SlideCard: React.FC<SlideCardProps> = ({
   svg,
   title,
   description,
   primaryColor,
-}: {
-  svg?: string;
-  title: string;
-  description: string | MDXRemoteSerializeResult;
-  primaryColor: string;
-}) {
+}) => {
   const mdxComponents1 = useMDXComponents1({});
   const lighterColor = lighten(0.2, primaryColor);
   const icons = [Handshake, Home, User, Settings];
   const randomIcon = icons[Math.floor(Math.random() * icons.length)];
 
   return (
-    <div className="w-full max-w-4xl mx-auto flex md:flex-row-reverse flex-col-reverse items-stretch bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm border">
+    <div className="w-full max-w-5xl mx-auto min-h-60 flex md:flex-row-reverse flex-col-reverse items-stretch bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm border">
       <div className="md:w-2/3 w-full p-6 space-y-2">
         <h3 className="font-bold text-lg text-neutral-900 dark:text-white">
-          {title}
+          {typeof title === "string" ? (
+            title
+          ) : (
+            <MDXRemote
+              {...(title as MDXRemoteSerializeResult)}
+              components={mdxComponents1}
+            />
+          )}
         </h3>
         <div className="text-sm text-gray-600 dark:text-gray-300 leading-loose">
           {typeof description === "string" ? (
@@ -191,7 +202,11 @@ function SlideCard({
         style={{ backgroundColor: primaryColor }}
       >
         {svg ? (
-          <img src={svg} alt={title} className="max-h-24 object-contain" />
+          <img
+            src={svg}
+            alt={typeof title === "string" ? title : ""}
+            className="max-h-24 object-contain"
+          />
         ) : (
           React.createElement(randomIcon, {
             color: lighterColor,
@@ -201,6 +216,6 @@ function SlideCard({
       </div>
     </div>
   );
-}
+};
 
 export default ToneOfVoiceSection;
