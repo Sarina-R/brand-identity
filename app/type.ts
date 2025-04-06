@@ -46,18 +46,18 @@ export interface Overview {
 export interface StatementItems {
   MDXComponent?: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
-  items: string[];
   desc: string | MDXRemoteSerializeResult;
+  items: string[];
   content?: [];
 }
 
 export interface Statement {
   type: "statement";
   title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
   pattern?: string;
   img?: string;
   video?: string;
-  description?: string | MDXRemoteSerializeResult;
   items: StatementItems;
   style: number;
 }
@@ -79,10 +79,10 @@ export interface BrandPrismItems {
 export interface BrandPrism {
   type: "brand_prism";
   title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
   pattern?: string;
   img?: string;
   video?: string;
-  description?: string | MDXRemoteSerializeResult;
   items: BrandPrismItems;
   style: number;
 }
@@ -105,10 +105,10 @@ export interface TonOfVoiceItems {
 export interface ToneOfVoice {
   type: "tone_of_voice";
   title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
   pattern?: string;
   img?: string;
   video?: string;
-  description?: string | MDXRemoteSerializeResult;
   items: TonOfVoiceItems;
   style: number;
 }
@@ -118,21 +118,56 @@ export interface TaglineItems {
   MDXComponent?: string | MDXRemoteSerializeResult;
   title?: string | MDXRemoteSerializeResult;
   desc?: string | MDXRemoteSerializeResult;
+  svg: string;
 }
 
 export interface Tagline {
   type: "tagline";
   title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
   pattern?: string;
   img?: string;
   video?: string;
-  description?: string | MDXRemoteSerializeResult;
   items: TaglineItems;
   style: number;
 }
 
+// Design Principles
+export interface TabsContentItem {
+  title: string;
+  description: string | MDXRemoteSerializeResult;
+  svg: string;
+}
+
+export interface DesignPrinciplesItems {
+  MDXComponent?: string | MDXRemoteSerializeResult;
+  title?: string | MDXRemoteSerializeResult;
+  desc?: string | MDXRemoteSerializeResult;
+  video?: string;
+  image?: string;
+  videoCover: string;
+  tabsContent: TabsContentItem[];
+}
+
+export interface DesignPrinciples {
+  type: "design_principles";
+  title: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  description?: string | MDXRemoteSerializeResult;
+  items: DesignPrinciplesItems;
+  style: number;
+}
+
 // All
-export type Section = Overview | Statement | BrandPrism | ToneOfVoice | Tagline;
+export type Section =
+  | Overview
+  | Statement
+  | BrandPrism
+  | ToneOfVoice
+  | Tagline
+  | DesignPrinciples;
 
 export interface ApiResponse {
   brand: Brand;

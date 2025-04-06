@@ -215,11 +215,53 @@ const data = {
       pattern:
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
-      // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
       items: {
         MDXComponent: item1,
         title: "**TITLE** If there is",
         desc: "some desc :)",
+      },
+    },
+    {
+      type: "design_principles",
+      title: "Design Principles",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      items: {
+        MDXComponent: "",
+        title: "What and Why",
+        desc: ` # 🌟 Alibaba Design Principles <br/>
+          Alibaba Design Principles is a **framework** rooted in the brand’s conceptual identity —
+          strategically shaping and unifying all design outputs to ensure a **coherent and consistent experience** for the audience interacting with the Alibaba brand.
+          To clarify the difference between <strong>Design Principles</strong> and <strong>Visual Identity Guidelines</strong>:
+          <br />
+          <strong>Design Principles</strong> focus on <em>overall strategies</em> and take a <em>big picture</em> view of the brand design landscape.
+        `,
+        video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
+        videoCover:
+          "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
+        tabsContent: [
+          {
+            title: "Design Strategics",
+            description: `**AliBaba’s strategic design** is a comprehensive travel solution. It always aims to optimize the journey and offer a seamless experience across all stages.
+                          This mental model in strategic design helps the brand to evolve and emerge continuously.
+                          Strategic design in AliBaba is in service of communication and business growth.
+                          The foundation of strategic design stems from upstream strategies and loops through feedback and iteration to complete and refine one another.
+              `,
+            svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
+          },
+          {
+            title: "Creative Design",
+            description: `Creative design pushes innovation boundaries and aligns aesthetic vision with user needs...`,
+            svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
+          },
+          {
+            title: "User-Centric Design",
+            description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
+            svg: "",
+          },
+        ],
       },
     },
   ],

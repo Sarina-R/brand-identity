@@ -7,6 +7,7 @@ import StatementSection from "@/components/dynamic-section/StatementSection";
 import BrandPrism from "@/components/dynamic-section/BrandPrism";
 import ToneOfVoiceSection from "@/components/dynamic-section/ToneOfVoiceSection";
 import TaglineSection from "@/components/dynamic-section/TaglineSection";
+import DesignPrinciplesSection from "@/components/dynamic-section/DesignPrinciplesSection";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -47,8 +48,14 @@ const Page = () => {
         );
       case "tagline":
         return <TaglineSection key={section.type} section={section} />;
-      // case "design_principles":
-      //   return <div>Design Principles Section (To be implemented)</div>;
+      case "design_principles":
+        return (
+          <DesignPrinciplesSection
+            key={section.type}
+            section={section}
+            primaryColor={data.brand.primaryColor}
+          />
+        );
       // case "logo":
       //   return <div>Logo Section (To be implemented)</div>;
       // case "mascot":
