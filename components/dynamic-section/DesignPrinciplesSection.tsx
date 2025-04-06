@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { DesignPrinciples } from "@/app/type";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MDXRemote } from "next-mdx-remote";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
 import { motion } from "framer-motion";
@@ -195,7 +195,7 @@ const DesignPrinciplesSection = ({
       {section.items.MDXComponent && (
         <div className="mt-10">
           <MDXRemote
-            {...(section.items.MDXComponent as any)}
+            {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
             components={mdxComponents}
           />
         </div>
