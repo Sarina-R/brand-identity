@@ -113,8 +113,24 @@ export interface ToneOfVoice {
   style: number;
 }
 
+// tagline
+export interface TaglineItems {
+  MDXComponent?: string | MDXRemoteSerializeResult;
+}
+
+export interface Tagline {
+  type: "tagline";
+  title: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  description?: string | MDXRemoteSerializeResult;
+  items: TaglineItems;
+  style: number;
+}
+
 // All
-export type Section = Overview | Statement | BrandPrism | ToneOfVoice;
+export type Section = Overview | Statement | BrandPrism | ToneOfVoice | Tagline;
 
 export interface ApiResponse {
   brand: Brand;

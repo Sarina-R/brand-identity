@@ -208,6 +208,18 @@ const data = {
         style: 1,
       },
     },
+    {
+      type: "tagline",
+      title: "Tagline",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
+      items: {
+        MDXComponent: item1,
+      },
+    },
   ],
 };
 

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import StatementSection from "@/components/dynamic-section/StatementSection";
 import BrandPrism from "@/components/dynamic-section/BrandPrism";
 import ToneOfVoiceSection from "@/components/dynamic-section/ToneOfVoiceSection";
+import TaglineSection from "@/components/dynamic-section/TaglineSection";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -44,8 +45,8 @@ const Page = () => {
             primaryColor={data.brand.primaryColor}
           />
         );
-      // case "tagline":
-      //   return <div>Tagline Section (To be implemented)</div>;
+      case "tagline":
+        return <TaglineSection key={section.type} section={section} />;
       // case "design_principles":
       //   return <div>Design Principles Section (To be implemented)</div>;
       // case "logo":
