@@ -116,6 +116,8 @@ export interface ToneOfVoice {
 // tagline
 export interface TaglineItems {
   MDXComponent?: string | MDXRemoteSerializeResult;
+  title?: string | MDXRemoteSerializeResult;
+  desc?: string | MDXRemoteSerializeResult;
 }
 
 export interface Tagline {

@@ -218,6 +218,8 @@ const data = {
       // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
       items: {
         MDXComponent: item1,
+        title: "**TITLE** If there is",
+        desc: "some desc :)",
       },
     },
   ],
