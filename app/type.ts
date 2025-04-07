@@ -145,7 +145,7 @@ export interface DesignPrinciplesItems {
   desc?: string | MDXRemoteSerializeResult;
   video?: string;
   image?: string;
-  videoCover: string;
+  videoCover?: string;
   tabsContent: TabsContentItem[];
 }
 

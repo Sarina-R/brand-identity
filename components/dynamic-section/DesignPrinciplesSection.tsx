@@ -33,14 +33,20 @@ const DesignPrinciplesSection = ({
   const [selectedTab, setSelectedTab] = useState(tabsContent[0].title);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-  const media = section.items.video ? (
-    !isVideoPlaying ? (
+  const hasVideo = !!section.items.video;
+  const hasVideoCover = !!section.items.videoCover;
+  const hasImage = !!section.items.image;
+
+  let media;
+
+  if (hasVideo && hasVideoCover) {
+    media = !isVideoPlaying ? (
       <div
         className="relative w-full h-full cursor-pointer group"
         onClick={() => setIsVideoPlaying(true)}
       >
         <Image
-          src={section.items.videoCover}
+          src={section.items.videoCover || ""}
           alt="Video Cover"
           layout="fill"
           objectFit="cover"
@@ -60,24 +66,35 @@ const DesignPrinciplesSection = ({
         controls
         className="w-full h-full object-cover"
       />
-    )
-  ) : section.items.image ? (
-    <Image
-      src={section.items.image}
-      alt="Fallback Image"
-      layout="fill"
-      objectFit="cover"
-      className="object-cover"
-    />
-  ) : (
-    <div className="w-full h-full flex items-center justify-center bg-neutral-200">
-      {(() => {
-        const RandomIcon =
-          fallbackIcons[Math.floor(Math.random() * fallbackIcons.length)];
-        return <RandomIcon size={80} className="text-neutral-500" />;
-      })()}
-    </div>
-  );
+    );
+  } else if (hasVideo && !hasVideoCover) {
+    media = (
+      <video
+        src={section.items.video}
+        autoPlay
+        controls
+        className="w-full h-full object-cover"
+      />
+    );
+  } else if (hasImage) {
+    media = (
+      <Image
+        src={section.items.image || ""}
+        alt="Image"
+        layout="fill"
+        objectFit="cover"
+        className="object-cover"
+      />
+    );
+  } else {
+    const RandomIcon =
+      fallbackIcons[Math.floor(Math.random() * fallbackIcons.length)];
+    media = (
+      <div className="w-full h-full flex items-center justify-center bg-neutral-200">
+        <RandomIcon size={80} className="text-neutral-500" />
+      </div>
+    );
+  }
 
   return (
     <section className="py-16 space-y-24 overflow-hidden">

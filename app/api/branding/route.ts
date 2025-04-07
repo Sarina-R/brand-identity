@@ -238,6 +238,8 @@ const data = {
           <br />
           <strong>Design Principles</strong> focus on <em>overall strategies</em> and take a <em>big picture</em> view of the brand design landscape.
         `,
+        image:
+          "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
         video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
         videoCover:
           "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
