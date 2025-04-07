@@ -21,7 +21,7 @@ const item2 = `Alibaba's brand personality is defined based on the Magician arch
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Alibaba's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Alibaba’s brand identity.`;
 
-const item3 = `    <div className="w-full px-6 py-10 space-y-10">
+const item3 = `    <div className="w-full px-6 py-10 space-y-16">
       <h1 className="text-4xl font-bold">About Pokémon</h1>
       <p className="max-w-3xl mx-auto text-lg leading-relaxed">
         The pink Pokémon, however, appeared among some users due to unforeseen bugs such as the Dealer bug. 
@@ -40,7 +40,7 @@ const item3 = `    <div className="w-full px-6 py-10 space-y-10">
       </div>
     </div>`;
 
-const item4 = `<div className="w-full md:px-8 space-y-10">
+const item4 = `<div className="w-full md:px-8 space-y-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
           <h2 className="text-3xl font-bold">Monogram design</h2>

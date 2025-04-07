@@ -31,7 +31,7 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
   const downloadBtnText = section.items.downloadBtnText ?? "Download the logo";
 
   return (
-    <div className="md:p-8 p-4 space-y-16">
+    <div className="md:p-8 p-4 md:space-y-24 space-y-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center bg-neutral-50 dark:bg-neutral-900 p-6 rounded-xl border w-full">
           <div className="w-full max-w-md flex justify-center">

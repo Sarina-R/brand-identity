@@ -33,7 +33,7 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
   }, [data.svg.length]);
 
   return (
-    <section className="flex flex-col md:flex-row gap-8 p-6 rounded-2xl overflow-hidden">
+    <section className="flex flex-col md:flex-row gap-8 rounded-2xl overflow-hidden">
       <div className="flex-1 space-y-4">
         <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
           {mdxTitle && <MDXRemote {...mdxTitle} components={mdxComponents1} />}

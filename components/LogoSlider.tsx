@@ -79,7 +79,7 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-6 min-h-[400px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 min-h-[400px]">
       <motion.div
         className="space-y-4"
         initial={{ opacity: 0 }}
