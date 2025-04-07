@@ -9,6 +9,7 @@ import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { Logo } from "@/app/type";
 import LogoSlider from "../LogoSlider";
 import LogoBackground from "../LogoBG";
+import CoBrandingLogoSection from "../CoBrandingLogoSection";
 
 const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
   const mdxComponents1 = useMDXComponents1({});
@@ -82,6 +83,7 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
 
       <LogoSlider versions={section.items.logoVersion} />
       <LogoBackground data={section.items.inBackgroundSection} />
+      <CoBrandingLogoSection data={section.items.alongWithOthers} />
 
       {section.items.MDXComponent && (
         <MDXRemote
