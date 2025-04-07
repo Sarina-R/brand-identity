@@ -8,6 +8,7 @@ import BrandPrism from "@/components/dynamic-section/BrandPrism";
 import ToneOfVoiceSection from "@/components/dynamic-section/ToneOfVoiceSection";
 import TaglineSection from "@/components/dynamic-section/TaglineSection";
 import DesignPrinciplesSection from "@/components/dynamic-section/DesignPrinciplesSection";
+import LogoSection from "@/components/dynamic-section/LogoSection";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -56,8 +57,14 @@ const Page = () => {
             primaryColor={data.brand.primaryColor}
           />
         );
-      // case "logo":
-      //   return <div>Logo Section (To be implemented)</div>;
+      case "logo":
+        return (
+          <LogoSection
+            key={section.type}
+            section={section}
+            logo={data.brand.logo}
+          />
+        );
       // case "mascot":
       //   return <div>Mascot Section (To be implemented)</div>;
       // case "color":

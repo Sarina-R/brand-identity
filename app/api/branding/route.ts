@@ -40,6 +40,43 @@ const item3 = `    <div className="w-full px-6 py-10 space-y-10">
       </div>
     </div>`;
 
+const item4 = `<div className="w-full md:px-8 space-y-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
+          <h2 className="text-3xl font-bold">Monogram design</h2>
+          <p className="text-base leading-relaxed">
+            In designing the Alibaba monogram, we have designed a firm and decisive form, considering the brand identity and strategy, which, while being solid, is distanced from stillness and staticity by the movement of the curve in the middle of the letter A and is in harmony with the vibrant atmosphere of travel.
+          </p>
+          <p className="text-base leading-relaxed">
+            We have designed this monogram dynamically; meaning that it has a fixed DNA and anatomy; But its appearance is variable and changes in brand communications depending on what message is to be conveyed to which audience through which medium. This approach is a bold strategy in design and allows the brand to respond intelligently to social situations and audience needs, and at the communication level, always be one step ahead of customer expectations.
+          </p>
+        </div>
+        <div className="w-full bg-black rounded-2xl relative">
+          <img
+            src="https://cdn.alibaba.ir/cms/uploads/monogram_anim_2c775cc880.gif"
+            alt="Monogram Animation"
+            className="object-contain rounded-xl shadow-lg m-auto"
+          />
+        </div>
+      </div>
+
+      <div className="items-center space-y-10">
+      <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
+          <h2 className="text-3xl font-bold">Logotype design</h2>
+          <p className="text-base leading-relaxed">
+            We designed the Alibaba logo based on the previous logo. The new logo is actually an updated version of the previous logo, with more dynamic and fluid forms and less unnecessary details.
+          </p>
+        </div>
+        <div className="w-full relative">
+          <img
+            src="https://cdn.alibaba.ir/cms/uploads/logo_type_365b658ee9.svg"
+            alt="Logotype"
+            className="object-contain rounded-xl shadow-lg m-auto"
+          />
+        </div>
+      </div>
+    </div>`;
+
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
@@ -265,6 +302,61 @@ const data = {
           },
         ],
       },
+    },
+    {
+      type: "logo",
+      title: "Logo",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      items: {
+        MDXComponent: "",
+        MDXComponentForLogo: item4,
+        title: "**Brand** Identity",
+        desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
+        download: "",
+        downloadBtnText: "Download Fira Cup 2025 Tehran Logo",
+        logoVersion: [
+          {
+            id: 1,
+            name: "Vertical logo",
+            text: "Priority is given to use the vertical version of the logo.",
+            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/logo-vertical-02e1c68f.svg",
+          },
+          {
+            id: 2,
+            name: "Horizontal logo",
+            text: "We use the horizontal logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
+            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/logo-horizontal-48770b9c.svg",
+          },
+          {
+            id: 3,
+            name: "Mono",
+            text: "We use the monogram version in Alibaba media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
+            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/monogram-680c163d.svg",
+          },
+        ],
+        inBackgroundSection: {
+          listItems: [
+            "We use the Alibaba logo on a white background, only in the primary color.",
+            "We use the Alibaba logo on a black background, only in the primary color.",
+            "We use the Alibaba logo on a yellow background, only in solid black.",
+            "We use the Alibaba logo on gray backgrounds (permitted codes in the color palette), only in solid black or white.",
+            "The use of the Alibaba logo on other colored backgrounds is not permitted.",
+          ],
+          image: "https://cdn.alibaba.ir/cms/uploads/logo_types_b5f0565503.svg",
+        },
+        alongWithOthers: {
+          title: "Use it alongside other brand logos",
+          desc: "When using the Alibaba logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Alibaba logo; if it’s horizontal, stick with the horizontal Alibaba one. To keep things balanced, make sure the height of Alibaba’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Alibaba logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Alibaba logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
+          svg: [
+            "https://cdn.alibaba.ir/cms/uploads/co_logo_2_dadfc63297.svg",
+            "https://cdn.alibaba.ir/cms/uploads/co_logo_3_ed6df93726.svg",
+          ],
+        },
+      },
+      style: 1,
     },
   ],
 };

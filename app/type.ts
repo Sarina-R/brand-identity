@@ -152,11 +152,53 @@ export interface DesignPrinciplesItems {
 export interface DesignPrinciples {
   type: "design_principles";
   title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
   pattern?: string;
   img?: string;
   video?: string;
-  description?: string | MDXRemoteSerializeResult;
   items: DesignPrinciplesItems;
+  style: number;
+}
+
+//Logo
+export interface LogoVersion {
+  id: number;
+  name: string;
+  text: string | MDXRemoteSerializeResult;
+  svg: string;
+}
+
+export interface InBackgroundSection {
+  listItems: string[];
+  image: string;
+}
+
+export interface AlongWithOthers {
+  title: string | MDXRemoteSerializeResult;
+  desc: string | MDXRemoteSerializeResult;
+  svg: string[];
+}
+
+export interface LogoItems {
+  MDXComponent: string | MDXRemoteSerializeResult;
+  MDXComponentForLogo: string | MDXRemoteSerializeResult;
+  title?: string | MDXRemoteSerializeResult;
+  desc?: string | MDXRemoteSerializeResult;
+  download?: string;
+  downloadBtnText?: string;
+  logoVersion: LogoVersion[];
+  inBackgroundSection: InBackgroundSection;
+  alongWithOthers: AlongWithOthers;
+}
+
+export interface Logo {
+  type: "logo";
+  title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  items: LogoItems;
   style: number;
 }
 
@@ -167,7 +209,8 @@ export type Section =
   | BrandPrism
   | ToneOfVoice
   | Tagline
-  | DesignPrinciples;
+  | DesignPrinciples
+  | Logo;
 
 export interface ApiResponse {
   brand: Brand;
