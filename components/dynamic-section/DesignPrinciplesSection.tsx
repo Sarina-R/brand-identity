@@ -97,9 +97,9 @@ const DesignPrinciplesSection = ({
   }
 
   return (
-    <section className="py-16 space-y-24 overflow-hidden">
+    <section className="py-16 space-y-24">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+        <div className="relative aspect-video rounded-2xl shadow-xl">
           {media}
         </div>
 
@@ -134,7 +134,14 @@ const DesignPrinciplesSection = ({
           onValueChange={setSelectedTab}
           className="w-full"
         >
-          <TabsList className="relative flex gap-4 px-4 overflow-x-auto bg-transparent border-none shadow-none">
+          <TabsList
+            className={clsx(
+              "relative flex gap-4 px-4",
+              "overflow-x-auto",
+              "",
+              "bg-transparent border-none shadow-none max-w-full"
+            )}
+          >
             {tabsContent.map((tab) => (
               <TabsTrigger
                 key={tab.title}
