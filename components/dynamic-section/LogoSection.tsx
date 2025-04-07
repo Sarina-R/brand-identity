@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { Logo } from "@/app/type";
 import LogoSlider from "../LogoSlider";
+import LogoBackground from "../LogoBG";
 
 const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
   const mdxComponents1 = useMDXComponents1({});
@@ -72,14 +73,15 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
         </div>
       </div>
 
-      <LogoSlider versions={section.items.logoVersion} />
-
       {mdxSource && (
         <MDXRemote
           {...(mdxSource as MDXRemoteSerializeResult)}
           components={mdxComponents}
         />
       )}
+
+      <LogoSlider versions={section.items.logoVersion} />
+      <LogoBackground data={section.items.inBackgroundSection} />
 
       {section.items.MDXComponent && (
         <MDXRemote
