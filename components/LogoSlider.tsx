@@ -82,14 +82,14 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 min-h-[400px]">
       <motion.div
         className="space-y-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial="hidden"
+        animate="visible"
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <motion.h2
           className="text-3xl font-bold"
-          initial={{ y: -20 }}
-          animate={{ y: 0 }}
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           Versions
@@ -112,7 +112,7 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
 
       <div className="relative flex flex-col items-center">
         <motion.div
-          className="border rounded-2xl p-8 w-full flex justify-center items-center min-h-[250px]"
+          className="border rounded-2xl p-8 w-full flex justify-center items-center min-h-[350px]"
           transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           <AnimatePresence mode="wait">
