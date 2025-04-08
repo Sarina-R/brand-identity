@@ -1,5 +1,16 @@
 import { serialize } from "next-mdx-remote/serialize";
-import { ColorItems } from "@/app/type";
+import {
+  ColorItems,
+  Palette,
+  PaletteColors,
+  ColorWithShades,
+  ColorShade,
+  HarmonySection,
+  PaletteUsage,
+  UsageGuidelines,
+  UsageGuidelineItem,
+  MainStructureItem,
+} from "@/app/type";
 import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 type MDXFields = "title" | "description" | "desc";
@@ -20,10 +31,24 @@ const shouldSerialize = (key: string, value: unknown): value is string =>
   (key === "title" || key === "description" || key === "desc") &&
   typeof value === "string";
 
-export const serializeTextFields = async (
-  obj: ColorItems
-): Promise<Serialized<ColorItems>> => {
-  if (typeof obj !== "object" || obj === null) return obj as any;
+type SerializableObject =
+  | ColorItems
+  | Palette
+  | PaletteColors
+  | ColorWithShades
+  | ColorShade
+  | HarmonySection
+  | PaletteUsage
+  | UsageGuidelines
+  | UsageGuidelineItem
+  | MainStructureItem;
+
+export const serializeTextFields = async <T extends SerializableObject>(
+  obj: T
+): Promise<Serialized<T>> => {
+  if (typeof obj !== "object" || obj === null) {
+    return obj as Serialized<T>;
+  }
 
   const entries = await Promise.all(
     Object.entries(obj).map(async ([key, value]) => {
@@ -32,16 +57,16 @@ export const serializeTextFields = async (
         return [key, serialized];
       } else if (Array.isArray(value)) {
         const newArray = await Promise.all(
-          value.map((item) => serializeTextFields(item as any))
+          value.map((item) => serializeTextFields(item as SerializableObject))
         );
         return [key, newArray];
       } else if (typeof value === "object" && value !== null) {
-        const newObj = await serializeTextFields(value as any);
+        const newObj = await serializeTextFields(value as SerializableObject);
         return [key, newObj];
       }
       return [key, value];
     })
   );
 
-  return Object.fromEntries(entries) as Serialized<ColorItems>;
+  return Object.fromEntries(entries) as Serialized<T>;
 };
