@@ -65,8 +65,8 @@ const Page = () => {
             logo={data.brand.logo}
           />
         );
-      // case "mascot":
-      //   return <div>Mascot Section (To be implemented)</div>;
+      case "mascot":
+        return <TaglineSection key={section.type} section={section} />;
       // case "color":
       //   return <div>Color Section (To be implemented)</div>;
       // case "typography":

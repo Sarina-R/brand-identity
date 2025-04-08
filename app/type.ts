@@ -202,6 +202,24 @@ export interface Logo {
   style: number;
 }
 
+// Mascot
+export interface MascotItems {
+  MDXComponent: string | MDXRemoteSerializeResult;
+  title?: string | MDXRemoteSerializeResult;
+  desc?: string | MDXRemoteSerializeResult;
+}
+
+export interface Mascot {
+  type: "mascot";
+  title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  items: MascotItems;
+  style: number;
+}
+
 // All
 export type Section =
   | Overview
@@ -210,7 +228,8 @@ export type Section =
   | ToneOfVoice
   | Tagline
   | DesignPrinciples
-  | Logo;
+  | Logo
+  | Mascot;
 
 export interface ApiResponse {
   brand: Brand;

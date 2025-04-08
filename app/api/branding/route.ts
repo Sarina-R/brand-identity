@@ -358,6 +358,19 @@ const data = {
       },
       style: 1,
     },
+    {
+      type: "mascot",
+      title: "Mascot",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      items: {
+        MDXComponent: item3,
+        title: "Mascot",
+        desc: "MascotMascotMascotMascotMascot",
+      },
+    },
   ],
 };
 

@@ -1,8 +1,8 @@
-import { Tagline } from "@/app/type";
+import { Mascot, Tagline } from "@/app/type";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
-const TaglineSection = ({ section }: { section: Tagline }) => {
+const TaglineSection = ({ section }: { section: Tagline | Mascot }) => {
   const mdxComponents = useMDXComponents({});
   const mdxComponents1 = useMDXComponents1({});
 
