@@ -69,7 +69,13 @@ const Page = () => {
       case "mascot":
         return <TaglineSection key={section.type} section={section} />;
       case "color":
-        return <ColorSection key={section.type} section={section} />;
+        return (
+          <ColorSection
+            key={section.type}
+            section={section}
+            primaryColor={data.brand.primaryColor}
+          />
+        );
       // case "typography":
       //   return <div>Typography Section (To be implemented)</div>;
       // case "identity_in_use":

@@ -1,20 +1,48 @@
-import { serializeTextFields } from "@/lib/serializeTextFields";
-import { Color } from "@/app/type";
-import Header from "../ColorSection/Header";
+"use client";
+
+import { Serialized, serializeTextFields } from "@/lib/serializeTextFields";
+import { Color, ColorItems } from "@/app/type";
 import PaletteUsage from "../ColorSection/PaletteUsage";
 import Palette from "../ColorSection/Palette";
+import FlexComponent from "../ColorSection/FlexComponent";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import Header from "../ColorSection/Header";
+import { useEffect, useState } from "react";
 
-const ColorSection = async ({ section }: { section: Color }) => {
-  const serializedItems = await serializeTextFields(section.items);
+const ColorSection = ({
+  section,
+  primaryColor,
+}: {
+  section: Color;
+  primaryColor: string;
+}) => {
+  const [serializedItems, setSerializedItems] =
+    useState<Serialized<ColorItems | undefined>>();
+
+  useEffect(() => {
+    const serializeFunction = async () => {
+      const serializedItems = await serializeTextFields(section.items);
+      setSerializedItems(serializedItems);
+    };
+
+    serializeFunction();
+  }, [section]);
 
   return (
     <div>
       <Header
-        title={serializedItems.title}
-        description={serializedItems.desc}
+        serializedItems={serializedItems}
+        section={section}
+        primaryColor={primaryColor}
       />
-      <Palette palette={serializedItems.palette} />
-      <PaletteUsage usage={serializedItems.paletteUsage} />
+      {/* {serializedItems.Harmony && (
+        <FlexComponent data={serializedItems.Harmony} />
+      )}
+      {serializedItems.Gradient && (
+        <FlexComponent data={serializedItems.Gradient} />
+      )} */}
+      {/* {serializedItems.palette && <Palette palette={serializedItems.palette} />}
+      {serializedItems.paletteUsage && <PaletteUsage usage={serializedItems.paletteUsage} />} */}
     </div>
   );
 };

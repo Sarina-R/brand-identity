@@ -279,14 +279,14 @@ export interface PaletteUsage {
 }
 
 export interface ColorItems {
-  MDXComponent: string;
+  MDXComponent: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
   img: string[];
   palette: Palette;
-  Harmony: HarmonySection;
-  Gradient: HarmonySection;
-  paletteUsage: PaletteUsage;
+  Harmony?: HarmonySection;
+  Gradient?: HarmonySection;
+  paletteUsage?: PaletteUsage;
 }
 
 export interface Color {
@@ -296,7 +296,7 @@ export interface Color {
   pattern?: string;
   img?: string;
   video?: string;
-  items: MascotItems;
+  items: ColorItems;
   style: number;
 }
 
