@@ -9,6 +9,7 @@ import ToneOfVoiceSection from "@/components/dynamic-section/ToneOfVoiceSection"
 import TaglineSection from "@/components/dynamic-section/TaglineSection";
 import DesignPrinciplesSection from "@/components/dynamic-section/DesignPrinciplesSection";
 import LogoSection from "@/components/dynamic-section/LogoSection";
+import ColorSection from "@/components/dynamic-section/ColorSection";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -67,8 +68,8 @@ const Page = () => {
         );
       case "mascot":
         return <TaglineSection key={section.type} section={section} />;
-      // case "color":
-      //   return <div>Color Section (To be implemented)</div>;
+      case "color":
+        return <ColorSection key={section.type} section={section} />;
       // case "typography":
       //   return <div>Typography Section (To be implemented)</div>;
       // case "identity_in_use":

@@ -220,6 +220,86 @@ export interface Mascot {
   style: number;
 }
 
+// Color
+export interface ColorShade {
+  id: number;
+  hex: string;
+  name: string;
+}
+
+export interface ColorWithShades {
+  id: number;
+  hex: string;
+  name: string;
+  shades: ColorShade[];
+}
+
+export interface PaletteColors {
+  primary: ColorWithShades;
+  secondary: ColorWithShades;
+  action: ColorWithShades;
+  complementary: ColorWithShades;
+}
+
+export interface Palette {
+  title: string;
+  description: string;
+  colors: PaletteColors;
+}
+
+export interface HarmonySection {
+  title: string;
+  description: string;
+  img?: string;
+}
+
+export interface MainStructureItem {
+  id: number;
+  background: string;
+  name: string;
+}
+
+export interface UsageGuidelineItem {
+  id: number;
+  background: string;
+  text: string;
+  description: string;
+}
+
+export interface UsageGuidelines {
+  correct: UsageGuidelineItem[];
+  incorrect: UsageGuidelineItem[];
+}
+
+export interface PaletteUsage {
+  title: string | MDXRemoteSerializeResult;
+  description: string | MDXRemoteSerializeResult;
+  mainStructure: MainStructureItem[];
+  usageGuidelines: UsageGuidelines;
+}
+
+export interface ColorItems {
+  MDXComponent: string;
+  title: string | MDXRemoteSerializeResult;
+  desc: string | MDXRemoteSerializeResult;
+  img: string[];
+  palette: Palette;
+  Harmony: HarmonySection;
+  Gradient: HarmonySection;
+  paletteUsage: PaletteUsage;
+}
+
+export interface Color {
+  type: "color";
+  title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  items: MascotItems;
+  style: number;
+}
+
 // All
 export type Section =
   | Overview
@@ -229,7 +309,8 @@ export type Section =
   | Tagline
   | DesignPrinciples
   | Logo
-  | Mascot;
+  | Mascot
+  | Color;
 
 export interface ApiResponse {
   brand: Brand;

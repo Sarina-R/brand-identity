@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { title } from "process";
 
 const item1 = `
     <div className="flex flex-col md:flex-row gap-6">
@@ -370,6 +371,148 @@ const data = {
         title: "Mascot",
         desc: "MascotMascotMascotMascotMascot",
       },
+    },
+    {
+      type: "color",
+      title: "Color",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      items: {
+        MDXComponent: "",
+        title: "Color of Our Brand",
+        desc: "<p>Yellow is one of the most recognizable brand assets and the main color of the brand. Due to its consistent use in brand communications over the years, the audience easily identifies this color with Alibaba. Therefore, it was decided to use this color in this project as well to benefit from this capacity. Additionally, yellow, as the main color of the brand, should be used in all brand communications to have the greatest visual impact. This color generally has two main uses:</p><ul><li>First, as a background color in the design, covering the entire surface;</li><li>Second, as an accent color on a white background.</li></ul>",
+        img: [
+          "https://cdn.pixabay.com/photo/2025/03/31/15/18/mountains-9504950_640.jpg",
+          "https://gratisography.com/wp-content/uploads/2025/01/gratisography-dog-vacation-800x525.jpg",
+          "https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D",
+        ],
+        palette: {
+          title: "The Main Palette",
+          description:
+            "Alibaba’s main palette consists of yellow, orange, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
+          colors: {
+            primary: {
+              id: 1001,
+              hex: "#FDB813",
+              name: "Main Yellow",
+              shades: [
+                { id: 102, hex: "#FDC107", name: "Light Yellow" },
+                { id: 103, hex: "#FD9F06", name: "Medium Yellow" },
+                { id: 104, hex: "#FD8C05", name: "Dark Yellow" },
+              ],
+            },
+            secondary: {
+              id: 2002,
+              hex: "#F7941D",
+              name: "Main Orange",
+              shades: [
+                { id: 202, hex: "#F9A13A", name: "Light Orange" },
+                { id: 203, hex: "#F7870F", name: "Medium Orange" },
+                { id: 204, hex: "#D97718", name: "Dark Orange" },
+              ],
+            },
+            action: {
+              id: 3003,
+              hex: "#0077DB",
+              name: "Action Blue",
+              shades: [
+                { id: 302, hex: "#3391E5", name: "Light Blue" },
+                { id: 303, hex: "#0066B8", name: "Medium Blue" },
+                { id: 304, hex: "#005A9E", name: "Dark Blue" },
+              ],
+            },
+            complementary: {
+              id: 4004,
+              hex: "#000000",
+              name: "Black",
+              shades: [
+                { id: 402, hex: "#525252", name: "Gray" },
+                { id: 403, hex: "#8c8c8c", name: "Medium Gray" },
+                { id: 404, hex: "#bdbdbd", name: "Light Gray" },
+              ],
+            },
+          },
+        },
+        Harmony: {
+          title: "Harmony",
+          description: `There are three general combinations in using these colors:
+
+                - **Combination 1:** Yellow is the dominant color in the design, and we use white and black as complementary colors.  
+                - **Combination 2:** White is the dominant color, and we use yellow and black as complementary colors.  
+                - **Combination 3:** Black is the dominant color, and we use yellow and white as complementary colors.  
+
+                > **Note:** In brand communications, priority is given to using Combinations 1 and 2. Combination 3 is used sparingly and only in specific communication campaigns or environmental designs.
+                 `,
+          img: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/color-ratios-aae20c6c.svg",
+        },
+        Gradient: {
+          title: "Harmony",
+          img: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/color-gradient-8df2bb44.svg",
+          description: `There are three general combinations in using these colors:
+
+                - **Combination 1:** Yellow is the dominant color in the design, and we use white and black as complementary colors.  
+                - **Combination 2:** White is the dominant color, and we use yellow and black as complementary colors.  
+                - **Combination 3:** Black is the dominant color, and we use yellow and white as complementary colors.  
+
+                > **Note:** In brand communications, priority is given to using Combinations 1 and 2. Combination 3 is used sparingly and only in specific communication campaigns or environmental designs.
+                 `,
+        },
+        paletteUsage: {
+          title: "Color Usage in Design",
+          description:
+            "For better understanding, the color palette is used in the following ways.",
+          mainStructure: [
+            { id: 5001, background: "#FDB813", name: "Yellow Background" },
+            { id: 5002, background: "#FFFFFF", name: "White Background" },
+            { id: 5003, background: "#000000", name: "Black Background" },
+          ],
+          usageGuidelines: {
+            correct: [
+              {
+                id: 6001,
+                background: "#FDB813",
+                text: "#FFFFFF",
+                description: "Yellow background with white text",
+              },
+              {
+                id: 6002,
+                background: "#FFFFFF",
+                text: "#FDB813",
+                description: "White background with yellow text",
+              },
+              {
+                id: 6003,
+                background: "#000000",
+                text: "#FDB813",
+                description: "Black background with yellow text",
+              },
+            ],
+            incorrect: [
+              {
+                id: 7001,
+                background: "#FDB813",
+                text: "#000000",
+                description: "Yellow background with black text",
+              },
+              {
+                id: 7002,
+                background: "#000000",
+                text: "#FFFFFF",
+                description: "Black background with white text",
+              },
+              {
+                id: 7003,
+                background: "#FFFFFF",
+                text: "#000000",
+                description: "White background with black text",
+              },
+            ],
+          },
+        },
+      },
+      style: 1,
     },
   ],
 };
