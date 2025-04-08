@@ -408,6 +408,7 @@ const data = {
             primary: {
               id: 1001,
               hex: "#FDB813",
+              hexColor: "#000000",
               name: "Main Yellow",
               shades: [
                 { id: 102, hex: "#FDC107", name: "Light Yellow" },
@@ -418,6 +419,7 @@ const data = {
             secondary: {
               id: 2002,
               hex: "#F7941D",
+              hexColor: "#000000",
               name: "Main Orange",
               shades: [
                 { id: 202, hex: "#F9A13A", name: "Light Orange" },
@@ -428,6 +430,7 @@ const data = {
             action: {
               id: 3003,
               hex: "#0077DB",
+              hexColor: "#FFFFFF",
               name: "Action Blue",
               shades: [
                 { id: 302, hex: "#3391E5", name: "Light Blue" },
@@ -438,6 +441,7 @@ const data = {
             complementary: {
               id: 4004,
               hex: "#000000",
+              hexColor: "#FFFFFF",
               name: "Black",
               shades: [
                 { id: 402, hex: "#525252", name: "Gray" },

@@ -230,6 +230,7 @@ export interface ColorShade {
 export interface ColorWithShades {
   id: number;
   hex: string;
+  hexColor: string;
   name: string;
   shades: ColorShade[];
 }

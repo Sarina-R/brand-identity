@@ -3,11 +3,11 @@
 import { Serialized, serializeTextFields } from "@/lib/serializeTextFields";
 import { Color, ColorItems } from "@/app/type";
 import PaletteUsage from "../ColorSection/PaletteUsage";
-import Palette from "../ColorSection/Palette";
 import FlexComponent from "../ColorSection/FlexComponent";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Header from "../ColorSection/Header";
 import { useEffect, useState } from "react";
+import PaletteComponent from "../ColorSection/Palette";
 
 const ColorSection = ({
   section,
@@ -35,14 +35,18 @@ const ColorSection = ({
         section={section}
         primaryColor={primaryColor}
       />
+
+      {serializedItems?.palette && (
+        <PaletteComponent palette={serializedItems.palette} />
+      )}
+
       {serializedItems?.Harmony && (
         <FlexComponent data={serializedItems.Harmony} />
       )}
       {serializedItems?.Gradient && (
         <FlexComponent data={serializedItems.Gradient} />
       )}
-      {/* {serializedItems.palette && <Palette palette={serializedItems.palette} />}
-      {serializedItems.paletteUsage && <PaletteUsage usage={serializedItems.paletteUsage} />} */}
+      {/* {serializedItems?.paletteUsage && <PaletteUsage usage={serializedItems.paletteUsage} />} */}
     </div>
   );
 };
