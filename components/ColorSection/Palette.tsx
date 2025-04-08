@@ -36,12 +36,12 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
   const copyToClipboard = (hex: string) => {
     navigator.clipboard.writeText(hex);
     setCopiedHex(hex);
-    setTimeout(() => setCopiedHex(null), 2000); // Reset after 2 seconds
+    setTimeout(() => setCopiedHex(null), 2000);
   };
 
   return (
     <div className="">
-      <div className="container mx-auto px-6 py-12 md:py-16 overflow-hidden">
+      <div className="container mx-auto overflow-hidden">
         <h2 className="font-bold mb-4">
           {palette?.title && (
             <MDXRemote
@@ -60,7 +60,7 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl overflow-hidden hover:overflow-visible">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl sm:m-4 m-8 overflow-hidden hover:overflow-visible">
           {Object.values(palette.colors).map((color) => (
             <motion.div
               key={color.id}
@@ -72,7 +72,7 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
               onClick={() => copyToClipboard(color.hex)}
             >
               <div
-                className="h-40 w-full"
+                className="h-40 md:h-80 w-full"
                 style={{ backgroundColor: color.hex }}
               ></div>
 

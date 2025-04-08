@@ -13,7 +13,7 @@ const FlexComponent = ({ data }: { data: HarmonySection }) => {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="container mx-auto lg:flex flex-col-reverse lg:flex-row items-center gap-8 md:gap-12 px-6 py-12 md:py-16 overflow-hidden"
+        className="container mx-auto lg:flex flex-col-reverse lg:flex-row items-center gap-8 md:gap-12 overflow-hidden"
       >
         <div className="flex-1 space-y-6">
           <div className="text-3xl md:text-4xl font-bold">

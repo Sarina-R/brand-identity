@@ -29,7 +29,7 @@ const ColorSection = ({
   }, [section]);
 
   return (
-    <div>
+    <div className="px-2 md:px-6 lg:px-14 py-16 space-y-24 md:space-y-32">
       <Header
         serializedItems={serializedItems}
         section={section}

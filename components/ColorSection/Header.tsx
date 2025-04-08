@@ -34,7 +34,7 @@ const Header = ({
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="lg:flex flex-col-reverse md:flex-row items-center gap-10 px-6 py-12 md:py-16 overflow-hidden space-y-8"
+      className="lg:flex flex-col-reverse md:flex-row items-center gap-10 overflow-hidden space-y-8"
     >
       <div className="flex-1">
         <div className="text-3xl md:text-4xl font-bold mb-4">
