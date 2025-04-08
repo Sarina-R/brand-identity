@@ -242,14 +242,14 @@ export interface PaletteColors {
 }
 
 export interface Palette {
-  title: string;
-  description: string;
+  title: string | MDXRemoteSerializeResult;
+  description: string | MDXRemoteSerializeResult;
   colors: PaletteColors;
 }
 
 export interface HarmonySection {
-  title: string;
-  description: string;
+  title: string | MDXRemoteSerializeResult;
+  description: string | MDXRemoteSerializeResult;
   img?: string;
 }
 
