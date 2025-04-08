@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { title } from "process";
 
 const item1 = `
     <div className="flex flex-col md:flex-row gap-6">
