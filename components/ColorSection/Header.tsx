@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Color, ColorItems } from "@/app/type";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { Serialized } from "@/lib/serializeTextFields";
-import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
+import { useMDXComponents } from "@/mdx-component";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = ({
@@ -16,7 +16,7 @@ const Header = ({
   section: Color;
   primaryColor: string;
 }) => {
-  const mdxComponents1 = useMDXComponents({});
+  const mdxComponents = useMDXComponents({});
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -41,18 +41,18 @@ const Header = ({
           {serializedItems?.title && (
             <MDXRemote
               {...(serializedItems.title as MDXRemoteSerializeResult)}
-              components={mdxComponents1}
+              components={mdxComponents}
             />
           )}
         </div>
-        <p className="leading-relaxed text-neutral-700">
+        <div className="">
           {serializedItems?.desc && (
             <MDXRemote
               {...(serializedItems.desc as MDXRemoteSerializeResult)}
-              components={mdxComponents1}
+              components={mdxComponents}
             />
           )}
-        </p>
+        </div>
       </div>
 
       <div className="relative flex-1 h-72 md:h-96 rounded-3xl overflow-hidden shadow-lg">

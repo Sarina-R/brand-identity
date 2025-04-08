@@ -35,12 +35,12 @@ const ColorSection = ({
         section={section}
         primaryColor={primaryColor}
       />
-      {/* {serializedItems.Harmony && (
+      {serializedItems?.Harmony && (
         <FlexComponent data={serializedItems.Harmony} />
       )}
-      {serializedItems.Gradient && (
+      {serializedItems?.Gradient && (
         <FlexComponent data={serializedItems.Gradient} />
-      )} */}
+      )}
       {/* {serializedItems.palette && <Palette palette={serializedItems.palette} />}
       {serializedItems.paletteUsage && <PaletteUsage usage={serializedItems.paletteUsage} />} */}
     </div>

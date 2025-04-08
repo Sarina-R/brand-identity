@@ -1,5 +1,4 @@
 import type { MDXComponents } from "mdx/types";
-import { motion } from "framer-motion";
 
 interface MDXComponentProps {
   primaryColor?: string;
@@ -23,36 +22,25 @@ export function useMDXComponents({
   return {
     // Headings (h1 - h6)
     h1: ({ children }) => (
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+      <h1
         style={{ color: primaryColor }}
         className="text-4xl font-bold tracking-tight mb-4 dark:text-white"
       >
         {children}
-      </motion.h1>
+      </h1>
     ),
     h2: ({ children }) => (
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
+      <h2
         style={{ color: primaryColor }}
         className="text-3xl font-semibold mt-6 mb-3 dark:text-neutral-100"
       >
         {children}
-      </motion.h2>
+      </h2>
     ),
     h3: ({ children }) => (
-      <motion.h3
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-2xl font-medium mt-5 mb-2 dark:text-neutral-200"
-      >
+      <h3 className="text-2xl font-medium mt-5 mb-2 dark:text-neutral-200">
         {children}
-      </motion.h3>
+      </h3>
     ),
 
     // Paragraph
@@ -64,10 +52,7 @@ export function useMDXComponents({
 
     // Image
     img: (props) => (
-      <motion.img
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
+      <img
         whileHover={{ scale: 1.05 }}
         style={{ width: "100%", height: "auto" }}
         className="rounded-lg shadow-md transition-transform duration-300 my-4 dark:shadow-neutral-700"
@@ -77,157 +62,81 @@ export function useMDXComponents({
 
     // Code (inline)
     code: ({ children }) => (
-      <motion.code
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-sm px-2 py-1 rounded-md font-mono text-purple-600 dark:text-purple-400"
-      >
+      <code className="text-sm px-2 py-1 rounded-md font-mono text-purple-600 dark:text-purple-400">
         {children}
-      </motion.code>
+      </code>
     ),
 
     // Preformatted Code Block
     pre: ({ children }) => (
-      <motion.pre
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="bg-neutral-900 dark:bg-neutral-800 text-white p-4 rounded-lg overflow-x-auto my-4"
-      >
+      <pre className="bg-neutral-900 dark:bg-neutral-800 text-white p-4 rounded-lg overflow-x-auto my-4">
         {children}
-      </motion.pre>
+      </pre>
     ),
 
     // Blockquote
     blockquote: ({ children }) => (
-      <motion.blockquote
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
-        className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-4"
-      >
+      <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-4">
         {children}
-      </motion.blockquote>
+      </blockquote>
     ),
 
     // Lists (with nested list support)
     ul: ({ children }) => (
-      <motion.ul
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="list-disc pl-6 my-4 text-neutral-700 dark:text-neutral-300"
-      >
+      <ul className="list-disc pl-6 my-4 text-neutral-700 dark:text-neutral-300">
         {children}
-      </motion.ul>
+      </ul>
     ),
     ol: ({ children }) => (
-      <motion.ol
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="list-decimal pl-6 my-4 text-neutral-700 dark:text-neutral-300"
-      >
+      <ol className="list-decimal pl-6 my-4 text-neutral-700 dark:text-neutral-300">
         {children}
-      </motion.ol>
+      </ol>
     ),
     li: ({ children }) => (
-      <motion.li
-        initial={{ opacity: 0, x: -10 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.4 }}
-        className="mb-2 pl-1 [&_ul]:pl-4 [&_ol]:pl-4 [&_ul]:list-circle [&_ol]:list-[lower-roman] dark:[&_ul]:text-neutral-300 dark:[&_ol]:text-neutral-300"
-      >
+      <li className="mb-2 pl-1 [&_ul]:pl-4 [&_ol]:pl-4 [&_ul]:list-circle [&_ol]:list-[lower-roman] dark:[&_ul]:text-neutral-300 dark:[&_ol]:text-neutral-300">
         {children}
-      </motion.li>
+      </li>
     ),
 
     // Table (Full Support with Dark Mode)
     table: ({ children }) => (
-      <motion.table
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="w-full border-collapse my-6 border border-neutral-300 dark:border-neutral-700"
-      >
+      <table className="w-full border-collapse my-6 border border-neutral-300 dark:border-neutral-700">
         {children}
-      </motion.table>
+      </table>
     ),
     thead: ({ children }) => (
-      <motion.thead
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="bg-neutral-100 dark:bg-neutral-800"
-      >
-        {children}
-      </motion.thead>
+      <thead className="bg-neutral-100 dark:bg-neutral-800">{children}</thead>
     ),
     tbody: ({ children }) => (
       <tbody className="dark:text-neutral-300">{children}</tbody>
     ),
     tr: ({ children }) => (
-      <motion.tr
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        className="border-b border-neutral-200 dark:border-neutral-600"
-      >
+      <tr className="border-b border-neutral-200 dark:border-neutral-600">
         {children}
-      </motion.tr>
+      </tr>
     ),
     th: ({ children }) => (
-      <motion.th
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        className="px-4 py-2 text-left font-semibold text-neutral-700 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700"
-      >
+      <th className="px-4 py-2 text-left font-semibold text-neutral-700 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700">
         {children}
-      </motion.th>
+      </th>
     ),
     td: ({ children }) => (
-      <motion.td
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4 }}
-        className="px-4 py-2 text-neutral-600 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-700"
-      >
+      <td className="px-4 py-2 text-neutral-600 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-700">
         {children}
-      </motion.td>
+      </td>
     ),
 
     // Strong (bold) and Emphasis (italic)
     strong: ({ children }) => (
-      <motion.strong
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="font-bold dark:text-neutral-200"
-      >
-        {children}
-      </motion.strong>
+      <strong className="font-bold dark:text-neutral-200">{children}</strong>
     ),
     em: ({ children }) => (
-      <motion.em
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="italic dark:text-neutral-300"
-      >
-        {children}
-      </motion.em>
+      <em className="italic dark:text-neutral-300">{children}</em>
     ),
 
     // Horizontal Rule
     hr: () => (
-      <motion.hr
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="my-6 border-neutral-300 dark:border-neutral-600"
-      />
+      <hr className="my-6 border-neutral-300 dark:border-neutral-600" />
     ),
   };
 }

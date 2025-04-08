@@ -78,6 +78,18 @@ const item4 = `<div className="w-full md:px-8 space-y-16">
       </div>
     </div>`;
 
+const item5 = `<div className="mx-auto">
+      <p className=" text-lg leading-relaxed mb-4">
+        Yellow is one of the most recognizable brand assets and the main color of the brand. Due to its consistent use in brand communications over the years, the audience easily identifies this color with Alibaba. Therefore, it was decided to use this color in this project as well to benefit from this capacity. Additionally, yellow, as the main color of the brand, should be used in all brand communications to have the greatest visual impact. This color generally has two main uses:
+      </p>
+      <ul className="list-disc px-3">
+        <li>
+          First, as a background color in the <strong>design</strong>, covering the entire surface;
+        </li>
+        <li>Second, as an accent color on a white background.</li>
+      </ul>
+    </div>`;
+
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
@@ -382,7 +394,7 @@ const data = {
       items: {
         MDXComponent: "",
         title: "Color of Our Brand",
-        desc: "<p>Yellow is one of the most recognizable brand assets and the main color of the brand. Due to its consistent use in brand communications over the years, the audience easily identifies this color with Alibaba. Therefore, it was decided to use this color in this project as well to benefit from this capacity. Additionally, yellow, as the main color of the brand, should be used in all brand communications to have the greatest visual impact. This color generally has two main uses:</p><ul><li>First, as a background color in the design, covering the entire surface;</li><li>Second, as an accent color on a white background.</li></ul>",
+        desc: item5,
         img: [
           "https://cdn.pixabay.com/photo/2025/03/31/15/18/mountains-9504950_640.jpg",
           "https://gratisography.com/wp-content/uploads/2025/01/gratisography-dog-vacation-800x525.jpg",
