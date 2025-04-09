@@ -7,7 +7,7 @@ const PaletteUsage = ({ usage }: { usage: PaletteUsageType }) => {
   const mdxComponents = useMDXComponents({});
 
   return (
-    <div className="container mx-auto px-6 py-12 md:py-16">
+    <div className="container mx-auto">
       <h2 className="text-2xl font-bold mb-4">
         {typeof usage.title === "string" ? (
           usage.title
