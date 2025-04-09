@@ -1,5 +1,5 @@
 import { PaletteUsage as PaletteUsageType } from "@/app/type";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MDXRemote } from "next-mdx-remote";
 import { useMDXComponents } from "@/mdx-component";
 import { Check, X } from "lucide-react";
 
