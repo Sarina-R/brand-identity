@@ -10,36 +10,36 @@ interface TypographySectionProps {
 }
 
 const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
-  const { font } = section;
+  //   const { font } = section;
   const mdxComponent = useMDXComponents({});
   const mdxComponent1 = useMDXComponents1({});
 
   const [lastKey, setLastKey] = useState<string>("A");
 
-  useEffect(() => {
-    if (!font || !font.name) return;
+  //   useEffect(() => {
+  //     if (!font || !font.name) return;
 
-    const { name, weights, subsets } = font;
-    const formattedFontName = name.replace(/\s+/g, "+");
-    const weightsQuery = weights ? `wght@${weights.join(";")}` : "wght@400;700";
-    const subsetsQuery = subsets ? `&subset=${subsets.join(",")}` : "";
-    const fontUrl = `https://fonts.googleapis.com/css2?family=${formattedFontName}:${weightsQuery}${subsetsQuery}&display=swap`;
+  //     const { name, weights, subsets } = font;
+  //     const formattedFontName = name.replace(/\s+/g, "+");
+  //     const weightsQuery = weights ? `wght@${weights.join(";")}` : "wght@400;700";
+  //     const subsetsQuery = subsets ? `&subset=${subsets.join(",")}` : "";
+  //     const fontUrl = `https://fonts.googleapis.com/css2?family=${formattedFontName}:${weightsQuery}${subsetsQuery}&display=swap`;
 
-    const existingLink = document.querySelector(`link[href="${fontUrl}"]`);
-    if (!existingLink) {
-      const link = document.createElement("link");
-      link.href = fontUrl;
-      link.rel = "stylesheet";
-      document.head.appendChild(link);
-    }
+  //     const existingLink = document.querySelector(`link[href="${fontUrl}"]`);
+  //     if (!existingLink) {
+  //       const link = document.createElement("link");
+  //       link.href = fontUrl;
+  //       link.rel = "stylesheet";
+  //       document.head.appendChild(link);
+  //     }
 
-    return () => {
-      const link = document.querySelector(`link[href="${fontUrl}"]`);
-      if (link) {
-        document.head.removeChild(link);
-      }
-    };
-  }, [font]);
+  //     return () => {
+  //       const link = document.querySelector(`link[href="${fontUrl}"]`);
+  //       if (link) {
+  //         document.head.removeChild(link);
+  //       }
+  //     };
+  //   }, [font]);
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -69,12 +69,12 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
     };
   }, []);
 
-  const fontFamily = font && font.name ? font.name : "sans-serif";
+  //   const fontFamily = font && font.name ? font.name : "sans-serif";
 
   return (
     <section
       className="p-10 max-w-6xl mx-auto space-y-8"
-      style={{ fontFamily }}
+      //   style={{ fontFamily }}
     >
       <div className="mb-4 space-y-4 z-10 md:flex">
         <div className="sticky top-0 h-full flex-1 gap-6 py-6">
