@@ -264,7 +264,7 @@ export interface UsageGuidelineItem {
   id: number;
   background: string;
   text: string;
-  description: string;
+  description: string | MDXRemoteSerializeResult;
 }
 
 export interface UsageGuidelines {

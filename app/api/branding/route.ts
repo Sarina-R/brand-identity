@@ -479,37 +479,29 @@ const data = {
           description:
             "For better understanding, the color palette is used in the following ways.",
           mainStructure: [
-            { id: 5001, background: "#FDB813", name: "Yellow Background" },
-            { id: 5002, background: "#FFFFFF", name: "White Background" },
-            { id: 5003, background: "#000000", name: "Black Background" },
+            {
+              id: 5001,
+              background: "#000000",
+              name: "White and yellow text on a black background",
+            },
+            {
+              id: 5002,
+              background: "#FDB813",
+              name: "Black text on a yellow background",
+            },
+            {
+              id: 5003,
+              background: "#FFFFFF",
+              name: "Black text on a white background",
+            },
           ],
           usageGuidelines: {
             correct: [
-              {
-                id: 6001,
-                background: "#FDB813",
-                text: "#FFFFFF",
-                description: "Yellow background with white text",
-              },
-              {
-                id: 6002,
-                background: "#FFFFFF",
-                text: "#FDB813",
-                description: "White background with yellow text",
-              },
               {
                 id: 6003,
                 background: "#000000",
                 text: "#FDB813",
                 description: "Black background with yellow text",
-              },
-            ],
-            incorrect: [
-              {
-                id: 7001,
-                background: "#FDB813",
-                text: "#000000",
-                description: "Yellow background with black text",
               },
               {
                 id: 7002,
@@ -522,6 +514,26 @@ const data = {
                 background: "#FFFFFF",
                 text: "#000000",
                 description: "White background with black text",
+              },
+              {
+                id: 7001,
+                background: "#FDB813",
+                text: "#000000",
+                description: "Yellow background with black text",
+              },
+            ],
+            incorrect: [
+              {
+                id: 6001,
+                background: "#FDB813",
+                text: "#FFFFFF",
+                description: "Yellow background with white text",
+              },
+              {
+                id: 6002,
+                background: "#FFFFFF",
+                text: "#FDB813",
+                description: "White background with yellow text",
               },
             ],
           },

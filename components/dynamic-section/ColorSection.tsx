@@ -1,12 +1,11 @@
 "use client";
 
-import { Serialized, serializeTextFields } from "@/lib/serializeTextFields";
+import { useEffect, useState } from "react";
 import { Color, ColorItems } from "@/app/type";
+import { Serialized, serializeTextFields } from "@/lib/serializeTextFields";
 import PaletteUsage from "../ColorSection/PaletteUsage";
 import FlexComponent from "../ColorSection/FlexComponent";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Header from "../ColorSection/Header";
-import { useEffect, useState } from "react";
 import PaletteComponent from "../ColorSection/Palette";
 
 const ColorSection = ({
@@ -46,7 +45,9 @@ const ColorSection = ({
       {serializedItems?.Gradient && (
         <FlexComponent data={serializedItems.Gradient} />
       )}
-      {/* {serializedItems?.paletteUsage && <PaletteUsage usage={serializedItems.paletteUsage} />} */}
+      {serializedItems?.paletteUsage && (
+        <PaletteUsage usage={serializedItems.paletteUsage} />
+      )}
     </div>
   );
 };
