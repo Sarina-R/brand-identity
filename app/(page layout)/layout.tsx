@@ -1,12 +1,13 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { useMDXComponents1 } from "@/mdx-component";
 import { useData } from "@/hooks/DataProvider";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useEffect } from "react";
+import { Font } from "@/app/type";
 
 export default function RootLayout({
   children,
@@ -16,6 +17,34 @@ export default function RootLayout({
   const { data, loading } = useData();
   const pathname = usePathname();
   const mdxComponents = useMDXComponents1({});
+
+  const font: Font | undefined = data?.brand?.font;
+  const fontFamily = font && font.name ? font.name : "sans-serif";
+
+  useEffect(() => {
+    if (loading || !data || !font || !font.name) return;
+
+    const { name, weights, subsets } = font;
+    const formattedFontName = name.replace(/\s+/g, "+");
+    const weightsQuery = weights ? `wght@${weights.join(";")}` : "wght@400;700";
+    const subsetsQuery = subsets ? `&subset=${subsets.join(",")}` : "";
+    const fontUrl = `https://fonts.googleapis.com/css2?family=${formattedFontName}:${weightsQuery}${subsetsQuery}&display=swap`;
+
+    const existingLink = document.querySelector(`link[href="${fontUrl}"]`);
+    if (!existingLink) {
+      const link = document.createElement("link");
+      link.href = fontUrl;
+      link.rel = "stylesheet";
+      document.head.appendChild(link);
+    }
+
+    return () => {
+      const link = document.querySelector(`link[href="${fontUrl}"]`);
+      if (link) {
+        document.head.removeChild(link);
+      }
+    };
+  }, [data, loading, font]);
 
   useEffect(() => {
     async function serializeSectionContent() {
@@ -57,7 +86,7 @@ export default function RootLayout({
       return (
         <div
           className="relative min-h-[50vh] flex items-center justify-center rounded-xl px-10 py-5"
-          style={{ backgroundColor: primaryColor }}
+          style={{ backgroundColor: primaryColor, fontFamily }}
         >
           <h2 className="text-2xl font-bold text-black">No route match</h2>
         </div>
@@ -79,79 +108,81 @@ export default function RootLayout({
       case "typography":
       case "identity_in_use":
         return (
-          <div
-            className={`relative min-h-[50vh] md:flex flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden ${
-              hasMedia ? "block" : "md:flex"
-            }`}
-            style={{ backgroundColor: primaryColor }}
-          >
-            {/* Pattern */}
-            {section?.pattern && (
-              <motion.div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: `url(${section.pattern})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              />
-            )}
-
-            {/* Text Content */}
+          <div style={{ fontFamily }}>
             <div
-              className={`relative text-left text-black ${
-                hasMedia
-                  ? "bottom-1 lg:bottom-[-5rem] md:bottom-[-7rem]"
-                  : "md:bottom-[-5rem] bottom-[-14rem]"
+              className={`relative min-h-[50vh] md:flex flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden ${
+                hasMedia ? "block" : "md:flex"
               }`}
+              style={{ backgroundColor: primaryColor }}
             >
-              <h1 className="font-bold md:font-black text-display-lg lg:text-4xl text-3xl m-0">
-                {section?.title && (
-                  <MDXRemote
-                    {...(section.title as MDXRemoteSerializeResult)}
-                    components={mdxComponents}
-                  />
-                )}
-              </h1>
-              <h5 className="text-display-sm md:text-display-md m-0 mt-2 lg:mt-4">
-                {section?.description && (
-                  <MDXRemote
-                    {...(section.description as MDXRemoteSerializeResult)}
-                    components={mdxComponents}
-                  />
-                )}
-              </h5>
-            </div>
+              {/* Pattern */}
+              {section?.pattern && (
+                <motion.div
+                  className="absolute inset-0 opacity-10"
+                  style={{
+                    backgroundImage: `url(${section.pattern})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                />
+              )}
 
-            {/* Media */}
-            {hasMedia && (
-              <div className="relative flex right-0 w-full justify-end">
-                {section?.video ? (
-                  <motion.video
-                    src={section.video}
-                    autoPlay
-                    loop
-                    muted
-                    className="max-w-full h-auto rounded-lg shadow-lg max-h-[50vh]"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                  />
-                ) : section?.img ? (
-                  <motion.img
-                    src={section.img}
-                    alt="Overview Image"
-                    className="max-w-full h-auto rounded-lg shadow-lg max-h-[50vh]"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                  />
-                ) : null}
+              {/* Text Content */}
+              <div
+                className={`relative text-left text-black ${
+                  hasMedia
+                    ? "bottom-1 lg:bottom-[-5rem] md:bottom-[-7rem]"
+                    : "md:bottom-[-5rem] bottom-[-14rem]"
+                }`}
+              >
+                <h1 className="font-bold md:font-black text-display-lg lg:text-4xl text-3xl m-0">
+                  {section?.title && (
+                    <MDXRemote
+                      {...(section.title as MDXRemoteSerializeResult)}
+                      components={mdxComponents}
+                    />
+                  )}
+                </h1>
+                <h5 className="text-display-sm md:text-display-md m-0 mt-2 lg:mt-4">
+                  {section?.description && (
+                    <MDXRemote
+                      {...(section.description as MDXRemoteSerializeResult)}
+                      components={mdxComponents}
+                    />
+                  )}
+                </h5>
               </div>
-            )}
+
+              {/* Media */}
+              {hasMedia && (
+                <div className="relative flex right-0 w-full justify-end">
+                  {section?.video ? (
+                    <motion.video
+                      src={section.video}
+                      autoPlay
+                      loop
+                      muted
+                      className="max-w-full h-auto rounded-lg shadow-lg max-h-[50vh]"
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 1, ease: "easeOut" }}
+                    />
+                  ) : section?.img ? (
+                    <motion.img
+                      src={section.img}
+                      alt="Overview Image"
+                      className="max-w-full h-auto rounded-lg shadow-lg max-h-[50vh]"
+                      initial={{ opacity: 0, x: 50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 1, ease: "easeOut" }}
+                    />
+                  ) : null}
+                </div>
+              )}
+            </div>
           </div>
         );
 
@@ -159,7 +190,7 @@ export default function RootLayout({
         return (
           <div
             className="relative min-h-[50vh] flex items-center justify-center rounded-xl px-10 py-5"
-            style={{ backgroundColor: primaryColor }}
+            style={{ backgroundColor: primaryColor, fontFamily }}
           >
             <h2 className="text-2xl font-bold text-black">No route match</h2>
           </div>
@@ -168,7 +199,7 @@ export default function RootLayout({
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8" style={{ fontFamily }}>
       {renderSectionContent()}
       {children}
       <footer className="bg-neutral-100 dark:bg-neutral-900 h-20 rounded-2xl font-bold px-4 items-center w-full flex">

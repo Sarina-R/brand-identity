@@ -5,6 +5,7 @@ export interface Brand {
   name: string;
   primaryColor: string;
   logo: string;
+  font: Font;
 }
 
 // Menu

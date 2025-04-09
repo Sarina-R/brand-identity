@@ -94,7 +94,11 @@ const data = {
     name: "Fira Cup 2025 Tehran",
     primaryColor: "#fdb713",
     logo: "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
-    font: "Underdog",
+    font: {
+      name: "Underdog",
+      weights: [400, 500, 700],
+      subsets: ["latin", "latin-ext"],
+    },
   },
   menu: {
     Introduction: {
