@@ -315,12 +315,6 @@ export interface TypographyItems {
   MDXComponent: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
-  img: string[];
-  palette: Palette;
-  Harmony?: HarmonySection;
-  Gradient?: HarmonySection;
-  paletteUsage?: PaletteUsage;
-  styles: FontStyles[];
 }
 
 export interface Font {

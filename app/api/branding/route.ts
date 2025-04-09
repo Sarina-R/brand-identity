@@ -94,6 +94,7 @@ const data = {
     name: "Fira Cup 2025 Tehran",
     primaryColor: "#fdb713",
     logo: "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
+    font: "Underdog",
   },
   menu: {
     Introduction: {
@@ -554,36 +555,9 @@ const data = {
         subsets: ["latin", "latin-ext"],
       },
       items: {
-        MDXComponent: item3,
+        MDXComponent: "",
         title: "Typography",
-        desc: "TypographyTypographyTypographyTypographyTypography",
-        styles: [
-          {
-            label: "Heading 1",
-            tag: "h1",
-            fontSize: "48px",
-            fontWeight: 700,
-            lineHeight: "1.2",
-            sampleText: "This is Heading 1",
-          },
-          {
-            label: "Heading 2",
-            tag: "h2",
-            fontSize: "36px",
-            fontWeight: 500,
-            lineHeight: "1.3",
-            sampleText: "This is Heading 2",
-          },
-          {
-            label: "Paragraph",
-            tag: "p",
-            fontSize: "16px",
-            fontWeight: 400,
-            lineHeight: "1.6",
-            sampleText:
-              "This is a sample paragraph text to demonstrate the body typography style.",
-          },
-        ],
+        desc: "We use a custom font for readability **andelegance** to enhance brand identity across allcommunication channels.",
       },
     },
   ],
