@@ -34,7 +34,7 @@ const FlexComponent = ({ data }: { data: HarmonySection }) => {
           </div>
         </div>
 
-        <div className="flex-1 w-full max-w-md lg:max-w-lg">
+        <div className="flex-1 w-full max-w-md lg:max-w-lg items-center mx-auto">
           <div className="relative rounded-3xl overflow-hidden aspect-w-4 aspect-h-3">
             <AnimatePresence>
               <motion.img

@@ -7,6 +7,8 @@ import PaletteUsage from "../ColorSection/PaletteUsage";
 import FlexComponent from "../ColorSection/FlexComponent";
 import Header from "../ColorSection/Header";
 import PaletteComponent from "../ColorSection/Palette";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { useMDXComponents } from "@/mdx-component";
 
 const ColorSection = ({
   section,
@@ -15,6 +17,8 @@ const ColorSection = ({
   section: Color;
   primaryColor: string;
 }) => {
+  const mdxComponent = useMDXComponents({});
+
   const [serializedItems, setSerializedItems] =
     useState<Serialized<ColorItems | undefined>>();
 
@@ -47,6 +51,13 @@ const ColorSection = ({
       )}
       {serializedItems?.paletteUsage && (
         <PaletteUsage usage={serializedItems.paletteUsage} />
+      )}
+
+      {section.items.MDXComponent && (
+        <MDXRemote
+          {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
+          components={mdxComponent}
+        />
       )}
     </div>
   );
