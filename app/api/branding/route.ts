@@ -541,6 +541,51 @@ const data = {
       },
       style: 1,
     },
+    {
+      type: "typography",
+      title: "Typography",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      font: {
+        name: "Underdog",
+        weights: [400, 500, 700],
+        subsets: ["latin", "latin-ext"],
+      },
+      items: {
+        MDXComponent: item3,
+        title: "Typography",
+        desc: "TypographyTypographyTypographyTypographyTypography",
+        styles: [
+          {
+            label: "Heading 1",
+            tag: "h1",
+            fontSize: "48px",
+            fontWeight: 700,
+            lineHeight: "1.2",
+            sampleText: "This is Heading 1",
+          },
+          {
+            label: "Heading 2",
+            tag: "h2",
+            fontSize: "36px",
+            fontWeight: 500,
+            lineHeight: "1.3",
+            sampleText: "This is Heading 2",
+          },
+          {
+            label: "Paragraph",
+            tag: "p",
+            fontSize: "16px",
+            fontWeight: 400,
+            lineHeight: "1.6",
+            sampleText:
+              "This is a sample paragraph text to demonstrate the body typography style.",
+          },
+        ],
+      },
+    },
   ],
 };
 

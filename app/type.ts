@@ -301,6 +301,46 @@ export interface Color {
   style: number;
 }
 
+// Typography
+export interface FontStyles {
+  label: string;
+  tag: string;
+  fontSize: string;
+  fontWeight: number;
+  lineHeight: string;
+  sampleText: string;
+}
+
+export interface TypographyItems {
+  MDXComponent: string | MDXRemoteSerializeResult;
+  title: string | MDXRemoteSerializeResult;
+  desc: string | MDXRemoteSerializeResult;
+  img: string[];
+  palette: Palette;
+  Harmony?: HarmonySection;
+  Gradient?: HarmonySection;
+  paletteUsage?: PaletteUsage;
+  styles: FontStyles[];
+}
+
+export interface Font {
+  name: string;
+  weights: number[];
+  subsets: string[];
+}
+
+export interface Typography {
+  type: "typography";
+  title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  items: TypographyItems;
+  font: Font;
+  style: number;
+}
+
 // All
 export type Section =
   | Overview
@@ -311,7 +351,8 @@ export type Section =
   | DesignPrinciples
   | Logo
   | Mascot
-  | Color;
+  | Color
+  | Typography;
 
 export interface ApiResponse {
   brand: Brand;

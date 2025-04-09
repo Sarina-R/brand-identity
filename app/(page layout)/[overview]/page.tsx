@@ -10,6 +10,7 @@ import TaglineSection from "@/components/dynamic-section/TaglineSection";
 import DesignPrinciplesSection from "@/components/dynamic-section/DesignPrinciplesSection";
 import LogoSection from "@/components/dynamic-section/LogoSection";
 import ColorSection from "@/components/dynamic-section/ColorSection";
+import TypographySection from "@/components/dynamic-section/TypographySection";
 
 const Page = () => {
   const { data, loading } = useData();
@@ -76,8 +77,8 @@ const Page = () => {
             primaryColor={data.brand.primaryColor}
           />
         );
-      // case "typography":
-      //   return <div>Typography Section (To be implemented)</div>;
+      case "typography":
+        return <TypographySection key={section.type} section={section} />;
       // case "identity_in_use":
       //   return <div>Identity In Use Section (To be implemented)</div>;
       default:
