@@ -19,7 +19,7 @@ export default function RootLayout({
   const mdxComponents = useMDXComponents1({});
 
   const font: Font | undefined = data?.brand?.font;
-  const fontFamily = font && font.name ? font.name : "sans-serif";
+  const fontFamily = font && font.name ? font.name : "roboto";
 
   useEffect(() => {
     if (loading || !data || !font || !font.name) return;
