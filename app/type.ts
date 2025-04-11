@@ -312,10 +312,22 @@ export interface FontStyles {
   sampleText: string;
 }
 
+export interface FontFeatureComponent {
+  text: string | MDXRemoteSerializeResult;
+  color: string;
+  bg: string;
+}
+
 export interface TypographyItems {
   MDXComponent: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
+  fontFeatureComponent: {
+    title: string | MDXRemoteSerializeResult;
+    desc: string | MDXRemoteSerializeResult;
+    componentItems: FontFeatureComponent[];
+  };
+  principlesMDX: string | MDXRemoteSerializeResult;
 }
 
 export interface Font {
