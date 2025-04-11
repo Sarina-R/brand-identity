@@ -312,6 +312,12 @@ export interface FontStyles {
   sampleText: string;
 }
 
+export interface WightsComponentItems {
+  title: string | MDXRemoteSerializeResult;
+  desc: string | MDXRemoteSerializeResult;
+  sampleText: string | MDXRemoteSerializeResult;
+}
+
 export interface FontFeatureComponent {
   text: string | MDXRemoteSerializeResult;
   color: string;
@@ -328,6 +334,7 @@ export interface TypographyItems {
     componentItems: FontFeatureComponent[];
   };
   principlesMDX: string | MDXRemoteSerializeResult;
+  wights: WightsComponentItems;
 }
 
 export interface Font {

@@ -651,6 +651,14 @@ const data = {
           ],
         },
         principlesMDX: item6,
+        wights: {
+          title: "Weights",
+          desc: `A regular, thin weight that we use for body text and two heavy, black weights that we use for headings.<br/>
+                Each of these weights is carefully designed for use in specific situations and applications. Therefore, it is necessary to pay attention to communication considerations when using them.<br/>
+                Specifically, we need to know what message will be conveyed through what medium, to what audience, and more importantly, in what order the hierarchy of message and content is designed.
+                `,
+          sampleText: "Some Sample Text",
+        },
       },
     },
   ],
