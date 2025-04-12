@@ -1,4 +1,3 @@
-// file: components/RootLayout.tsx
 "use client";
 
 import { useEffect } from "react";
@@ -9,6 +8,7 @@ import { useData } from "@/hooks/DataProvider";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Font } from "@/app/type";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function RootLayout({
   children,
@@ -47,8 +47,16 @@ export default function RootLayout({
     };
   }, [data, loading, font]);
 
-  if (loading || !data) return <div>Loading...</div>;
-
+  if (loading || !data) {
+    return (
+      <div className="space-y-6 px-10 py-5">
+        <Skeleton className="h-10 w-1/3" />
+        <Skeleton className="h-6 w-2/3" />
+        <Skeleton className="h-[200px] w-full rounded-xl" />
+        <Skeleton className="h-20 w-full rounded-2xl" />
+      </div>
+    );
+  }
   const { primaryColor } = data.brand;
 
   const menuItems = Object.values(data.menu).flatMap((menu) => menu.items);
