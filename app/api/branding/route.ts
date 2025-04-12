@@ -160,18 +160,6 @@ const item4 = `<div className="w-full lg:px-8 space-y-16">
       </div>
     </div>`;
 
-const item5 = `<div className="mx-auto">
-      <p className=" text-lg leading-relaxed mb-4">
-        Yellow is one of the most recognizable brand assets and the main color of the brand. Due to its consistent use in brand communications over the years, the audience easily identifies this color with Alibaba. Therefore, it was decided to use this color in this project as well to benefit from this capacity. Additionally, yellow, as the main color of the brand, should be used in all brand communications to have the greatest visual impact. This color generally has two main uses:
-      </p>
-      <ul className="list-disc px-3">
-        <li>
-          First, as a background color in the <strong>design</strong>, covering the entire surface;
-        </li>
-        <li>Second, as an accent color on a white background.</li>
-      </ul>
-    </div>`;
-
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
@@ -501,7 +489,7 @@ const data = {
       items: {
         MDXComponent: "",
         title: "Color of Our Brand",
-        desc: item5,
+        desc: `E6EBEAOur color palette draws inspiration from nature, resultingin a fresh and vibrant aesthetic. It is imperative to applythese colors consistently across all platforms to upholdbrand cohesion.`,
         img: [
           "https://cdn.pixabay.com/photo/2025/03/31/15/18/mountains-9504950_640.jpg",
           "https://gratisography.com/wp-content/uploads/2025/01/gratisography-dog-vacation-800x525.jpg",
@@ -523,17 +511,17 @@ const data = {
                 { id: 104, hex: "#FD8C05", name: "Dark Yellow" },
               ],
             },
-            secondary: {
-              id: 2002,
-              hex: "#F7941D",
-              hexColor: "#000000",
-              name: "Main Orange",
-              shades: [
-                { id: 202, hex: "#F9A13A", name: "Light Orange" },
-                { id: 203, hex: "#F7870F", name: "Medium Orange" },
-                { id: 204, hex: "#D97718", name: "Dark Orange" },
-              ],
-            },
+            // secondary: {
+            //   id: 2002,
+            //   hex: "#F7941D",
+            //   hexColor: "#000000",
+            //   name: "Main Orange",
+            //   shades: [
+            //     { id: 202, hex: "#F9A13A", name: "Light Orange" },
+            //     { id: 203, hex: "#F7870F", name: "Medium Orange" },
+            //     { id: 204, hex: "#D97718", name: "Dark Orange" },
+            //   ],
+            // },
             action: {
               id: 3003,
               hex: "#0077DB",
@@ -551,9 +539,9 @@ const data = {
               hexColor: "#FFFFFF",
               name: "Black",
               shades: [
-                { id: 402, hex: "#525252", name: "neutral" },
-                { id: 403, hex: "#8c8c8c", name: "Medium neutral" },
-                { id: 404, hex: "#bdbdbd", name: "Light neutral" },
+                // { id: 402, hex: "#525252", name: "neutral" },
+                { id: 403, hex: "#E6EBEA", name: "Medium neutral" },
+                { id: 404, hex: "#FFFFFF", name: "Light neutral" },
               ],
             },
           },

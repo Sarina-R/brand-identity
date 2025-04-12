@@ -39,6 +39,14 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
     setTimeout(() => setCopiedHex(null), 2000);
   };
 
+  const colorCount = Object.values(palette.colors).length;
+  const gridColsClass =
+    colorCount === 2
+      ? "grid-cols-1 sm:grid-cols-2"
+      : colorCount === 3
+      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+      : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+
   return (
     <div className="">
       <div className="container mx-auto overflow-hidden">
@@ -60,7 +68,9 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl sm:m-4 m-8 overflow-hidden hover:overflow-visible">
+        <div
+          className={`grid ${gridColsClass} rounded-2xl sm:m-4 m-8 overflow-hidden hover:overflow-visible`}
+        >
           {Object.values(palette.colors).map((color) => (
             <motion.div
               key={color.id}
