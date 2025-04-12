@@ -1,6 +1,44 @@
 import { NextResponse } from "next/server";
-import lightBg from "@/assets/light-background/nextjs-logotype-light-background.svg";
-import darkBg from "@/assets/dark-background/nextjs-logotype-dark-background.png";
+import lightBg from "@/public/assets/light-background/nextjs-logotype-light-background.svg";
+import darkBg from "@/public/assets/dark-background/nextjs-logotype-dark-background.png";
+
+const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
+      <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(3).png"
+          alt="Vision Icon"
+          className="w-20 h-20 mx-auto mb-3"
+        />
+        <h2 className="text-2xl font-bold mb-4">Vision</h2>
+        <p className="leading-relaxed text-sm">
+          To be the leading global stage for robotics and artificial intelligence, shaping a world where technological innovation transforms industries, enriches lives, and fosters sustainable progress for humanity.
+        </p>
+      </div>
+
+      <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(2).png"
+          alt="Mission Icon"
+          className="w-20 h-20 mx-auto mb-3"
+        />
+        <h2 className="text-2xl font-bold mb-4">Mission</h2>
+        <p className="leading-relaxed text-sm">
+          To inspire and empower the global robotics community by creating a dynamic platform for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics can achieve for a better future.
+        </p>
+      </div>
+
+      <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(1).png"
+          alt="Target Icon"
+          className="w-20 h-20 mx-auto mb-3"
+        />
+        <h2 className="text-2xl font-bold mb-4">Target</h2>
+        <p className="leading-relaxed text-sm">
+          Develop robust relationships with customers across diverse market segments, encompassing individual consumers and beyond.
+        </p>
+      </div>
+    </div>`;
 
 const item1 = `
     <div className="flex flex-col md:flex-row gap-6">
@@ -97,7 +135,7 @@ const data = {
     primaryColor: "#fdb713",
     logo: "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
     font: {
-      name: "Underdog",
+      name: "Poppins",
       weights: [400, 500, 700],
       subsets: ["latin", "latin-ext"],
     },
@@ -164,10 +202,12 @@ const data = {
       img: "",
       video: "",
       items: {
-        MDXComponent: item1,
+        MDXComponent: BrandIdentity,
         title: "What **leads** us to the idea of dynamic identity:",
-        items: ["item1", "item2", "item3", "item4"],
-        desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
+        items: ["Vision", "Mission", "Target"],
+        desc: `FIRA CUP 2025 represents global innovation in robotics and AI, uniting
+              visionaries to challenge boundaries and inspire progress. It’s a platform where
+              creativity meets technology, shaping the future of robotics.`,
       },
 
       style: 1,
@@ -582,7 +622,7 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       font: {
-        name: "Underdog",
+        name: "Poppins",
         weights: [400, 500, 700],
         subsets: ["latin", "latin-ext"],
       },

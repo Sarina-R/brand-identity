@@ -24,7 +24,7 @@ export function useMDXComponents({
     h1: ({ children }) => (
       <h1
         style={{ color: primaryColor }}
-        className="text-4xl font-bold tracking-tight mb-4 dark:text-white"
+        className="text-4xl font-bold tracking-tight dark:text-white"
       >
         {children}
       </h1>
@@ -45,7 +45,7 @@ export function useMDXComponents({
 
     // Paragraph
     p: ({ children }) => (
-      <p className="text-base leading-relaxed text-neutral-700 dark:text-neutral-300 mb-4">
+      <p className="leading-relaxed text-neutral-700 dark:text-neutral-300 mb-4">
         {children}
       </p>
     ),
