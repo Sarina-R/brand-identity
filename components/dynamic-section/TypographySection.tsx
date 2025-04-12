@@ -3,22 +3,12 @@
 import { useEffect, useState } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import { Typography } from "@/app/type";
+import { Typography, TypographyPrinciplesSection } from "@/app/type";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 
 interface TypographySectionProps {
   section: Typography;
 }
-
-// const weightMap: Record<number, string> = {
-//   300: "Light",
-//   400: "Regular",
-//   500: "Medium",
-//   600: "SemiBold",
-//   700: "Bold",
-//   800: "ExtraBold",
-//   900: "Black",
-// };
 
 const sampleText = "Some Sample Text";
 
@@ -30,11 +20,10 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
   const [serializedItems, setSerializedItems] = useState<
     { mdx: MDXRemoteSerializeResult; bg: string; color: string }[]
   >([]);
+
   const [fontFeatureTitle, setFontFeatureTitle] =
     useState<MDXRemoteSerializeResult | null>(null);
   const [fontFeatureDesc, setFontFeatureDesc] =
-    useState<MDXRemoteSerializeResult | null>(null);
-  const [principlesMDX, setPrinciplesMDX] =
     useState<MDXRemoteSerializeResult | null>(null);
   const [weightsTitle, setWeightsTitle] =
     useState<MDXRemoteSerializeResult | null>(null);
@@ -48,6 +37,14 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
   );
   const [customMDXComponent, setCustomMDXComponent] =
     useState<MDXRemoteSerializeResult | null>(null);
+
+  const [principlesTitle, setPrinciplesTitle] =
+    useState<MDXRemoteSerializeResult | null>(null);
+  const [principlesDesc, setPrinciplesDesc] =
+    useState<MDXRemoteSerializeResult | null>(null);
+  const [principlesSections, setPrinciplesSections] = useState<
+    TypographyPrinciplesSection[]
+  >([]);
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -77,22 +74,47 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
 
     const serializeAll = async () => {
       const { items } = section;
+
+      setMainTitle(await serializeMDX(items.title));
+      setMainDesc(await serializeMDX(items.desc));
+
+      setFontFeatureTitle(await serializeMDX(items.fontFeatureComponent.title));
+      setFontFeatureDesc(await serializeMDX(items.fontFeatureComponent.desc));
+
       const serializedFontFeatures = await Promise.all(
         items.fontFeatureComponent.componentItems.map(async (item) => ({
           mdx: await serializeMDX(item.text),
-          bg: item.bg || "#fff",
-          color: item.color || "#000",
+          bg: item.bg,
+          color: item.color,
         }))
       );
-
       setSerializedItems(serializedFontFeatures);
-      setFontFeatureTitle(await serializeMDX(items.fontFeatureComponent.title));
-      setFontFeatureDesc(await serializeMDX(items.fontFeatureComponent.desc));
-      setPrinciplesMDX(await serializeMDX(items.principlesMDX));
+
       setWeightsTitle(await serializeMDX(items.wights.title));
       setWeightsDesc(await serializeMDX(items.wights.desc));
-      setMainTitle(await serializeMDX(items.title));
-      setMainDesc(await serializeMDX(items.desc));
+
+      setPrinciplesTitle(await serializeMDX(items.typographyPrinciples.title));
+      setPrinciplesDesc(
+        await serializeMDX(items.typographyPrinciples.description)
+      );
+
+      const sections = await Promise.all(
+        items.typographyPrinciples.section.map(async (s) => {
+          const subtitle = await serializeMDX(s.subtitle);
+          const content = await serializeMDX(s.content);
+          const examples = await Promise.all(
+            s.examples.map(async (example) => ({
+              label: example.label,
+              status: example.status,
+              mdx: example.mdx ? await serializeMDX(example.mdx) : null,
+              img: example.img,
+            }))
+          );
+          return { subtitle, content, examples };
+        })
+      );
+      setPrinciplesSections(sections);
+
       if (typeof items.MDXComponent !== "string") {
         setCustomMDXComponent(await serializeMDX(items.MDXComponent));
       }
@@ -105,16 +127,8 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
     <section className="p-4 md:p-10 max-w-6xl mx-auto space-y-28 mt-12">
       <div className="lg:flex md:space-x-8 space-y-10 lg:space-y-0 gap-32">
         <div className="flex-1 space-y-4 lg:sticky top-5 h-full">
-          {mainTitle && (
-            <div className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
-              <MDXRemote {...mainTitle} components={mdxComponent1} />
-            </div>
-          )}
-          {mainDesc && (
-            <div className="text-neutral-700 dark:text-neutral-300">
-              <MDXRemote {...mainDesc} components={mdxComponent1} />
-            </div>
-          )}
+          {mainTitle && <MDXRemote {...mainTitle} components={mdxComponent1} />}
+          {mainDesc && <MDXRemote {...mainDesc} components={mdxComponent1} />}
         </div>
         <div className="flex-1 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
           <p className="text-9xl font-bold">{lastKey}</p>
@@ -125,7 +139,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       <div className="space-y-12">
         <div className="lg:flex justify-between gap-32">
           {fontFeatureTitle && (
-            <div className="text-xl font-bold lg:sticky top-5 h-full">
+            <div className="text-xl font-bold">
               <MDXRemote {...fontFeatureTitle} components={mdxComponent1} />
             </div>
           )}
@@ -135,7 +149,6 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
             </div>
           )}
         </div>
-
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {serializedItems.map((item, index) => (
             <div
@@ -152,17 +165,9 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       <div className="flex flex-col lg:flex-row gap-12 rounded-2xl">
         <div className="space-y-4 flex-1 border p-10 px-8 m-auto rounded-2xl w-full">
           {section.font.weights.map((weight) => (
-            <div key={weight} className="flex items-center justify-center">
-              {/* <p className="w-24 text-lg" style={{ fontWeight: weight }}>
-                {weightMap[weight] || weight}
-              </p> */}
-              <p
-                className="text-2xl lg:sticky top-5 h-full"
-                style={{ fontWeight: weight }}
-              >
-                {sampleText}
-              </p>
-            </div>
+            <p key={weight} className="text-2xl" style={{ fontWeight: weight }}>
+              {sampleText}
+            </p>
           ))}
         </div>
         <div className="flex-1 text-sm leading-relaxed">
@@ -177,11 +182,85 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
         </div>
       </div>
 
-      {principlesMDX && (
-        <div className="space-y-6">
-          <MDXRemote {...principlesMDX} components={mdxComponent} />
-        </div>
-      )}
+      <div className="lg:space-y-16 space-y-10">
+        {principlesTitle && (
+          <div>
+            <h2 className="text-2xl font-bold">
+              <MDXRemote {...principlesTitle} components={mdxComponent1} />
+            </h2>
+            {principlesDesc && (
+              <MDXRemote {...principlesDesc} components={mdxComponent1} />
+            )}
+          </div>
+        )}
+        {principlesSections.length > 0 && (
+          <div className="space-y-24">
+            {principlesSections.map((sec, idx) => {
+              const isEven = idx % 2 === 0;
+              const textCol = isEven ? "order-1" : "order-2";
+              const exampleCol = isEven ? "order-2" : "order-1";
+
+              return (
+                <div
+                  key={idx}
+                  className="grid grid-cols-1 lg:grid-cols-3 items-start gap-8 lg:gap-16"
+                >
+                  <div className={`${textCol} space-y-4`}>
+                    <h2 className="text-2xl font-semibold text-neutral-800 dark:text-white">
+                      <MDXRemote {...sec.subtitle} components={mdxComponent1} />
+                    </h2>
+                    <div className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+                      <MDXRemote {...sec.content} components={mdxComponent1} />
+                    </div>
+                  </div>
+
+                  <div
+                    className={`${exampleCol} col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6`}
+                  >
+                    {sec.examples.map((example, idx2) => (
+                      <div
+                        key={idx2}
+                        className="rounded-2xl border border-neutral-200 dark:border-neutral-700 p-5 shadow-sm hover:shadow-md transition-all duration-200 bg-white dark:bg-zinc-900 space-y-4"
+                      >
+                        <div className="flex justify-end">
+                          <span
+                            className={`text-xs font-semibold px-3 py-1 rounded-full text-white ${
+                              example.status === "incorrect"
+                                ? "bg-red-500"
+                                : "bg-green-600"
+                            }`}
+                          >
+                            {example.status === "incorrect"
+                              ? "Incorrect"
+                              : "Correct"}
+                          </span>
+                        </div>
+
+                        {example.mdx ? (
+                          <div className="text-sm text-right text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                            <MDXRemote
+                              {...example.mdx}
+                              components={mdxComponent1}
+                            />
+                          </div>
+                        ) : example.img ? (
+                          <div className="w-full flex justify-center">
+                            <img
+                              src={example.img}
+                              alt={example.label}
+                              className="max-w-full rounded-md shadow-sm"
+                            />
+                          </div>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
 
       {customMDXComponent && (
         <MDXRemote {...customMDXComponent} components={mdxComponent} />

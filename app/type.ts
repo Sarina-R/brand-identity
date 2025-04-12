@@ -330,6 +330,21 @@ export interface FontFeatureComponent {
   bg: string;
 }
 
+type Status = "correct" | "incorrect";
+
+export interface Example {
+  status: Status;
+  mdx: MDXRemoteSerializeResult | null;
+  img?: string;
+  label: string;
+}
+
+export interface TypographyPrinciplesSection {
+  subtitle: MDXRemoteSerializeResult;
+  content: MDXRemoteSerializeResult;
+  examples: Example[];
+}
+
 export interface TypographyItems {
   MDXComponent: string | MDXRemoteSerializeResult;
   title: string | MDXRemoteSerializeResult;
@@ -339,7 +354,11 @@ export interface TypographyItems {
     desc: string | MDXRemoteSerializeResult;
     componentItems: FontFeatureComponent[];
   };
-  principlesMDX: string | MDXRemoteSerializeResult;
+  typographyPrinciples: {
+    title: string | MDXRemoteSerializeResult;
+    description: string | MDXRemoteSerializeResult;
+    section: TypographyPrinciplesSection[];
+  };
   wights: WightsComponentItems;
 }
 
@@ -361,7 +380,7 @@ export interface Typography {
   style: number;
 }
 
-//
+// IdentityInUse
 export interface IdentityInUseItems {
   MDXComponent: string | MDXRemoteSerializeResult;
   title?: string | MDXRemoteSerializeResult;

@@ -91,67 +91,6 @@ const item5 = `<div className="mx-auto">
       </ul>
     </div>`;
 
-const item6 = `## Basic Typography Principles
-
-In typography, Alibaba follows two fundamental principles:
-
-<div className="space-y-6 lg:space-y-0 lg:flex lg:gap-10 items-start mt-6">
-  <div className="prose dark:prose-invert flex-1">
-    ### Readability
-
-    Readability is a core principle of Alibaba’s typography.  
-    We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.
-  </div>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 flex-1">
-    <div className="rounded-xl p-4 flex flex-col items-center h-full text-center">
-      <img
-        src="https://cdn.alibaba.ir/cms/uploads/text_readablity_incorrect_1_0679ba8183.svg"
-        alt="Incorrect Typography Example"
-        className="w-full max-w-xs md:max-w-sm mb-4 max-h-48 md:max-h-max"
-      />
-    </div>
-
-    <div className="rounded-xl p-4 flex flex-col items-center h-full text-center">
-      <img
-        src="https://cdn.alibaba.ir/cms/uploads/text_readablity_correct_1_ab2bd96923.svg"
-        alt="Correct Typography Example"
-        className="w-full max-w-xs md:max-w-sm mb-4 max-h-48 md:max-h-max"
-      />
-    </div>
-  </div>
-</div>
-
-<br/>
-
-<div className="space-y-6 lg:space-y-0 flex flex-col-reverse lg:flex-row lg:gap-10 items-start mt-6">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 flex-1">
-    <div className="rounded-xl p-4 flex flex-col items-center h-full text-center">
-      <img
-        src="https://cdn.alibaba.ir/cms/uploads/text_priority_incorrect_4de2388114.svg"
-        alt="Incorrect Hierarchy Example"
-        className="w-full max-w-xs md:max-w-sm mb-4 max-h-48 md:max-h-max"
-      />
-    </div>
-
-    <div className="rounded-xl p-4 flex flex-col items-center h-full text-center">
-      <img
-        src="https://cdn.alibaba.ir/cms/uploads/text_priority_correct_272e42aa75.svg"
-        alt="Correct Hierarchy Example"
-        className="w-full max-w-xs md:max-w-sm mb-4 max-h-48 md:max-h-max"
-      />
-    </div>
-  </div>
-
-    <div className="prose dark:prose-invert flex-1">
-    ### Respecting Content Hierarchy
-
-    One of Alibaba's communication features is that its content always delivers priority and importance.  
-    In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.
-  </div>
-</div>
-`;
-
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
@@ -678,7 +617,64 @@ const data = {
             },
           ],
         },
-        principlesMDX: item6,
+        typographyPrinciples: {
+          title: "Basic Typography Principles",
+          description:
+            "In typography, Alibaba follows two fundamental principles:",
+          section: [
+            {
+              subtitle: "Readability",
+              content:
+                "Readability is a core principle of Alibaba’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
+              examples: [
+                {
+                  status: "incorrect",
+                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  label: "incorrect",
+                },
+                {
+                  status: "correct",
+                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  label: "correct",
+                },
+              ],
+            },
+            {
+              subtitle: "Respecting Content Hierarchy",
+              content:
+                "One of Alibaba's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
+              examples: [
+                {
+                  status: "incorrect",
+                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  label: "incorrect",
+                },
+                {
+                  status: "correct",
+                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  label: "correct",
+                },
+              ],
+            },
+            {
+              subtitle: "Respecting Content Hierarchy with pic",
+              content:
+                "One of Alibaba's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
+              examples: [
+                {
+                  status: "incorrect",
+                  img: "https://cdn.alibaba.ir/cms/uploads/text_priority_incorrect_4de2388114.svg",
+                  label: "incorrect",
+                },
+                {
+                  status: "correct",
+                  img: "https://cdn.alibaba.ir/cms/uploads/text_priority_correct_272e42aa75.svg",
+                  label: "correct",
+                },
+              ],
+            },
+          ],
+        },
         wights: {
           title: "Weights",
           desc: `A regular, thin weight that we use for body text and two heavy, black weights that we use for headings.<br/>
