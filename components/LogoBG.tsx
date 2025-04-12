@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { InBackgroundSection } from "@/app/type";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
 interface Props {
   data: InBackgroundSection;
@@ -36,9 +37,9 @@ const imageVariants = {
 
 const LogoBackground = ({ data }: Props) => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-12 py-8">
+    <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 lg:px-12 py-8">
       <motion.div
-        className="md:sticky md:top-20 self-start space-y-4"
+        className="lg:sticky lg:top-20 self-start space-y-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -64,19 +65,38 @@ const LogoBackground = ({ data }: Props) => {
       </motion.div>
 
       <motion.div
-        className="overflow-auto"
+        className="grid grid-cols-2 gap-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={imageVariants}
       >
-        <Image
-          src={data.image}
-          alt="logo background usages"
-          width={1000}
-          height={1000}
-          className="w-full h-auto rounded-xl"
-        />
+        {data.inBackgroundComponent.map((item, index) => {
+          const isImageBg = Boolean(item.imgBg);
+
+          return (
+            <div
+              key={index}
+              className={clsx(
+                "rounded-xl overflow-hidden aspect-square flex items-center justify-center border",
+                isImageBg ? "bg-cover bg-center" : ""
+              )}
+              style={
+                isImageBg
+                  ? { backgroundImage: `url(${item.imgBg})` }
+                  : { backgroundColor: item.colorBg }
+              }
+            >
+              <Image
+                src={item.logo}
+                alt={`logo background ${index}`}
+                width={100}
+                height={100}
+                className="w-20 h-auto"
+              />
+            </div>
+          );
+        })}
       </motion.div>
     </section>
   );

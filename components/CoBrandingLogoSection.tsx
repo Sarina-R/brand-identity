@@ -48,7 +48,7 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
   };
 
   return (
-    <section className="flex flex-col md:flex-row gap-8 rounded-2xl overflow-hidden">
+    <section className="flex flex-col lg:flex-row gap-8 overflow-hidden">
       <motion.div
         className="flex-1 space-y-4"
         initial="hidden"

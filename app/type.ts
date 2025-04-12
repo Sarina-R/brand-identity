@@ -169,9 +169,15 @@ export interface LogoVersion {
   svg: string;
 }
 
+export interface InBackgroundComponent {
+  colorBg?: string;
+  imgBg?: string;
+  logo: string;
+}
+
 export interface InBackgroundSection {
   listItems: string[];
-  image: string;
+  inBackgroundComponent: InBackgroundComponent[];
 }
 
 export interface AlongWithOthers {

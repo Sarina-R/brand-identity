@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import lightBg from "@/assets/light-background/nextjs-logotype-light-background.svg";
+import darkBg from "@/assets/dark-background/nextjs-logotype-dark-background.png";
 
 const item1 = `
     <div className="flex flex-col md:flex-row gap-6">
@@ -40,8 +42,8 @@ const item3 = `    <div className="w-full px-6 py-10 space-y-16">
       </div>
     </div>`;
 
-const item4 = `<div className="w-full md:px-8 space-y-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+const item4 = `<div className="w-full lg:px-8 space-y-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
           <h2 className="text-3xl font-bold">Monogram design</h2>
           <p className="text-base leading-relaxed">
@@ -423,7 +425,33 @@ const data = {
             "We use the Alibaba logo on gray backgrounds (permitted codes in the color palette), only in solid black or white.",
             "The use of the Alibaba logo on other colored backgrounds is not permitted.",
           ],
-          image: "https://cdn.alibaba.ir/cms/uploads/logo_types_b5f0565503.svg",
+          inBackgroundComponent: [
+            {
+              colorBg: "#FFFFFF",
+              logo: lightBg.src,
+            },
+            {
+              colorBg: "#000000",
+              logo: lightBg.src,
+            },
+            {
+              colorBg: "#FDB813",
+              logo: lightBg.src,
+            },
+            {
+              colorBg: "#D3D3D3",
+              logo: darkBg.src,
+            },
+            {
+              colorBg: "#A9A9A9",
+              logo: darkBg.src,
+            },
+            {
+              imgBg:
+                "https://plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
+              logo: darkBg.src,
+            },
+          ],
         },
         alongWithOthers: {
           title: "Use it alongside other brand logos",

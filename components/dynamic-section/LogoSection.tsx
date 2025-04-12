@@ -67,13 +67,13 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
 
   return (
     <motion.div
-      className="md:p-8 p-4 md:space-y-24 space-y-16"
+      className="lg:p-8 p-4 lg:space-y-24 space-y-16"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
         variants={fadeIn("left")}
         initial="hidden"
         animate="visible"
