@@ -661,6 +661,19 @@ const data = {
         },
       },
     },
+    {
+      type: "identity_in_use",
+      title: "Identity In Use",
+      description: "",
+      pattern:
+        "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      img: "",
+      items: {
+        MDXComponent: item3,
+        title: "Identity In Use Title",
+        desc: "Identity In Use Desc",
+      },
+    },
   ],
 };
 

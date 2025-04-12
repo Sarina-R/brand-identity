@@ -1,8 +1,12 @@
-import { Mascot, Tagline } from "@/app/type";
+import { IdentityInUse, Mascot, Tagline } from "@/app/type";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
-const TaglineSection = ({ section }: { section: Tagline | Mascot }) => {
+const TaglineSection = ({
+  section,
+}: {
+  section: Tagline | Mascot | IdentityInUse;
+}) => {
   const mdxComponents = useMDXComponents({});
   const mdxComponents1 = useMDXComponents1({});
 

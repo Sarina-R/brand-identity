@@ -79,8 +79,9 @@ const Page = () => {
         );
       case "typography":
         return <TypographySection key={section.type} section={section} />;
-      // case "identity_in_use":
-      //   return <div>Identity In Use Section (To be implemented)</div>;
+      case "identity_in_use":
+        return <TaglineSection key={section.type} section={section} />;
+
       default:
         return <div>No type match</div>;
     }

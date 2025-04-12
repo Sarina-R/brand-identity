@@ -355,6 +355,24 @@ export interface Typography {
   style: number;
 }
 
+//
+export interface IdentityInUseItems {
+  MDXComponent: string | MDXRemoteSerializeResult;
+  title?: string | MDXRemoteSerializeResult;
+  desc?: string | MDXRemoteSerializeResult;
+}
+
+export interface IdentityInUse {
+  type: "identity_in_use";
+  title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  items: IdentityInUseItems;
+  style: number;
+}
+
 // All
 export type Section =
   | Overview
@@ -366,7 +384,8 @@ export type Section =
   | Logo
   | Mascot
   | Color
-  | Typography;
+  | Typography
+  | IdentityInUse;
 
 export interface ApiResponse {
   brand: Brand;
