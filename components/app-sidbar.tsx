@@ -30,7 +30,7 @@ export function AppSidebar({ groups }: AppSidebarProps) {
     <Sidebar>
       <SidebarContent>
         {groups.map((group, index) => (
-          <SidebarGroup key={index}>
+          <SidebarGroup key={index} className="p-3 px-6">
             <SidebarGroupLabel>{group.label}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
