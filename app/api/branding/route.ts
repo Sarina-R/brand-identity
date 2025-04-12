@@ -61,22 +61,65 @@ const item2 = `Alibaba's brand personality is defined based on the Magician arch
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Alibaba's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Alibaba’s brand identity.`;
 
-const item3 = `    <div className="w-full px-6 py-10 space-y-16">
-      <h1 className="text-4xl font-bold">About Pokémon</h1>
-      <p className="max-w-3xl mx-auto text-lg leading-relaxed">
-        The pink Pokémon, however, appeared among some users due to unforeseen bugs such as the Dealer bug. 
-        It was therefore perceived by the public as a secret character, fueling many myths and rumors. 
-        This is why, and to the surprise of the development team, Satoshi Tajiri decided to expose Mew 
-        in the Japanese magazine CoroCoro Comics in the spring of 1996 and to launch the 
-        "Legendary Pokémon Offer" contest in April: twenty winners were to be selected to receive Mew.
-      </p>
-      <h2 className="text-2xl font-semibold">Mew's Myth and Reveal</h2>
-      <div className="w-full overflow-x-auto">
-        <img
-          src="https://cdn.alibaba.ir/cms/uploads/dominate_tone_5ec412f50a.svg"
-          alt="Mew reveal chart"
-          className="min-w-[900px] max-w-none mx-auto"
-        />
+const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
+        <div className="space-y-6">
+          <h1 className="text-3xl font-bold">Voice and Tone</h1>
+          <p className="mx-auto text-lg leading-relaxed">
+            Our brand voice combines professionalism and friendliness to
+            prioritize exceptional customer service. It remains adaptable to
+            different contexts and audiences.
+          </p>
+        </div>
+        <div className="w-full overflow-x-auto">
+          <img
+            src="https://cdn.alibaba.ir/cms/uploads/dominate_tone_5ec412f50a.svg"
+            alt="Mew reveal chart"
+            className="min-w-[900px] max-w-none mx-auto"
+          />
+        </div>
+      </div>
+      
+   <div className="min-h-[500px] py-10 px-6">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto">
+        <div className="relative flex-1 text-center">
+          <div className="bg-gradient-to-r p-8 transform -skew-y-6 rounded-3xl border dark:bg-neutral-900">
+            <div className="transform skew-y-6">
+              <div className="relative">
+                <img
+                  src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(4).png"
+                  alt="Friendly Icon"
+                  className="w-24 h-24 rounded-full mx-auto mb-6 border-4 p-1"
+                />
+              </div>
+              <h6 className="text-3xl font-extrabold mb-4 tracking-wide glow-text">
+                Friendly
+              </h6>
+              <p className="text-lg leading-relaxed">
+                We endeavor to cultivate a hospitable and inclusive environment for our clients and partners, nurturing transparent communication and cooperative partnerships.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative flex-1 text-center">
+          <div className="p-8 transform skew-y-6 rounded-3xl border dark:bg-neutral-900">
+            <div className="transform -skew-y-6">
+              <div className="relative">
+                <img
+                  src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(5).png"
+                  alt="Professional Icon"
+                  className="w-24 h-24 rounded-full mx-auto mb-6 border-4"
+                />
+              </div>
+              <h6 className="text-3xl font-extrabold mb-4 tracking-wide glow-text">
+                Professional
+              </h6>
+              <p className="text-lg leading-relaxed">
+                FIRA CUP upholds a professional and formal tone in all communications, demonstrating our dedication to excellence and dependability.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>`;
 
@@ -274,30 +317,22 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       items: {
-        MDXComponent: item3,
-        title: "What **leads** us to the idea of dynamic identity:",
-        desc: `Today, on what is always a "first day," we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.`,
+        MDXComponent: ToneOfVoice,
+        title: "some title",
+        desc: "Our brand voice combines professionalism and friendliness to prioritize exceptional customer service. It remains adaptable to different contexts and audiences.",
         sliderContent: [
           {
             id: "1001",
             // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
-            title: "Friendly Vibe",
+            title: "Trustworthy",
             description:
-              '**Today**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
+              "**FIRA CUP** demonstrates *trustworthiness* and *authority* in all our communications.",
           },
           {
             id: "1002",
-            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
-            title: "Mew Vibe",
-            description:
-              '**Mew**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
-          },
-          {
-            id: "1003",
-            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
-            title: "Mew Mew Vibe",
-            description:
-              '**Mew Mew**, on what is always a "first day," <br/> we have embarked on a new path to expand the journey from the trilogy of "going, staying, and returning" to a broader concept, as vast as our worlds full of differences. As always, we want to be companions on a journey that extends from the realm of imagination to the review of sweet memories.',
+            // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+            title: "Innovative",
+            description: `As a **pioneering company**, we adopt an *energetic* and *dynamic* tone in our communications.`,
           },
         ],
 
@@ -401,7 +436,7 @@ const data = {
             "We use the Alibaba logo on a white background, only in the primary color.",
             "We use the Alibaba logo on a black background, only in the primary color.",
             "We use the Alibaba logo on a yellow background, only in solid black.",
-            "We use the Alibaba logo on gray backgrounds (permitted codes in the color palette), only in solid black or white.",
+            "We use the Alibaba logo on neutral backgrounds (permitted codes in the color palette), only in solid black or white.",
             "The use of the Alibaba logo on other colored backgrounds is not permitted.",
           ],
           inBackgroundComponent: [
@@ -451,7 +486,7 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       items: {
-        MDXComponent: item3,
+        MDXComponent: ToneOfVoice,
         title: "Mascot",
         desc: "MascotMascotMascotMascotMascot",
       },
@@ -516,9 +551,9 @@ const data = {
               hexColor: "#FFFFFF",
               name: "Black",
               shades: [
-                { id: 402, hex: "#525252", name: "Gray" },
-                { id: 403, hex: "#8c8c8c", name: "Medium Gray" },
-                { id: 404, hex: "#bdbdbd", name: "Light Gray" },
+                { id: 402, hex: "#525252", name: "neutral" },
+                { id: 403, hex: "#8c8c8c", name: "Medium neutral" },
+                { id: 404, hex: "#bdbdbd", name: "Light neutral" },
               ],
             },
           },
@@ -733,7 +768,7 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       items: {
-        MDXComponent: item3,
+        MDXComponent: ToneOfVoice,
         title: "Identity In Use Title",
         desc: "Identity In Use Desc",
       },
