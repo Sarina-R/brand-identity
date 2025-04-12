@@ -629,12 +629,12 @@ const data = {
               examples: [
                 {
                   status: "incorrect",
-                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
                   label: "incorrect",
                 },
                 {
                   status: "correct",
-                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
                   label: "correct",
                 },
               ],
@@ -646,12 +646,12 @@ const data = {
               examples: [
                 {
                   status: "incorrect",
-                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
                   label: "incorrect",
                 },
                 {
                   status: "correct",
-                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\nParagraph text that is spaced from the headings\nand arranged with clear order\n...</p>\n</div>',
+                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
                   label: "correct",
                 },
               ],

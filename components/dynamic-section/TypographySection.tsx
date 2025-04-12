@@ -215,12 +215,12 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
                   </div>
 
                   <div
-                    className={`${exampleCol} col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6`}
+                    className={`${exampleCol} col-span-2 grid grid-cols-2 gap-3 sm:gap-6`}
                   >
                     {sec.examples.map((example, idx2) => (
                       <div
                         key={idx2}
-                        className="rounded-2xl border border-neutral-200 dark:border-neutral-700 p-5 shadow-sm hover:shadow-md transition-all duration-200 bg-white dark:bg-zinc-900 space-y-4"
+                        className="rounded-2xl border border-neutral-200 dark:border-neutral-700 px-5 py-3 shadow-sm hover:shadow-md transition-all duration-200 bg-white dark:bg-zinc-900 space-y-4"
                       >
                         <div className="flex justify-end">
                           <span
