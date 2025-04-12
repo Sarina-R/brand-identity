@@ -10,15 +10,15 @@ interface TypographySectionProps {
   section: Typography;
 }
 
-const weightMap: Record<number, string> = {
-  300: "Light",
-  400: "Regular",
-  500: "Medium",
-  600: "SemiBold",
-  700: "Bold",
-  800: "ExtraBold",
-  900: "Black",
-};
+// const weightMap: Record<number, string> = {
+//   300: "Light",
+//   400: "Regular",
+//   500: "Medium",
+//   600: "SemiBold",
+//   700: "Bold",
+//   800: "ExtraBold",
+//   900: "Black",
+// };
 
 const sampleText = "Some Sample Text";
 
@@ -102,9 +102,9 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
   }, [section]);
 
   return (
-    <section className="p-6 md:p-10 max-w-6xl mx-auto space-y-28 mt-12">
-      <div className="lg:flex md:space-x-8 space-y-6 md:space-y-0 gap-32">
-        <div className="flex-1 space-y-4">
+    <section className="p-4 md:p-10 max-w-6xl mx-auto space-y-28 mt-12">
+      <div className="lg:flex md:space-x-8 space-y-10 lg:space-y-0 gap-32">
+        <div className="flex-1 space-y-4 sticky top-5 h-full">
           {mainTitle && (
             <div className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
               <MDXRemote {...mainTitle} components={mdxComponent1} />
@@ -116,7 +116,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
             </div>
           )}
         </div>
-        <div className="flex-1 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center p-6">
+        <div className="flex-1 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
           <p className="text-9xl font-bold">{lastKey}</p>
           <p className="text-sm font-bold">only support EN</p>
         </div>
@@ -125,7 +125,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       <div className="space-y-12">
         <div className="lg:flex justify-between gap-32">
           {fontFeatureTitle && (
-            <div className="text-xl font-bold">
+            <div className="text-xl font-bold sticky top-5 h-full">
               <MDXRemote {...fontFeatureTitle} components={mdxComponent1} />
             </div>
           )}
@@ -140,7 +140,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
           {serializedItems.map((item, index) => (
             <div
               key={index}
-              className="rounded-xl text-xl p-6 text-center border min-h-40 h-full flex flex-col items-center justify-center"
+              className="rounded-xl text-xl text-center border min-h-40 h-full flex flex-col items-center justify-center"
               style={{ backgroundColor: item.bg, color: item.color }}
             >
               <MDXRemote {...item.mdx} components={mdxComponent1} />
@@ -149,14 +149,17 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 p-6 rounded-2xl">
-        <div className="space-y-4 flex-1 border p-10 px-8 m-auto rounded-2xl">
+      <div className="flex flex-col lg:flex-row gap-12 rounded-2xl">
+        <div className="space-y-4 flex-1 border p-10 px-8 m-auto rounded-2xl w-full">
           {section.font.weights.map((weight) => (
-            <div key={weight} className="flex items-center gap-6">
-              <p className="w-24 text-lg" style={{ fontWeight: weight }}>
+            <div key={weight} className="flex items-center justify-center">
+              {/* <p className="w-24 text-lg" style={{ fontWeight: weight }}>
                 {weightMap[weight] || weight}
-              </p>
-              <p className="text-2xl" style={{ fontWeight: weight }}>
+              </p> */}
+              <p
+                className="text-2xl sticky top-5 h-full"
+                style={{ fontWeight: weight }}
+              >
                 {sampleText}
               </p>
             </div>

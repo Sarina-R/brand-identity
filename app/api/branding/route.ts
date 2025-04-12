@@ -93,7 +93,7 @@ const item6 = `## Basic Typography Principles
 
 In typography, Alibaba follows two fundamental principles:
 
-<div className="space-y-6 lg:space-y-0 lg:flex lg:gap-20 items-start mt-6">
+<div className="space-y-6 lg:space-y-0 lg:flex lg:gap-10 items-start mt-6">
   <div className="prose dark:prose-invert flex-1">
     ### Readability
 
@@ -101,7 +101,7 @@ In typography, Alibaba follows two fundamental principles:
     We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.
   </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 flex-1">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 flex-1">
     <div className="rounded-xl p-4 flex flex-col items-center h-full text-center">
       <img
         src="https://cdn.alibaba.ir/cms/uploads/text_readablity_incorrect_1_0679ba8183.svg"
@@ -122,8 +122,8 @@ In typography, Alibaba follows two fundamental principles:
 
 <br/>
 
-<div className="space-y-6 lg:space-y-0 lg:flex lg:gap-20 items-start mt-6">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 flex-1">
+<div className="space-y-6 lg:space-y-0 flex flex-col-reverse lg:flex-row lg:gap-10 items-start mt-6">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 flex-1">
     <div className="rounded-xl p-4 flex flex-col items-center h-full text-center">
       <img
         src="https://cdn.alibaba.ir/cms/uploads/text_priority_incorrect_4de2388114.svg"
