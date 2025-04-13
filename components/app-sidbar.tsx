@@ -9,6 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { Dot } from "lucide-react";
 
 type SidebarItem = {
   id: string;
@@ -30,7 +31,7 @@ export function AppSidebar({ groups }: AppSidebarProps) {
     <Sidebar>
       <SidebarContent>
         {groups.map((group, index) => (
-          <SidebarGroup key={index} className="p-3 px-6">
+          <SidebarGroup key={index} className="p-3 px-6 font-bold">
             <SidebarGroupLabel>{group.label}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
@@ -38,7 +39,8 @@ export function AppSidebar({ groups }: AppSidebarProps) {
                   <SidebarMenuItem key={item.id}>
                     <SidebarMenuButton asChild>
                       <Link href={`/${item.id}`}>
-                        .<span>{item.title}</span>
+                        <Dot />
+                        <span>{item.title}</span>
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

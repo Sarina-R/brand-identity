@@ -97,13 +97,13 @@ const DesignPrinciplesSection = ({
   }
 
   return (
-    <section className="py-16 space-y-24">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className="relative aspect-video rounded-2xl shadow-xl">
+    <section className="py-16 space-y-24 h-full">
+      <div className="mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="relative aspect-video rounded-2xl shadow-xl overflow-hidden">
           {media}
         </div>
 
-        <div>
+        <div className="sticky top-0 h-fit">
           {section.items.title && (
             <h2 className="text-3xl font-bold mb-4 text-neutral-800 dark:text-neutral-200">
               {typeof section.items.title === "string" ? (

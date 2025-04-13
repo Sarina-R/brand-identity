@@ -32,30 +32,24 @@ export function useMDXComponents({
     h2: ({ children }) => (
       <h2
         style={{ color: primaryColor }}
-        className="text-3xl font-semibold mt-6 mb-3 dark:text-neutral-100"
+        className="text-3xl font-semibold mt-6 mb-3 "
       >
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-2xl font-medium mt-5 mb-2 dark:text-neutral-200">
-        {children}
-      </h3>
+      <h3 className="text-2xl font-medium mt-5 mb-2">{children}</h3>
     ),
 
     // Paragraph
-    p: ({ children }) => (
-      <p className="leading-relaxed text-neutral-700 dark:text-neutral-300 mb-4">
-        {children}
-      </p>
-    ),
+    p: ({ children }) => <p className="leading-relaxed mb-4">{children}</p>,
 
     // Image
     img: (props) => (
       <img
-        whileHover={{ scale: 1.05 }}
-        style={{ width: "100%", height: "auto" }}
-        className="rounded-lg shadow-md transition-transform duration-300 my-4 dark:shadow-neutral-700"
+        // whileHover={{ scale: 1.0 }}
+        // style={{ width: "100%", height: "auto" }}
+        // className="rounded-lg shadow-md transition-transform duration-300 my-4 dark:shadow-neutral-700"
         {...props}
       />
     ),

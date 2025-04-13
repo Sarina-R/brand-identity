@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import lightBg from "@/public/assets/light-background/nextjs-logotype-light-background.svg";
-import darkBg from "@/public/assets/dark-background/nextjs-logotype-dark-background.png";
 
 const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
@@ -57,9 +55,9 @@ const item1 = `
     </div>
   `;
 
-const item2 = `Alibaba's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
-"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Alibaba's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
-Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Alibaba’s brand identity.`;
+const item2 = `Fira Iran's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
+"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Fira Iran's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
+Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Fira Iran’s brand identity.`;
 
 const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
         <div className="space-y-6">
@@ -80,10 +78,10 @@ const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
       </div>
       
    <div className="min-h-[500px] py-10 px-6">
-      <div className="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-10 max-w-6xl mx-auto">
         <div className="relative flex-1 text-center">
-          <div className="bg-gradient-to-r p-8 transform -skew-y-6 rounded-3xl border dark:bg-neutral-900">
-            <div className="transform skew-y-6">
+          <div className="bg-gradient-to-r p-8 transform lg:-skew-y-6 rounded-3xl border dark:bg-neutral-900">
+            <div className="transform lg:skew-y-6">
               <div className="relative">
                 <img
                   src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(4).png"
@@ -102,8 +100,8 @@ const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
         </div>
 
         <div className="relative flex-1 text-center">
-          <div className="p-8 transform skew-y-6 rounded-3xl border dark:bg-neutral-900">
-            <div className="transform -skew-y-6">
+          <div className="p-8 transform lg:skew-y-6 rounded-3xl border dark:bg-neutral-900">
+            <div className="transform lg:-skew-y-6">
               <div className="relative">
                 <img
                   src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(5).png"
@@ -123,48 +121,151 @@ const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
       </div>
     </div>`;
 
-const item4 = `<div className="w-full lg:px-8 space-y-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
-          <h2 className="text-3xl font-bold">Monogram design</h2>
-          <p className="text-base leading-relaxed">
-            In designing the Alibaba monogram, we have designed a firm and decisive form, considering the brand identity and strategy, which, while being solid, is distanced from stillness and staticity by the movement of the curve in the middle of the letter A and is in harmony with the vibrant atmosphere of travel.
-          </p>
-          <p className="text-base leading-relaxed">
-            We have designed this monogram dynamically; meaning that it has a fixed DNA and anatomy; But its appearance is variable and changes in brand communications depending on what message is to be conveyed to which audience through which medium. This approach is a bold strategy in design and allows the brand to respond intelligently to social situations and audience needs, and at the communication level, always be one step ahead of customer expectations.
-          </p>
-        </div>
-        <div className="w-full bg-black rounded-2xl relative">
+const Mascot = `<div className="max-w-5xl mx-auto my-12 px-4 sm:px-6 lg:px-8">
+  <div className="relative rounded-2xl shadow-2xl p-6 sm:p-8 bg-[#FDB813]">
+    <div className="absolute inset-0 bg-[url('https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png')] bg-cover bg-center bg-no-repeat opacity-5 rounded-2xl"></div>
+    <div className="relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="w-full">
           <img
-            src="https://cdn.alibaba.ir/cms/uploads/monogram_anim_2c775cc880.gif"
-            alt="Monogram Animation"
-            className="object-contain rounded-xl shadow-lg m-auto"
+            src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__7_-removebg-preview%20(1).png"
+            alt="FIRA Cup 2025 Mascot - Iranian Cheetah"
+            className="w-full h-auto rounded-lg"
           />
         </div>
+        <div className="text-center lg:text-left">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-black mb-6">
+            MASCOT
+          </h2>
+          <p className="text-black text-base sm:text-lg leading-relaxed">
+            The mascot for the FIRA Cup 2025 in Iran is inspired by the Iranian
+            cheetah, symbolizing speed, agility, and resilience. This robotic
+            cheetah embodies the spirit of innovation and excellence that defines
+            FIRA's robotics competitions. Combining advanced technology with a
+            cultural symbol, the mascot represents both the technological progress
+            and the rich heritage of Iran. It serves as a vibrant and dynamic
+            emblem of the event, showcasing the fusion of tradition and
+            cutting-edge robotics.
+          </p>
+        </div>
       </div>
+    </div>
+  </div>
+</div>`;
 
-      <div className="items-center space-y-10">
-      <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
-          <h2 className="text-3xl font-bold">Logotype design</h2>
-          <p className="text-base leading-relaxed">
-            We designed the Alibaba logo based on the previous logo. The new logo is actually an updated version of the previous logo, with more dynamic and fluid forms and less unnecessary details.
-          </p>
-        </div>
-        <div className="w-full relative">
-          <img
-            src="https://cdn.alibaba.ir/cms/uploads/logo_type_365b658ee9.svg"
-            alt="Logotype"
-            className="object-contain rounded-xl shadow-lg m-auto"
-          />
-        </div>
-      </div>
-    </div>`;
+const DesignPrinciples = `<img src='https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(8).png' alt='logo'/>`;
+
+// const item4 = `<div className="w-full lg:px-8 space-y-16">
+//       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+//         <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
+//           <h2 className="text-3xl font-bold">Monogram design</h2>
+//           <p className="text-base leading-relaxed">
+//             In designing the Fira Iran monogram, we have designed a firm and decisive form, considering the brand identity and strategy, which, while being solid, is distanced from stillness and staticity by the movement of the curve in the middle of the letter A and is in harmony with the vibrant atmosphere of travel.
+//           </p>
+//           <p className="text-base leading-relaxed">
+//             We have designed this monogram dynamically; meaning that it has a fixed DNA and anatomy; But its appearance is variable and changes in brand communications depending on what message is to be conveyed to which audience through which medium. This approach is a bold strategy in design and allows the brand to respond intelligently to social situations and audience needs, and at the communication level, always be one step ahead of customer expectations.
+//           </p>
+//         </div>
+//         <div className="w-full bg-black rounded-2xl relative">
+//           <img
+//             src="https://cdn.alibaba.ir/cms/uploads/monogram_anim_2c775cc880.gif"
+//             alt="Monogram Animation"
+//             className="object-contain rounded-xl shadow-lg m-auto"
+//           />
+//         </div>
+//       </div>
+
+//       <div className="items-center space-y-10">
+//       <div className="space-y-4 text-neutral-800 dark:text-neutral-200">
+//           <h2 className="text-3xl font-bold">Logotype design</h2>
+//           <p className="text-base leading-relaxed">
+//             We designed the Fira Iran logo based on the previous logo. The new logo is actually an updated version of the previous logo, with more dynamic and fluid forms and less unnecessary details.
+//           </p>
+//         </div>
+//         <div className="w-full relative">
+//           <img
+//             src="https://cdn.alibaba.ir/cms/uploads/logo_type_365b658ee9.svg"
+//             alt="Logotype"
+//             className="object-contain rounded-xl shadow-lg m-auto"
+//           />
+//         </div>
+//       </div>
+//     </div>`;
+
+const IdentityInUse = `<div class="min-h-screen px-6 py-12 space-y-12">
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Instagram Posts</h2>
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(18).png" alt="Post 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Instagram Stories</h2>
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(20).png" alt="Story 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(21).png" alt="Story 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(22).png" alt="Story 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Format Sizes</h2>
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(23).png" alt="Story Size" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(24).png" alt="Poster Size" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(25).png" alt="Post Size" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Flags & City Posters</h2>
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(26).png" alt="Flag 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(27).png" alt="Flag 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(28).png" alt="Flag 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(29).png" alt="City 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(30).png" alt="City 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(31).png" alt="City 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(32).png" alt="City 4" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Merch: T-Shirts & Mugs</h2>
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(33).png" alt="T-shirt" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(34).png" alt="Mug" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">ID Cards</h2>
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(35).png" alt="ID Back" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(36).png" alt="ID Front" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(37).png" alt="ID Ribbon 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(38).png" alt="ID Ribbon 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Certificates</h2>
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(39).png" alt="Certificate 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(40).png" alt="Certificate 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+    </div>
+  </section>
+</div>
+`;
 
 const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
-    primaryColor: "#fdb713",
-    logo: "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
+    primaryColor: "#fdb813",
+    logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
     font: {
       name: "Poppins",
       weights: [400, 500, 700],
@@ -348,15 +449,9 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       items: {
-        MDXComponent: "",
-        title: "What and Why",
-        desc: ` # 🌟 Alibaba Design Principles <br/>
-          Alibaba Design Principles is a **framework** rooted in the brand’s conceptual identity —
-          strategically shaping and unifying all design outputs to ensure a **coherent and consistent experience** for the audience interacting with the Alibaba brand.
-          To clarify the difference between <strong>Design Principles</strong> and <strong>Visual Identity Guidelines</strong>:
-          <br />
-          <strong>Design Principles</strong> focus on <em>overall strategies</em> and take a <em>big picture</em> view of the brand design landscape.
-        `,
+        MDXComponent: DesignPrinciples,
+        title: "Our Logo",
+        desc: ` Ensure use a custom font for readability and elegance to enhance brand identity across all communication channels.        `,
         image:
           "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
         video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
@@ -367,7 +462,7 @@ const data = {
             title: "Design Strategics",
             description: `**AliBaba’s strategic design** is a comprehensive travel solution. It always aims to optimize the journey and offer a seamless experience across all stages.
                           This mental model in strategic design helps the brand to evolve and emerge continuously.
-                          Strategic design in AliBaba is in service of communication and business growth.
+                          Strategic design in Fira Iran is in service of communication and business growth.
                           The foundation of strategic design stems from upstream strategies and loops through feedback and iteration to complete and refine one another.
               `,
             svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
@@ -394,70 +489,71 @@ const data = {
       img: "",
       items: {
         MDXComponent: "",
-        MDXComponentForLogo: item4,
+        MDXComponentForLogo: "",
         title: "**Brand** Identity",
         desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
-        download: "",
+        download:
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
         downloadBtnText: "Download Fira Cup 2025 Tehran Logo",
         logoVersion: [
           {
             id: 1,
             name: "Vertical logo",
             text: "Priority is given to use the vertical version of the logo.",
-            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/logo-vertical-02e1c68f.svg",
+            svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
           },
           {
             id: 2,
             name: "Horizontal logo",
             text: "We use the horizontal logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
-            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/logo-horizontal-48770b9c.svg",
+            svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
           },
           {
             id: 3,
             name: "Mono",
-            text: "We use the monogram version in Alibaba media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
-            svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/monogram-680c163d.svg",
+            text: "We use the monogram version in Fira Iran media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
+            svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(41).png",
           },
         ],
         inBackgroundSection: {
           listItems: [
-            "We use the Alibaba logo on a white background, only in the primary color.",
-            "We use the Alibaba logo on a black background, only in the primary color.",
-            "We use the Alibaba logo on a yellow background, only in solid black.",
-            "We use the Alibaba logo on neutral backgrounds (permitted codes in the color palette), only in solid black or white.",
-            "The use of the Alibaba logo on other colored backgrounds is not permitted.",
+            "We use the Fira Iran logo on a white background, only in the primary color.",
+            "We use the Fira Iran logo on a black background, only in the primary color.",
+            "We use the Fira Iran logo on a yellow background, only in solid black.",
+            "We use the Fira Iran logo on neutral backgrounds (permitted codes in the color palette), only in solid black or white.",
+            "The use of the Fira Iran logo on other colored backgrounds is not permitted.",
           ],
           inBackgroundComponent: [
             {
               colorBg: "#FFFFFF",
-              logo: lightBg.src,
+              logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
             },
             {
               colorBg: "#000000",
-              logo: lightBg.src,
+              logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
             },
             {
               colorBg: "#FDB813",
-              logo: lightBg.src,
+              logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
             },
             {
               colorBg: "#D3D3D3",
-              logo: darkBg.src,
+              logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
             },
             {
               colorBg: "#A9A9A9",
-              logo: darkBg.src,
+              logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
             },
             {
               imgBg:
                 "https://plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
-              logo: darkBg.src,
+              logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
             },
           ],
         },
         alongWithOthers: {
           title: "Use it alongside other brand logos",
-          desc: "When using the Alibaba logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Alibaba logo; if it’s horizontal, stick with the horizontal Alibaba one. To keep things balanced, make sure the height of Alibaba’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Alibaba logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Alibaba logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
+          desc: "When using the Fira Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Fira Iran logo; if it’s horizontal, stick with the horizontal Fira Iran one. To keep things balanced, make sure the height of Fira Iran’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Fira Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Fira Iran logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
           svg: [
             "https://cdn.alibaba.ir/cms/uploads/co_logo_2_dadfc63297.svg",
             "https://cdn.alibaba.ir/cms/uploads/co_logo_3_ed6df93726.svg",
@@ -474,9 +570,9 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       items: {
-        MDXComponent: ToneOfVoice,
-        title: "Mascot",
-        desc: "MascotMascotMascotMascotMascot",
+        MDXComponent: Mascot,
+        // title: "Mascot",
+        // desc: "MascotMascotMascotMascotMascot",
       },
     },
     {
@@ -652,10 +748,10 @@ const data = {
       items: {
         MDXComponent: "",
         title: "Typography",
-        desc: "We use a custom font for readability **andelegance** to enhance brand identity across allcommunication channels.",
+        desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
         fontFeatureComponent: {
           title: "Font Features",
-          desc: "In Alibaba Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
+          desc: "In Fira Iran Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
           componentItems: [
             {
               text: "**Refund** <br/> easily",
@@ -683,12 +779,12 @@ const data = {
         typographyPrinciples: {
           title: "Basic Typography Principles",
           description:
-            "In typography, Alibaba follows two fundamental principles:",
+            "In typography, Fira Iran follows two fundamental principles:",
           section: [
             {
               subtitle: "Readability",
               content:
-                "Readability is a core principle of Alibaba’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
+                "Readability is a core principle of Fira Iran’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
               examples: [
                 {
                   status: "incorrect",
@@ -705,33 +801,37 @@ const data = {
             {
               subtitle: "Respecting Content Hierarchy",
               content:
-                "One of Alibaba's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
+                "One of Fira Iran's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
               examples: [
                 {
                   status: "incorrect",
-                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
+                  mdx: `<div className="space-y-1 sm:mx-2">
+        <div className="bg-neutral-500 h-2 w-22 sm:w-30" />
+        <div className="bg-neutral-500 h-2 w-12 sm:w-20" />
+        <div className="bg-neutral-500 h-2 w-7 sm:w-14" />
+        <div className="bg-neutral-500 h-2 w-17 sm:w-25" />
+        <div className="bg-neutral-500 h-2 w-22 sm:w-30" />
+        <div className="bg-neutral-500 h-2 w-12 sm:w-20" />
+        <div className="bg-neutral-500 h-2 w-7 sm:w-14" />
+        <div className="bg-neutral-500 h-2 w-17 sm:w-25" />
+        <div className="bg-neutral-500 h-2 w-7 sm:w-14" />
+        <div className="bg-neutral-500 h-2 w-17 sm:w-25" />
+      </div>`,
                   label: "incorrect",
                 },
                 {
                   status: "correct",
-                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
-                  label: "correct",
-                },
-              ],
-            },
-            {
-              subtitle: "Respecting Content Hierarchy with pic",
-              content:
-                "One of Alibaba's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
-              examples: [
-                {
-                  status: "incorrect",
-                  img: "https://cdn.alibaba.ir/cms/uploads/text_priority_incorrect_4de2388114.svg",
-                  label: "incorrect",
-                },
-                {
-                  status: "correct",
-                  img: "https://cdn.alibaba.ir/cms/uploads/text_priority_correct_272e42aa75.svg",
+                  mdx: `<div className="space-y-1 sm:mx-2">
+        <div className="bg-neutral-500 h-5 w-8 sm:w-14 mb-3" />
+        <div className="bg-neutral-300 h-2 w-22 sm:w-30" />
+        <div className="bg-neutral-300 h-2 w-22 sm:w-30 mb-2" />
+        <div className="bg-neutral-500 h-2 w-12 sm:w-18" />
+        <div className="bg-neutral-300 h-2 w-22 sm:w-30" />
+        <div className="bg-neutral-300 h-2 w-22 sm:w-30 mb-2" />
+        <div className="bg-neutral-500 h-2 w-12 sm:w-18" />
+        <div className="bg-neutral-300 h-2 w-22 sm:w-30" />
+        <div className="bg-neutral-300 h-2 w-22 sm:w-30 mb-2" />
+      </div>`,
                   label: "correct",
                 },
               ],
@@ -756,9 +856,8 @@ const data = {
         "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
       img: "",
       items: {
-        MDXComponent: ToneOfVoice,
-        title: "Identity In Use Title",
-        desc: "Identity In Use Desc",
+        MDXComponent: IdentityInUse,
+        title: "Brand in Action: FIRA CUP 2025",
       },
     },
   ],
