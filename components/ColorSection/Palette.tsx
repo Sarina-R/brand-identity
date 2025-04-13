@@ -42,10 +42,14 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
   const colorCount = Object.values(palette.colors).length;
   const gridColsClass =
     colorCount === 2
-      ? "grid-cols-1 sm:grid-cols-2"
+      ? "grid-cols-1"
       : colorCount === 3
-      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-      : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4";
+      ? "grid-cols-1 md:grid-cols-3"
+      : colorCount === 5
+      ? "grid-cols-1 sm:grid-cols-3 lg:grid-cols-5"
+      : colorCount === 6
+      ? "grid-cols-2 md:grid-cols-3 xl:grid-cols-6"
+      : "grid-cols-1 md:grid-cols-4";
 
   return (
     <div className="">
@@ -132,10 +136,10 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
                     )}
                   </button>
                 </div>
-                <p className="text-sm" style={{ color: color.hexColor }}>
+                <p className="text-xs" style={{ color: color.hexColor }}>
                   {hexToRgb(color.hex)}
                 </p>
-                <p className="text-sm" style={{ color: color.hexColor }}>
+                <p className="text-xs" style={{ color: color.hexColor }}>
                   {hexToCmyk(color.hex)}
                 </p>
               </div>

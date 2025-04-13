@@ -489,7 +489,7 @@ const data = {
       items: {
         MDXComponent: "",
         title: "Color of Our Brand",
-        desc: `E6EBEAOur color palette draws inspiration from nature, resultingin a fresh and vibrant aesthetic. It is imperative to applythese colors consistently across all platforms to upholdbrand cohesion.`,
+        desc: `Our color palette draws inspiration from nature, resulting in a fresh and vibrant aesthetic. It is imperative to apply these colors consistently across all platforms to uphold brand cohesion.`,
         img: [
           "https://cdn.pixabay.com/photo/2025/03/31/15/18/mountains-9504950_640.jpg",
           "https://gratisography.com/wp-content/uploads/2025/01/gratisography-dog-vacation-800x525.jpg",
@@ -498,7 +498,7 @@ const data = {
         palette: {
           title: "The Main Palette",
           description:
-            "Alibaba’s main palette consists of yellow, orange, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
+            "Fira Iran’s main palette consists of yellow, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
           colors: {
             primary: {
               id: 1001,
