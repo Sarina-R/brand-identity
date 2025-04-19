@@ -477,6 +477,21 @@ const data = {
             description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
             svg: "",
           },
+          {
+            title: "User-Centric Design0",
+            description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
+            svg: "",
+          },
+          {
+            title: "User-Centric Design1",
+            description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
+            svg: "",
+          },
+          {
+            title: "User-Centric Design2",
+            description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
+            svg: "",
+          },
         ],
       },
     },

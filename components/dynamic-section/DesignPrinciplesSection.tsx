@@ -9,6 +9,7 @@ import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import clsx from "clsx";
+import { CustomTabs } from "../CustomTabs";
 
 const fallbackIcons = [Cable, CircleUser, ShieldCheck, Rss];
 
@@ -98,7 +99,7 @@ const DesignPrinciplesSection = ({
 
   return (
     <section className="py-16 space-y-24 h-full">
-      <div className="mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="relative aspect-video rounded-2xl shadow-xl overflow-hidden">
           {media}
         </div>
@@ -128,93 +129,12 @@ const DesignPrinciplesSection = ({
         </div>
       </div>
 
-      <div>
-        <Tabs
-          value={selectedTab}
-          onValueChange={setSelectedTab}
-          className="w-full"
-        >
-          <TabsList
-            className={clsx(
-              "relative flex gap-4 px-4",
-              "overflow-x-auto",
-              "",
-              "bg-transparent border-none shadow-none max-w-full"
-            )}
-          >
-            {tabsContent.map((tab) => (
-              <TabsTrigger
-                key={tab.title}
-                value={tab.title}
-                className={clsx(
-                  "relative px-4 py-2 text-sm font-medium capitalize transition-all duration-300",
-                  "rounded-full border-none shadow-none bg-transparent outline-none",
-                  "hover:bg-muted/40 hover:text-foreground",
-                  selectedTab === tab.title
-                    ? "text-foreground font-semibold"
-                    : "text-muted-foreground"
-                )}
-              >
-                {tab.title}
-
-                {selectedTab === tab.title && (
-                  <motion.span
-                    layoutId="tab-underline"
-                    transition={{
-                      type: "spring",
-                      stiffness: 500,
-                      damping: 30,
-                    }}
-                    className="absolute inset-0 z-[-1] rounded-full"
-                    style={{
-                      backgroundColor: primaryColor,
-                    }}
-                  />
-                )}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          {tabsContent.map((tab) => (
-            <TabsContent
-              key={tab.title}
-              value={tab.title}
-              className="flex flex-col md:flex-row-reverse items-center gap-6 mt-8"
-            >
-              <div
-                style={{ backgroundColor: primaryColor }}
-                className="w-full md:w-1/2 p-4 rounded-4xl"
-              >
-                {tab.svg ? (
-                  <Image
-                    src={tab.svg}
-                    alt={tab.title}
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-contain m-auto p-14"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    {(() => {
-                      const RandomIcon =
-                        fallbackIcons[
-                          Math.floor(Math.random() * fallbackIcons.length)
-                        ];
-                      return <RandomIcon size={80} className="" />;
-                    })()}
-                  </div>
-                )}
-              </div>
-              <div className="w-full md:w-1/2 p-4">
-                <h3 className="text-2xl font-semibold mb-4">{tab.title}</h3>
-                <div className="text-neutral-700 dark:text-neutral-300 leading-relaxed whitespace-pre-line">
-                  {tab.serializedDescription}
-                </div>
-              </div>
-            </TabsContent>
-          ))}
-        </Tabs>
-      </div>
+      <CustomTabs
+        tabs={tabsContent}
+        selectedTab={selectedTab}
+        setSelectedTab={setSelectedTab}
+        primaryColor={primaryColor}
+      />
 
       {section.items.MDXComponent && (
         <div className="mt-10">
