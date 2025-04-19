@@ -36,7 +36,7 @@ export const CustomTabs = ({
   });
 
   return (
-    <div className="w-full">
+    <div className="max-w-3xl">
       <ScrollArea>
         <div className="flex gap-6 border-b border-muted pb-2 mb-4 relative">
           {tabs.map((tab) => (

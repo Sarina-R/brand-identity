@@ -9,8 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SliderContent, ToneOfVoice } from "@/app/type";
 import { lighten } from "polished";
 import { serialize } from "next-mdx-remote/serialize";
-import "swiper/css/pagination";
 import "swiper/css";
+import "swiper/css/pagination";
 
 type SlideCardProps = {
   svg?: string;
@@ -77,7 +77,7 @@ const ToneOfVoiceSection = ({
   }, [sliderContent]);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-[53rem]">
       {section.items.MDXComponent && (
         <MDXRemote
           {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
@@ -85,7 +85,7 @@ const ToneOfVoiceSection = ({
         />
       )}
 
-      <div className="p-6 space-y-5 max-w-3xl">
+      <div className="px-6 space-y-5 max-w-3xl mx-auto">
         <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
           {section.items.title && (
             <MDXRemote
@@ -105,27 +105,28 @@ const ToneOfVoiceSection = ({
       </div>
 
       {serializedContent.length > 0 && (
-        <div className="w-full relative px-4">
+        <div className="w-full px-4 max-w-6xl mx-auto">
           <Swiper
             modules={[Autoplay, Pagination]}
-            grabCursor={true}
+            grabCursor
             slidesPerView={1}
-            spaceBetween={24}
+            spaceBetween={0}
             loop={false}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             pagination={{ clickable: true, dynamicBullets: true }}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
-            className="pb-16"
+            className="pb-16 w-full"
+            style={{ maxWidth: "100%", overflow: "hidden" }}
           >
             {serializedContent.map((item) => (
-              <SwiperSlide key={item.id}>
+              <SwiperSlide key={item.id} style={{ width: "100%" }}>
                 <SlideCard {...item} primaryColor={primaryColor} />
               </SwiperSlide>
             ))}
 
             {isDesktop && (
               <div
-                className="hidden md:flex items-center gap-2 absolute bottom-6 xl:left-12 left-8 z-10"
+                className="hidden md:flex items-center gap-2 absolute bottom-6 left-4 z-10"
                 slot="container-end"
               >
                 <svg
@@ -140,7 +141,6 @@ const ToneOfVoiceSection = ({
                     stroke="currentColor"
                     strokeWidth="4"
                     fill="none"
-                    className="progress-ring"
                     style={{
                       strokeDasharray: 125.6,
                       strokeDashoffset: `calc(125.6 * var(--progress))`,
@@ -170,10 +170,10 @@ const SlideCard: React.FC<SlideCardProps> = ({
   const mdxComponents1 = useMDXComponents1({});
   const lighterColor = lighten(0.2, primaryColor);
   const icons = [Handshake, Home, User, Settings];
-  const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+  const RandomIcon = icons[Math.floor(Math.random() * icons.length)];
 
   return (
-    <div className="w-full max-w-5xl mx-auto min-h-60 flex md:flex-row-reverse flex-col-reverse items-stretch bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-sm border">
+    <div className="w-full max-w-5xl mx-auto min-h-60 flex md:flex-row-reverse flex-col-reverse items-stretch bg-white dark:bg-neutral-800 rounded-2xl shadow-sm border overflow-hidden">
       <div className="md:w-2/3 w-full p-6 space-y-2">
         <h3 className="font-bold text-lg text-neutral-900 dark:text-white">
           {typeof title === "string" ? (
@@ -185,7 +185,7 @@ const SlideCard: React.FC<SlideCardProps> = ({
             />
           )}
         </h3>
-        <div className="text-sm text-gray-600 dark:text-gray-300 leading-loose">
+        <div className="text-sm text-gray-600 dark:text-gray-300 leading-loose overflow-wrap break-word word-break break-word">
           {typeof description === "string" ? (
             description
           ) : (
@@ -204,13 +204,10 @@ const SlideCard: React.FC<SlideCardProps> = ({
           <img
             src={svg}
             alt={typeof title === "string" ? title : ""}
-            className="max-h-24 object-contain"
+            className="max-h-24 object-contain max-w-full"
           />
         ) : (
-          React.createElement(randomIcon, {
-            color: lighterColor,
-            className: "w-16 h-16",
-          })
+          <RandomIcon color={lighterColor} className="w-16 h-16" />
         )}
       </div>
     </div>

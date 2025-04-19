@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Font } from "@/app/type";
 import { Skeleton } from "@/components/ui/skeleton";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function RootLayout({
   children,
@@ -168,9 +169,15 @@ export default function RootLayout({
         {prevItem ? (
           <Link
             href={`/${prevItem.id}`}
-            className="text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
+            className="flex gap-2 text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
           >
-            {"<"} Prev: {prevItem.title}
+            <div className="pt-2">
+              <ChevronLeft size={32} />
+            </div>
+            <div className="">
+              <p className="font-light text-neutral-500 text-sm">Prev</p>
+              <p>{prevItem.title}</p>
+            </div>
           </Link>
         ) : (
           <span></span>
@@ -179,9 +186,15 @@ export default function RootLayout({
         {nextItem ? (
           <Link
             href={`/${nextItem.id}`}
-            className="text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
+            className="flex gap-2 text-right text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
           >
-            Next: {nextItem.title} {">"}
+            <div>
+              <p className="font-light text-neutral-500 text-sm">Next</p>
+              <p>{nextItem.title}</p>
+            </div>
+            <div className="pt-2">
+              <ChevronRight size={32} />
+            </div>
           </Link>
         ) : (
           <span>End of sections</span>

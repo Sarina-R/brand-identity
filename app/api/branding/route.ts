@@ -265,7 +265,7 @@ const data = {
   brand: {
     name: "Fira Cup 2025 Tehran",
     primaryColor: "#fdb813",
-    logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
+    logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
     font: {
       name: "Poppins",
       weights: [400, 500, 700],

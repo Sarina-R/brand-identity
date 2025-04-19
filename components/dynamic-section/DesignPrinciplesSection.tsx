@@ -2,13 +2,10 @@
 
 import { useState } from "react";
 import { DesignPrinciples } from "@/app/type";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import clsx from "clsx";
 import { CustomTabs } from "../CustomTabs";
 
 const fallbackIcons = [Cable, CircleUser, ShieldCheck, Rss];
