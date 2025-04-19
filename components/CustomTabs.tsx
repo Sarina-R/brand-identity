@@ -39,9 +39,9 @@ export const CustomTabs = ({
     <div className="max-w-3xl">
       <ScrollArea>
         <div className="flex gap-6 border-b border-muted pb-2 mb-4 relative">
-          {tabs.map((tab) => (
+          {tabs.map((tab, index) => (
             <button
-              key={tab.title}
+              key={`${tab.title}+${index}`}
               onClick={() => setSelectedTab(tab.title)}
               className={clsx(
                 "relative px-2 pb-2 md:text-base text-sm font-medium whitespace-nowrap",
