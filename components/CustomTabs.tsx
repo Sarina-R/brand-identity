@@ -6,11 +6,11 @@ import { Handshake, ShieldCheck, HandCoins, Blocks, Cog } from "lucide-react";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 const fallbackIcons = [
-  <Handshake className="w-24 h-24 text-white" />,
-  <ShieldCheck className="w-24 h-24 text-white" />,
-  <HandCoins className="w-24 h-24 text-white" />,
-  <Blocks className="w-24 h-24 text-white" />,
-  <Cog className="w-24 h-24 text-white" />,
+  <Handshake key="handshake" className="w-24 h-24 text-white" />,
+  <ShieldCheck key="shield" className="w-24 h-24 text-white" />,
+  <HandCoins key="coins" className="w-24 h-24 text-white" />,
+  <Blocks key="blocks" className="w-24 h-24 text-white" />,
+  <Cog key="cog" className="w-24 h-24 text-white" />,
 ];
 
 export const CustomTabs = ({
