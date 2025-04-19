@@ -77,7 +77,7 @@ const ToneOfVoiceSection = ({
   }, [sliderContent]);
 
   return (
-    <div className="space-y-8 max-w-[53rem]">
+    <div className="space-y-8 max-w-[53rem] sm:px-4">
       {section.items.MDXComponent && (
         <MDXRemote
           {...(section.items.MDXComponent as MDXRemoteSerializeResult)}

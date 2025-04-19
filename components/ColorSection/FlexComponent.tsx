@@ -16,7 +16,7 @@ const FlexComponent = ({ data }: { data: HarmonySection }) => {
         className="container mx-auto lg:flex flex-col-reverse lg:flex-row items-center gap-8 md:gap-12 overflow-hidden"
       >
         <div className="flex-1 space-y-6">
-          <div className="text-3xl md:text-4xl font-bold">
+          <div className="text-2xl text-neutral-800 dark:text-neutral-200 font-bold">
             {data?.title && (
               <MDXRemote
                 {...(data.title as MDXRemoteSerializeResult)}
@@ -24,7 +24,7 @@ const FlexComponent = ({ data }: { data: HarmonySection }) => {
               />
             )}
           </div>
-          <div className="text-lg leading-relaxed">
+          <div className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
             {data?.description && (
               <MDXRemote
                 {...(data.description as MDXRemoteSerializeResult)}

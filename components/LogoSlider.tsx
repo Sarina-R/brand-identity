@@ -87,14 +87,14 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <motion.h2
-          className="text-3xl font-bold"
+          className="text-2xl font-bold text-neutral-800 dark:text-neutral-200"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           Versions
         </motion.h2>
-        <ul className="space-y-3 text-sm">
+        <ul className="space-y-3 text-sm text-neutral-700 dark:text-neutral-300">
           {mdxSources.map((mdx, i) => (
             <motion.li
               key={versions[i].id}
@@ -102,7 +102,9 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
               variants={listItemVariants}
               initial="hidden"
               animate="visible"
-              className={i === index ? "font-bold" : ""}
+              className={
+                i === index ? "font-bold border rounded-2xl p-2" : "p-2"
+              }
             >
               <MDXRemote {...mdx} components={mdxComponents} />
             </motion.li>

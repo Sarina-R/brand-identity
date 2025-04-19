@@ -41,10 +41,10 @@ const StatementSection = ({ section }: StatementProps) => {
   };
 
   return (
-    <div className="statement-section p-6 space-y-26 text-neutral-700 dark:text-neutral-300 mt-18">
+    <div className="statement-section p-6 space-y-26 text-neutral-700 dark:text-neutral-300 mt-10 capitalize">
       <div className="sm:flex justify-between items-center space-y-6 gap-6">
-        <div className="w-full sm:w-1/2 flex flex-col justify-center font-bold space-y-1">
-          <div className="text-sm">
+        <div className="w-full sm:w-1/2 flex flex-col justify-center font-bold space-y-1 sticky top-15">
+          <div className="text-sm font-light text-neutral-500">
             {section.items?.title && (
               <MDXRemote
                 {...(section.items.title as MDXRemoteSerializeResult)}

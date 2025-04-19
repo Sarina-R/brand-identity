@@ -54,7 +54,7 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
   return (
     <div className="">
       <div className="container mx-auto overflow-hidden">
-        <h2 className="font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-4 text-neutral-800 dark:text-neutral-200">
           {palette?.title && (
             <MDXRemote
               {...(palette.title as MDXRemoteSerializeResult)}
@@ -63,7 +63,7 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
           )}
         </h2>
 
-        <div className="mb-8">
+        <div className="mb-8 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
           {palette?.description && (
             <MDXRemote
               {...(palette.description as MDXRemoteSerializeResult)}

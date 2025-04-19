@@ -124,9 +124,9 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
   }, [section]);
 
   return (
-    <section className="p-4 md:p-10 max-w-6xl mx-auto space-y-28 mt-12">
+    <section className="p-4 md:p-10 max-w-6xl mx-auto space-y-28 mt-12 capitalize">
       <div className="lg:flex md:space-x-8 space-y-10 lg:space-y-0 gap-32">
-        <div className="flex-1 space-y-4 lg:sticky top-5 h-full">
+        <div className="flex-1 space-y-4 lg:sticky top-15 h-full">
           <div className="text-xl font-bold">
             {mainTitle && (
               <MDXRemote {...mainTitle} components={mdxComponent1} />
@@ -134,9 +134,9 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
           </div>
           {mainDesc && <MDXRemote {...mainDesc} components={mdxComponent1} />}
         </div>
-        <div className="flex-1 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
+        <div className="flex-1 min-h-52 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
           <p className="text-9xl font-bold">{lastKey}</p>
-          <p className="text-sm font-bold">only support EN</p>
+          <p className="text-sm font-bold pt-8">only support EN</p>
         </div>
       </div>
 

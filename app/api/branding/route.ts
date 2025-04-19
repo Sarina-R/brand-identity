@@ -41,7 +41,7 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
 const item1 = `
     <div className="flex flex-col md:flex-row gap-6">
     <div className="w-full md:w-1/2 flex flex-col justify-center">
-        <p className="text-lg leading-relaxed">
+        <p className="leading-relaxed text-neutral-700 dark:text-neutral-300">
           English is a West Germanic language in the Indo-European language family, whose speakers, called Anglophones, originated in early medieval England on the island of Great Britain.[4][5][6] The namesake of the language is the Angles, one of the Germanic peoples that migrated to Britain after its Roman occupiers left. English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the
         </p>
       </div>
@@ -59,10 +59,10 @@ const item2 = `Fira Iran's brand personality is defined based on the Magician ar
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Fira Iran's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Fira Iran’s brand identity.`;
 
-const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
+const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
         <div className="space-y-6">
-          <h1 className="text-3xl font-bold">Voice and Tone</h1>
-          <p className="mx-auto text-lg leading-relaxed">
+          <h1 className="text-xl font-bold">Voice and Tone</h1>
+          <p className="text-neutral-700 dark:text-neutral-300 mx-auto leading-relaxed">
             Our brand voice combines professionalism and friendliness to
             prioritize exceptional customer service. It remains adaptable to
             different contexts and audiences.
@@ -92,7 +92,7 @@ const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
               <h6 className="text-3xl font-extrabold mb-4 tracking-wide glow-text">
                 Friendly
               </h6>
-              <p className="text-lg leading-relaxed">
+              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
                 We endeavor to cultivate a hospitable and inclusive environment for our clients and partners, nurturing transparent communication and cooperative partnerships.
               </p>
             </div>
@@ -112,17 +112,17 @@ const ToneOfVoice = `          <div className="w-full px-6 py-10 space-y-16">
               <h6 className="text-3xl font-extrabold mb-4 tracking-wide glow-text">
                 Professional
               </h6>
-              <p className="text-lg leading-relaxed">
+              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
                 FIRA CUP upholds a professional and formal tone in all communications, demonstrating our dedication to excellence and dependability.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>`;
+</div>`;
 
-const Mascot = `<div className="max-w-5xl mx-auto my-12 px-4 sm:px-6 lg:px-8">
-  <div className="relative rounded-2xl shadow-2xl p-6 sm:p-8 bg-[#FDB813]">
+const Mascot = `<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="relative rounded-2xl p-6 sm:p-8 bg-[#FDB813]">
     <div className="absolute inset-0 bg-[url('https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png')] bg-cover bg-center bg-no-repeat opacity-5 rounded-2xl"></div>
     <div className="relative">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -137,7 +137,7 @@ const Mascot = `<div className="max-w-5xl mx-auto my-12 px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-black mb-6">
             MASCOT
           </h2>
-          <p className="text-black text-base sm:text-lg leading-relaxed">
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
             The mascot for the FIRA Cup 2025 in Iran is inspired by the Iranian
             cheetah, symbolizing speed, agility, and resilience. This robotic
             cheetah embodies the spirit of innovation and excellence that defines
@@ -196,66 +196,66 @@ const IdentityInUse = `<div class="min-h-screen px-6 py-12 space-y-12">
   <section>
     <h2 class="text-2xl font-semibold mb-4">Instagram Posts</h2>
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(18).png" alt="Post 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 1" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(18).png" alt="Post 2" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 3" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold mb-4">Instagram Stories</h2>
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(20).png" alt="Story 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(21).png" alt="Story 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(22).png" alt="Story 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(20).png" alt="Story 1" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(21).png" alt="Story 2" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(22).png" alt="Story 3" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold mb-4">Format Sizes</h2>
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(23).png" alt="Story Size" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(24).png" alt="Poster Size" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(25).png" alt="Post Size" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(23).png" alt="Story Size" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(24).png" alt="Poster Size" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(25).png" alt="Post Size" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold mb-4">Flags & City Posters</h2>
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(26).png" alt="Flag 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(27).png" alt="Flag 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(28).png" alt="Flag 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(29).png" alt="City 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(30).png" alt="City 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(31).png" alt="City 3" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(32).png" alt="City 4" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(26).png" alt="Flag 1" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(27).png" alt="Flag 2" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(28).png" alt="Flag 3" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(29).png" alt="City 1" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(30).png" alt="City 2" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(31).png" alt="City 3" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(32).png" alt="City 4" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold mb-4">Merch: T-Shirts & Mugs</h2>
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(33).png" alt="T-shirt" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(34).png" alt="Mug" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(33).png" alt="T-shirt" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(34).png" alt="Mug" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold mb-4">ID Cards</h2>
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(35).png" alt="ID Back" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(36).png" alt="ID Front" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(37).png" alt="ID Ribbon 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(38).png" alt="ID Ribbon 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(35).png" alt="ID Back" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(36).png" alt="ID Front" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(37).png" alt="ID Ribbon 1" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(38).png" alt="ID Ribbon 2" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 
   <section>
     <h2 class="text-2xl font-semibold mb-4">Certificates</h2>
     <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(39).png" alt="Certificate 1" class="w-full rounded-2xl shadow-lg hover:scale-105" />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(40).png" alt="Certificate 2" class="w-full rounded-2xl shadow-lg hover:scale-105" />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(39).png" alt="Certificate 1" class="w-full rounded-2xl shadow-lg " />
+      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(40).png" alt="Certificate 2" class="w-full rounded-2xl shadow-lg " />
     </div>
   </section>
 </div>

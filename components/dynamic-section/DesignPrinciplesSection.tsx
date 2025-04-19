@@ -7,8 +7,14 @@ import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
 import Image from "next/image";
 import { CustomTabs } from "../CustomTabs";
+import { motion } from "framer-motion";
 
 const fallbackIcons = [Cable, CircleUser, ShieldCheck, Rss];
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
 const DesignPrinciplesSection = ({
   section,
@@ -48,7 +54,7 @@ const DesignPrinciplesSection = ({
           alt="Video Cover"
           layout="fill"
           objectFit="cover"
-          className="transition-all duration-300 group-hover:scale-105"
+          className="transition-all duration-300 group-"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <PlayCircle
@@ -95,13 +101,22 @@ const DesignPrinciplesSection = ({
   }
 
   return (
-    <section className="py-16 space-y-24 h-full">
-      <div className="mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="relative aspect-video rounded-2xl shadow-xl overflow-hidden">
+    <section className="py-10 md:px-4 space-y-24 h-full capitalize">
+      <motion.div
+        className="mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+      >
+        <motion.div
+          className="relative aspect-video rounded-2xl shadow-xl overflow-hidden"
+          variants={fadeInUp}
+        >
           {media}
-        </div>
+        </motion.div>
 
-        <div className="sticky top-0 h-fit">
+        <motion.div className="sticky top-15 h-fit" variants={fadeInUp}>
           {section.items.title && (
             <h2 className="text-3xl font-bold mb-4 text-neutral-800 dark:text-neutral-200">
               {typeof section.items.title === "string" ? (
@@ -123,23 +138,37 @@ const DesignPrinciplesSection = ({
               )}
             </div>
           )}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <CustomTabs
-        tabs={tabsContent}
-        selectedTab={selectedTab}
-        setSelectedTab={setSelectedTab}
-        primaryColor={primaryColor}
-      />
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+        className="m-auto sm:px-6"
+      >
+        <CustomTabs
+          tabs={tabsContent}
+          selectedTab={selectedTab}
+          setSelectedTab={setSelectedTab}
+          primaryColor={primaryColor}
+        />
+      </motion.div>
 
       {section.items.MDXComponent && (
-        <div className="mt-10">
+        <motion.div
+          className="mt-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={fadeInUp}
+        >
           <MDXRemote
             {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
             components={mdxComponents}
           />
-        </div>
+        </motion.div>
       )}
     </section>
   );

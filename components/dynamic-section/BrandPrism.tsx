@@ -38,15 +38,15 @@ const ActiveSectionDetails = ({
 
   return (
     <motion.div
-      className="mt-4 p-4 border border-neutral-400 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900"
+      className="mt-4 p-4 border border-neutral-400 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-900 capitalize"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <h3 className="text-lg font-bold text-black dark:text-white">
+      <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
         {activeSection}
       </h3>
-      <p className="text-neutral-700 dark:text-neutral-300">
+      <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
         {activeItem.description}
       </p>
     </motion.div>
@@ -71,7 +71,7 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
   ];
 
   return (
-    <div className="flex flex-col items-center space-y-8 sm:px-6">
+    <div className="flex flex-col items-center space-y-8 sm:px-6 py-5">
       <div className="lg:flex sm:p-6 p-2 justify-center items-center overflow-hidden">
         <svg
           viewBox="0 0 350 350"
@@ -152,7 +152,7 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
         </div>
       </div>
 
-      <div className="sm:px-6 px-4">
+      <div className="sm:px-6 px-4 text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm">
         {section.items.MDXComponent && (
           <MDXRemote
             {...(section.items.MDXComponent as MDXRemoteSerializeResult)}

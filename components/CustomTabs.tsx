@@ -93,7 +93,7 @@ export const CustomTabs = ({
             </div>
             <div className="w-full lg:w-1/2 p-4">
               <h3 className="text-2xl font-semibold mb-4">{tab.title}</h3>
-              <div className="text-neutral-700 dark:text-neutral-300 leading-relaxed whitespace-pre-line">
+              <div className="text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-pre-line">
                 {tab.serializedDescription}
               </div>
             </div>

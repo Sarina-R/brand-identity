@@ -7,6 +7,15 @@ import { Serialized } from "@/lib/serializeTextFields";
 import { useMDXComponents } from "@/mdx-component";
 import { motion, AnimatePresence } from "framer-motion";
 
+const textVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
 const Header = ({
   serializedItems,
   section,
@@ -25,7 +34,6 @@ const Header = ({
         prevIndex === section.items.img.length - 1 ? 0 : prevIndex + 1
       );
     }, 4000);
-
     return () => clearInterval(interval);
   }, [section.items.img.length]);
 
@@ -34,42 +42,63 @@ const Header = ({
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="lg:flex flex-col-reverse md:flex-row items-center gap-10 overflow-hidden space-y-8"
+      className="lg:flex flex-col-reverse md:flex-row gap-10 space-y-8"
     >
-      <div className="flex-1">
-        <div className="text-3xl md:text-4xl font-bold mb-4">
+      <div className="flex-1 sticky top-15 h-full">
+        <motion.div
+          variants={textVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={0}
+          className="text-2xl font-bold mb-4 text-neutral-800 dark:text-neutral-200"
+        >
           {serializedItems?.title && (
             <MDXRemote
               {...(serializedItems.title as MDXRemoteSerializeResult)}
               components={mdxComponents}
             />
           )}
-        </div>
-        <div className="">
+        </motion.div>
+
+        <motion.div
+          variants={textVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={1}
+          className="text-sm text-neutral-700 dark:text-neutral-300"
+        >
           {serializedItems?.desc && (
             <MDXRemote
               {...(serializedItems.desc as MDXRemoteSerializeResult)}
               components={mdxComponents}
             />
           )}
-        </div>
+        </motion.div>
       </div>
 
-      <div className="relative flex-1 h-72 md:h-96 rounded-3xl overflow-hidden shadow-lg">
-        <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative flex-1 h-72 rounded-3xl overflow-hidden shadow-lg"
+      >
+        <AnimatePresence mode="wait">
           {section.items.img.map((imgSrc, index) =>
             index === currentImageIndex ? (
               <motion.img
                 key={imgSrc}
                 src={imgSrc}
                 alt={`Slide ${index + 1}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={{ opacity: 0, scale: 1.02 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
                 transition={{ duration: 1 }}
                 className="absolute w-full h-full object-cover object-center"
               />
-            ) : undefined
+            ) : null
           )}
         </AnimatePresence>
 
@@ -145,7 +174,7 @@ const Header = ({
           }}
           className="opacity-30"
         />
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

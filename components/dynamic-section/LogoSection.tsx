@@ -67,7 +67,7 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
 
   return (
     <motion.div
-      className="lg:p-8 p-4 lg:space-y-24 space-y-16"
+      className="lg:p-8 p-4 lg:space-y-24 space-y-16 capitalize"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -99,7 +99,7 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
         >
           <motion.div variants={fadeIn("down")} className="space-y-4">
             {section.items.title && (
-              <div className="text-xl font-semibold">
+              <div className="text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
                 <MDXRemote
                   {...(section.items.title as MDXRemoteSerializeResult)}
                   components={mdxComponents1}
@@ -107,7 +107,7 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
               </div>
             )}
             {section.items.desc && (
-              <div className="text-sm leading-relaxed whitespace-pre-line">
+              <div className="text-sm leading-relaxed whitespace-pre-line text-neutral-700 dark:bg-neutral-300">
                 <MDXRemote
                   {...(section.items.desc as MDXRemoteSerializeResult)}
                   components={mdxComponents1}
