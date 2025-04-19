@@ -70,7 +70,9 @@ export default function RootLayout({
                 <div className="flex-1 w-[calc(100vw-18rem)]">
                   <div className="flex justify-between items-center border-b px-4 py-2 mb-2 sticky top-0 z-50 bg-white dark:bg-black">
                     <div className="flex items-center gap-2">
-                      <SidebarTrigger />
+                      <span className="md:hidden inline">
+                        <SidebarTrigger />
+                      </span>
                       <Breadcrumbs />
                     </div>
                     <ThemeToggle />
