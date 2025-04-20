@@ -127,12 +127,14 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
     <section className="p-4 md:p-10 max-w-6xl mx-auto space-y-28 mt-12 capitalize">
       <div className="lg:flex md:space-x-8 space-y-10 lg:space-y-0 gap-32">
         <div className="flex-1 space-y-4 lg:sticky top-15 h-full">
-          <div className="text-xl font-bold">
+          <div className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
             {mainTitle && (
               <MDXRemote {...mainTitle} components={mdxComponent1} />
             )}
           </div>
-          {mainDesc && <MDXRemote {...mainDesc} components={mdxComponent1} />}
+          <div className="text-neutral-700 dark:text-neutral-300 leading-7">
+            {mainDesc && <MDXRemote {...mainDesc} components={mdxComponent1} />}
+          </div>
         </div>
         <div className="flex-1 min-h-52 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
           <p className="text-9xl font-bold">{lastKey}</p>
@@ -143,12 +145,12 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       <div className="space-y-12">
         <div className="lg:flex justify-between gap-32">
           {fontFeatureTitle && (
-            <div className="text-xl font-bold">
+            <div className="sticky top-15 h-full text-xl font-bold text-neutral-800 dark:text-neutral-200">
               <MDXRemote {...fontFeatureTitle} components={mdxComponent1} />
             </div>
           )}
           {fontFeatureDesc && (
-            <div>
+            <div className="text-neutral-700 dark:text-neutral-300 leading-7">
               <MDXRemote {...fontFeatureDesc} components={mdxComponent1} />
             </div>
           )}
@@ -167,16 +169,22 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-12 rounded-2xl">
-        <div className="space-y-4 flex-1 border p-10 px-8 m-auto text-center rounded-2xl w-full">
-          {section.font.weights.map((weight) => (
-            <p key={weight} className="text-2xl" style={{ fontWeight: weight }}>
-              {sampleText}
-            </p>
-          ))}
+        <div className="flex-1 sticky top-15 h-full">
+          <div className="space-y-4 border p-10 px-8 m-auto text-center rounded-2xl w-full">
+            {section.font.weights.map((weight) => (
+              <p
+                key={weight}
+                className="text-2xl text-neutral-800 dark:text-neutral-200"
+                style={{ fontWeight: weight }}
+              >
+                {sampleText}
+              </p>
+            ))}
+          </div>
         </div>
-        <div className="flex-1 text-sm leading-relaxed">
+        <div className="flex-1 text-sm text-neutral-700 dark:text-neutral-300 leading-7">
           {weightsTitle && (
-            <h2 className="text-xl font-bold mb-4">
+            <h2 className="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-200">
               <MDXRemote {...weightsTitle} components={mdxComponent1} />
             </h2>
           )}
@@ -189,12 +197,14 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       <div className="lg:space-y-16 space-y-10">
         {principlesTitle && (
           <div>
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 pb-3">
               <MDXRemote {...principlesTitle} components={mdxComponent1} />
             </h2>
-            {principlesDesc && (
-              <MDXRemote {...principlesDesc} components={mdxComponent1} />
-            )}
+            <div className="text-neutral-700 dark:text-neutral-300 leading-7">
+              {principlesDesc && (
+                <MDXRemote {...principlesDesc} components={mdxComponent1} />
+              )}
+            </div>
           </div>
         )}
         {principlesSections.length > 0 && (
@@ -213,7 +223,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
                     <h2 className="text-2xl font-semibold text-neutral-800 dark:text-white">
                       <MDXRemote {...sec.subtitle} components={mdxComponent1} />
                     </h2>
-                    <div className="text-neutral-600 dark:text-neutral-300 text-sm leading-relaxed">
+                    <div className="text-neutral-600 dark:text-neutral-300 text-sm leading-7">
                       <MDXRemote {...sec.content} components={mdxComponent1} />
                     </div>
                   </div>
@@ -224,7 +234,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
                     {sec.examples.map((example, idx2) => (
                       <div
                         key={idx2}
-                        className="rounded-2xl border border-neutral-200 dark:border-neutral-700 px-5 py-3 shadow-sm hover:shadow-md transition-all duration-200 bg-white dark:bg-zinc-900 space-y-4"
+                        className="rounded-2xl border border-neutral-200 dark:border-neutral-700 px-5 py-3 transition-all duration-200 bg-white dark:bg-zinc-900 space-y-4"
                       >
                         <div className="flex justify-end">
                           <span
@@ -241,7 +251,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
                         </div>
 
                         {example.mdx ? (
-                          <div className="text-sm text-right text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                          <div className="text-sm text-right text-neutral-700 dark:text-neutral-300 leading-7">
                             <MDXRemote
                               {...example.mdx}
                               components={mdxComponent1}
