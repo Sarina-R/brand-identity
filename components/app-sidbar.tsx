@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/sidebar";
 import { useData } from "@/hooks/DataProvider";
 import Image from "next/image";
+import { Skeleton } from "./ui/skeleton";
 
 type SidebarItem = {
   id: string;
@@ -34,20 +35,20 @@ export function AppSidebar({ groups }: AppSidebarProps) {
     <Sidebar className="py-4 border">
       {loading ? (
         <SidebarContent>
-          {groups.map((group, index) => (
+          <div className="px-4 mb-6">
+            <Skeleton className="h-10 w-32" />
+          </div>
+
+          {Array.from({ length: 3 }).map((_, index) => (
             <SidebarGroup key={index} className="p-3 px-6">
-              <SidebarGroupLabel className="font-light">
-                {group.label}
+              <SidebarGroupLabel className="mb-2">
+                <Skeleton className="h-4 w-24" />
               </SidebarGroupLabel>
               <SidebarGroupContent>
-                <SidebarMenu className=" font-bold">
-                  {group.items.map((item) => (
-                    <SidebarMenuItem key={item.id}>
-                      <SidebarMenuButton asChild>
-                        <Link href={`/${item.id}`}>
-                          <span>{item.title}</span>
-                        </Link>
-                      </SidebarMenuButton>
+                <SidebarMenu>
+                  {Array.from({ length: 4 }).map((_, itemIndex) => (
+                    <SidebarMenuItem key={itemIndex} className="py-2">
+                      <Skeleton className="h-4 w-40" />
                     </SidebarMenuItem>
                   ))}
                 </SidebarMenu>
