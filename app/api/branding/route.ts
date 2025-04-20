@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
         <img
-          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(3).png"
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//portfolio-svgrepo-com.svg"
           alt="Vision Icon"
-          className="w-20 h-20 mx-auto mb-3 dark:invert"
+          className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
         <h2 className="text-2xl font-bold mb-4">Vision</h2>
         <p className="leading-relaxed text-sm">
@@ -15,9 +15,9 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
 
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
         <img
-          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(2).png"
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//file-2-svgrepo-com.svg"
           alt="Mission Icon"
-          className="w-20 h-20 mx-auto mb-3 dark:invert"
+          className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
         <h2 className="text-2xl font-bold mb-4">Mission</h2>
         <p className="leading-relaxed text-sm">
@@ -27,9 +27,9 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
 
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
         <img
-          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(1).png"
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//trophy-svgrepo-com.svg"
           alt="Target Icon"
-          className="w-20 h-20 mx-auto mb-3 dark:invert"
+          className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
         <h2 className="text-2xl font-bold mb-4">Target</h2>
         <p className="leading-relaxed text-sm">
@@ -185,7 +185,14 @@ const DesignPrinciples = `
           alt="FIRA Cup Logo"
           width={200}
           height={150}
-          className="object-contain"
+          className="object-contain dark:hidden block"
+        />
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo.png"
+          alt="FIRA Cup Logo"
+          width={200}
+          height={150}
+          className="object-contain dark:block hidden"
         />
       </div>
     </div>`;
