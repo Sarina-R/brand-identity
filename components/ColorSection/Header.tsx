@@ -44,7 +44,7 @@ const Header = ({
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="lg:flex flex-col-reverse md:flex-row gap-10 space-y-8"
     >
-      <div className="flex-1 sticky top-15 h-full">
+      <div className="flex-1 lg:sticky top-15 h-full">
         <motion.div
           variants={textVariant}
           initial="hidden"

@@ -83,11 +83,11 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
               onHoverEnd={() => setHoveredColor(null)}
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              onClick={() => copyToClipboard(color.hex)}
             >
               <div
                 className="h-40 md:h-80 w-full"
                 style={{ backgroundColor: color.hex }}
+                onClick={() => copyToClipboard(color.hex)}
               ></div>
 
               <div className="p-4 absolute top-0 w-full">
@@ -156,9 +156,49 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
                         duration: 0.3,
                         ease: "easeOut",
                       }}
-                      className="w-full"
+                      className="w-full hover:cursor-pointer relative"
                       style={{ backgroundColor: shade.hex }}
-                    />
+                      onClick={() => copyToClipboard(shade.hex)}
+                    >
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                        <div className="flex items-center gap-1 bg-black/50 px-1 py-[0.1rem] rounded">
+                          <p className="text-[0.5rem] text-white">
+                            {shade.hex}
+                          </p>
+                          {copiedHex === shade.hex ? (
+                            <svg
+                              className="w-3 h-3 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              className="w-3 h-3 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M8 16h8M8 12h8m-4-8v16"
+                              />
+                            </svg>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
                   ))}
                 </div>
               )}
