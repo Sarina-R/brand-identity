@@ -130,7 +130,14 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
                 alt={versions[index].name}
                 width={200}
                 height={200}
-                className="object-contain"
+                className="object-contain block dark:hidden"
+              />
+              <Image
+                src={versions[index].darkSvg}
+                alt={versions[index].name}
+                width={200}
+                height={200}
+                className="object-contain hidden dark:block"
               />
             </motion.div>
           </AnimatePresence>

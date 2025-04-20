@@ -5,7 +5,7 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
         <img
           src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(3).png"
           alt="Vision Icon"
-          className="w-20 h-20 mx-auto mb-3"
+          className="w-20 h-20 mx-auto mb-3 dark:invert"
         />
         <h2 className="text-2xl font-bold mb-4">Vision</h2>
         <p className="leading-relaxed text-sm">
@@ -17,7 +17,7 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
         <img
           src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(2).png"
           alt="Mission Icon"
-          className="w-20 h-20 mx-auto mb-3"
+          className="w-20 h-20 mx-auto mb-3 dark:invert"
         />
         <h2 className="text-2xl font-bold mb-4">Mission</h2>
         <p className="leading-relaxed text-sm">
@@ -29,7 +29,7 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
         <img
           src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(1).png"
           alt="Target Icon"
-          className="w-20 h-20 mx-auto mb-3"
+          className="w-20 h-20 mx-auto mb-3 dark:invert"
         />
         <h2 className="text-2xl font-bold mb-4">Target</h2>
         <p className="leading-relaxed text-sm">
@@ -137,7 +137,7 @@ const Mascot = `<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-black mb-6">
             MASCOT
           </h2>
-          <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
+          <p className="text-neutral-700 text-sm leading-relaxed">
             The mascot for the FIRA Cup 2025 in Iran is inspired by the Iranian
             cheetah, symbolizing speed, agility, and resilience. This robotic
             cheetah embodies the spirit of innovation and excellence that defines
@@ -153,7 +153,42 @@ const Mascot = `<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
   </div>
 </div>`;
 
-const DesignPrinciples = `<img src='https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(8).png' alt='logo'/>`;
+const DesignPrinciples = `
+ <div className="flex items-center justify-center gap-4 w-full flex-wrap">
+      <div className="flex items-center justify-center">
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//cheata.png"
+          alt="cheetah"
+          width={150}
+          height={70}
+          className="dark:invert object-contain"
+        />
+      </div>
+
+      <span className="text-4xl dark:text-white">→</span>
+
+      <div className="flex items-center justify-center">
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Fire.png"
+          alt="fire"
+          width={100}
+          height={70}
+          className="dark:invert object-contain"
+        />
+      </div>
+
+      <span className="text-4xl dark:text-white">→</span>
+
+      <div className="flex items-center justify-center">
+        <img
+          src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg"
+          alt="FIRA Cup Logo"
+          width={200}
+          height={150}
+          className="object-contain"
+        />
+      </div>
+    </div>`;
 
 // const item4 = `<div className="w-full lg:px-8 space-y-16">
 //       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -266,6 +301,8 @@ const data = {
     name: "Fira Cup 2025 Tehran",
     primaryColor: "#fdb813",
     logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
+    darkLogo:
+      "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
     font: {
       name: "Poppins",
       weights: [400, 500, 700],
@@ -516,18 +553,24 @@ const data = {
             name: "Vertical logo",
             text: "Priority is given to use the vertical version of the logo.",
             svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+            darkSvg:
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
           },
           {
             id: 2,
             name: "Horizontal logo",
             text: "We use the horizontal logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
             svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
+            darkSvg:
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
           },
           {
             id: 3,
             name: "Mono",
             text: "We use the monogram version in Fira Iran media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
             svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(41).png",
+            darkSvg:
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(41).png",
           },
         ],
         inBackgroundSection: {
@@ -803,12 +846,12 @@ const data = {
               examples: [
                 {
                   status: "incorrect",
-                  mdx: '<div className="leading-7 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
+                  mdx: '<div className="text-left leading-5">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
                   label: "incorrect",
                 },
                 {
                   status: "correct",
-                  mdx: '<div className="leading-5 text-left">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
+                  mdx: '<div className="text-left leading-6">\n  <p className="max-w-40">First-level heading with short and balanced text\nSecond-level heading that is longer and wraps to the next line\n...</p>\n</div>',
                   label: "correct",
                 },
               ],

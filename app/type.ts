@@ -5,6 +5,7 @@ export interface Brand {
   name: string;
   primaryColor: string;
   logo: string;
+  darkLogo: string;
   font: Font;
 }
 
@@ -167,6 +168,7 @@ export interface LogoVersion {
   name: string;
   text: string | MDXRemoteSerializeResult;
   svg: string;
+  darkSvg: string;
 }
 
 export interface InBackgroundComponent {

@@ -14,7 +14,7 @@ export function Breadcrumbs() {
   };
 
   return (
-    <nav className="flex items-center text-sm text-gray-600 dark:text-gray-400 space-x-2">
+    <nav className="flex items-center text-sm text-neutral-600 dark:text-neutral-400 space-x-2">
       {paths.map((path, index) => (
         <span key={index} className="capitalize">
           {formatSegment(path)}

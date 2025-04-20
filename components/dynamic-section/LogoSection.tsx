@@ -7,12 +7,20 @@ import { serialize } from "next-mdx-remote/serialize";
 import { Button } from "@/components/ui/button";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { Logo } from "@/app/type";
+import { motion } from "framer-motion";
 import LogoSlider from "../LogoSlider";
 import LogoBackground from "../LogoBG";
 import CoBrandingLogoSection from "../CoBrandingLogoSection";
-import { motion } from "framer-motion";
 
-const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
+const LogoSection = ({
+  section,
+  logo,
+  darkLogo,
+}: {
+  section: Logo;
+  logo: string;
+  darkLogo: string;
+}) => {
   const mdxComponents1 = useMDXComponents1({});
   const mdxComponents = useMDXComponents({});
   const [mdxSource, setMdxSource] = useState<
@@ -84,11 +92,18 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
         >
           <div className="w-full max-w-md flex justify-center">
             <Image
-              src={logo || ""}
+              src={logo}
               alt="logo"
               width={300}
               height={100}
-              className="object-contain"
+              className="object-contain block dark:hidden"
+            />
+            <Image
+              src={darkLogo}
+              alt="dark logo"
+              width={300}
+              height={100}
+              className="object-contain hidden dark:block"
             />
           </div>
         </motion.div>
@@ -107,7 +122,7 @@ const LogoSection = ({ section, logo }: { section: Logo; logo: string }) => {
               </div>
             )}
             {section.items.desc && (
-              <div className="text-sm leading-relaxed whitespace-pre-line text-neutral-700 dark:bg-neutral-300">
+              <div className="text-sm leading-relaxed whitespace-pre-line text-neutral-700 dark:text-neutral-300">
                 <MDXRemote
                   {...(section.items.desc as MDXRemoteSerializeResult)}
                   components={mdxComponents1}

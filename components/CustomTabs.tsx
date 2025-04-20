@@ -4,6 +4,9 @@ import Image from "next/image";
 import React, { JSX } from "react";
 import { Handshake, ShieldCheck, HandCoins, Blocks, Cog } from "lucide-react";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
+import { TabsContentItem } from "@/app/type";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { useMDXComponents1 } from "@/mdx-component";
 
 const fallbackIcons = [
   <Handshake key="handshake" className="w-24 h-24 text-white" />,
@@ -19,15 +22,14 @@ export const CustomTabs = ({
   setSelectedTab,
   primaryColor,
 }: {
-  tabs: {
-    title: string;
-    svg?: string;
-    serializedDescription: React.ReactNode;
-  }[];
+  tabs: Array<
+    TabsContentItem & { serializedDescription: MDXRemoteSerializeResult }
+  >;
   selectedTab: string;
   setSelectedTab: (val: string) => void;
   primaryColor: string;
 }) => {
+  const mdxComponent1 = useMDXComponents1({});
   const svgLessTabs = tabs.filter((tab) => !tab.svg);
 
   const iconMap = new Map<string, JSX.Element>();
@@ -94,7 +96,14 @@ export const CustomTabs = ({
             <div className="w-full lg:w-1/2 p-4">
               <h3 className="text-2xl font-semibold mb-4">{tab.title}</h3>
               <div className="text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-pre-line">
-                {tab.serializedDescription}
+                {tab.serializedDescription ? (
+                  <MDXRemote
+                    {...tab.serializedDescription}
+                    components={mdxComponent1}
+                  />
+                ) : (
+                  <p>No description available</p>
+                )}
               </div>
             </div>
           </motion.div>

@@ -65,6 +65,7 @@ const Page = () => {
             key={section.type}
             section={section}
             logo={data.brand.logo}
+            darkLogo={data.brand.darkLogo}
           />
         );
       case "mascot":

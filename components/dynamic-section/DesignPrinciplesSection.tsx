@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { DesignPrinciples } from "@/app/type";
+import { useState, useEffect } from "react";
+import { DesignPrinciples, TabsContentItem } from "@/app/type";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
 import Image from "next/image";
@@ -25,17 +26,47 @@ const DesignPrinciplesSection = ({
 }) => {
   const mdxComponents = useMDXComponents({});
   const mdxComponents1 = useMDXComponents1({});
-  const tabsContent = section.items.tabsContent.map((tab) => ({
-    ...tab,
-    serializedDescription:
-      typeof tab.description === "string" ? (
-        tab.description
-      ) : (
-        <MDXRemote {...tab.description} components={mdxComponents1} />
-      ),
-  }));
-  const [selectedTab, setSelectedTab] = useState(tabsContent[0].title);
+  const [serializedTabsContent, setSerializedTabsContent] = useState<
+    Array<TabsContentItem & { serializedDescription: MDXRemoteSerializeResult }>
+  >([]);
+  const [selectedTab, setSelectedTab] = useState(
+    section.items.tabsContent[0]?.title || ""
+  );
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  useEffect(() => {
+    const serializeDescriptions = async () => {
+      try {
+        const serializedContent = await Promise.all(
+          section.items.tabsContent.map(async (tab) => {
+            let serializedDescription: MDXRemoteSerializeResult;
+
+            if (typeof tab.description === "string") {
+              serializedDescription = await serialize(tab.description);
+            } else {
+              serializedDescription = tab.description; // Already serialized
+            }
+
+            return {
+              ...tab,
+              serializedDescription,
+            };
+          })
+        );
+        setSerializedTabsContent(serializedContent);
+
+        // Set default selected tab if not set
+        if (serializedContent.length > 0 && !selectedTab) {
+          setSelectedTab(serializedContent[0].title);
+        }
+      } catch (error) {
+        console.error("Error serializing tabs content:", error);
+        setSerializedTabsContent([]); // Fallback to empty array
+      }
+    };
+
+    serializeDescriptions();
+  }, [section.items.tabsContent, selectedTab]);
 
   const hasVideo = !!section.items.video;
   const hasVideoCover = !!section.items.videoCover;
@@ -52,9 +83,9 @@ const DesignPrinciplesSection = ({
         <Image
           src={section.items.videoCover || ""}
           alt="Video Cover"
-          layout="fill"
-          objectFit="cover"
-          className="transition-all duration-300 group-"
+          fill
+          style={{ objectFit: "cover" }}
+          className="transition-all duration-300"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <PlayCircle
@@ -85,8 +116,8 @@ const DesignPrinciplesSection = ({
       <Image
         src={section.items.image || ""}
         alt="Image"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
         className="object-cover"
       />
     );
@@ -149,7 +180,7 @@ const DesignPrinciplesSection = ({
         className="m-auto sm:px-6"
       >
         <CustomTabs
-          tabs={tabsContent}
+          tabs={serializedTabsContent}
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}
           primaryColor={primaryColor}
