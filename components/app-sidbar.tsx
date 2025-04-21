@@ -12,34 +12,19 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { useData } from "@/hooks/DataProvider";
-import Image from "next/image";
 import { Skeleton } from "./ui/skeleton";
 import { useEffect, useState } from "react";
 import { MenuGroup, MenuItem } from "@/app/type";
-
-type SidebarItem = {
-  id: string;
-  title: string;
-  type: string;
-};
+import Image from "next/image";
 
 type SidebarGroup = {
   label: string;
-  items: SidebarItem[];
-};
-
-type AppSidebarProps = {
-  groups: SidebarGroup[];
+  items: MenuItem[];
 };
 
 export function AppSidebar() {
   const { data, loading } = useData();
-  const [groups, setGroups] = useState<
-    {
-      label: string;
-      items: MenuItem[];
-    }[]
-  >([]);
+  const [groups, setGroups] = useState<SidebarGroup[]>([]);
 
   useEffect(() => {
     if (!data || !data.menu) return;
