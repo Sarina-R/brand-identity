@@ -16,6 +16,7 @@ import { Skeleton } from "./ui/skeleton";
 import { useEffect, useState } from "react";
 import { MenuGroup, MenuItem } from "@/app/type";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type SidebarGroup = {
   label: string;
@@ -25,6 +26,8 @@ type SidebarGroup = {
 export function AppSidebar() {
   const { data, loading } = useData();
   const [groups, setGroups] = useState<SidebarGroup[]>([]);
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1] || "IR";
 
   useEffect(() => {
     if (!data || !data.menu) return;
@@ -94,7 +97,7 @@ export function AppSidebar() {
                     {group.items.map((item) => (
                       <SidebarMenuItem key={item.id}>
                         <SidebarMenuButton asChild>
-                          <Link href={`/${item.id}`}>
+                          <Link href={`/${locale}/${item.id}`}>
                             <span>{item.title}</span>
                           </Link>
                         </SidebarMenuButton>

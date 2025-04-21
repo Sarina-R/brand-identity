@@ -19,9 +19,13 @@ const Page = () => {
   if (loading || !data)
     return <div className="text-center text-gray-500">Loading...</div>;
 
+  const parts = pathname.split("/").filter(Boolean);
+  const location = parts[0];
+  const itemId = parts[1];
+
   const currentType = Object.values(data.menu)
     .flatMap((menu) => menu.items)
-    .find((item) => pathname.includes(item.id))?.type;
+    .find((item) => item.id === itemId)?.type;
 
   const section = data.sections.find((sec) => sec.type === currentType);
 

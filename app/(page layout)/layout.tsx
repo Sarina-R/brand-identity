@@ -58,7 +58,7 @@ export default function RootLayout({
       </div>
     );
   }
-  const { primaryColor } = data.brand;
+  const primaryColor = data.brand.primaryColor;
 
   const menuItems = Object.values(data.menu).flatMap((menu) => menu.items);
   const currentType = menuItems.find((item) =>

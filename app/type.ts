@@ -419,3 +419,7 @@ export interface ApiResponse {
   menu: Menu;
   sections: Section[];
 }
+
+export interface Data {
+  [localeCode: string]: ApiResponse;
+}

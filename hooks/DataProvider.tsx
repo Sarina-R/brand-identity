@@ -7,9 +7,10 @@ import {
   useEffect,
   ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 import axios from "axios";
 import { serialize } from "next-mdx-remote/serialize";
-import { ApiResponse, Section } from "@/app/type";
+import { ApiResponse, Section, Data as LocaleData } from "@/app/type";
 import { API_URLS } from "@/app/api/url";
 
 interface DataContextType {
@@ -25,15 +26,26 @@ const DataContext = createContext<DataContextType>({
 export function DataProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     async function fetchAndSerializeData() {
       try {
         const response = await axios.get(API_URLS.BRANDING);
-        const result: ApiResponse = response.data;
+        const result: LocaleData = response.data;
+
+        const locale = pathname?.split("/")[1] || "";
+
+        const selectedLocaleData = result[locale];
+
+        if (!selectedLocaleData) {
+          console.warn(`Locale "${locale}" not found in API response`);
+          setLoading(false);
+          return;
+        }
 
         const serializedSections = await Promise.all(
-          result.sections.map(async (section: Section) => {
+          selectedLocaleData.sections.map(async (section: Section) => {
             const serializedSection = { ...section };
 
             if (section.title) {
@@ -69,7 +81,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         );
 
         setData({
-          ...result,
+          ...selectedLocaleData,
           sections: serializedSections,
         });
       } catch (error) {
@@ -78,8 +90,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
         setLoading(false);
       }
     }
+
     fetchAndSerializeData();
-  }, []);
+  }, [pathname]);
 
   return (
     <DataContext.Provider value={{ data, loading }}>
