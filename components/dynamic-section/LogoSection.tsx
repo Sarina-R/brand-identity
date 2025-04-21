@@ -133,7 +133,7 @@ const LogoSection = ({
 
           <motion.div variants={bounceFade}>
             <a href={download} download>
-              <Button variant="outline">{downloadBtnText}</Button>
+              <Button>{downloadBtnText}</Button>
             </a>
           </motion.div>
         </motion.div>

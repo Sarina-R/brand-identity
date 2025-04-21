@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoVersion } from "@/app/type";
-import { useMDXComponents } from "@/mdx-component";
+import { useMDXComponents1 } from "@/mdx-component";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,7 +17,7 @@ interface LogoSectionProps {
 const LogoSlider = ({ versions }: LogoSectionProps) => {
   const [index, setIndex] = useState(0);
   const [mdxSources, setMdxSources] = useState<MDXRemoteSerializeResult[]>([]);
-  const mdxComponents = useMDXComponents({});
+  const mdxComponents1 = useMDXComponents1({});
 
   const next = () => setIndex((prev) => (prev + 1) % versions.length);
   const prev = () =>
@@ -103,10 +103,12 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
               initial="hidden"
               animate="visible"
               className={
-                i === index ? "font-bold border rounded-2xl p-2" : "p-2"
+                i === index
+                  ? "font-bold border rounded-lg py-2 px-3"
+                  : "py-2 px-3"
               }
             >
-              <MDXRemote {...mdx} components={mdxComponents} />
+              <MDXRemote {...mdx} components={mdxComponents1} />
             </motion.li>
           ))}
         </ul>
@@ -146,12 +148,12 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
         <div className="flex items-center w-full mt-4">
           <div className="flex justify-center gap-4">
             <motion.div variants={buttonVariants} whileTap="tap">
-              <Button variant="outline" size="icon" onClick={next}>
+              <Button size="icon" onClick={next}>
                 <ArrowLeft className="w-5 h-5" />
               </Button>
             </motion.div>
             <motion.div variants={buttonVariants} whileTap="tap">
-              <Button variant="outline" size="icon" onClick={prev}>
+              <Button size="icon" onClick={prev}>
                 <ArrowRight className="w-5 h-5" />
               </Button>
             </motion.div>

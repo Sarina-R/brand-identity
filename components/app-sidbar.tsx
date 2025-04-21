@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Sidebar,
@@ -12,6 +14,8 @@ import {
 import { useData } from "@/hooks/DataProvider";
 import Image from "next/image";
 import { Skeleton } from "./ui/skeleton";
+import { useEffect, useState } from "react";
+import { MenuGroup, MenuItem } from "@/app/type";
 
 type SidebarItem = {
   id: string;
@@ -28,8 +32,27 @@ type AppSidebarProps = {
   groups: SidebarGroup[];
 };
 
-export function AppSidebar({ groups }: AppSidebarProps) {
+export function AppSidebar() {
   const { data, loading } = useData();
+  const [groups, setGroups] = useState<
+    {
+      label: string;
+      items: MenuItem[];
+    }[]
+  >([]);
+
+  useEffect(() => {
+    if (!data || !data.menu) return;
+
+    const transformedGroups = Object.entries(data.menu).map(
+      ([key, value]: [string, MenuGroup]) => ({
+        label: key,
+        items: value.items,
+      })
+    );
+
+    setGroups(transformedGroups);
+  }, [data]);
 
   return (
     <Sidebar className="py-4 border">

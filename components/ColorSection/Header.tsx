@@ -83,7 +83,7 @@ const Header = ({
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative flex-1 h-72 rounded-3xl overflow-hidden shadow-lg"
+        className="relative flex-1 h-72 rounded-3xl overflow-hidden"
       >
         <AnimatePresence mode="wait">
           {section.items.img.map((imgSrc, index) =>
