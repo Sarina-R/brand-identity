@@ -89,7 +89,7 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
                     alt={`co-brand-logo-${idx}`}
                     width={300}
                     height={100}
-                    className="object-contain"
+                    className="object-contain max-h-36"
                   />
                 </motion.div>
               )

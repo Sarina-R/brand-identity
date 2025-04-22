@@ -7,14 +7,7 @@ import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { TabsContentItem } from "@/app/type";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { useMDXComponents1 } from "@/mdx-component";
-
-const fallbackIcons = [
-  <Handshake key="handshake" className="w-24 h-24 text-white" />,
-  <ShieldCheck key="shield" className="w-24 h-24 text-white" />,
-  <HandCoins key="coins" className="w-24 h-24 text-white" />,
-  <Blocks key="blocks" className="w-24 h-24 text-white" />,
-  <Cog key="cog" className="w-24 h-24 text-white" />,
-];
+import { lighten } from "polished";
 
 export const CustomTabs = ({
   tabs,
@@ -29,6 +22,8 @@ export const CustomTabs = ({
   setSelectedTab: (val: string) => void;
   primaryColor: string;
 }) => {
+  const lighterColor = lighten(0.2, primaryColor);
+
   const mdxComponent1 = useMDXComponents1({});
   const svgLessTabs = tabs.filter((tab) => !tab.svg);
 
@@ -36,6 +31,30 @@ export const CustomTabs = ({
   svgLessTabs.forEach((tab, index) => {
     iconMap.set(tab.title, fallbackIcons[index % fallbackIcons.length]);
   });
+
+  const fallbackIcons = [
+    <Handshake
+      key="handshake"
+      style={{ color: lighterColor }}
+      className="w-24 h-24"
+    />,
+    <ShieldCheck
+      key="shield"
+      style={{ color: lighterColor }}
+      className="w-24 h-24"
+    />,
+    <HandCoins
+      key="coins"
+      style={{ color: lighterColor }}
+      className="w-24 h-24"
+    />,
+    <Blocks
+      key="blocks"
+      style={{ color: lighterColor }}
+      className="w-24 h-24"
+    />,
+    <Cog key="cog" style={{ color: lighterColor }} className="w-24 h-24" />,
+  ];
 
   return (
     <div className="max-w-3xl">
@@ -82,13 +101,19 @@ export const CustomTabs = ({
               className="w-full min-h-72 lg:w-1/2 p-4 rounded-4xl flex items-center justify-center"
             >
               {tab.svg ? (
-                <Image
-                  src={tab.svg}
-                  alt={tab.title}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-contain m-auto p-14"
-                />
+                <div className="absolute">
+                  <div
+                    style={{ backgroundColor: primaryColor }}
+                    className="opacity-70 z-10 absolute w-full h-full"
+                  />
+                  <Image
+                    src={tab.svg}
+                    alt={tab.title}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-contain m-auto max-h-72"
+                  />
+                </div>
               ) : (
                 iconMap.get(tab.title)
               )}

@@ -83,7 +83,7 @@ const LogoBackground = ({ data }: Props) => {
               )}
               style={
                 isImageBg
-                  ? { backgroundImage: `url(${item.imgBg})` }
+                  ? { backgroundImage: `url("${encodeURI(item.imgBg || "")}")` }
                   : { backgroundColor: item.colorBg }
               }
             >

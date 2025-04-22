@@ -7,8 +7,8 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
           alt="Vision Icon"
           className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
-        <h2 className="text-2xl font-bold mb-4">Vision</h2>
-        <p className="leading-relaxed text-sm">
+        <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Vision</h2>
+        <p className="leading-relaxed sm:text-sm text-xs">
           To be the leading global stage for robotics and artificial intelligence, shaping a world where technological innovation transforms industries, enriches lives, and fosters sustainable progress for humanity.
         </p>
       </div>
@@ -19,8 +19,8 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
           alt="Mission Icon"
           className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
-        <h2 className="text-2xl font-bold mb-4">Mission</h2>
-        <p className="leading-relaxed text-sm">
+        <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Mission</h2>
+        <p className="leading-relaxed sm:text-sm text-xs">
           To inspire and empower the global robotics community by creating a dynamic platform for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics can achieve for a better future.
         </p>
       </div>
@@ -31,12 +31,50 @@ const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between
           alt="Target Icon"
           className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
-        <h2 className="text-2xl font-bold mb-4">Target</h2>
-        <p className="leading-relaxed text-sm">
+        <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Target</h2>
+        <p className="leading-relaxed sm:text-sm text-xs">
           Develop robust relationships with customers across diverse market segments, encompassing individual consumers and beyond.
         </p>
       </div>
     </div>`;
+
+const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 justify-between min-h-[300px] text-sm p-0">
+        <div className="border rounded-2xl m-3 flex-1 text-center sm:px-5 px-2 dark:bg-neutral-900">
+          <img
+            src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//portfolio-svgrepo-com.svg"
+            alt="Vision Icon"
+            className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
+          />
+          <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Vision</h2>
+          <p className="leading-relaxed sm:text-sm text-xs">
+            To position Canada as a global leader in robotics and intelligent automation, driving technological advancements that shape the future.
+          </p>
+        </div>
+
+        <div className="border rounded-2xl m-3 flex-1 text-center sm:px-5 px-2 dark:bg-neutral-900">
+          <img
+            src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//file-2-svgrepo-com.svg"
+            alt="Mission Icon"
+            className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
+          />
+          <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Mission</h2>
+          <p className="leading-relaxed sm:text-sm text-xs">
+            To foster innovation, collaboration, and excellence in robotics, AI, and automation by providing a global platform for researchers, engineers, and entrepreneurs.
+          </p>
+        </div>
+
+        <div className="border rounded-2xl m-3 flex-1 text-center sm:px-5 px-2 dark:bg-neutral-900">
+          <img
+            src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//trophy-svgrepo-com.svg"
+            alt="Target Icon"
+            className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
+          />
+          <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Target</h2>
+          <p className="leading-relaxed sm:text-sm text-xs">
+           To position Canada as a global leader in robotics and AI by fostering talent, innovation, and industry collaboration through competitions, research, and strategic partnerships. 
+          </p>
+        </div>
+      </div>`;
 
 const item1 = `
     <div className="flex flex-col md:flex-row gap-6">
@@ -80,7 +118,7 @@ const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
    <div className="min-h-[500px] py-10 px-6">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-10 max-w-6xl mx-auto">
         <div className="relative flex-1 text-center">
-          <div className="bg-gradient-to-r p-8 transform lg:-skew-y-6 rounded-3xl border dark:bg-neutral-900">
+          <div className="bg-gradient-to-r p-8 transform lg:-skew-y-6 rounded-3xl border dark:bg-zinc-900">
             <div className="transform lg:skew-y-6">
               <div className="relative">
                 <img
@@ -100,7 +138,7 @@ const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
         </div>
 
         <div className="relative flex-1 text-center">
-          <div className="p-8 transform lg:skew-y-6 rounded-3xl border dark:bg-neutral-900">
+          <div className="p-8 transform lg:skew-y-6 rounded-3xl border dark:bg-zinc-900">
             <div className="transform lg:-skew-y-6">
               <div className="relative">
                 <img
@@ -197,6 +235,42 @@ const DesignPrinciples = `
       </div>
     </div>`;
 
+const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
+    <h2 className="text-2xl font-extrabold text-neutral-800 dark:text-neutral-300 mb-10 text-center">
+      Slogan Explanation for FIRA:
+      <span className="text-[#d22b2b]">Enjoy Robots, Enjoy Life</span>
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold text-[#d22b2b]">"Enjoy Robots"</h3>
+        <ul className="space-y-2 list-disc">
+          <li>
+            <strong>Innovation & Technology:</strong> Celebrates the excitement of cutting-edge robotic advancements.
+          </li>
+          <li>
+            <strong>Educational Engagement:</strong> Fosters curiosity and learning through hands-on interaction.
+          </li>
+        </ul>
+      </div>
+
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold text-[#d22b2b]">"Enjoy Life"</h3>
+        <ul className="space-y-2 list-disc">
+          <li>
+            <strong>Improved Quality of Life:</strong> Simplifies tasks and boosts efficiency through robotics.
+          </li>
+          <li>
+            <strong>Future Prospects:</strong> Tackles global challenges with AI-driven solutions.
+          </li>
+          <li>
+            <strong>Inclusivity & Accessibility:</strong> Ensures everyone benefits from robotic innovations.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>`;
+
 const IdentityInUse = `<div className="min-h-screen px-6 py-12 space-y-12">
   <section>
     <h2 className="text-2xl font-semibold mb-4">Instagram Posts</h2>
@@ -267,7 +341,7 @@ const IdentityInUse = `<div className="min-h-screen px-6 py-12 space-y-12">
 `;
 
 const data = {
-  IR: {
+  ir: {
     brand: {
       name: "Fira Cup 2025 Tehran",
       primaryColor: "#fdb813",
@@ -528,20 +602,21 @@ const data = {
           logoVersion: [
             {
               id: 1,
-              name: "Vertical logo",
-              text: "Priority is given to use the vertical version of the logo.",
-              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
-              darkSvg:
-                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
-            },
-            {
-              id: 2,
               name: "Horizontal logo",
-              text: "We use the horizontal logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
+              text: "Priority is given to use the horizontal version of the logo.",
               svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
               darkSvg:
                 "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo.png",
             },
+            {
+              id: 2,
+              name: "Vertical logo",
+              text: "We use the vertical logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+              darkSvg:
+                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
+            },
+
             {
               id: 3,
               name: "Mono",
@@ -898,15 +973,15 @@ const data = {
       },
     ],
   },
-  CN: {
+  ca: {
     brand: {
       name: "Fira Cup 2025 Canada",
-      primaryColor: "#c1102d",
-      logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
+      primaryColor: "#d22b2b",
+      logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
       darkLogo:
-        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo.png",
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
       font: {
-        name: "Poppins",
+        name: "Barlow",
         weights: [400, 500, 700],
         subsets: ["latin", "latin-ext"],
       },
@@ -941,7 +1016,6 @@ const data = {
             type: "design_principles",
           },
           { id: "logo", title: "Logo", type: "logo" },
-          { id: "mascot", title: "Mascot", type: "mascot" },
           { id: "color", title: "Color", type: "color" },
           { id: "typography", title: "Typography", type: "typography" },
           {
@@ -957,14 +1031,14 @@ const data = {
         type: "overview",
         title: "Brand Introduction",
         description: "FIRA CUP 2025 - **Canada**",
-        // pattern:
-        //   "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
-        img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
+        pattern:
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
+        img: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Screenshot-2025-02-13-at-12.56.18%20PM.png",
         video: "",
         items: {
           group: "introduction",
           title: "overview",
-          desc: "Welcome to the **FIRA CUP 2025**, where innovation meets excellence in robotics and artificial intelligence. This prestigious competition will take place at the Tehran International Exhibition Center, a venue that embodies Iran’s commitment to hosting world-class events and fostering technological progress.",
+          desc: `<p>**Beyond Imagination, Into Innovation!**</p> <br/>FIRA Canada, the official representative of the FIRA Federation in Canada, serves as a hub for innovators, researchers, and enthusiasts in robotics and artificial intelligence. Through international competitions, educational workshops, and tech events, we provide a platform for the next generation of engineers and entrepreneurs to grow and collaborate. FIRA Canada—where ideas come to life and shape the future of technology!`,
           img: "",
         },
 
@@ -974,17 +1048,15 @@ const data = {
         type: "statement",
         title: "Statement Section",
         description: "FIRA CUP 2025 - IRAN, TEHRAN",
-        // pattern:
-        //   "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+        pattern:
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         video: "",
         items: {
-          MDXComponent: BrandIdentity,
-          title: "What **leads** us to the idea of dynamic identity:",
+          MDXComponent: BrandIdentityCA,
+          title: "Essence of the FIRA Brand",
           items: ["Vision", "Mission", "Target"],
-          desc: `FIRA CUP 2025 represents global innovation in robotics and AI, uniting
-              visionaries to challenge boundaries and inspire progress. It’s a platform where
-              creativity meets technology, shaping the future of robotics.`,
+          desc: `**FIRA Canada** is the official representative of the *FIRA Federation in Canada*, dedicated to advancing **robotics**, **AI**, and **automation** through innovation, collaboration, and excellence. As a hub for researchers, engineers, and entrepreneurs, FIRA Canada fosters talent, drives technological breakthroughs, and bridges academia with industry. With a professional and forward-thinking identity, it delivers world-class competitions, educational initiatives, and strategic partnerships to position Canada as a global leader in intelligent automation. `,
         },
 
         style: 1,
@@ -994,7 +1066,7 @@ const data = {
         title: "Brand Prism Section",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
         items: {
@@ -1048,7 +1120,7 @@ const data = {
         title: "Tone Of Voice",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: ToneOfVoice,
@@ -1078,7 +1150,7 @@ const data = {
         title: "Tagline",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: item1,
@@ -1091,52 +1163,43 @@ const data = {
         title: "Design Principles",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
-          MDXComponent: DesignPrinciples,
+          MDXComponent: DesignPrinciplesCA,
           title: "Our Logo",
-          desc: ` Ensure use a custom font for readability and elegance to enhance brand identity across all communication channels.        `,
+          desc: `it's a movement shaping the future of robotics and AI. By fostering innovation, collaboration, and world-class competitions, we are building a dynamic ecosystem where researchers, engineers, and entrepreneurs come together to push boundaries. From groundbreaking ideas to real-world impact, FIRA Canada is the catalyst for a smarter, more connected future—where technology is for everyone, and innovation knows no limits.`,
           image:
             "https://canada.firaworldcup.org/wp-content/uploads/2020/11/logo.png",
           video:
             "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
           videoCover:
-            "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
+            "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Screenshot-2025-02-13-at-12.56.18%20PM.png",
           tabsContent: [
             {
-              title: "Design Strategics",
-              description: `**AliBaba’s strategic design** is a comprehensive travel solution. It always aims to optimize the journey and offer a seamless experience across all stages.
-                          This mental model in strategic design helps the brand to evolve and emerge continuously.
-                          Strategic design in Fira Iran is in service of communication and business growth.
-                          The foundation of strategic design stems from upstream strategies and loops through feedback and iteration to complete and refine one another.
-              `,
-              svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
+              title: "Innovation",
+              description: `Pioneering advancements in robotics, constantly pushing boundaries.`,
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(19).png",
             },
             {
-              title: "Creative Design",
-              description: `Creative design pushes innovation boundaries and aligns aesthetic vision with user needs...`,
-              svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
+              title: "Excellence",
+              description: `Striving for the highest standards in competitions and education.`,
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(15).png",
             },
             {
-              title: "User-Centric Design",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
+              title: "Unity",
+              description: `Bringing together a diverse global community, celebrating collaboration.`,
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(14).png",
             },
             {
-              title: "User-Centric Design0",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
+              title: "Inspiration",
+              description: `Motivating the next generation of innovators and leaders in robotics.`,
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(16).png",
             },
             {
-              title: "User-Centric Design1",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
-            },
-            {
-              title: "User-Centric Design2",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
+              title: "Integrity",
+              description: `Upholding fairness, transparency, and respect in all activities.`,
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(17).png",
             },
           ],
         },
@@ -1146,7 +1209,7 @@ const data = {
         title: "Logo",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: "",
@@ -1154,67 +1217,47 @@ const data = {
           title: "**Brand** Identity",
           desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
           download:
-            "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
+            "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
           downloadBtnText: "Download Fira Cup 2025 Tehran Logo",
           logoVersion: [
             {
               id: 1,
-              name: "Vertical logo",
-              text: "Priority is given to use the vertical version of the logo.",
-              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+              name: "Horizontal logo",
+              text: "The primary logo of FIRA Canada is designed in a horizontal format, representing stability, progress, and a forward-thinking approach in robotics and AI. This format ensures maximum visibility across digital and print media, making it ideal for official branding, banners, and corporate materials.",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
               darkSvg:
-                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
+                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
             },
             {
               id: 2,
-              name: "Horizontal logo",
-              text: "We use the horizontal logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
-              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
+              name: "Vertical logo",
+              text: "The secondary logo, used in vertical format, is designed for adaptability across different platforms and applications. Whether on promotional materials, social media, or compact spaces, this version maintains the brand’s identity while ensuring flexibility and consistency.",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//verticalLogo-removebg-preview.png",
               darkSvg:
-                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo.png",
-            },
-            {
-              id: 3,
-              name: "Mono",
-              text: "We use the monogram version in Fira Iran media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
-              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(41).png",
-              darkSvg:
-                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-mono-logo.png",
+                "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//verticalLogoDark.png",
             },
           ],
           inBackgroundSection: {
             listItems: [
-              "We use the Fira Iran logo on a white background, only in the primary color.",
-              "We use the Fira Iran logo on a black background, only in the primary color.",
-              "We use the Fira Iran logo on a yellow background, only in solid black.",
-              "We use the Fira Iran logo on neutral backgrounds (permitted codes in the color palette), only in solid black or white.",
-              "The use of the Fira Iran logo on other colored backgrounds is not permitted.",
+              `The following color combinations ensure that the brand's visual identity remains strong, cohesive, and professional. These pairings maintain readability, contrast, and alignment with the FIRA Canada's core values.`,
             ],
             inBackgroundComponent: [
               {
                 colorBg: "#FFFFFF",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
               },
               {
-                colorBg: "#000000",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
+                colorBg: "#2c0e37",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
               },
               {
-                colorBg: "#FDB813",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
-              },
-              {
-                colorBg: "#D3D3D3",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
-              },
-              {
-                colorBg: "#808080",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
+                colorBg: "#d22b2b",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
               },
               {
                 imgBg:
-                  "https://plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
+                  "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//gradient.png",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
               },
             ],
           },
@@ -1222,32 +1265,19 @@ const data = {
             title: "Use it alongside other brand logos",
             desc: "When using the Fira Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Fira Iran logo; if it’s horizontal, stick with the horizontal Fira Iran one. To keep things balanced, make sure the height of Fira Iran’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Fira Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Fira Iran logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
             svg: [
-              "https://cdn.alibaba.ir/cms/uploads/co_logo_2_dadfc63297.svg",
-              "https://cdn.alibaba.ir/cms/uploads/co_logo_3_ed6df93726.svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(10).png",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CoBranding.png",
             ],
           },
         },
         style: 1,
       },
       {
-        type: "mascot",
-        title: "Mascot",
-        description: "",
-        pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
-        img: "",
-        items: {
-          MDXComponent: Mascot,
-          // title: "Mascot",
-          // desc: "MascotMascotMascotMascotMascot",
-        },
-      },
-      {
         type: "color",
         title: "Color",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: "",
@@ -1261,46 +1291,35 @@ const data = {
           palette: {
             title: "The Main Palette",
             description:
-              "Fira Iran’s main palette consists of yellow, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
+              "Fira Iran’s main palette consists of Red, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
             colors: {
               primary: {
                 id: 1001,
-                hex: "#FDB813",
-                hexColor: "#000000",
-                name: "Main Yellow",
+                hex: "#d22b2b",
+                hexColor: "#FFFFFF",
+                name: "Main Red",
                 shades: [
-                  { id: 102, hex: "#FDC107", name: "Light Yellow" },
-                  { id: 103, hex: "#FD9F06", name: "Medium Yellow" },
-                  { id: 104, hex: "#FD8C05", name: "Dark Yellow" },
+                  { id: 102, hex: "#cf3636", name: "Light Red" },
+                  { id: 103, hex: "#cf4848", name: "Medium Red" },
+                  { id: 104, hex: "#cf6565", name: "Dark Red" },
                 ],
               },
-              // secondary: {
-              //   id: 2002,
-              //   hex: "#F7941D",
-              //   hexColor: "#000000",
-              //   name: "Main Orange",
-              //   shades: [
-              //     { id: 202, hex: "#F9A13A", name: "Light Orange" },
-              //     { id: 203, hex: "#F7870F", name: "Medium Orange" },
-              //     { id: 204, hex: "#D97718", name: "Dark Orange" },
-              //   ],
-              // },
-              action: {
-                id: 3003,
-                hex: "#0077DB",
+              secondary: {
+                id: 2002,
+                hex: "#2c0e37",
                 hexColor: "#FFFFFF",
-                name: "Action Blue",
+                name: "Main purple",
                 shades: [
-                  { id: 302, hex: "#3391E5", name: "Light Blue" },
-                  { id: 303, hex: "#0066B8", name: "Medium Blue" },
-                  { id: 304, hex: "#005A9E", name: "Dark Blue" },
+                  { id: 202, hex: "#431654", name: "Light purple" },
+                  { id: 203, hex: "#2c1336", name: "Medium purple" },
+                  { id: 204, hex: "#301a38", name: "Dark purple" },
                 ],
               },
               complementary: {
                 id: 4004,
-                hex: "#000000",
-                hexColor: "#FFFFFF",
-                name: "Black",
+                hex: "#e3e3e3",
+                hexColor: "#000000",
+                name: "neutral",
                 shades: [
                   // { id: 402, hex: "#525252", name: "neutral" },
                   { id: 403, hex: "#E6EBEA", name: "Medium neutral" },
@@ -1405,7 +1424,7 @@ const data = {
         title: "Typography",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         font: {
           name: "Poppins",
@@ -1520,7 +1539,7 @@ const data = {
         title: "Identity In Use",
         description: "",
         pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: IdentityInUse,

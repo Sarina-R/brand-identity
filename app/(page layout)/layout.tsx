@@ -70,6 +70,25 @@ export default function RootLayout({
   const nextItem = menuItems[currentIndex + 1];
   const prevItem = currentIndex > 0 ? menuItems[currentIndex - 1] : null;
 
+  function getContrastYIQ(hexColor: string): "black" | "white" {
+    let color = hexColor.replace("#", "");
+    if (color.length === 3) {
+      color = color
+        .split("")
+        .map((c) => c + c)
+        .join("");
+    }
+
+    const r = parseInt(color.substr(0, 2), 16);
+    const g = parseInt(color.substr(2, 2), 16);
+    const b = parseInt(color.substr(4, 2), 16);
+
+    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
+    return yiq >= 128 ? "black" : "white";
+  }
+  const textColor = getContrastYIQ(primaryColor);
+
   const renderSectionContent = () => {
     if (!currentType || !section) {
       return (
@@ -90,24 +109,24 @@ export default function RootLayout({
           className={`relative min-h-[50vh] md:flex flex-row items-center justify-start rounded-xl gap-4 px-10 py-5 overflow-hidden ${
             hasMedia ? "block" : "md:flex"
           }`}
-          style={{ backgroundColor: primaryColor }}
+          style={{ backgroundColor: primaryColor, color: textColor }}
         >
           {section?.pattern && (
             <motion.div
-              className="absolute inset-0 opacity-10"
+              className="absolute inset-0 opacity-0"
               style={{
                 backgroundImage: `url(${section.pattern})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              animate={{ opacity: 0.4 }}
               transition={{ duration: 1 }}
             />
           )}
 
           <div
-            className={`relative text-left text-black ${
+            className={`relative text-left text- ${
               hasMedia
                 ? "bottom-1 lg:bottom-[-5rem] md:bottom-[-7rem]"
                 : "md:bottom-[-5rem] bottom-[-14rem]"

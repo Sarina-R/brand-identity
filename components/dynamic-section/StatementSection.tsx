@@ -41,9 +41,9 @@ const StatementSection = ({ section }: StatementProps) => {
   };
 
   return (
-    <div className="statement-section p-6 space-y-26 text-neutral-700 dark:text-neutral-300 mt-10 capitalize">
-      <div className="sm:flex justify-between items-center space-y-6 gap-6">
-        <div className="w-full sm:w-1/2 flex flex-col justify-center font-bold space-y-1 sticky top-15">
+    <div className="statement-section sm:p-6 p-2 space-y-26 text-neutral-700 dark:text-neutral-300 mt-10 capitalize">
+      <div className="sm:flex justify-between space-y-6 gap-6">
+        <div className="w-full sm:w-1/2 flex flex-col font-bold space-y-1 sm:sticky sm:top-15 h-full pt-3">
           <div className="text-sm font-light text-neutral-500">
             {section.items?.title && (
               <MDXRemote
@@ -79,12 +79,14 @@ const StatementSection = ({ section }: StatementProps) => {
         </div>
       </div>
 
-      {section.items?.MDXComponent && (
-        <MDXRemote
-          {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
-          components={mdxComponents}
-        />
-      )}
+      <div className="sm:m-auto m-[-1rem]">
+        {section.items?.MDXComponent && (
+          <MDXRemote
+            {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
+            components={mdxComponents}
+          />
+        )}
+      </div>
     </div>
   );
 };

@@ -6,9 +6,9 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
-import Image from "next/image";
 import { CustomTabs } from "../CustomTabs";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fallbackIcons = [Cable, CircleUser, ShieldCheck, Rss];
 
@@ -44,7 +44,7 @@ const DesignPrinciplesSection = ({
             if (typeof tab.description === "string") {
               serializedDescription = await serialize(tab.description);
             } else {
-              serializedDescription = tab.description; // Already serialized
+              serializedDescription = tab.description;
             }
 
             return {
@@ -55,13 +55,12 @@ const DesignPrinciplesSection = ({
         );
         setSerializedTabsContent(serializedContent);
 
-        // Set default selected tab if not set
         if (serializedContent.length > 0 && !selectedTab) {
           setSelectedTab(serializedContent[0].title);
         }
       } catch (error) {
         console.error("Error serializing tabs content:", error);
-        setSerializedTabsContent([]); // Fallback to empty array
+        setSerializedTabsContent([]);
       }
     };
 
