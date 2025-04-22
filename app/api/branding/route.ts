@@ -910,7 +910,7 @@ const data = {
       {
         type: "typography",
         title: "Typography",
-        description: "",
+        description: "Poppins",
         pattern:
           "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
         img: "",
@@ -1353,9 +1353,9 @@ const data = {
           title: "Color of Our Brand",
           desc: `Our color palette draws inspiration from nature, resulting in a fresh and vibrant aesthetic. It is imperative to apply these colors consistently across all platforms to uphold brand cohesion.`,
           img: [
-            "https://cdn.pixabay.com/photo/2025/03/31/15/18/mountains-9504950_640.jpg",
-            "https://gratisography.com/wp-content/uploads/2025/01/gratisography-dog-vacation-800x525.jpg",
-            "https://images.unsplash.com/photo-1593696954577-ab3d39317b97?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZyZWUlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D",
+            "https://th.bing.com/th/id/R.729da756e9a256ea9071b1f1f1fe09e2?rik=lCcFmxlOlJhhYA&riu=http%3a%2f%2fs1.bwallpapers.com%2fwallpapers%2f2014%2f01%2f20%2fred-roses-picture_111003652.jpg&ehk=Fgrx8GspL6ag7TQIxmZxzQ%2bjI9LXCeCDFAG44VtRd7k%3d&risl=&pid=ImgRaw&r=0",
+            "https://tse2.mm.bing.net/th/id/OIP.I8B_36LWGpRPEY7LNUKkRAHaFj?rs=1&pid=ImgDetMain",
+            "https://tse3.mm.bing.net/th/id/OIP.G5TTIR4lo44EhjdxAoWQAgHaEo?rs=1&pid=ImgDetMain",
           ],
           palette: {
             title: "The Main Palette",
@@ -1397,29 +1397,22 @@ const data = {
               },
             },
           },
-          Harmony: {
-            title: "Harmony",
-            description: `There are three general combinations in using these colors:
+          // Harmony: {
+          //   title: "Harmony",
+          //   description: `There are three general combinations in using these colors:
 
-                - **Combination 1:** Yellow is the dominant color in the design, and we use white and black as complementary colors.  
-                - **Combination 2:** White is the dominant color, and we use yellow and black as complementary colors.  
-                - **Combination 3:** Black is the dominant color, and we use yellow and white as complementary colors.  
+          //       - **Combination 1:** Yellow is the dominant color in the design, and we use white and black as complementary colors.
+          //       - **Combination 2:** White is the dominant color, and we use yellow and black as complementary colors.
+          //       - **Combination 3:** Black is the dominant color, and we use yellow and white as complementary colors.
 
-                > **Note:** In brand communications, priority is given to using Combinations 1 and 2. Combination 3 is used sparingly and only in specific communication campaigns or environmental designs.
-                 `,
-            img: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/color-ratios-aae20c6c.svg",
-          },
+          //       > **Note:** In brand communications, priority is given to using Combinations 1 and 2. Combination 3 is used sparingly and only in specific communication campaigns or environmental designs.
+          //        `,
+          //   img: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/color-ratios-aae20c6c.svg",
+          // },
           Gradient: {
-            title: "Harmony",
-            img: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/color-gradient-8df2bb44.svg",
-            description: `There are three general combinations in using these colors:
-
-                - **Combination 1:** Yellow is the dominant color in the design, and we use white and black as complementary colors.  
-                - **Combination 2:** White is the dominant color, and we use yellow and black as complementary colors.  
-                - **Combination 3:** Black is the dominant color, and we use yellow and white as complementary colors.  
-
-                > **Note:** In brand communications, priority is given to using Combinations 1 and 2. Combination 3 is used sparingly and only in specific communication campaigns or environmental designs.
-                 `,
+            title: "Backdrops",
+            img: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//gradient%20(2).png",
+            description: `Backdrops play an essential role in setting the visual tone for events, presentations, and digital platforms. For FIRA Canada, backdrops should enhance the brand’s identity while maintaining a clean and professional look that aligns with the values of innovation, robotics, and Canadian pride. `,
           },
           paletteUsage: {
             title: "Color Usage in Design",
@@ -1429,26 +1422,26 @@ const data = {
               {
                 id: 5001,
                 background: "#000000",
-                name: "White and yellow text on a black background",
+                name: "White text on a black background",
               },
               {
                 id: 5002,
-                background: "#FDB813",
-                name: "Black text on a yellow background",
+                background: "#d22b2b",
+                name: "white text on a red background",
               },
               {
                 id: 5003,
                 background: "#FFFFFF",
-                name: "Black text on a white background",
+                name: "Black and Red text on a white background",
               },
             ],
             usageGuidelines: {
               correct: [
                 {
                   id: 6003,
-                  background: "#000000",
-                  text: "#FDB813",
-                  description: "Black background with yellow text",
+                  background: "#ffffff",
+                  text: "#d22b2b",
+                  description: "white background with red text",
                 },
                 {
                   id: 7002,
@@ -1457,29 +1450,29 @@ const data = {
                   description: "Black background with white text",
                 },
                 {
+                  id: 7001,
+                  background: "#d22b2b",
+                  text: "#ffffff",
+                  description: "Yellow background with black text",
+                },
+                {
                   id: 7003,
                   background: "#FFFFFF",
                   text: "#000000",
                   description: "White background with black text",
                 },
-                {
-                  id: 7001,
-                  background: "#FDB813",
-                  text: "#000000",
-                  description: "Yellow background with black text",
-                },
               ],
               incorrect: [
                 {
                   id: 6001,
-                  background: "#FDB813",
-                  text: "#FFFFFF",
+                  background: "#d22b2b",
+                  text: "#000000",
                   description: "Yellow background with white text",
                 },
                 {
                   id: 6002,
-                  background: "#FFFFFF",
-                  text: "#FDB813",
+                  background: "#000000",
+                  text: "#d22b2b",
                   description: "White background with yellow text",
                 },
               ],
@@ -1491,12 +1484,12 @@ const data = {
       {
         type: "typography",
         title: "Typography",
-        description: "",
+        description: "Barlow",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         font: {
-          name: "Poppins",
+          name: "Heebo, Barlow",
           weights: [400, 500, 700],
           subsets: ["latin", "latin-ext"],
         },
@@ -1510,8 +1503,8 @@ const data = {
             componentItems: [
               {
                 text: "**Refund** <br/> easily",
-                color: "#000000",
-                bg: "#FDB813",
+                color: "#FFFFFF",
+                bg: "#d22b2b",
               },
               {
                 text: "Last Minute <br/> **456$**",
@@ -1519,15 +1512,15 @@ const data = {
                 bg: "#FFFFFF",
               },
               {
-                text: `<p className="text-[#FDB813]">Amsterdam </p> <br/>
+                text: "from **amsterdam** to **paris**",
+                color: "#ffffff",
+                bg: "#d22b2b",
+              },
+              {
+                text: `<p className="text-white">Amsterdam </p> <br/>
                    <p className="text-white font-bold">round trip</p>`,
                 color: "",
                 bg: "#000000",
-              },
-              {
-                text: "from **amsterdam** to **paris**",
-                color: "#000000",
-                bg: "#FFFFFF",
               },
             ],
           },

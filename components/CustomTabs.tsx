@@ -101,17 +101,17 @@ export const CustomTabs = ({
               className="w-full min-h-72 lg:w-1/2 p-4 rounded-4xl flex items-center justify-center"
             >
               {tab.svg ? (
-                <div className="absolute">
+                <div className="absolute overflow-hidden">
                   <div
                     style={{ backgroundColor: primaryColor }}
-                    className="opacity-70 z-10 absolute w-full h-full"
+                    className="opacity-70 z-10 absolute w-full h-full "
                   />
                   <Image
                     src={tab.svg}
                     alt={tab.title}
                     width={400}
                     height={400}
-                    className="w-full h-full object-contain m-auto max-h-72"
+                    className="w-full h-full object-contain m-auto max-h-64"
                   />
                 </div>
               ) : (

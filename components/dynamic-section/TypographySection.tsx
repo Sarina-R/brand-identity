@@ -126,7 +126,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
   return (
     <section className="p-4 md:p-10 max-w-6xl mx-auto space-y-28 mt-12 capitalize">
       <div className="lg:flex md:space-x-8 space-y-10 lg:space-y-0 gap-32">
-        <div className="flex-1 space-y-4 lg:sticky top-15 h-full">
+        <div className="flex-1 space-y-4 lg:sticky lg:top-15 h-full">
           <div className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
             {mainTitle && (
               <MDXRemote {...mainTitle} components={mdxComponent1} />
@@ -169,7 +169,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-12 rounded-2xl">
-        <div className="flex-1 sticky top-15 h-full">
+        <div className="flex-1 lg:sticky top-15 h-full">
           <div className="space-y-4 border p-10 px-8 m-auto text-center rounded-2xl w-full">
             {section.font.weights.map((weight) => (
               <p

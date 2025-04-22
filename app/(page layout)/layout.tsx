@@ -18,6 +18,8 @@ export default function RootLayout({
 }>) {
   const { data, loading } = useData();
   const pathname = usePathname();
+  const pathSegments = pathname.split("/").filter(Boolean);
+  const localePrefix = pathSegments[0];
   const mdxComponents = useMDXComponents1({});
 
   const font: Font | undefined = data?.brand?.font;
@@ -187,7 +189,7 @@ export default function RootLayout({
       <footer className="bg-neutral-100 dark:bg-neutral-900 h-20 rounded-2xl font-bold px-4 items-center w-full flex justify-between">
         {prevItem ? (
           <Link
-            href={`/${prevItem.id}`}
+            href={`/${localePrefix}/${prevItem.id}`}
             className="flex gap-2 text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
           >
             <div className="pt-2">
@@ -204,7 +206,7 @@ export default function RootLayout({
 
         {nextItem ? (
           <Link
-            href={`/${nextItem.id}`}
+            href={`/${localePrefix}/${nextItem.id}`}
             className="flex gap-2 text-right text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
           >
             <div>
