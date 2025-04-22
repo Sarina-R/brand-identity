@@ -77,7 +77,7 @@ const ToneOfVoiceSection = ({
   }, [sliderContent]);
 
   return (
-    <div className="space-y-8 max-w-[53rem] sm:px-4">
+    <div className="space-y-16 max-w-[53rem] sm:px-4">
       {section.items.MDXComponent && (
         <MDXRemote
           {...(section.items.MDXComponent as MDXRemoteSerializeResult)}
@@ -86,7 +86,7 @@ const ToneOfVoiceSection = ({
       )}
 
       <div className="px-6 space-y-5 max-w-3xl mx-auto">
-        <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+        <h2 className="font-bold text-2xl text-neutral-800 dark:text-neutral-200">
           {section.items.title && (
             <MDXRemote
               {...(section.items.title as MDXRemoteSerializeResult)}
@@ -150,7 +150,7 @@ const ToneOfVoiceSection = ({
                 </svg>
                 <span
                   ref={progressContent}
-                  className="text-xs text-gray-600 dark:text-gray-300"
+                  className="text-xs text-neutral-600 dark:text-neutral-300"
                 />
               </div>
             )}
@@ -185,7 +185,7 @@ const SlideCard: React.FC<SlideCardProps> = ({
             />
           )}
         </h3>
-        <div className="text-sm text-gray-600 dark:text-gray-300 leading-loose overflow-wrap break-word word-break break-word">
+        <div className="text-sm text-neutral-600 dark:text-neutral-300 leading-loose overflow-wrap break-word word-break break-word">
           {typeof description === "string" ? (
             description
           ) : (
@@ -201,11 +201,17 @@ const SlideCard: React.FC<SlideCardProps> = ({
         style={{ backgroundColor: primaryColor }}
       >
         {svg ? (
-          <img
-            src={svg}
-            alt={typeof title === "string" ? title : ""}
-            className="max-h-24 object-contain max-w-full"
-          />
+          <div className="relative ">
+            <div
+              style={{ backgroundColor: primaryColor }}
+              className="absolute opacity-60 w-full h-full z-10"
+            />
+            <img
+              src={svg}
+              alt={typeof title === "string" ? title : ""}
+              className="max-h-24 object-contain max-w-full"
+            />
+          </div>
         ) : (
           <RandomIcon color={lighterColor} className="w-16 h-16" />
         )}

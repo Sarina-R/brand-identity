@@ -159,6 +159,69 @@ const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
       </div>
 </div>`;
 
+const ToneOfVoiceCA = `
+<h2 className="py-12 px-6 text-neutral-800 dark:text-neutral-200 text-2xl font-bold mb-6">Tone</h2> 
+<div className="w-full px-6 sm:px-12 lg:px-24 rounded-2xl">
+  <div className="grid lg:grid-cols-2 gap-10 text-sm text-neutral-700">
+    <div className="flex gap-4">
+      <div className="flex-shrink-0 p-3 bg-[#d22b2b] opacity-50 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M12 2a10 10 0 00-7.07 17.07c.31.31.73.57 1.17.72a.75.75 0 00.9-.28l1.82-2.54a.75.75 0 00-.13-.97A6 6 0 0112 6a6 6 0 014.31 10.01.75.75 0 00-.13.97l1.82 2.54a.75.75 0 00.9.28c.44-.15.86-.41 1.17-.72A10 10 0 0012 2z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-800">Empathetic & Supportive</h3>
+        <p>
+          We understand the challenges and aspirations of our audience. Our tone is empathetic and supportive, offering reassurance and guidance. We speak to our audience’s needs and concerns, making them feel valued and understood.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex gap-4">
+      <div className="flex-shrink-0 p-3 bg-[#d22b2b] opacity-50 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-800">Clear & Concise</h3>
+        <p>
+          Clarity is key in all our communications. We avoid jargon and complex language, ensuring our messages are easily understood. Our tone is straightforward and to the point, making information accessible and actionable.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex gap-4">
+      <div className="flex-shrink-0 p-3 bg-[#d22b2b] opacity-50 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M3 10h2a1 1 0 011 1v7a1 1 0 01-1 1H3m0-9V6a1 1 0 011-1h4m0 0h3a1 1 0 011 1v2m0 0h6a1 1 0 011 1v7a1 1 0 01-1 1h-6m-4-8V6m0 8v2"/>
+        </svg>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-800">Dynamic & Motivating</h3>
+        <p>
+          FIRA’s tone is dynamic and motivating. We inspire our audience to take action and embrace change. Our communications are infused with energy and enthusiasm, encouraging engagement and participation.
+        </p>
+      </div>
+    </div>
+
+    <div className="flex gap-4">
+      <div className="flex-shrink-0 p-3 bg-[#d22b2b] opacity-50 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M7 8h10M7 12h4m-4 4h10M5 3a2 2 0 00-2 2v14l4-4h12a2 2 0 002-2V5a2 2 0 00-2-2H5z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-neutral-800">Inclusive & Respectful</h3>
+        <p>
+          We value diversity and inclusivity. Our tone is always respectful and considerate, ensuring everyone feels welcome and appreciated. We strive to create a positive and inclusive environment through our communications.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 const Mascot = `<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
   <div className="relative rounded-2xl p-6 sm:p-8 bg-[#FDB813]">
     <div className="absolute inset-0 bg-[url('https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png')] bg-cover bg-center bg-no-repeat opacity-5 rounded-2xl"></div>
@@ -238,12 +301,12 @@ const DesignPrinciples = `
 const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
     <h2 className="text-2xl font-extrabold text-neutral-800 dark:text-neutral-300 mb-10 text-center">
       Slogan Explanation for FIRA:
-      <span className="text-[#d22b2b]">Enjoy Robots, Enjoy Life</span>
+      <span className="text-black">Enjoy Robots, Enjoy Life</span>
     </h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-[#d22b2b]">"Enjoy Robots"</h3>
+        <h3 className="text-lg font-semibold text-black">"Enjoy Robots"</h3>
         <ul className="space-y-2 list-disc">
           <li>
             <strong>Innovation & Technology:</strong> Celebrates the excitement of cutting-edge robotic advancements.
@@ -255,7 +318,7 @@ const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-[#d22b2b]">"Enjoy Life"</h3>
+        <h3 className="text-lg font-semibold text-black">"Enjoy Life"</h3>
         <ul className="space-y-2 list-disc">
           <li>
             <strong>Improved Quality of Life:</strong> Simplifies tasks and boosts efficiency through robotics.
@@ -990,7 +1053,7 @@ const data = {
       Introduction: {
         items: [
           { id: "overview", title: "Overview", type: "overview" },
-          { id: "statement", title: "Statement", type: "statement" },
+          { id: "brand-identity", title: "Brand Identity", type: "statement" },
         ],
       },
       "Conceptual identity": {
@@ -1046,15 +1109,15 @@ const data = {
       },
       {
         type: "statement",
-        title: "Statement Section",
-        description: "FIRA CUP 2025 - IRAN, TEHRAN",
+        title: "Brand Identity",
+        description: "FIRA CUP 2025 - Canada",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         video: "",
         items: {
           MDXComponent: BrandIdentityCA,
-          title: "Essence of the FIRA Brand",
+          title: "Brand Identity",
           items: ["Vision", "Mission", "Target"],
           desc: `**FIRA Canada** is the official representative of the *FIRA Federation in Canada*, dedicated to advancing **robotics**, **AI**, and **automation** through innovation, collaboration, and excellence. As a hub for researchers, engineers, and entrepreneurs, FIRA Canada fosters talent, drives technological breakthroughs, and bridges academia with industry. With a professional and forward-thinking identity, it delivers world-class competitions, educational initiatives, and strategic partnerships to position Canada as a global leader in intelligent automation. `,
         },
@@ -1123,22 +1186,28 @@ const data = {
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
-          MDXComponent: ToneOfVoice,
-          title: "some title",
-          desc: "Our brand voice combines professionalism and friendliness to prioritize exceptional customer service. It remains adaptable to different contexts and audiences.",
+          MDXComponent: ToneOfVoiceCA,
+          title: "Voice",
           sliderContent: [
             {
               id: "1001",
-              // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
-              title: "Trustworthy",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(18).png",
+              title: "Confident & Knowledgeable",
               description:
-                "**FIRA CUP** demonstrates *trustworthiness* and *authority* in all our communications.",
+                "FIRA speaks with confidence and authority. Our voice reflects a deep understanding of our industry and the needs of our audience. We provide clear, accurate, and insightful information, establishing FIRA as a trusted expert.",
             },
             {
               id: "1002",
-              // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
-              title: "Innovative",
-              description: `As a **pioneering company**, we adopt an *energetic* and *dynamic* tone in our communications.`,
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(21).png",
+              title: "Professional & Approachable",
+              description: `While maintaining a professional demeanor, FIRA is also approachable. We strike a balance between expertise and friendliness, ensuring that our communication is not only reliable but also engaging and relatable.`,
+            },
+            {
+              id: "1003",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(20).png",
+              title: "Innovative & Forward-Thinking",
+              description:
+                "Our voice reflects our commitment to innovation and future-oriented thinking. We convey enthusiasm for new ideas and solutions, positioning FIRA at the forefront of industry advancements.",
             },
           ],
 
