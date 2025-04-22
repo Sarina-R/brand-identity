@@ -162,7 +162,7 @@ const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
 const ToneOfVoiceCA = `
 <h2 className="py-12 px-6 text-neutral-800 dark:text-neutral-200 text-2xl font-bold mb-6">Tone</h2> 
 <div className="w-full px-6 sm:px-12 lg:px-24 rounded-2xl">
-  <div className="grid lg:grid-cols-2 gap-10 text-sm text-neutral-700">
+  <div className="grid lg:grid-cols-2 gap-10 text-sm text-neutral-700 dark:text-neutral-300">
     <div className="flex gap-4">
       <div className="flex-shrink-0 p-3 bg-[#d22b2b] opacity-50 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -170,7 +170,7 @@ const ToneOfVoiceCA = `
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-neutral-800">Empathetic & Supportive</h3>
+        <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">Empathetic & Supportive</h3>
         <p>
           We understand the challenges and aspirations of our audience. Our tone is empathetic and supportive, offering reassurance and guidance. We speak to our audience’s needs and concerns, making them feel valued and understood.
         </p>
@@ -184,7 +184,7 @@ const ToneOfVoiceCA = `
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-neutral-800">Clear & Concise</h3>
+        <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">Clear & Concise</h3>
         <p>
           Clarity is key in all our communications. We avoid jargon and complex language, ensuring our messages are easily understood. Our tone is straightforward and to the point, making information accessible and actionable.
         </p>
@@ -198,7 +198,7 @@ const ToneOfVoiceCA = `
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-neutral-800">Dynamic & Motivating</h3>
+        <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">Dynamic & Motivating</h3>
         <p>
           FIRA’s tone is dynamic and motivating. We inspire our audience to take action and embrace change. Our communications are infused with energy and enthusiasm, encouraging engagement and participation.
         </p>
@@ -212,7 +212,7 @@ const ToneOfVoiceCA = `
         </svg>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-neutral-800">Inclusive & Respectful</h3>
+        <h3 className="text-lg font-semibold text-neutral-800 dark:text-neutral-200">Inclusive & Respectful</h3>
         <p>
           We value diversity and inclusivity. Our tone is always respectful and considerate, ensuring everyone feels welcome and appreciated. We strive to create a positive and inclusive environment through our communications.
         </p>
@@ -1384,7 +1384,7 @@ const data = {
           },
           alongWithOthers: {
             title: "Use it alongside other brand logos",
-            desc: "When using the Fira Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Fira Iran logo; if it’s horizontal, stick with the horizontal Fira Iran one. To keep things balanced, make sure the height of Fira Iran’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Fira Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Fira Iran logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
+            desc: "When using the Fira Canada logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Fira Canada logo; if it’s horizontal, stick with the horizontal Fira Canada one. To keep things balanced, make sure the height of Fira Canada’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Fira Canada logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Fira Canada logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
             svg: [
               "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(10).png",
               "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CoBranding.png",
@@ -1412,7 +1412,7 @@ const data = {
           palette: {
             title: "The Main Palette",
             description:
-              "Fira Iran’s main palette consists of Red, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
+              "Fira Canada’s main palette consists of Red, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
             colors: {
               primary: {
                 id: 1001,
@@ -1536,12 +1536,12 @@ const data = {
       {
         type: "typography",
         title: "Typography",
-        description: "Barlow",
+        description: "Heebo,Barlow",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         font: {
-          name: "Heebo, Barlow",
+          name: "Barlow",
           weights: [400, 500, 700],
           subsets: ["latin", "latin-ext"],
         },
@@ -1551,7 +1551,7 @@ const data = {
           desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
           fontFeatureComponent: {
             title: "Font Features",
-            desc: "In Fira Iran Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
+            desc: "In Fira Canada Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
             componentItems: [
               {
                 text: "**Refund** <br/> easily",
@@ -1579,12 +1579,12 @@ const data = {
           typographyPrinciples: {
             title: "Basic Typography Principles",
             description:
-              "In typography, Fira Iran follows two fundamental principles:",
+              "In typography, Fira Canada follows two fundamental principles:",
             section: [
               {
                 subtitle: "Readability",
                 content:
-                  "Readability is a core principle of Fira Iran’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
+                  "Readability is a core principle of Fira Canada’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
                 examples: [
                   {
                     status: "incorrect",
@@ -1601,7 +1601,7 @@ const data = {
               {
                 subtitle: "Respecting Content Hierarchy",
                 content:
-                  "One of Fira Iran's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
+                  "One of Fira Canada's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
                 examples: [
                   {
                     status: "incorrect",
