@@ -400,6 +400,22 @@ export interface IdentityInUse {
   style: number;
 }
 
+// FallBackSection
+export interface FallbackSection {
+  type: "string";
+  title: string | MDXRemoteSerializeResult;
+  description?: string | MDXRemoteSerializeResult;
+  pattern?: string;
+  img?: string;
+  video?: string;
+  items: {
+    MDXComponent: string | MDXRemoteSerializeResult;
+    title?: string | MDXRemoteSerializeResult;
+    desc?: string | MDXRemoteSerializeResult;
+  };
+  style: number;
+}
+
 // All
 export type Section =
   | Overview
@@ -412,7 +428,8 @@ export type Section =
   | Mascot
   | Color
   | Typography
-  | IdentityInUse;
+  | IdentityInUse
+  | FallbackSection;
 
 export interface ApiResponse {
   brand: Brand;

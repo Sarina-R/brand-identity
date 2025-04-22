@@ -52,7 +52,7 @@ export default function RootLayout({
 
   if (loading || !data) {
     return (
-      <div className="space-y-6 px-10 py-5">
+      <div className="space-y-6 py-5">
         <Skeleton className="h-10 w-1/3" />
         <Skeleton className="h-6 w-2/3" />
         <Skeleton className="h-[200px] w-full rounded-xl" />

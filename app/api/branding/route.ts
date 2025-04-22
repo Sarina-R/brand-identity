@@ -299,7 +299,7 @@ const DesignPrinciples = `
     </div>`;
 
 const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
-    <h2 className="text-2xl font-extrabold text-neutral-800 dark:text-neutral-300 mb-10 text-center">
+    <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-10">
       Slogan Explanation for FIRA:
       <span className="text-black">Enjoy Robots, Enjoy Life</span>
     </h2>
@@ -436,7 +436,7 @@ const data = {
             title: "Tone Of Voice",
             type: "tone_of_voice",
           },
-          { id: "tagline", title: "Tagline", type: "tagline" },
+          // { id: "tagline", title: "Tagline", type: "tagline" },
         ],
       },
       "Visual identity": {
@@ -579,19 +579,19 @@ const data = {
           style: 1,
         },
       },
-      {
-        type: "tagline",
-        title: "Tagline",
-        description: "",
-        pattern:
-          "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
-        img: "",
-        items: {
-          MDXComponent: item1,
-          title: "**TITLE** If there is",
-          desc: "some desc :)",
-        },
-      },
+      // {
+      //   type: "tagline",
+      //   title: "Tagline",
+      //   description: "",
+      //   pattern:
+      //     "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
+      //   img: "",
+      //   items: {
+      //     MDXComponent: item1,
+      //     title: "**TITLE** If there is",
+      //     desc: "some desc :)",
+      //   },
+      // },
       {
         type: "design_principles",
         title: "Design Principles",
@@ -1068,7 +1068,7 @@ const data = {
             title: "Tone Of Voice",
             type: "tone_of_voice",
           },
-          { id: "tagline", title: "Tagline", type: "tagline" },
+          // { id: "tagline", title: "Tagline", type: "tagline" },
         ],
       },
       "Visual identity": {
@@ -1085,6 +1085,11 @@ const data = {
             id: "identity-in-use",
             title: "Identity In Use",
             type: "identity_in_use",
+          },
+          {
+            id: "pattern",
+            title: "Pattern",
+            type: "pattern",
           },
         ],
       },
@@ -1212,19 +1217,6 @@ const data = {
           ],
 
           style: 1,
-        },
-      },
-      {
-        type: "tagline",
-        title: "Tagline",
-        description: "",
-        pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
-        img: "",
-        items: {
-          MDXComponent: item1,
-          title: "**TITLE** If there is",
-          desc: "some desc :)",
         },
       },
       {
@@ -1606,6 +1598,18 @@ const data = {
         items: {
           MDXComponent: IdentityInUse,
           title: "Brand in Action: FIRA CUP 2025",
+        },
+      },
+      {
+        type: "pattern",
+        title: "Pattern",
+        description: "",
+        pattern:
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
+        items: {
+          MDXComponent: "MDXComponent",
+          title: "Pattern",
+          desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
         },
       },
     ],
