@@ -76,22 +76,22 @@ const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid
         </div>
       </div>`;
 
-const item1 = `
-    <div className="flex flex-col md:flex-row gap-6">
-    <div className="w-full md:w-1/2 flex flex-col justify-center">
-        <p className="leading-relaxed text-neutral-700 dark:text-neutral-300">
-          English is a West Germanic language in the Indo-European language family, whose speakers, called Anglophones, originated in early medieval England on the island of Great Britain.[4][5][6] The namesake of the language is the Angles, one of the Germanic peoples that migrated to Britain after its Roman occupiers left. English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the
-        </p>
-      </div>
-      <div className="relative w-full md:w-1/2">
-        <img
-          src="https://cdn.alibaba.ir/cms/uploads/statement_1_bd405ef6af.jpg"
-          alt="Scenic travel"
-          className="w-full h-auto rounded-lg shadow-lg"
-        />
-      </div>
-    </div>
-  `;
+// const taglineMDXComponent = `
+//     <div className="flex flex-col md:flex-row gap-6">
+//     <div className="w-full md:w-1/2 flex flex-col justify-center">
+//         <p className="leading-relaxed text-neutral-700 dark:text-neutral-300">
+//           English is a West Germanic language in the Indo-European language family, whose speakers, called Anglophones, originated in early medieval England on the island of Great Britain.[4][5][6] The namesake of the language is the Angles, one of the Germanic peoples that migrated to Britain after its Roman occupiers left. English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the
+//         </p>
+//       </div>
+//       <div className="relative w-full md:w-1/2">
+//         <img
+//           src="https://cdn.alibaba.ir/cms/uploads/statement_1_bd405ef6af.jpg"
+//           alt="Scenic travel"
+//           className="w-full h-auto rounded-lg shadow-lg"
+//         />
+//       </div>
+//     </div>
+//   `;
 
 const item2 = `Fira Iran's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Fira Iran's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
@@ -401,6 +401,66 @@ const IdentityInUse = `<div className="min-h-screen px-6 py-12 space-y-12">
     </div>
   </section>
 </div>
+`;
+
+const PatternCA = `
+<div className="flex flex-wrap justify-center gap-4">
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(23).png"
+    alt="Image 1"
+    className="object-cover sm:w-[240px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(24).png"
+    alt="Image 2"
+    className="object-cover sm:w-[200px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(25).png"
+    alt="Image 3"
+    className="object-cover sm:w-[180px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(26).png"
+    alt="Image 4"
+    className="object-cover sm:w-[220px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(27).png"
+    alt="Image 5"
+    className="object-cover sm:w-[260px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(28).png"
+    alt="Image 6"
+    className="object-cover sm:w-[190px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(29).png"
+    alt="Image 7"
+    className="object-cover sm:w-[210px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(30).png"
+    alt="Image 8"
+    className="object-cover sm:w-[230px] h-auto"
+    loading="lazy"
+  />
+  <img
+    src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/pattern/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(31).png"
+    alt="Image 9"
+    className="object-cover sm:w-[250px] h-auto"
+    loading="lazy"
+  />
+</div>
+
 `;
 
 const data = {
@@ -1607,7 +1667,7 @@ const data = {
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         items: {
-          MDXComponent: "MDXComponent",
+          MDXComponent: PatternCA,
           title: "Pattern",
           desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
         },

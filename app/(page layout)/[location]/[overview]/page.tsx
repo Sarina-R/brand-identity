@@ -1,5 +1,6 @@
 "use client";
 
+import { Section } from "@/app/type";
 import { useData } from "@/hooks/DataProvider";
 import { usePathname } from "next/navigation";
 import { useMDXComponents } from "@/mdx-component";
@@ -13,7 +14,6 @@ import DesignPrinciplesSection from "@/components/dynamic-section/DesignPrincipl
 import LogoSection from "@/components/dynamic-section/LogoSection";
 import ColorSection from "@/components/dynamic-section/ColorSection";
 import TypographySection from "@/components/dynamic-section/TypographySection";
-import { Section } from "@/app/type";
 
 const Page = () => {
   const { data, loading } = useData();
