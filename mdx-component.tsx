@@ -1,4 +1,5 @@
 import type { MDXComponents } from "mdx/types";
+import Image from "next/image";
 
 interface MDXComponentProps {
   primaryColor?: string;
@@ -46,7 +47,7 @@ export function useMDXComponents({
 
     // Image
     img: (props) => (
-      <img
+      <Image
         // whileHover={{ scale: 1.0 }}
         // style={{ width: "100%", height: "auto" }}
         // className="rounded-lg shadow-md transition-transform duration-300 my-4 dark:shadow-neutral-700"

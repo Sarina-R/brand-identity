@@ -69,22 +69,26 @@ export function AppSidebar() {
         </SidebarContent>
       ) : (
         <>
-          <Image
-            src={data?.brand.logo || ""}
-            width={120}
-            height={40}
-            alt={data?.brand.name || ""}
-            className="object-contain px-4 w-full block dark:hidden"
-            priority
-          />
-          <Image
-            src={data?.brand.darkLogo || ""}
-            width={120}
-            height={40}
-            alt={data?.brand.name || ""}
-            className="object-contain px-4 w-full hidden dark:block"
-            priority
-          />
+          {(data?.brand.logo || data?.brand.darkLogo) && (
+            <>
+              <Image
+                src={data?.brand.logo || ""}
+                width={120}
+                height={40}
+                alt={data?.brand.name || ""}
+                className="object-contain px-4 w-full block dark:hidden"
+                priority
+              />
+              <Image
+                src={data?.brand.darkLogo || ""}
+                width={120}
+                height={40}
+                alt={data?.brand.name || ""}
+                className="object-contain px-4 w-full hidden dark:block"
+                priority
+              />
+            </>
+          )}
 
           <SidebarContent>
             {groups.map((group, index) => (
