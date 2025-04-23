@@ -620,45 +620,41 @@ const MDXComponentCa = `<div className="space-y-8">
             </div>
         </div>
 
-        <div style="width: 100%; overflow-x: auto;">
-  <h2 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Final Shots</h2>
-  <div style="display: flex; gap: 1rem; padding-bottom: 1rem;">
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(76).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(77).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(78).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(79).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(80).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(81).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-    <div style="min-width: 200px; max-width: 300px; flex-shrink: 0; border-radius: 0.5rem; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(82).png" alt="Final Shots 2" style="width: 100%; height: auto; object-fit: contain;">
-    </div>
-
-    </div>
-</div>
-
-
-        
+        <div>
+            <h2 className="text-xl font-semibold mb-2">Final Shots</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(76).png" alt="Final Shots 3" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(77).png" alt="Final Shots 4" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(78).png" alt="Final Shots 5" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(79).png" alt="Final Shots 6" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(80).png" alt="Final Shots 7" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(81).png" alt="Final Shots 8" className="w-full h-auto object-contain"/>
+                </div>
+                <div className="relative w-full">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(82).png" alt="Final Shots 9" className="w-full h-auto object-contain"/>
+                </div>
+            </div>
+        </div>
     </div>`;
 
 const PatternCA = `
