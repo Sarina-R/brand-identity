@@ -622,14 +622,14 @@ const MDXComponentCa = `<div className="space-y-8">
 
         <div>
             <h2 className="text-xl font-semibold mb-2">Final Shots</h2>
-            <div className="gap-1 flex">
+            <div className="gap-1 flex max-w-[800px]">
                 <div className="relative max-w-[300px]">
                     <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" className="max-w-[300px] h-auto object-contain"/>
                 </div>
                 <div className="relative max-w-[300px]">
                     <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" className="max-w-[300px] h-auto object-contain"/>
                 </div>
-                <div className="relative max-w-[300px]">
+                <div className="relative max-w-[200px]">
                     <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" className="max-w-[300px] h-auto object-contain"/>
                 </div>
                 <div className="relative max-w-[300px]">
