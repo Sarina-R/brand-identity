@@ -623,35 +623,35 @@ const MDXComponentCa = `<div className="space-y-8">
         <div>
             <h2 className="text-xl font-semibold mb-2">Final Shots</h2>
             <div className="gap-1">
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(76).png" alt="Final Shots 3" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(76).png" alt="Final Shots 3" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(77).png" alt="Final Shots 4" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(77).png" alt="Final Shots 4" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(78).png" alt="Final Shots 5" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(78).png" alt="Final Shots 5" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(79).png" alt="Final Shots 6" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(79).png" alt="Final Shots 6" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(80).png" alt="Final Shots 7" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(80).png" alt="Final Shots 7" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(81).png" alt="Final Shots 8" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(81).png" alt="Final Shots 8" className="max-w-[500px] h-auto object-contain"/>
                 </div>
-                <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(82).png" alt="Final Shots 9" className="w-full h-auto object-contain"/>
+                <div className="relative max-w-[500px]">
+                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(82).png" alt="Final Shots 9" className="max-w-[500px] h-auto object-contain"/>
                 </div>
             </div>
         </div>
