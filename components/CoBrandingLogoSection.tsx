@@ -5,6 +5,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { useMDXComponents1 } from "@/mdx-component";
 import { AlongWithOthers } from "@/app/type";
 import { motion, AnimatePresence } from "framer-motion";
+import { useFont } from "@/hooks/FontProvider";
 
 interface CoBrandingProps {
   data: AlongWithOthers;
@@ -15,6 +16,7 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
   const [mdxTitle, setMdxTitle] = useState<MDXRemoteSerializeResult>();
   const [mdxDesc, setMdxDesc] = useState<MDXRemoteSerializeResult>();
   const [activeIndex, setActiveIndex] = useState(0);
+  const { headerFont } = useFont();
 
   useEffect(() => {
     const serializeContent = async () => {
@@ -63,7 +65,10 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
           },
         }}
       >
-        <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+        <h2
+          className="text-2xl font-bold text-neutral-800 dark:text-neutral-200"
+          style={{ fontFamily: headerFont }}
+        >
           {mdxTitle && <MDXRemote {...mdxTitle} components={mdxComponents1} />}
         </h2>
         <div className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm">

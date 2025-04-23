@@ -366,8 +366,9 @@ export interface TypographyItems {
 
 export interface Font {
   name: string;
+  headers?: string;
   weights: number[];
-  subsets: string[];
+  subsets?: string[];
 }
 
 export interface Typography {

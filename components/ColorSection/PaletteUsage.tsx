@@ -3,6 +3,7 @@ import { MDXRemote } from "next-mdx-remote";
 import { useMDXComponents } from "@/mdx-component";
 import { Check, X } from "lucide-react";
 import { motion } from "framer-motion";
+import { useFont } from "@/hooks/FontProvider";
 
 // Animation Variants
 const fadeUp = {
@@ -32,6 +33,7 @@ const cardAnim = {
 
 const PaletteUsage = ({ usage }: { usage: PaletteUsageType }) => {
   const mdxComponents = useMDXComponents({});
+  const { headerFont } = useFont();
 
   return (
     <motion.div
@@ -44,6 +46,7 @@ const PaletteUsage = ({ usage }: { usage: PaletteUsageType }) => {
       <motion.h2
         variants={fadeUp}
         className="text-2xl text-neutral-800 dark:text-neutral-200 font-bold mb-4"
+        style={{ fontFamily: headerFont }}
       >
         {typeof usage.title === "string" ? (
           usage.title
@@ -64,7 +67,10 @@ const PaletteUsage = ({ usage }: { usage: PaletteUsageType }) => {
       </motion.p>
 
       <motion.div variants={fadeUp} className="mb-8">
-        <h3 className="text-lg font-semibold mb-4 text-neutral-800 dark:text-neutral-200">
+        <h3
+          className="text-lg font-semibold mb-4 text-neutral-800 dark:text-neutral-200"
+          style={{ fontFamily: headerFont }}
+        >
           Main Structure
         </h3>
         <ul className="list-disc pl-5 text-neutral-700 dark:text-neutral-300">

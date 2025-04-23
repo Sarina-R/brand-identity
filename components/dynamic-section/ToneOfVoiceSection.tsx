@@ -11,6 +11,7 @@ import { lighten } from "polished";
 import { serialize } from "next-mdx-remote/serialize";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useFont } from "@/hooks/FontProvider";
 
 type SlideCardProps = {
   svg?: string;
@@ -33,6 +34,7 @@ const ToneOfVoiceSection = ({
   const [serializedContent, setSerializedContent] = useState<SliderContent[]>(
     []
   );
+  const { headerFont } = useFont();
 
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
@@ -86,7 +88,10 @@ const ToneOfVoiceSection = ({
       )}
 
       <div className="px-6 space-y-5 max-w-3xl mx-auto">
-        <h2 className="font-bold text-2xl text-neutral-800 dark:text-neutral-200">
+        <h2
+          className="font-bold text-2xl text-neutral-800 dark:text-neutral-200"
+          style={{ fontFamily: headerFont }}
+        >
           {section.items.title && (
             <MDXRemote
               {...(section.items.title as MDXRemoteSerializeResult)}
@@ -171,11 +176,15 @@ const SlideCard: React.FC<SlideCardProps> = ({
   const lighterColor = lighten(0.2, primaryColor);
   const icons = [Handshake, Home, User, Settings];
   const RandomIcon = icons[Math.floor(Math.random() * icons.length)];
+  const { headerFont } = useFont();
 
   return (
     <div className="w-full max-w-5xl mx-auto min-h-60 flex md:flex-row-reverse flex-col-reverse items-stretch bg-white dark:bg-neutral-800 rounded-2xl shadow-sm border overflow-hidden">
       <div className="md:w-2/3 w-full p-6 space-y-2">
-        <h3 className="font-bold text-lg text-neutral-900 dark:text-white">
+        <h3
+          className="font-bold text-lg text-neutral-900 dark:text-white"
+          style={{ fontFamily: headerFont }}
+        >
           {typeof title === "string" ? (
             title
           ) : (

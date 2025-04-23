@@ -3,6 +3,7 @@ import { useMDXComponents } from "@/mdx-component";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useFont } from "@/hooks/FontProvider";
 
 const hexToRgb = (hex: string) => {
   const r = parseInt(hex.slice(1, 3), 16);
@@ -32,6 +33,7 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
   const mdxComponents = useMDXComponents({});
   const [hoveredColor, setHoveredColor] = useState<string | null>(null);
   const [copiedHex, setCopiedHex] = useState<string | null>(null);
+  const { headerFont } = useFont();
 
   const copyToClipboard = (hex: string) => {
     navigator.clipboard.writeText(hex);
@@ -54,7 +56,10 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
   return (
     <div className="">
       <div className="container mx-auto overflow-hidden">
-        <h2 className="text-2xl font-bold mb-4 text-neutral-800 dark:text-neutral-200">
+        <h2
+          className="text-2xl font-bold mb-4 text-neutral-800 dark:text-neutral-200"
+          style={{ fontFamily: headerFont }}
+        >
           {palette?.title && (
             <MDXRemote
               {...(palette.title as MDXRemoteSerializeResult)}

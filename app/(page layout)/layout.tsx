@@ -10,12 +10,13 @@ import Link from "next/link";
 import { Font } from "@/app/type";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { FontProvider, useFont } from "@/hooks/FontProvider";
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   const { data, loading } = useData();
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
@@ -23,32 +24,31 @@ export default function RootLayout({
   const mdxComponents = useMDXComponents1({});
 
   const font: Font | undefined = data?.brand?.font;
-  const fontFamily = font && font.name ? font.name : "roboto";
+  const fontFamily = font?.name ?? "Roboto";
+  const headerFontFamily = font?.headers ?? fontFamily;
+  const weights = font?.weights?.join(";") ?? "400;700";
+  const subsets = font?.subsets?.join(",") ?? "latin";
 
   useEffect(() => {
-    if (loading || !data || !font || !font.name) return;
+    if (!font?.name) return;
 
-    const { name, weights, subsets } = font;
-    const formattedFontName = name.replace(/\s+/g, "+");
-    const weightsQuery = weights ? `wght@${weights.join(";")}` : "wght@400;700";
-    const subsetsQuery = subsets ? `&subset=${subsets.join(",")}` : "";
-    const fontUrl = `https://fonts.googleapis.com/css2?family=${formattedFontName}:${weightsQuery}${subsetsQuery}&display=swap`;
+    const loadFont = (fontName: string) => {
+      const formatted = fontName.replace(/\s+/g, "+");
+      const url = `https://fonts.googleapis.com/css2?family=${formatted}:wght@${weights}&subset=${subsets}&display=swap`;
 
-    const existingLink = document.querySelector(`link[href="${fontUrl}"]`);
-    if (!existingLink) {
-      const link = document.createElement("link");
-      link.href = fontUrl;
-      link.rel = "stylesheet";
-      document.head.appendChild(link);
-    }
-
-    return () => {
-      const link = document.querySelector(`link[href="${fontUrl}"]`);
-      if (link) {
-        document.head.removeChild(link);
+      if (!document.querySelector(`link[href="${url}"]`)) {
+        const link = document.createElement("link");
+        link.href = url;
+        link.rel = "stylesheet";
+        document.head.appendChild(link);
       }
     };
-  }, [data, loading, font]);
+
+    loadFont(fontFamily);
+    if (font?.headers && font.headers !== font.name) {
+      loadFont(headerFontFamily);
+    }
+  }, [fontFamily, headerFontFamily, weights, subsets]);
 
   if (loading || !data) {
     return (
@@ -60,36 +60,31 @@ export default function RootLayout({
       </div>
     );
   }
-  const primaryColor = data.brand.primaryColor;
 
+  const primaryColor = data.brand.primaryColor;
+  const textColor = getContrastYIQ(primaryColor);
   const menuItems = Object.values(data.menu).flatMap((menu) => menu.items);
   const currentType = menuItems.find((item) =>
     pathname.includes(item.id)
   )?.type;
   const section = data.sections.find((sec) => sec.type === currentType);
-
   const currentIndex = menuItems.findIndex((item) => item.type === currentType);
   const nextItem = menuItems[currentIndex + 1];
   const prevItem = currentIndex > 0 ? menuItems[currentIndex - 1] : null;
 
   function getContrastYIQ(hexColor: string): "black" | "white" {
     let color = hexColor.replace("#", "");
-    if (color.length === 3) {
+    if (color.length === 3)
       color = color
         .split("")
         .map((c) => c + c)
         .join("");
-    }
-
-    const r = parseInt(color.substr(0, 2), 16);
-    const g = parseInt(color.substr(2, 2), 16);
-    const b = parseInt(color.substr(4, 2), 16);
-
+    const r = parseInt(color.substring(0, 2), 16);
+    const g = parseInt(color.substring(2, 2), 16);
+    const b = parseInt(color.substring(4, 2), 16);
     const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-
     return yiq >= 128 ? "black" : "white";
   }
-  const textColor = getContrastYIQ(primaryColor);
 
   const renderSectionContent = () => {
     if (!currentType || !section) {
@@ -127,14 +122,11 @@ export default function RootLayout({
             />
           )}
 
-          <div
-            className={`relative text-left text- ${
-              hasMedia
-                ? "bottom-1 lg:bottom-[-5rem] md:bottom-[-7rem]"
-                : "md:bottom-[-5rem] bottom-[-14rem]"
-            }`}
-          >
-            <h1 className="font-bold md:font-black text-display-lg lg:text-4xl text-3xl m-0">
+          <div className="relative text-left">
+            <h1
+              className="font-bold md:font-black text-display-lg lg:text-4xl text-3xl m-0"
+              style={{ fontFamily: headerFontFamily }}
+            >
               {section?.title && (
                 <MDXRemote
                   {...(section.title as MDXRemoteSerializeResult)}
@@ -183,44 +175,46 @@ export default function RootLayout({
   };
 
   return (
-    <div className="space-y-8" style={{ fontFamily }}>
-      {renderSectionContent()}
-      {children}
-      <footer className="bg-neutral-100 dark:bg-neutral-900 h-20 rounded-2xl font-bold px-4 items-center w-full flex justify-between">
-        {prevItem ? (
-          <Link
-            href={`/${localePrefix}/${prevItem.id}`}
-            className="flex gap-2 text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
-          >
-            <div className="pt-2">
-              <ChevronLeft size={32} />
-            </div>
-            <div className="">
-              <p className="font-light text-neutral-500 text-sm">Prev</p>
-              <p>{prevItem.title}</p>
-            </div>
-          </Link>
-        ) : (
-          <span></span>
-        )}
+    <FontProvider font={data.brand.font}>
+      <div className="space-y-8" style={{ fontFamily }}>
+        {renderSectionContent()}
+        {children}
+        <footer className="bg-neutral-100 dark:bg-neutral-900 h-20 rounded-2xl font-bold px-4 items-center w-full flex justify-between">
+          {prevItem ? (
+            <Link
+              href={`/${localePrefix}/${prevItem.id}`}
+              className="flex gap-2 text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
+            >
+              <div className="pt-2">
+                <ChevronLeft size={32} />
+              </div>
+              <div>
+                <p className="font-light text-neutral-500 text-sm">Prev</p>
+                <p>{prevItem.title}</p>
+              </div>
+            </Link>
+          ) : (
+            <span></span>
+          )}
 
-        {nextItem ? (
-          <Link
-            href={`/${localePrefix}/${nextItem.id}`}
-            className="flex gap-2 text-right text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
-          >
-            <div>
-              <p className="font-light text-neutral-500 text-sm">Next</p>
-              <p>{nextItem.title}</p>
-            </div>
-            <div className="pt-2">
-              <ChevronRight size={32} />
-            </div>
-          </Link>
-        ) : (
-          <span>End of sections</span>
-        )}
-      </footer>
-    </div>
+          {nextItem ? (
+            <Link
+              href={`/${localePrefix}/${nextItem.id}`}
+              className="flex gap-2 text-right text-neutral-800 dark:text-neutral-200 hover:text-neutral-600"
+            >
+              <div>
+                <p className="font-light text-neutral-500 text-sm">Next</p>
+                <p>{nextItem.title}</p>
+              </div>
+              <div className="pt-2">
+                <ChevronRight size={32} />
+              </div>
+            </Link>
+          ) : (
+            <span>End of sections</span>
+          )}
+        </footer>
+      </div>
+    </FontProvider>
   );
 }

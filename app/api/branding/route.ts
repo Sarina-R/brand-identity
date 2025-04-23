@@ -1359,6 +1359,7 @@ const data = {
         "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
       font: {
         name: "Barlow",
+        headers: "Heebo",
         weights: [400, 500, 700],
         subsets: ["latin", "latin-ext"],
       },

@@ -9,6 +9,7 @@ import { PlayCircle, Cable, CircleUser, ShieldCheck, Rss } from "lucide-react";
 import { CustomTabs } from "../CustomTabs";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useFont } from "@/hooks/FontProvider";
 
 const fallbackIcons = [Cable, CircleUser, ShieldCheck, Rss];
 
@@ -33,6 +34,7 @@ const DesignPrinciplesSection = ({
     section.items.tabsContent[0]?.title || ""
   );
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const { headerFont } = useFont();
 
   useEffect(() => {
     const serializeDescriptions = async () => {
@@ -148,7 +150,10 @@ const DesignPrinciplesSection = ({
 
         <motion.div className="sticky top-15 h-fit" variants={fadeInUp}>
           {section.items.title && (
-            <h2 className="text-3xl font-bold mb-4 text-neutral-800 dark:text-neutral-200">
+            <h2
+              className="text-3xl font-bold mb-4 text-neutral-800 dark:text-neutral-200"
+              style={{ fontFamily: headerFont }}
+            >
               {typeof section.items.title === "string" ? (
                 section.items.title
               ) : (
