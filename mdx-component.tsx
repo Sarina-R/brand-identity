@@ -48,10 +48,11 @@ export function useMDXComponents({
     // Image
     img: (props) => (
       <Image
-        // whileHover={{ scale: 1.0 }}
-        // style={{ width: "100%", height: "auto" }}
-        // className="rounded-lg shadow-md transition-transform duration-300 my-4 dark:shadow-neutral-700"
-        {...props}
+        src={props.src}
+        alt={props.alt || ""}
+        width={parseInt(props.width) || 500}
+        height={parseInt(props.height) || 500}
+        style={{ objectFit: "cover" }}
       />
     ),
 

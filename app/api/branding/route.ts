@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import Image from "next/image";
 
 const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
@@ -341,66 +342,66 @@ const IdentityInUse = `<div className="min-h-screen px-6 py-12 space-y-12">
   <section>
     <h2 className="text-2xl font-semibold mb-4">Instagram Posts</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 1" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(18).png" alt="Post 2" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 3" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 1" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(18).png" alt="Post 2" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(19).png" alt="Post 3" className="w-full " />
     </div>
   </section>
 
   <section>
     <h2 className="text-2xl font-semibold mb-4">Instagram Stories</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(20).png" alt="Story 1" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(21).png" alt="Story 2" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(22).png" alt="Story 3" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(20).png" alt="Story 1" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(21).png" alt="Story 2" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(22).png" alt="Story 3" className="w-full " />
     </div>
   </section>
 
   <section>
     <h2 className="text-2xl font-semibold mb-4">Format Sizes</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(23).png" alt="Story Size" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(24).png" alt="Poster Size" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(25).png" alt="Post Size" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(23).png" alt="Story Size" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(24).png" alt="Poster Size" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(25).png" alt="Post Size" className="w-full " />
     </div>
   </section>
 
   <section>
     <h2 className="text-2xl font-semibold mb-4">Flags & City Posters</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(26).png" alt="Flag 1" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(27).png" alt="Flag 2" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(28).png" alt="Flag 3" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(29).png" alt="City 1" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(30).png" alt="City 2" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(31).png" alt="City 3" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(32).png" alt="City 4" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(26).png" alt="Flag 1" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(27).png" alt="Flag 2" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(28).png" alt="Flag 3" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(29).png" alt="City 1" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(30).png" alt="City 2" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(31).png" alt="City 3" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(32).png" alt="City 4" className="w-full " />
     </div>
   </section>
 
   <section>
     <h2 className="text-2xl font-semibold mb-4">Merch: T-Shirts & Mugs</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(33).png" alt="T-shirt" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(34).png" alt="Mug" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(33).png" alt="T-shirt" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(34).png" alt="Mug" className="w-full " />
     </div>
   </section>
 
   <section>
     <h2 className="text-2xl font-semibold mb-4">ID Cards</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(35).png" alt="ID Back" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(36).png" alt="ID Front" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(37).png" alt="ID Ribbon 1" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(38).png" alt="ID Ribbon 2" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(35).png" alt="ID Back" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(36).png" alt="ID Front" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(37).png" alt="ID Ribbon 1" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(38).png" alt="ID Ribbon 2" className="w-full " />
     </div>
   </section>
 
   <section>
     <h2 className="text-2xl font-semibold mb-4">Certificates</h2>
     <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(39).png" alt="Certificate 1" className="w-full " />
-      <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(40).png" alt="Certificate 2" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(39).png" alt="Certificate 1" className="w-full " />
+      <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/in%20use/Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(40).png" alt="Certificate 2" className="w-full " />
     </div>
   </section>
 </div>
@@ -411,10 +412,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Business Card</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(33).png" alt="Business Card 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(33).png" alt="Business Card 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(34).png" alt="Business Card 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(34).png" alt="Business Card 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -423,13 +424,13 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Business Card in Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(35).png" alt="Business Card in Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(35).png" alt="Business Card in Use 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(36).png" alt="Business Card in Use 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(36).png" alt="Business Card in Use 1" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(37).png" alt="Business Card in Use 2" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(37).png" alt="Business Card in Use 2" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -438,10 +439,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">ID Card</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(38).png" alt="ID Card 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(38).png" alt="ID Card 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(39).png" alt="ID Card 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(39).png" alt="ID Card 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -450,7 +451,7 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">ID Card in Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(40).png" alt="ID Card in Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(40).png" alt="ID Card in Use 0" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -459,10 +460,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Business Letterhead</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(41).png" alt="Business Letterhead 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(41).png" alt="Business Letterhead 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(42).png" alt="Business Letterhead 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(42).png" alt="Business Letterhead 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -471,10 +472,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Business Letterhead in Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(43).png" alt="Business Letterhead in Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(43).png" alt="Business Letterhead in Use 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(44).png" alt="Business Letterhead in Use 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(44).png" alt="Business Letterhead in Use 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -483,10 +484,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Business Envelope</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(45).png" alt="Business Envelope 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(45).png" alt="Business Envelope 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(46).png" alt="Business Envelope 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(46).png" alt="Business Envelope 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -495,10 +496,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Business Envelope in Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(47).png" alt="Business Envelope in Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(47).png" alt="Business Envelope in Use 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(48).png" alt="Business Envelope in Use 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(48).png" alt="Business Envelope in Use 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -507,10 +508,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Instagram Post Style</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(49).png" alt="Instagram Post Style 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(49).png" alt="Instagram Post Style 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(50).png" alt="Instagram Post Style 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(50).png" alt="Instagram Post Style 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -519,13 +520,13 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Instagram Story</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(51).png" alt="Instagram Story 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(51).png" alt="Instagram Story 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(52).png" alt="Instagram Story 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(52).png" alt="Instagram Story 1" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(53).png" alt="Instagram Story 2" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(53).png" alt="Instagram Story 2" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -534,7 +535,7 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Instagram Story In Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(54).png" alt="Instagram Story In Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(54).png" alt="Instagram Story In Use 0" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -543,7 +544,7 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Story Highlight Covers</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(55).png" alt="Storyalit Covers 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(55).png" alt="Storyalit Covers 0" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -552,31 +553,31 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Roll Up Banner</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(56).png" alt="Roll Up Banner 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(56).png" alt="Roll Up Banner 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(57).png" alt="Roll Up Banner 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(57).png" alt="Roll Up Banner 1" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(58).png" alt="Roll Up Banner 2" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(58).png" alt="Roll Up Banner 2" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(59).png" alt="Roll Up Banner 3" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(59).png" alt="Roll Up Banner 3" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(60).png" alt="Roll Up Banner 4" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(60).png" alt="Roll Up Banner 4" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(61).png" alt="Roll Up Banner 5" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(61).png" alt="Roll Up Banner 5" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(62).png" alt="Roll Up Banner 6" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(62).png" alt="Roll Up Banner 6" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(63).png" alt="Roll Up Banner 7" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(63).png" alt="Roll Up Banner 7" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(64).png" alt="Roll Up Banner 8" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(64).png" alt="Roll Up Banner 8" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -585,13 +586,13 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Roll Up In Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(65).png" alt="Roll Up In Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(65).png" alt="Roll Up In Use 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(66).png" alt="Roll Up In Use 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(66).png" alt="Roll Up In Use 1" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(67).png" alt="Roll Up In Use 2" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(67).png" alt="Roll Up In Use 2" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -600,13 +601,13 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Hanging Exhibition Banner</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(68).png" alt="Hanging Exhibition Banner 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(68).png" alt="Hanging Exhibition Banner 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(69).png" alt="Hanging Exhibition Banner 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(69).png" alt="Hanging Exhibition Banner 1" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(70).png" alt="Hanging Exhibition Banner 2" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(70).png" alt="Hanging Exhibition Banner 2" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -615,10 +616,10 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Exhibition In Use</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(71).png" alt="Exhibition In Use 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(71).png" alt="Exhibition In Use 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(72).png" alt="Exhibition In Use 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(72).png" alt="Exhibition In Use 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
@@ -627,34 +628,34 @@ const MDXComponentCa = `<div className="space-y-8">
             <h2 className="text-xl font-semibold mb-2">Final Shots</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(73).png" alt="Final Shots 0" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(74).png" alt="Final Shots 1" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(75).png" alt="Final Shots 2" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(76).png" alt="Final Shots 3" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(76).png" alt="Final Shots 3" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(77).png" alt="Final Shots 4" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(77).png" alt="Final Shots 4" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(78).png" alt="Final Shots 5" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(78).png" alt="Final Shots 5" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(79).png" alt="Final Shots 6" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(79).png" alt="Final Shots 6" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(80).png" alt="Final Shots 7" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(80).png" alt="Final Shots 7" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(81).png" alt="Final Shots 8" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(81).png" alt="Final Shots 8" className="w-full h-auto object-contain"/>
                 </div>
                 <div className="relative w-full">
-                    <img src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(82).png" alt="Final Shots 9" className="w-full h-auto object-contain"/>
+                    <img width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(82).png" alt="Final Shots 9" className="w-full h-auto object-contain"/>
                 </div>
             </div>
         </div>
