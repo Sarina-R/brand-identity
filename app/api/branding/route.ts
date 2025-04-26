@@ -1615,7 +1615,7 @@ const data = {
               },
               {
                 imgBg:
-                  "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//gradient.png",
+                  "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/gradient.png",
                 logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
               },
             ],
