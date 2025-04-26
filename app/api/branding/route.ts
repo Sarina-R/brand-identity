@@ -94,11 +94,11 @@ const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid
 //   `;
 
 const item2 = `Fira Iran's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
-"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Fira Iran's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
-Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Fira Iran’s brand identity.`;
+"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify FIRA Iran's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
+Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining FIRA Iran’s brand identity.`;
 const item2CA = `Fira Canada's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
-"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify Fira Canada's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
-Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining Fira Canada’s brand identity.`;
+"Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify FIRA Canada's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
+Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining FIRA Canada’s brand identity.`;
 
 const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
         <div className="space-y-6">
@@ -931,7 +931,7 @@ const data = {
               title: "Design Strategics",
               description: `**AliBaba’s strategic design** is a comprehensive travel solution. It always aims to optimize the journey and offer a seamless experience across all stages.
                           This mental model in strategic design helps the brand to evolve and emerge continuously.
-                          Strategic design in Fira Iran is in service of communication and business growth.
+                          Strategic design in FIRA Iran is in service of communication and business growth.
                           The foundation of strategic design stems from upstream strategies and loops through feedback and iteration to complete and refine one another.
               `,
               svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
@@ -958,7 +958,7 @@ const data = {
           desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
           download:
             "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
-          downloadBtnText: "Download Fira Cup 2025 Tehran Logo",
+          downloadBtnText: "Download FIRA Cup 2025 Tehran Logo",
           logoVersion: [
             {
               id: 1,
@@ -980,7 +980,7 @@ const data = {
             {
               id: 3,
               name: "Mono",
-              text: "We use the monogram version in Fira Iran media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
+              text: "We use the monogram version in FIRA Iran media, such as the brand's social media, website and app icons, and video watermarks. We can also use this version in other brand communications where the brand name does not need to be mentioned due to familiarity with the audience.",
               svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy%20of%20FIRA%20CUP%202025%20BRAND%20BOOK%20(41).png",
               darkSvg:
                 "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-mono-logo.png",
@@ -988,11 +988,11 @@ const data = {
           ],
           inBackgroundSection: {
             listItems: [
-              "We use the Fira Iran logo on a white background, only in the primary color.",
-              "We use the Fira Iran logo on a black background, only in the primary color.",
-              "We use the Fira Iran logo on a yellow background, only in solid black.",
-              "We use the Fira Iran logo on neutral backgrounds (permitted codes in the color palette), only in solid black or white.",
-              "The use of the Fira Iran logo on other colored backgrounds is not permitted.",
+              "We use the FIRA Iran logo on a white background, only in the primary color.",
+              "We use the FIRA Iran logo on a black background, only in the primary color.",
+              "We use the FIRA Iran logo on a yellow background, only in solid black.",
+              "We use the FIRA Iran logo on neutral backgrounds (permitted codes in the color palette), only in solid black or white.",
+              "The use of the FIRA Iran logo on other colored backgrounds is not permitted.",
             ],
             inBackgroundComponent: [
               {
@@ -1024,7 +1024,7 @@ const data = {
           },
           alongWithOthers: {
             title: "Use it alongside other brand logos",
-            desc: "When using the Fira Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Fira Iran logo; if it’s horizontal, stick with the horizontal Fira Iran one. To keep things balanced, make sure the height of Fira Iran’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Fira Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Fira Iran logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
+            desc: "When using the FIRA Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the FIRA Iran logo; if it’s horizontal, stick with the horizontal FIRA Iran one. To keep things balanced, make sure the height of FIRA Iran’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal FIRA Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the FIRA Iran logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
             svg: [
               "https://cdn.alibaba.ir/cms/uploads/co_logo_2_dadfc63297.svg",
               "https://cdn.alibaba.ir/cms/uploads/co_logo_3_ed6df93726.svg",
@@ -1222,7 +1222,7 @@ const data = {
           desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
           fontFeatureComponent: {
             title: "Font Features",
-            desc: "In Fira Iran Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
+            desc: "In FIRA Iran Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
             componentItems: [
               {
                 text: "**Refund** <br/> easily",
@@ -1250,12 +1250,12 @@ const data = {
           typographyPrinciples: {
             title: "Basic Typography Principles",
             description:
-              "In typography, Fira Iran follows two fundamental principles:",
+              "In typography, FIRA Iran follows two fundamental principles:",
             section: [
               {
                 subtitle: "Readability",
                 content:
-                  "Readability is a core principle of Fira Iran’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
+                  "Readability is a core principle of FIRA Iran’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
                 examples: [
                   {
                     status: "incorrect",
@@ -1272,7 +1272,7 @@ const data = {
               {
                 subtitle: "Respecting Content Hierarchy",
                 content:
-                  "One of Fira Iran's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
+                  "One of FIRA Iran's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
                 examples: [
                   {
                     status: "incorrect",
@@ -1577,7 +1577,7 @@ const data = {
           desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
           download:
             "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
-          downloadBtnText: "Download Fira Cup 2025 Tehran Logo",
+          downloadBtnText: "Download FIRA Cup 2025 Tehran Logo",
           logoVersion: [
             {
               id: 1,
@@ -1622,7 +1622,7 @@ const data = {
           },
           alongWithOthers: {
             title: "Use it alongside other brand logos",
-            desc: "When using the Fira Canada logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the Fira Canada logo; if it’s horizontal, stick with the horizontal Fira Canada one. To keep things balanced, make sure the height of Fira Canada’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal Fira Canada logo. In that case, the height of both logotypes should be the same.<br/>Always slap the Fira Canada logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
+            desc: "When using the FIRA Canada logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the FIRA Canada logo; if it’s horizontal, stick with the horizontal FIRA Canada one. To keep things balanced, make sure the height of FIRA Canada’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal FIRA Canada logo. In that case, the height of both logotypes should be the same.<br/>Always slap the FIRA Canada logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
             svg: [
               "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(10).png",
               "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CoBranding.png",
@@ -1790,7 +1790,7 @@ const data = {
           desc: "Typography plays a key role in defining the visual identity of FIRA Canada. It ensures consistency and professionalism across all communication platforms, helping to communicate the brand's values clearly and effectively.<br/> We use **Heebo** as *Main Font* font for headers and **Barlow** as Alternative for For *Subheaders*",
           fontFeatureComponent: {
             title: "Font Features",
-            desc: "In Fira Canada Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
+            desc: "In FIRA Canada Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
             componentItems: [
               {
                 text: "**Refund** <br/> easily",
@@ -1818,12 +1818,12 @@ const data = {
           typographyPrinciples: {
             title: "Basic Typography Principles",
             description:
-              "In typography, Fira Canada follows two fundamental principles:",
+              "In typography, FIRA Canada follows two fundamental principles:",
             section: [
               {
                 subtitle: "Readability",
                 content:
-                  "Readability is a core principle of Fira Canada’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
+                  "Readability is a core principle of FIRA Canada’s typography. We organize all typographic elements—letter spacing, line spacing, and text alignment—so that the text is delivered to the reader in the clearest possible way.",
                 examples: [
                   {
                     status: "incorrect",
@@ -1840,7 +1840,7 @@ const data = {
               {
                 subtitle: "Respecting Content Hierarchy",
                 content:
-                  "One of Fira Canada's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
+                  "One of FIRA Canada's communication features is that its content always delivers priority and importance. In typography, we use characteristics like text size, weight, font, graphic elements, etc., to clearly communicate the hierarchy of different content layers to the audience.",
                 examples: [
                   {
                     status: "incorrect",
