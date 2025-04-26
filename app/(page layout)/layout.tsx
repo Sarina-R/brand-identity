@@ -73,16 +73,21 @@ export default function RootLayout({
   const prevItem = currentIndex > 0 ? menuItems[currentIndex - 1] : null;
 
   function getContrastYIQ(hexColor: string): "black" | "white" {
-    let color = hexColor.replace("#", "");
-    if (color.length === 3)
+    let color = hexColor.startsWith("#") ? hexColor.slice(1) : hexColor;
+
+    if (color.length === 3) {
       color = color
         .split("")
         .map((c) => c + c)
         .join("");
-    const r = parseInt(color.substring(0, 2), 16);
-    const g = parseInt(color.substring(2, 2), 16);
-    const b = parseInt(color.substring(4, 2), 16);
+    }
+
+    const r = parseInt(color.slice(0, 2), 16);
+    const g = parseInt(color.slice(2, 4), 16);
+    const b = parseInt(color.slice(4, 6), 16);
+
     const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
     return yiq >= 128 ? "black" : "white";
   }
 
