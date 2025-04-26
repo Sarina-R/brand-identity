@@ -94,10 +94,10 @@ const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid
 //     </div>
 //   `;
 
-const item2 = `Fira Iran's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
+const item2 = `FIRA Iran's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify FIRA Iran's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining FIRA Iran’s brand identity.`;
-const item2CA = `Fira Canada's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
+const item2CA = `FIRA Canada's brand personality is defined based on the Magician archetype—the kind of magician that brings the future into the present and creates transformative experiences for its audience.
 "Boldness for innovation," "the dynamic nature of travel," and "intelligence in understanding the present and future needs of both customers and the industry" are essential in crafting these experiences. These elements help solidify FIRA Canada's position as the leading brand in the travel industry, setting it apart from competitors while continuously creating value to meet diverse customer needs.
 Innovation, shaping the future, being a pioneer, and adapting to modern audience behavior patterns are the key themes that have guided us in redefining FIRA Canada’s brand identity.`;
 
@@ -338,7 +338,7 @@ const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
     </div>
   </div>`;
 
-const IdentityInUse = `<div className="min-h-screen px-6 py-12 space-y-12">
+const IdentityInUse = `<div className=" px-6 py-12 space-y-12">
   <section>
     <h2 className="text-2xl font-semibold mb-4">Instagram Posts</h2>
     <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
@@ -407,8 +407,8 @@ const IdentityInUse = `<div className="min-h-screen px-6 py-12 space-y-12">
 </div>
 `;
 
-const MDXComponentCa = `<div className="space-y-8">
-        <div>
+const MDXComponentCa = `<div className=" px-6 py-12 space-y-12">
+        <section>
             <h2 className="text-xl font-semibold mb-2">Business Card</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
                 <div className="relative w-full">
@@ -418,7 +418,7 @@ const MDXComponentCa = `<div className="space-y-8">
                     <Image width="600" height="400" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/identityInUse/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(34).png" alt="Business Card 1" className="w-full h-auto object-contain"/>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div>
             <h2 className="text-xl font-semibold mb-2">Business Card in Use</h2>
@@ -724,7 +724,7 @@ const PatternCA = `
 const data = {
   ir: {
     brand: {
-      name: "Fira Cup 2025 Tehran",
+      name: "FIRA Cup 2025 Tehran",
       primaryColor: "#fdb813",
       logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
       darkLogo:
@@ -1066,7 +1066,7 @@ const data = {
           palette: {
             title: "The Main Palette",
             description:
-              "Fira Iran’s main palette consists of yellow, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
+              "FIRA Iran’s main palette consists of yellow, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
             colors: {
               primary: {
                 id: 1001,
@@ -1336,7 +1336,7 @@ const data = {
   },
   ca: {
     brand: {
-      name: "Fira Cup 2025 Canada",
+      name: "FIRA Cup 2025 Canada",
       primaryColor: "#d22b2b",
       logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
       darkLogo:
@@ -1651,7 +1651,7 @@ const data = {
           palette: {
             title: "The Main Palette",
             description:
-              "Fira Canada’s main palette consists of Red, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
+              "FIRA Canada’s main palette consists of Red, black, white, and blue. In this palette, yellow is the central color. We use black and white as complementary colors alongside yellow. We also use blue in the call to action buttons.",
             colors: {
               primary: {
                 id: 1001,

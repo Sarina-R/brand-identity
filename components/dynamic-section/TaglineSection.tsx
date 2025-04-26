@@ -23,7 +23,7 @@ const TaglineSection = ({
       className="sm:p-6 p-2 space-y-8 capitalize"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.06 }}
     >
       {(section.items.title || section.items.desc) && (
         <motion.div
