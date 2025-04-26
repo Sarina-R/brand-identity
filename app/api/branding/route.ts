@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import Image from "next/image";
+// import Image from "next/image";
 
 const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
