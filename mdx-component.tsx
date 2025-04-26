@@ -56,6 +56,8 @@ export function useMDXComponents({
       />
     ),
 
+    Image: Image,
+
     // Code (inline)
     code: ({ children }) => (
       <code className="text-sm px-2 py-1 rounded-md font-mono text-purple-600 dark:text-purple-400">
