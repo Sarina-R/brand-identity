@@ -301,12 +301,12 @@ const DesignPrinciples = `
 const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
     <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-300 mb-10">
       Slogan Explanation for FIRA:
-      <span className="text-black">Enjoy Robots, Enjoy Life</span>
+      <span className="">Enjoy Robots, Enjoy Life</span>
     </h2>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-black">"Enjoy Robots"</h3>
+        <h3 className="text-lg font-semibold ">"Enjoy Robots"</h3>
         <ul className="space-y-2 list-disc">
           <li>
             <strong>Innovation & Technology:</strong> Celebrates the excitement of cutting-edge robotic advancements.
@@ -318,7 +318,7 @@ const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16">
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-black">"Enjoy Life"</h3>
+        <h3 className="text-lg font-semibold ">"Enjoy Life"</h3>
         <ul className="space-y-2 list-disc">
           <li>
             <strong>Improved Quality of Life:</strong> Simplifies tasks and boosts efficiency through robotics.
@@ -1777,13 +1777,14 @@ const data = {
         img: "",
         font: {
           name: "Barlow",
+          headers: "Heebo",
           weights: [400, 500, 700],
           subsets: ["latin", "latin-ext"],
         },
         items: {
           MDXComponent: "",
           title: "Typography",
-          desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
+          desc: "Typography plays a key role in defining the visual identity of FIRA Canada. It ensures consistency and professionalism across all communication platforms, helping to communicate the brand's values clearly and effectively.<br/> We use **Heebo** as *Main Font* font for headers and **Barlow** as Alternative for For *Subheaders*",
           fontFeatureComponent: {
             title: "Font Features",
             desc: "In Fira Canada Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
@@ -1873,7 +1874,7 @@ const data = {
               },
             ],
           },
-          wights: {
+          weights: {
             title: "Weights",
             desc: `A regular, thin weight that we use for body text and two heavy, black weights that we use for headings.<br/>
                 Each of these weights is carefully designed for use in specific situations and applications. Therefore, it is necessary to pay attention to communication considerations when using them.<br/>

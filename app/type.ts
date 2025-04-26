@@ -320,7 +320,7 @@ export interface FontStyles {
   sampleText: string;
 }
 
-export interface WightsComponentItems {
+export interface weightsComponentItems {
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
   sampleText: string | MDXRemoteSerializeResult;
@@ -361,13 +361,13 @@ export interface TypographyItems {
     description: string | MDXRemoteSerializeResult;
     section: TypographyPrinciplesSection[];
   };
-  wights: WightsComponentItems;
+  weights: weightsComponentItems;
 }
 
 export interface Font {
   name: string;
   headers?: string;
-  weights: number[];
+  weights?: number[];
   subsets?: string[];
 }
 

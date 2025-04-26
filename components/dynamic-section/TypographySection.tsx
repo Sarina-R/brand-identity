@@ -53,13 +53,12 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       const isLatin = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?`~]$/.test(
         event.key
       );
-      if (event.key === "Enter") setLastKey("Enter");
-      else if (event.key === " ") setLastKey("Space");
-      else if (
+      if (
         event.key.length === 1 &&
         !event.ctrlKey &&
         !event.altKey &&
         !event.metaKey &&
+        event.key !== " " &&
         isLatin
       ) {
         setLastKey(event.key);
@@ -92,8 +91,8 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
       );
       setSerializedItems(serializedFontFeatures);
 
-      setWeightsTitle(await serializeMDX(items.wights.title));
-      setWeightsDesc(await serializeMDX(items.wights.desc));
+      setWeightsTitle(await serializeMDX(items.weights.title));
+      setWeightsDesc(await serializeMDX(items.weights.desc));
 
       setPrinciplesTitle(await serializeMDX(items.typographyPrinciples.title));
       setPrinciplesDesc(
@@ -141,10 +140,38 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
             {mainDesc && <MDXRemote {...mainDesc} components={mdxComponent1} />}
           </div>
         </div>
-        <div className="flex-1 min-h-52 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
-          <p className="text-9xl font-bold">{lastKey}</p>
-          <p className="text-sm font-bold pt-8">only support EN</p>
-        </div>
+        {section.font?.headers ? (
+          <div className="flex flex-row lg:flex-col gap-8 flex-1 normal-case">
+            <div className="flex-1 max-h-44 sm:min-h-52 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
+              <p
+                className="text-7xl sm:text-9xl font-bold"
+                style={{ fontFamily: section.font.headers }}
+              >
+                {lastKey}
+              </p>
+              <p className="text-sm font-bold pt-8">{section.font.headers}</p>
+            </div>
+            <div className="flex-1 max-h-44 sm:min-h-52 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
+              <p
+                className="text-7xl sm:text-9xl font-bold"
+                style={{ fontFamily: section.font.name }}
+              >
+                {lastKey}
+              </p>
+              <p className="text-sm font-bold pt-8">{section.font.name}</p>
+            </div>
+          </div>
+        ) : (
+          <div className="flex-1 min-h-52 p-6 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex flex-col items-center justify-center">
+            <p
+              className="text-9xl font-bold"
+              style={{ fontFamily: section.font.name }}
+            >
+              {lastKey}
+            </p>
+            <p className="text-sm font-bold pt-8">{section.font.name}</p>
+          </div>
+        )}
       </div>
 
       <div className="space-y-12">
@@ -176,34 +203,36 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-12 rounded-2xl">
-        <div className="flex-1 lg:sticky top-15 h-full">
-          <div className="space-y-4 border p-10 px-8 m-auto text-center rounded-2xl w-full">
-            {section.font.weights.map((weight) => (
-              <p
-                key={weight}
-                className="text-2xl text-neutral-800 dark:text-neutral-200"
-                style={{ fontWeight: weight }}
+      {section.font.weights && (
+        <div className="flex flex-col lg:flex-row gap-12 rounded-2xl">
+          <div className="flex-1 lg:sticky top-15 h-full">
+            <div className="space-y-4 border p-10 px-8 m-auto text-center rounded-2xl w-full">
+              {section.font.weights.map((weight) => (
+                <p
+                  key={weight}
+                  className="text-2xl text-neutral-800 dark:text-neutral-200"
+                  style={{ fontWeight: weight }}
+                >
+                  {sampleText}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div className="flex-1 text-sm text-neutral-700 dark:text-neutral-300 leading-7">
+            {weightsTitle && (
+              <h2
+                style={{ fontFamily: headerFont }}
+                className="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-200"
               >
-                {sampleText}
-              </p>
-            ))}
+                <MDXRemote {...weightsTitle} components={mdxComponent1} />
+              </h2>
+            )}
+            {weightsDesc && (
+              <MDXRemote {...weightsDesc} components={mdxComponent1} />
+            )}
           </div>
         </div>
-        <div className="flex-1 text-sm text-neutral-700 dark:text-neutral-300 leading-7">
-          {weightsTitle && (
-            <h2
-              style={{ fontFamily: headerFont }}
-              className="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-200"
-            >
-              <MDXRemote {...weightsTitle} components={mdxComponent1} />
-            </h2>
-          )}
-          {weightsDesc && (
-            <MDXRemote {...weightsDesc} components={mdxComponent1} />
-          )}
-        </div>
-      </div>
+      )}
 
       <div className="lg:space-y-16 space-y-10">
         {principlesTitle && (
