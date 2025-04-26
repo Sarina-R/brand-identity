@@ -938,26 +938,6 @@ const data = {
               description: `Creative design pushes innovation boundaries and aligns aesthetic vision with user needs...`,
               svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
             },
-            {
-              title: "User-Centric Design",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
-            },
-            {
-              title: "User-Centric Design0",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
-            },
-            {
-              title: "User-Centric Design1",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
-            },
-            {
-              title: "User-Centric Design2",
-              description: `Centered around users, this approach puts empathy, accessibility, and usability first...`,
-              svg: "",
-            },
           ],
         },
       },

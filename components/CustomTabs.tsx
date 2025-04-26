@@ -29,11 +29,6 @@ export const CustomTabs = ({
   const mdxComponent1 = useMDXComponents1({});
   const svgLessTabs = tabs.filter((tab) => !tab.svg);
 
-  const iconMap = new Map<string, JSX.Element>();
-  svgLessTabs.forEach((tab, index) => {
-    iconMap.set(tab.title, fallbackIcons[index % fallbackIcons.length]);
-  });
-
   const fallbackIcons = [
     <Handshake
       key="handshake"
@@ -57,6 +52,11 @@ export const CustomTabs = ({
     />,
     <Cog key="cog" style={{ color: lighterColor }} className="w-24 h-24" />,
   ];
+
+  const iconMap = new Map<string, JSX.Element>();
+  svgLessTabs.forEach((tab, index) => {
+    iconMap.set(tab.title, fallbackIcons[index % fallbackIcons.length]);
+  });
 
   return (
     <div className="max-w-3xl">
