@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
       "iran.firaworldcup.org",
       "canada.firaworldcup.org",
       "kbgnpdzggogidjwifiuq.supabase.co",
+      "alibaba.ir",
+      "brand-identity-git-main-sarinas-projects-b9e3ccbd.vercel.app",
     ],
   },
 };
