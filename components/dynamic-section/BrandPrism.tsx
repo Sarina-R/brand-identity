@@ -72,6 +72,25 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
     { x: 105, y: 260 },
   ];
 
+  function getContrastYIQ(hexColor: string): "black" | "white" {
+    let color = hexColor.startsWith("#") ? hexColor.slice(1) : hexColor;
+
+    if (color.length === 3) {
+      color = color
+        .split("")
+        .map((c) => c + c)
+        .join("");
+    }
+
+    const r = parseInt(color.slice(0, 2), 16);
+    const g = parseInt(color.slice(2, 4), 16);
+    const b = parseInt(color.slice(4, 6), 16);
+
+    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
+    return yiq >= 128 ? "black" : "white";
+  }
+
   return (
     <div className="flex flex-col items-center space-y-8 sm:px-6 py-5">
       <div className="lg:flex sm:p-6 p-2 justify-center items-center overflow-hidden">
@@ -106,6 +125,7 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
             const position = positions[index] || { x: 125, y: 125 };
             const { rectX, rectY } = getRectanglePosition(position);
             const isActive = activeSection === item.title;
+            const textColor = isActive ? getContrastYIQ(primaryColor) : "black";
 
             return (
               <motion.g
@@ -133,7 +153,7 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
                   fontSize="12"
                   fontWeight="bold"
                   textAnchor="middle"
-                  fill="black"
+                  fill={textColor}
                   stroke="none"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
