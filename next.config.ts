@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       "canada.firaworldcup.org",
       "kbgnpdzggogidjwifiuq.supabase.co",
       "cdn.alibaba.ir",
+      "plus.unsplash.com",
       "brand-identity-git-main-sarinas-projects-b9e3ccbd.vercel.app",
     ],
   },

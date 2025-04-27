@@ -1018,7 +1018,7 @@ const data = {
               },
               {
                 imgBg:
-                  "https:/plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
+                  "https://plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
                 logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
               },
             ],
@@ -1214,13 +1214,13 @@ const data = {
         img: "",
         font: {
           name: "Poppins",
-          weights: [400, 500, 700],
+          weights: [500, 700],
           subsets: ["latin", "latin-ext"],
         },
         items: {
           MDXComponent: "",
           title: "Typography",
-          desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
+          desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across all communication channels.",
           fontFeatureComponent: {
             title: "Font Features",
             desc: "In FIRA Iran Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
@@ -1312,10 +1312,7 @@ const data = {
           },
           weights: {
             title: "Weights",
-            desc: `A regular, thin weight that we use for body text and two heavy, black weights that we use for headings.<br/>
-                Each of these weights is carefully designed for use in specific situations and applications. Therefore, it is necessary to pay attention to communication considerations when using them.<br/>
-                Specifically, we need to know what message will be conveyed through what medium, to what audience, and more importantly, in what order the hierarchy of message and content is designed.
-                `,
+            desc: `In designing the FIRA Iran font, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternating forms, strokes, style sets, and text and tabular numbers.`,
             sampleText: "Some Sample Text",
           },
         },

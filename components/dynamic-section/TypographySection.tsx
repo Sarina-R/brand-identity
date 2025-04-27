@@ -179,7 +179,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
           {fontFeatureTitle && (
             <div
               style={{ fontFamily: headerFont }}
-              className="sticky top-15 h-full text-xl font-bold text-neutral-800 dark:text-neutral-200"
+              className="lg:sticky top-15 h-full text-xl font-bold text-neutral-800 dark:text-neutral-200"
             >
               <MDXRemote {...fontFeatureTitle} components={mdxComponent1} />
             </div>
