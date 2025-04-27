@@ -973,7 +973,7 @@ const data = {
               id: 2,
               name: "Vertical logo",
               text: "We use the vertical logo in situations where there is not enough space to use the vertical version or in media where the size ratio is horizontal.",
-              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//vertical-logo.png",
               darkSvg:
                 "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
             },
@@ -998,7 +998,7 @@ const data = {
             inBackgroundComponent: [
               {
                 colorBg: "#FFFFFF",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//vertical-logo.png",
               },
               {
                 colorBg: "#000000",
@@ -1006,11 +1006,11 @@ const data = {
               },
               {
                 colorBg: "#FDB813",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//vertical-logo.png",
               },
               {
                 colorBg: "#D3D3D3",
-                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//Copy_of_FIRA_CUP_2025_BRAND_BOOK__10_-removebg-preview.png",
+                logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//vertical-logo.png",
               },
               {
                 colorBg: "#808080",
@@ -1018,7 +1018,7 @@ const data = {
               },
               {
                 imgBg:
-                  "https://plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
+                  "https:/plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
                 logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
               },
             ],
@@ -1310,7 +1310,7 @@ const data = {
               },
             ],
           },
-          wights: {
+          weights: {
             title: "Weights",
             desc: `A regular, thin weight that we use for body text and two heavy, black weights that we use for headings.<br/>
                 Each of these weights is carefully designed for use in specific situations and applications. Therefore, it is necessary to pay attention to communication considerations when using them.<br/>
