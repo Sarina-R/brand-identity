@@ -117,12 +117,12 @@ export default function RootLayout({
             <motion.div
               className="absolute inset-0 opacity-0"
               style={{
-                backgroundImage: `url(${section.pattern})`,
+                backgroundImage: `url('${section.pattern}')`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
+              animate={{ opacity: 0.2 }}
               transition={{ duration: 1 }}
             />
           )}
