@@ -186,6 +186,7 @@ export interface AlongWithOthers {
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;
   svg: string[];
+  darkSvg: string[];
 }
 
 export interface LogoItems {

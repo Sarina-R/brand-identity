@@ -140,13 +140,7 @@ const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
             different contexts and audiences.
           </p>
         </div>
-        <div className="w-full overflow-x-auto">
-          <img
-            src="https://cdn.alibaba.ir/cms/uploads/dominate_tone_5ec412f50a.svg"
-            alt="Mew reveal chart"
-            className="min-w-[900px] max-w-none mx-auto"
-          />
-        </div>
+        
       </div>
       
    <div className="min-h-[500px] py-10 px-6">
@@ -1042,19 +1036,19 @@ const data = {
         img: "",
         items: {
           MDXComponent: ToneOfVoice,
-          title: "some title",
+          title: "",
           desc: "Our brand voice combines professionalism and friendliness to prioritize exceptional customer service. It remains adaptable to different contexts and audiences.",
           sliderContent: [
             {
               id: "1001",
-              // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(2).png",
               title: "Trustworthy",
               description:
                 "**FIRA CUP** demonstrates *trustworthiness* and *authority* in all our communications.",
             },
             {
               id: "1002",
-              // svg: "https://cdn.alibaba.ir/h2/desktop/assets/brand-identity/polite-words-cfd9f81d.svg",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(1).png",
               title: "Innovative",
               description: `As a **pioneering company**, we adopt an *energetic* and *dynamic* tone in our communications.`,
             },
@@ -1190,10 +1184,14 @@ const data = {
           },
           alongWithOthers: {
             title: "Use it alongside other brand logos",
-            desc: "When using the FIRA Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the FIRA Iran logo; if it’s horizontal, stick with the horizontal FIRA Iran one. To keep things balanced, make sure the height of FIRA Iran’s monogram matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal FIRA Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the FIRA Iran logo on the right and above the second logo. Putting it on the left or below other logos? Nope, not allowed.",
+            desc: "When using the FIRA Iran logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the FIRA Iran logo; if it’s horizontal, stick with the horizontal FIRA Iran one. To keep things balanced, make sure the height of FIRA Iran’s logo matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal FIRA Iran logo. In that case, the height of both logotypes should be the same.<br/>Always slap the FIRA Iran logo on the left and above the second logo. Putting it on the right or below other logos? Nope, not allowed.",
             svg: [
-              "https://cdn.alibaba.ir/cms/uploads/co_logo_2_dadfc63297.svg",
-              "https://cdn.alibaba.ir/cms/uploads/co_logo_3_ed6df93726.svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/FIRA%20CUP%202025%20BRAND%20BOOK%20(12).svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/6.svg",
+            ],
+            darkSvg: [
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/FIRA%20CUP%202025%20BRAND%20BOOK%20(13).svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/6.svg",
             ],
           },
         },
@@ -1802,6 +1800,10 @@ const data = {
               "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(10).png",
               "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CoBranding.png",
             ],
+            darkSvg: [
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(10).png",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CoBranding.png",
+            ],
           },
         },
         style: 1,
@@ -2084,7 +2086,7 @@ const data = {
         items: {
           MDXComponent: PatternCA,
           title: "Pattern",
-          desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across allcommunication channels.",
+          desc: "We use a custom font for **readability** and **elegance** to enhance brand identity across all communication channels.",
         },
       },
     ],

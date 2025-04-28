@@ -17,6 +17,23 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
   const [mdxDesc, setMdxDesc] = useState<MDXRemoteSerializeResult>();
   const [activeIndex, setActiveIndex] = useState(0);
   const { headerFont } = useFont();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkMode = document.documentElement.classList.contains("dark");
+      setIsDarkMode(darkMode);
+    };
+
+    checkDarkMode();
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const serializeContent = async () => {
@@ -49,6 +66,8 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
     },
   };
 
+  const svgs = isDarkMode ? data.darkSvg : data.svg;
+
   return (
     <section className="flex flex-col lg:flex-row gap-8 overflow-hidden">
       <motion.div
@@ -78,12 +97,12 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
 
       <div className="flex-1 relative flex items-center justify-center min-h-[120px]">
         <AnimatePresence mode="wait">
-          {data.svg.map(
+          {svgs.map(
             (url, idx) =>
               idx === activeIndex && (
                 <motion.div
                   key={idx}
-                  className="absolute w-full max-w-sm p-6 rounded-xl flex items-center justify-center"
+                  className="absolute w-full p-6 rounded-xl flex items-center justify-center"
                   initial="hidden"
                   animate="visible"
                   exit="exit"
@@ -92,9 +111,9 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
                   <Image
                     src={url}
                     alt={`co-brand-logo-${idx}`}
-                    width={300}
+                    width={500}
                     height={100}
-                    className="object-contain max-h-36"
+                    className="object-contain"
                   />
                 </motion.div>
               )
