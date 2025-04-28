@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-// import Image from "next/image";
 
 const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
@@ -76,6 +75,37 @@ const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid
           </p>
         </div>
       </div>`;
+
+const Tagline = `<div className="mt-20 px-4 sm:px-8 lg:px-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold ">"Enjoy Robots"</h3>
+        <ul className="space-y-2 list-disc">
+          <li>
+            <strong>Innovation & Technology:</strong> Celebrates the excitement of cutting-edge robotic advancements.
+          </li>
+          <li>
+            <strong>Educational Engagement:</strong> Fosters curiosity and learning through hands-on interaction.
+          </li>
+        </ul>
+      </div>
+
+      <div className="space-y-4">
+        <h3 className="text-lg font-semibold ">"Enjoy Life"</h3>
+        <ul className="space-y-2 list-disc">
+          <li>
+            <strong>Improved Quality of Life:</strong> Simplifies tasks and boosts efficiency through robotics.
+          </li>
+          <li>
+            <strong>Future Prospects:</strong> Tackles global challenges with AI-driven solutions.
+          </li>
+          <li>
+            <strong>Inclusivity & Accessibility:</strong> Ensures everyone benefits from robotic innovations.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>`;
 
 // const taglineMDXComponent = `
 //     <div className="flex flex-col md:flex-row gap-6">
@@ -890,7 +920,7 @@ const data = {
             title: "Tone Of Voice",
             type: "tone_of_voice",
           },
-          // { id: "tagline", title: "Tagline", type: "tagline" },
+          { id: "tagline", title: "Tagline", type: "tagline" },
         ],
       },
       "Visual identity": {
@@ -1033,19 +1063,18 @@ const data = {
           style: 1,
         },
       },
-      // {
-      //   type: "tagline",
-      //   title: "Tagline",
-      //   description: "",
-      //   pattern:
-      //     "https://cdn.alibaba.ir/cms/uploads/hero_statement_d_d44dbb0315.svg",
-      //   img: "",
-      //   items: {
-      //     MDXComponent: item1,
-      //     title: "**TITLE** If there is",
-      //     desc: "some desc :)",
-      //   },
-      // },
+      {
+        type: "tagline",
+        title: "Tagline",
+        description: "",
+        pattern:
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+        img: "",
+        items: {
+          MDXComponent: Tagline,
+          title: "Enjoy Robots, Enjoy Life",
+        },
+      },
       {
         type: "design_principles",
         title: "Design Principles",
@@ -1066,17 +1095,17 @@ const data = {
           tabsContent: [
             {
               title: "Design Strategics",
-              description: `**AliBaba’s strategic design** is a comprehensive travel solution. It always aims to optimize the journey and offer a seamless experience across all stages.
+              description: `**FIRA Iran strategic design** is a comprehensive travel solution. It always aims to optimize the journey and offer a seamless experience across all stages.
                           This mental model in strategic design helps the brand to evolve and emerge continuously.
                           Strategic design in FIRA Iran is in service of communication and business growth.
                           The foundation of strategic design stems from upstream strategies and loops through feedback and iteration to complete and refine one another.
               `,
-              svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(3).png",
             },
             {
               title: "Creative Design",
               description: `Creative design pushes innovation boundaries and aligns aesthetic vision with user needs...`,
-              svg: "https://cdn.alibaba.ir/cms/uploads/design_principles_2_cd79d2f6e8.svg",
+              svg: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/icons/Copy%20of%20FIRA%20CANADA%20BRAND%20BOOK%20(2).png",
             },
           ],
         },
@@ -1362,23 +1391,23 @@ const data = {
             desc: "In FIRA Iran Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
             componentItems: [
               {
-                text: "**Refund** <br/> easily",
+                text: "**Build** <br/> The Future",
                 color: "#000000",
                 bg: "#FDB813",
               },
               {
-                text: "Last Minute <br/> **456$**",
+                text: "Challenge <br/> **Global Teams**",
                 color: "#000000",
                 bg: "#FFFFFF",
               },
               {
-                text: `<p className="text-[#FDB813]">Amsterdam </p> <br/>
-                   <p className="text-white font-bold">round trip</p>`,
+                text: `<p className="text-[#FDB813]">FIRA 2025 </p> <br/>
+                   <p className="text-white font-bold">Starts Soon</p>`,
                 color: "",
                 bg: "#000000",
               },
               {
-                text: "from **amsterdam** to **paris**",
+                text: "Innovate <br/> **Win Big**",
                 color: "#000000",
                 bg: "#FFFFFF",
               },
@@ -1500,7 +1529,7 @@ const data = {
             title: "Tone Of Voice",
             type: "tone_of_voice",
           },
-          // { id: "tagline", title: "Tagline", type: "tagline" },
+          { id: "tagline", title: "Tagline", type: "tagline" },
         ],
       },
       "Visual identity": {
@@ -1649,6 +1678,18 @@ const data = {
           ],
 
           style: 1,
+        },
+      },
+      {
+        type: "tagline",
+        title: "Tagline",
+        description: "",
+        pattern:
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
+        img: "",
+        items: {
+          MDXComponent: Tagline,
+          title: "Enjoy Robots, Enjoy Life",
         },
       },
       {
@@ -1927,25 +1968,26 @@ const data = {
             desc: "In FIRA Canada Font Design, in addition to the main features, we have foreseen a set of supplementary features that enrich the typography. These features include: ligatures, alternate forms, strokes, style sets, and text and tabular numbers.",
             componentItems: [
               {
-                text: "**Refund** <br/> easily",
+                text: "**Build** <br/> The Future",
                 color: "#FFFFFF",
                 bg: "#d22b2b",
               },
               {
-                text: "Last Minute <br/> **456$**",
+                text: `<p className="text-[#d22b2b]">Challenge </p> <br/>
+                   <p className="font-bold">Global Teams</p>`,
                 color: "#000000",
                 bg: "#FFFFFF",
               },
               {
-                text: "from **amsterdam** to **paris**",
-                color: "#ffffff",
-                bg: "#d22b2b",
-              },
-              {
-                text: `<p className="text-white">Amsterdam </p> <br/>
-                   <p className="text-white font-bold">round trip</p>`,
+                text: `<p className="text-white">Innovate </p> <br/>
+                   <p className="text-white font-bold">Win Big</p>`,
                 color: "",
                 bg: "#000000",
+              },
+              {
+                text: "FIRA 2025 <br/> **Starts Soon**",
+                color: "#ffffff",
+                bg: "#d22b2b",
               },
             ],
           },
