@@ -11,11 +11,10 @@ interface TypographySectionProps {
   section: Typography;
 }
 
-const sampleText = "Some Sample Text";
-
 const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
   const mdxComponent1 = useMDXComponents1({});
   const mdxComponent = useMDXComponents({});
+  const sampleText = section.items.weights.sampleText;
 
   const [lastKey, setLastKey] = useState<string>("A");
   const [serializedItems, setSerializedItems] = useState<
