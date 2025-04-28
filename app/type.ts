@@ -311,15 +311,6 @@ export interface Color {
 }
 
 // Typography
-export interface FontStyles {
-  label: string;
-  tag: string;
-  fontSize: string;
-  fontWeight: number;
-  lineHeight: string;
-  sampleText: string;
-}
-
 export interface weightsComponentItems {
   title: string | MDXRemoteSerializeResult;
   desc: string | MDXRemoteSerializeResult;

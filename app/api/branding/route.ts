@@ -1183,7 +1183,7 @@ const data = {
               },
               {
                 imgBg:
-                  "https://plus.unsplash.com/premium_photo-1673002094039-3b4a9e8d1fff?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMG9jZWFufGVufDB8fDB8fHww",
+                  "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//image.jpg",
                 logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-vertical-logo.png",
               },
             ],
