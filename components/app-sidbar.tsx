@@ -29,6 +29,8 @@ export function AppSidebar() {
   const pathname = usePathname();
   const locale = pathname.split("/")[1] || "IR";
   const isRootPath = pathname === "/";
+  const primaryLocation = locations[0];
+  const brandLocations = locations.slice(1);
 
   useEffect(() => {
     if (!data || !data.menu) return;
@@ -93,24 +95,38 @@ export function AppSidebar() {
 
           <SidebarContent>
             {isRootPath ? (
-              <SidebarGroup className="p-3 px-6">
-                <SidebarGroupLabel className="font-light mb-4">
-                  All Countries
-                </SidebarGroupLabel>
-                <SidebarGroupContent>
-                  <SidebarMenu className="font-bold">
-                    {locations.map((loc) => (
-                      <SidebarMenuItem key={loc}>
-                        <SidebarMenuButton asChild>
-                          <Link href={`/${loc}`}>
-                            <span>{loc.toUpperCase()}</span>
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
+              <>
+                {primaryLocation && (
+                  <SidebarMenu className="p-3 px-6 font-bold">
+                    <SidebarMenuItem>
+                      <SidebarMenuButton asChild>
+                        <Link href={`/${primaryLocation}`}>
+                          <span>{primaryLocation.toUpperCase()}</span>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
                   </SidebarMenu>
-                </SidebarGroupContent>
-              </SidebarGroup>
+                )}
+
+                <SidebarGroup className="p-3 px-6">
+                  <SidebarGroupLabel className="font-light">
+                    Brands
+                  </SidebarGroupLabel>
+                  <SidebarGroupContent>
+                    <SidebarMenu className="font-semibold">
+                      {brandLocations.map((loc) => (
+                        <SidebarMenuItem key={loc}>
+                          <SidebarMenuButton asChild>
+                            <Link href={`/${loc}`}>
+                              <span>{loc.toUpperCase()}</span>
+                            </Link>
+                          </SidebarMenuButton>
+                        </SidebarMenuItem>
+                      ))}
+                    </SidebarMenu>
+                  </SidebarGroupContent>
+                </SidebarGroup>
+              </>
             ) : (
               groups.map((group, index) => (
                 <SidebarGroup key={index} className="p-3 px-6">

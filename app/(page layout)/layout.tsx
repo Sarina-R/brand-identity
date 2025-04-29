@@ -183,7 +183,7 @@ export default function RootLayout({
 
   return (
     <FontProvider font={data.brand.font}>
-      <div className="space-y-8" style={{ fontFamily }}>
+      <div className="space-y-8 p-4" style={{ fontFamily }}>
         {renderSectionContent()}
         {children}
         <footer className="bg-neutral-100 dark:bg-neutral-900 h-20 rounded-2xl font-bold px-4 items-center w-full flex justify-between">
