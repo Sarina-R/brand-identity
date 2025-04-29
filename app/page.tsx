@@ -19,7 +19,7 @@ const staggerContainer = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-8 sm:p-20">
+    <div className="min-h-[80vh] flex flex-col items-center justify-center p-8 sm:p-20">
       <motion.div
         className="text-center"
         variants={staggerContainer}
@@ -45,7 +45,7 @@ export default function Home() {
             href="/ir"
             className="inline-block px-8 py-4 bg-black text-white rounded-full text-lg font-semibold hover:bg-neutral-800 dark:text-neutral-300 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Explore Fira Iran
+            Explore FIRA Iran
           </Link>
         </motion.div>
       </motion.div>
