@@ -20,7 +20,7 @@ export default function RootLayout({
   const { data, loading } = useData();
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter(Boolean);
-  const localePrefix = pathSegments[0];
+  const localePrefix = pathSegments[0] || "";
   const mdxComponents = useMDXComponents1({});
 
   const font: Font | undefined = data?.brand?.font;
@@ -64,10 +64,18 @@ export default function RootLayout({
   const primaryColor = data.brand.primaryColor;
   const textColor = getContrastYIQ(primaryColor);
   const menuItems = Object.values(data.menu).flatMap((menu) => menu.items);
-  const currentType = menuItems.find((item) =>
-    pathname.includes(item.id)
-  )?.type;
+
+  // Check the pathname structure
+  const isBaseLocationPath = pathSegments.length === 1; // e.g., "/newyork"
+  const isNestedPath = pathSegments.length > 1; // e.g., "/newyork/banana"
+
+  // Default to "overview" only for base location path (e.g., "/newyork")
+  const itemId = isBaseLocationPath ? "overview" : pathSegments[1];
+  const currentType = isBaseLocationPath
+    ? "overview"
+    : menuItems.find((item) => item.id === itemId)?.type;
   const section = data.sections.find((sec) => sec.type === currentType);
+
   const currentIndex = menuItems.findIndex((item) => item.type === currentType);
   const nextItem = menuItems[currentIndex + 1];
   const prevItem = currentIndex > 0 ? menuItems[currentIndex - 1] : null;
@@ -92,13 +100,26 @@ export default function RootLayout({
   }
 
   const renderSectionContent = () => {
-    if (!currentType || !section) {
+    // If the path is nested (e.g., "/newyork/banana"), show "No route match"
+    if (isNestedPath) {
       return (
         <div
           className="relative min-h-[50vh] flex items-center justify-center rounded-xl px-10 py-5"
           style={{ backgroundColor: primaryColor, fontFamily }}
         >
           <h2 className="text-2xl font-bold text-black">No route match</h2>
+        </div>
+      );
+    }
+
+    // If the path is just "/[location]" (e.g., "/newyork"), render the Overview section
+    if (!currentType || !section) {
+      return (
+        <div
+          className="relative min-h-[50vh] flex items-center justify-center rounded-xl px-10 py-5"
+          style={{ backgroundColor: primaryColor, fontFamily }}
+        >
+          <h2 className="text-2xl font-bold text-black">Section not found</h2>
         </div>
       );
     }
