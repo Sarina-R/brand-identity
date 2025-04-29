@@ -37,7 +37,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
         const response = await axios.get(API_URLS.BRANDING);
         const result: LocaleData = response.data;
 
-        const allLocales = Object.keys(result);
+        const allLocales = Object.keys(result).filter(
+          (locale) => locale !== "ca"
+        );
         setLocations(allLocales);
 
         const locale = pathname?.split("/")[1] || "";
