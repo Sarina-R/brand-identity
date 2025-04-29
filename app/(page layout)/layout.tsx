@@ -65,11 +65,9 @@ export default function RootLayout({
   const textColor = getContrastYIQ(primaryColor);
   const menuItems = Object.values(data.menu).flatMap((menu) => menu.items);
 
-  // Check the pathname structure
-  const isBaseLocationPath = pathSegments.length === 1; // e.g., "/newyork"
-  const isNestedPath = pathSegments.length > 1; // e.g., "/newyork/banana"
+  const isBaseLocationPath = pathSegments.length === 1;
+  const isNestedPath = pathSegments.length > 1;
 
-  // Default to "overview" only for base location path (e.g., "/newyork")
   const itemId = isBaseLocationPath ? "overview" : pathSegments[1];
   const currentType = isBaseLocationPath
     ? "overview"
@@ -100,7 +98,6 @@ export default function RootLayout({
   }
 
   const renderSectionContent = () => {
-    // If the path is nested (e.g., "/newyork/banana"), show "No route match"
     if (isNestedPath) {
       return (
         <div
@@ -112,7 +109,6 @@ export default function RootLayout({
       );
     }
 
-    // If the path is just "/[location]" (e.g., "/newyork"), render the Overview section
     if (!currentType || !section) {
       return (
         <div

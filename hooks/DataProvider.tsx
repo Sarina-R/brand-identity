@@ -16,16 +16,19 @@ import { API_URLS } from "@/app/api/url";
 interface DataContextType {
   data: ApiResponse | null;
   loading: boolean;
+  locations: string[];
 }
 
 const DataContext = createContext<DataContextType>({
   data: null,
   loading: true,
+  locations: [],
 });
 
 export function DataProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
+  const [locations, setLocations] = useState<string[]>([]);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -34,8 +37,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
         const response = await axios.get(API_URLS.BRANDING);
         const result: LocaleData = response.data;
 
-        const locale = pathname?.split("/")[1] || "";
+        const allLocales = Object.keys(result);
+        setLocations(allLocales);
 
+        const locale = pathname?.split("/")[1] || "";
         const selectedLocaleData = result[locale];
 
         if (!selectedLocaleData) {
@@ -95,7 +100,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, [pathname]);
 
   return (
-    <DataContext.Provider value={{ data, loading }}>
+    <DataContext.Provider value={{ data, loading, locations }}>
       {children}
     </DataContext.Provider>
   );
