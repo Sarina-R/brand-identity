@@ -66,13 +66,20 @@ export default function RootLayout({
   const menuItems = Object.values(data.menu).flatMap((menu) => menu.items);
 
   const isBaseLocationPath = pathSegments.length === 1;
-  const isNestedPath = pathSegments.length > 1;
+  const itemId = pathSegments.length > 1 ? pathSegments[1] : "overview";
 
-  const itemId = isBaseLocationPath ? "overview" : pathSegments[1];
-  const currentType = isBaseLocationPath
-    ? "overview"
-    : menuItems.find((item) => item.id === itemId)?.type;
-  const section = data.sections.find((sec) => sec.type === currentType);
+  const currentTypeFromMenu = menuItems.find(
+    (item) => item.id === itemId
+  )?.type;
+
+  const currentType =
+    isBaseLocationPath || !currentTypeFromMenu
+      ? "overview"
+      : currentTypeFromMenu;
+
+  const section =
+    data.sections.find((sec) => sec.type === currentType) ??
+    data.sections.find((sec) => sec.type === "overview");
 
   const currentIndex = menuItems.findIndex((item) => item.type === currentType);
   const nextItem = menuItems[currentIndex + 1];
@@ -98,28 +105,6 @@ export default function RootLayout({
   }
 
   const renderSectionContent = () => {
-    if (isNestedPath) {
-      return (
-        <div
-          className="relative min-h-[50vh] flex items-center justify-center rounded-xl px-10 py-5"
-          style={{ backgroundColor: primaryColor, fontFamily }}
-        >
-          <h2 className="text-2xl font-bold text-black">No route match</h2>
-        </div>
-      );
-    }
-
-    if (!currentType || !section) {
-      return (
-        <div
-          className="relative min-h-[50vh] flex items-center justify-center rounded-xl px-10 py-5"
-          style={{ backgroundColor: primaryColor, fontFamily }}
-        >
-          <h2 className="text-2xl font-bold text-black">Section not found</h2>
-        </div>
-      );
-    }
-
     const hasMedia = section?.video || section?.img;
 
     return (
