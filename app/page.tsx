@@ -47,7 +47,7 @@ const sections = [
   },
   {
     title: "Color Palette",
-    href: "/global/colors",
+    href: "/global/color",
     type: "component",
     desc: "Explore FIRA’s carefully crafted brand colors in both light and dark modes.",
   },
