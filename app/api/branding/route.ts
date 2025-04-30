@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { BrandIdentityGlobal } from "./mdx";
 
 const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-between p-10 min-h-[300px] text-sm">
       <div className="border rounded-2xl m-3 flex-1 text-center px-5 dark:bg-neutral-900">
@@ -899,7 +900,7 @@ const data = {
       Introduction: {
         items: [
           { id: "overview", title: "Overview", type: "overview" },
-          { id: "statement", title: "Statement", type: "statement" },
+          { id: "brand-identity", title: "Brand Identity", type: "statement" },
         ],
       },
       "Conceptual identity": {
@@ -956,19 +957,17 @@ const data = {
       },
       {
         type: "statement",
-        title: "Statement Section",
+        title: "Brand Identity",
         description: "FIRA CUP 2025 - IRAN, TEHRAN",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
         img: "",
         video: "",
         items: {
-          MDXComponent: BrandIdentity,
-          title: "What **leads** us to the idea of dynamic identity:",
+          MDXComponent: BrandIdentityGlobal,
+          title: "Brand Identity",
           items: ["Vision", "Mission", "Target"],
-          desc: `FIRA CUP 2025 represents global innovation in robotics and AI, uniting
-              visionaries to challenge boundaries and inspire progress. It’s a platform where
-              creativity meets technology, shaping the future of robotics.`,
+          desc: `“At FIRA, we’ve pioneered solutions that set new industry standards. Our latest innovation is a testament to our commitment to excellence.”`,
         },
 
         style: 1,
