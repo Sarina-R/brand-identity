@@ -4,7 +4,6 @@ import { Statement } from "@/app/type";
 import { useMDXComponents, useMDXComponents1 } from "@/mdx-component";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { useFont } from "@/hooks/FontProvider";
-import Image from "next/image";
 
 interface StatementProps {
   section: Statement;
