@@ -680,7 +680,7 @@ const data = {
       {
         type: "overview",
         title: "Brand Introduction",
-        description: "FIRA CUP 2025 - **IRAN, TEHRAN**",
+        description: "Iran FIRA Open Competition 2025 - **IRAN, TEHRAN**",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
         img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
@@ -688,7 +688,7 @@ const data = {
         items: {
           group: "introduction",
           title: "overview",
-          desc: "Welcome to the **FIRA CUP 2025**, where innovation meets excellence in robotics and artificial intelligence. This prestigious competition will take place at the Tehran International Exhibition Center, a venue that embodies Iran’s commitment to hosting world-class events and fostering technological progress.",
+          desc: "Welcome to the **Iran FIRA Open Competition**, where innovation meets excellence in robotics and artificial intelligence. This prestigious competition will take place at the Tehran International Exhibition Center, a venue that embodies Iran’s commitment to hosting world-class events and fostering technological progress.",
           img: "",
         },
 
@@ -697,7 +697,7 @@ const data = {
       {
         type: "statement",
         title: "Statement Section",
-        description: "FIRA CUP 2025 - IRAN, TEHRAN",
+        description: "Iran FIRA Open Competition 2025 - IRAN, TEHRAN",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
         img: "",
@@ -706,7 +706,7 @@ const data = {
           MDXComponent: BrandIdentity,
           title: "What **leads** us to the idea of dynamic identity:",
           items: ["Vision", "Mission", "Target"],
-          desc: `FIRA CUP 2025 represents global innovation in robotics and AI, uniting
+          desc: `Iran FIRA Open Competition 2025 represents global innovation in robotics and AI, uniting
               visionaries to challenge boundaries and inspire progress. It’s a platform where
               creativity meets technology, shaping the future of robotics.`,
         },
@@ -855,10 +855,10 @@ const data = {
           MDXComponent: "",
           MDXComponentForLogo: "",
           title: "**Brand** Identity",
-          desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
+          desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. Iran FIRA Open Competition 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
           download:
             "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
-          downloadBtnText: "Download FIRA Cup 2025 Tehran Logo",
+          downloadBtnText: "Download Iran FIRA Open Competition 2025 Tehran Logo",
           logoVersion: [
             {
               id: 1,
@@ -1229,7 +1229,7 @@ const data = {
         img: "",
         items: {
           MDXComponent: IdentityInUse,
-          title: "Brand in Action: FIRA CUP 2025",
+          title: "Brand in Action: Iran FIRA Open Competition 2025",
         },
       },
     ],
