@@ -123,14 +123,14 @@ export default function Home() {
                         <img
                           src={section.lightImg}
                           alt={`${section.title} light preview`}
-                          className="object-contain p-4 dark:hidden"
+                          className="object-contain p-4 dark:hidden max-h-[100%]"
                         />
                       )}
                       {section.darkImg && (
                         <img
                           src={section.darkImg}
                           alt={`${section.title} dark preview`}
-                          className="object-contain p-4 hidden dark:block"
+                          className="object-contain p-4 hidden dark:block max-h-[100%]"
                         />
                       )}
                     </>
