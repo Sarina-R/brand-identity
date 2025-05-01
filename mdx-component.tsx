@@ -43,7 +43,7 @@ export function useMDXComponents({
     ),
 
     // Paragraph
-    p: ({ children }) => <p className="leading-relaxed mb-4">{children}</p>,
+    p: ({ children }) => <span className="leading-relaxed mb-4">{children}</span>,
 
     // Image
     img: (props) => (
