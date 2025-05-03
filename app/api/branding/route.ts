@@ -16,6 +16,7 @@ import {
   PatternCA,
   ToneOfVoiceG,
   MascotG,
+  identityInUseG,
 } from "./mdx";
 
 const data = {
@@ -79,7 +80,7 @@ const data = {
         title: "Brand Introduction",
         description: "FIRA CUP 2025 ",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
         video: "",
         items: {
@@ -96,7 +97,7 @@ const data = {
         title: "Brand Identity",
         description: "FIRA CUP 2025",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         video: "",
         items: {
@@ -113,7 +114,7 @@ const data = {
         title: "Brand Prism Section",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         // video: "https://files-us-east-1.t-cdn.net/files/1GG2rmxcOLAUjnt5zTqoY",
         items: {
@@ -167,7 +168,7 @@ const data = {
         title: "Tone Of Voice",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: ToneOfVoiceG,
@@ -201,7 +202,7 @@ const data = {
         title: "Tagline",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: Tagline,
@@ -259,7 +260,7 @@ const data = {
         title: "Logo",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: "",
@@ -341,7 +342,7 @@ const data = {
         title: "Mascot",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: MascotG,
@@ -354,7 +355,7 @@ const data = {
         title: "Color",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
           MDXComponent: "",
@@ -501,7 +502,7 @@ const data = {
         title: "Typography",
         description: "Poppins",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         font: {
           name: "Poppins",
@@ -613,10 +614,10 @@ const data = {
         title: "Identity In Use",
         description: "",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         items: {
-          MDXComponent: IdentityInUse,
+          MDXComponent: identityInUseG,
           title: "Brand in Action: FIRA CUP 2025",
         },
       },
@@ -682,7 +683,7 @@ const data = {
         title: "Brand Introduction",
         description: "Iran FIRA Open Competition 2025 - **IRAN, TEHRAN**",
         pattern:
-          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/FIRA%20CUP%202025%20BRAND%20BOOK%20(7).svg",
+          "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
         video: "",
         items: {
@@ -858,7 +859,8 @@ const data = {
           desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. Iran FIRA Open Competition 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
           download:
             "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//6042030147017755542.jpg",
-          downloadBtnText: "Download Iran FIRA Open Competition 2025 Tehran Logo",
+          downloadBtnText:
+            "Download Iran FIRA Open Competition 2025 Tehran Logo",
           logoVersion: [
             {
               id: 1,

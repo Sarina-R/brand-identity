@@ -722,6 +722,23 @@ export const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16"
     </div>
   </div>`;
 
+export const identityInUseG = `
+<div class="max-w-screen-xl mx-auto columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(10).png" alt="Gallery Image 1" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(11).png" alt="Gallery Image 2" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(12).png" alt="Gallery Image 3" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(13).png" alt="Gallery Image 4" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(2).png" alt="Gallery Image 5" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(3).png" alt="Gallery Image 6" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(4).png" alt="Gallery Image 7" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(5).png" alt="Gallery Image 8" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(6).png" alt="Gallery Image 9" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(7).png" alt="Gallery Image 10" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(8).png" alt="Gallery Image 11" />
+    <img class="w-full h-auto rounded" src="https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/identity-in-use/Copy%20of%20FIRA%20Brand%20Book%20(9).png" alt="Gallery Image 12" />
+  </div>
+`;
+
 export const IdentityInUse = `<div className=" px-6 py-12 space-y-12">
   <section>
     <h2 className="text-2xl font-semibold mb-4">Instagram Posts</h2>
