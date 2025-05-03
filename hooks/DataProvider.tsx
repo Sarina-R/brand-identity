@@ -42,7 +42,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
         const response = await axios.get(API_URLS.BRANDING);
         const result: LocaleData = response.data;
 
-        const allLocales = Object.keys(result).filter((locale) => locale);
+        // ca
+        const allLocales = Object.keys(result).filter(
+          (locale) => locale !== "ca"
+        );
         setLocations(allLocales);
 
         const logos = allLocales.reduce((acc, locale) => {

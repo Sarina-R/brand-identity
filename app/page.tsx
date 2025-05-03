@@ -1,10 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Heebo } from "next/font/google";
-import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 
 const heebo = Heebo({
@@ -97,13 +95,6 @@ const TypographyPreview = () => {
 };
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="">
       <div className="px-6 py-12">
@@ -116,69 +107,55 @@ export default function Home() {
         className={`${heebo.className} min-h-screen border-t text-neutral-900 dark:bg-neutral-950 dark:text-white transition-colors px-0`}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 border-neutral-200 dark:border-neutral-800">
-          {(isLoading ? new Array(4).fill(null) : sections).map(
-            (section, i) => (
-              <motion.div
-                key={section?.title || i}
-                custom={i}
-                initial="hidden"
-                animate="visible"
-                variants={fadeIn}
-                className="border-b border-r border-neutral-300 dark:border-neutral-800"
-              >
-                {isLoading ? (
-                  <div className="block">
-                    <div className="relative aspect-video w-full border-b flex items-center justify-center">
-                      <Skeleton className="w-3/4 h-3/4 rounded-lg" />
-                    </div>
-                    <div className="px-6 py-6 space-y-2">
-                      <Skeleton className="h-4 w-1/3" />
-                      <Skeleton className="h-3 w-2/3" />
-                    </div>
-                  </div>
-                ) : (
-                  <Link href={section.href} className="block">
-                    <div className="relative aspect-video w-full border-b flex items-center justify-center">
-                      {section.type === "image" ? (
-                        <>
-                          {section.lightImg && (
-                            <Image
-                              width={400}
-                              height={400}
-                              src={section.lightImg}
-                              alt={`${section.title} light preview`}
-                              className="object-contain p-4 dark:hidden max-h-full"
-                            />
-                          )}
-                          {section.darkImg && (
-                            <Image
-                              width={400}
-                              height={400}
-                              src={section.darkImg}
-                              alt={`${section.title} dark preview`}
-                              className="object-contain p-4 hidden dark:block max-h-full"
-                            />
-                          )}
-                        </>
-                      ) : section.title === "Color Palette" ? (
-                        <ColorPreview />
-                      ) : section.title === "Typography" ? (
-                        <TypographyPreview />
-                      ) : null}
-                    </div>
-                    <div className="px-6 py-6 space-y-1">
-                      <h3 className="text-base font-semibold leading-tight">
-                        {section.title}
-                      </h3>
-                      <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-snug">
-                        {section.desc}
-                      </p>
-                    </div>
-                  </Link>
-                )}
-              </motion.div>
-            )
-          )}
+          {sections.map((section, i) => (
+            <motion.div
+              key={section.title}
+              custom={i}
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              className="border-b border-r border-neutral-300 dark:border-neutral-800"
+            >
+              <Link href={section.href} className="block">
+                <div className="relative aspect-video w-full border-b flex items-center justify-center">
+                  {section.type === "image" ? (
+                    <>
+                      {section.lightImg && (
+                        <Image
+                          width={400}
+                          height={400}
+                          src={section.lightImg}
+                          alt={`${section.title} light preview`}
+                          className="object-contain p-4 dark:hidden max-h-full"
+                        />
+                      )}
+                      {section.darkImg && (
+                        <Image
+                          width={400}
+                          height={400}
+                          src={section.darkImg}
+                          alt={`${section.title} dark preview`}
+                          className="object-contain p-4 hidden dark:block max-h-full"
+                        />
+                      )}
+                    </>
+                  ) : section.title === "Color Palette" ? (
+                    <ColorPreview />
+                  ) : section.title === "Typography" ? (
+                    <TypographyPreview />
+                  ) : null}
+                </div>
+                <div className="px-6 py-6 space-y-1">
+                  <h3 className="text-base font-semibold leading-tight">
+                    {section.title}
+                  </h3>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-snug">
+                    {section.desc}
+                  </p>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
 
         <footer className="text-center text-xs text-neutral-400 dark:text-neutral-600 mt-10 py-4">
