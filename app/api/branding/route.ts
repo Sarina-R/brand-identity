@@ -509,7 +509,7 @@ const data = {
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
         font: {
-          name: "Poppins",
+          name: "Heebo",
           weights: [400, 500, 700, 900],
           subsets: ["latin", "latin-ext"],
         },

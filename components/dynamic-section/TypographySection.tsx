@@ -135,7 +135,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
               <MDXRemote {...mainTitle} components={mdxComponent1} />
             )}
           </div>
-          <div className="text-neutral-700 dark:text-neutral-300 leading-7">
+          <div className="text-neutral-700 dark:text-neutral-300 leading-6">
             {mainDesc && <MDXRemote {...mainDesc} components={mdxComponent1} />}
           </div>
         </div>
@@ -184,7 +184,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
             </div>
           )}
           {fontFeatureDesc && (
-            <div className="text-neutral-700 dark:text-neutral-300 leading-7">
+            <div className="text-neutral-700 dark:text-neutral-300 leading-6">
               <MDXRemote {...fontFeatureDesc} components={mdxComponent1} />
             </div>
           )}
@@ -217,7 +217,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
               ))}
             </div>
           </div>
-          <div className="flex-1 text-sm text-neutral-700 dark:text-neutral-300 leading-7">
+          <div className="flex-1 text-sm text-neutral-700 dark:text-neutral-300 leading-6">
             {weightsTitle && (
               <h2
                 style={{ fontFamily: headerFont }}
@@ -242,7 +242,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
             >
               <MDXRemote {...principlesTitle} components={mdxComponent1} />
             </h2>
-            <div className="text-neutral-700 dark:text-neutral-300 leading-7">
+            <div className="text-neutral-700 dark:text-neutral-300 leading-6">
               {principlesDesc && (
                 <MDXRemote {...principlesDesc} components={mdxComponent1} />
               )}
@@ -268,7 +268,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
                     >
                       <MDXRemote {...sec.subtitle} components={mdxComponent1} />
                     </h2>
-                    <div className="text-neutral-600 dark:text-neutral-300 text-sm leading-7">
+                    <div className="text-neutral-600 dark:text-neutral-300 text-sm leading-6">
                       <MDXRemote {...sec.content} components={mdxComponent1} />
                     </div>
                   </div>
@@ -296,7 +296,7 @@ const TypographySection: React.FC<TypographySectionProps> = ({ section }) => {
                         </div>
 
                         {example.mdx ? (
-                          <div className="text-sm text-right text-neutral-700 dark:text-neutral-300 leading-7">
+                          <div className="text-sm text-right text-neutral-700 dark:text-neutral-300 leading-6">
                             <MDXRemote
                               {...example.mdx}
                               components={mdxComponent1}
