@@ -22,7 +22,7 @@ import {
 const data = {
   global: {
     brand: {
-      name: "FIRA Cup 2025 Tehran",
+      name: "FIRA RoboWorld Cup 2025 Tehran",
       primaryColor: "#01acec",
       logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//fira-logo-color-horizontal-no-slogan.svg",
       darkLogo:
@@ -78,7 +78,7 @@ const data = {
       {
         type: "overview",
         title: "Brand Introduction",
-        description: "FIRA CUP 2025 ",
+        description: "FIRA RoboWorld Cup 2025 ",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
@@ -95,7 +95,7 @@ const data = {
       {
         type: "statement",
         title: "Brand Identity",
-        description: "FIRA CUP 2025",
+        description: "FIRA RoboWorld Cup 2025",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
@@ -266,10 +266,10 @@ const data = {
           MDXComponent: "",
           MDXComponentForLogo: "",
           title: "**Brand** Identity",
-          desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
+          desc: "To inspire and empower the global robotics community by **creating a dynamic platform** for innovation, collaboration, and excellence. FIRA RoboWorld Cup 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics",
           download:
             "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//fira-logo-color-horizontal-no-slogan.svg",
-          downloadBtnText: "Download FIRA Cup 2025 Logo",
+          downloadBtnText: "Download FIRA RoboWorld Cup 2025 Logo",
           logoVersion: [
             {
               id: 1,
@@ -618,7 +618,7 @@ const data = {
         img: "",
         items: {
           MDXComponent: identityInUseG,
-          title: "Brand in Action: FIRA CUP 2025",
+          title: "Brand in Action: FIRA RoboWorld Cup 2025",
         },
       },
     ],
