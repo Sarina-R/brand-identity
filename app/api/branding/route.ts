@@ -504,7 +504,7 @@ const data = {
       {
         type: "typography",
         title: "Typography",
-        description: "Poppins",
+        description: "Heebo",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
         img: "",
