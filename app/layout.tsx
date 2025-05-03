@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/them-provider";
 import { AppSidebar } from "@/components/app-sidbar";
 import { ThemeToggle } from "@/components/ThemToggle";
 import "./globals.css";
+import { ChevronRight } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,10 @@ export default function RootLayout({
                       <span className="md:hidden inline">
                         <SidebarTrigger />
                       </span>
-                      <p className="text-neutral-500">FIRA World Cup</p>
+                      <p className="text-neutral-500 flex items-center">
+                        FIRA World Cup{" "}
+                        <ChevronRight size={19} className="pt-1" />
+                      </p>
                       <Breadcrumbs />
                     </div>
                     <ThemeToggle />
