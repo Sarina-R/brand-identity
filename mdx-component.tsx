@@ -12,7 +12,7 @@ export function useMDXComponents1(components: MDXComponents): MDXComponents {
     img: (props) => (
       <img sizes="100vw" style={{ width: "100%", height: "auto" }} {...props} />
     ),
-    p: ({ children }) => <p className="leading-6">{children}</p>,
+    p: ({ children }) => <p className="">{children}</p>,
     ...components,
   };
 }
