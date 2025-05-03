@@ -24,7 +24,7 @@ type SidebarGroup = {
 };
 
 export function AppSidebar() {
-  const { data, loading, locations } = useData();
+  const { data, loading, locations, localeLogos } = useData();
   const [groups, setGroups] = useState<SidebarGroup[]>([]);
   const pathname = usePathname();
   const locale = pathname.split("/")[1] || "IR";
@@ -100,7 +100,28 @@ export function AppSidebar() {
                   <SidebarMenu className="p-3 px-6 font-bold">
                     <SidebarMenuItem>
                       <SidebarMenuButton asChild>
-                        <Link href={`/${primaryLocation}`}>
+                        <Link
+                          href={`/${primaryLocation}`}
+                          className="flex items-center gap-2"
+                        >
+                          {localeLogos[primaryLocation] && (
+                            <>
+                              <Image
+                                src={localeLogos[primaryLocation].monoLogo}
+                                width={20}
+                                height={20}
+                                alt={`${primaryLocation} logo`}
+                                className="object-contain block dark:hidden"
+                              />
+                              <Image
+                                src={localeLogos[primaryLocation].monoLogoDark}
+                                width={20}
+                                height={20}
+                                alt={`${primaryLocation} dark logo`}
+                                className="object-contain hidden dark:block"
+                              />
+                            </>
+                          )}
                           <span>{primaryLocation.toUpperCase()}</span>
                         </Link>
                       </SidebarMenuButton>
@@ -117,7 +138,28 @@ export function AppSidebar() {
                       {brandLocations.map((loc) => (
                         <SidebarMenuItem key={loc}>
                           <SidebarMenuButton asChild>
-                            <Link href={`/${loc}`}>
+                            <Link
+                              href={`/${loc}`}
+                              className="flex items-center gap-2"
+                            >
+                              {localeLogos[loc] && (
+                                <>
+                                  <Image
+                                    src={localeLogos[loc].monoLogo}
+                                    width={20}
+                                    height={20}
+                                    alt={`${loc} logo`}
+                                    className="object-contain block dark:hidden"
+                                  />
+                                  <Image
+                                    src={localeLogos[loc].monoLogoDark}
+                                    width={20}
+                                    height={20}
+                                    alt={`${loc} dark logo`}
+                                    className="object-contain hidden dark:block"
+                                  />
+                                </>
+                              )}
                               <span>{loc.toUpperCase()}</span>
                             </Link>
                           </SidebarMenuButton>
@@ -134,7 +176,7 @@ export function AppSidebar() {
                     {group.label}
                   </SidebarGroupLabel>
                   <SidebarGroupContent>
-                    <SidebarMenu className=" font-bold">
+                    <SidebarMenu className="font-bold">
                       {group.items.map((item) => (
                         <SidebarMenuItem key={item.id}>
                           <SidebarMenuButton asChild>

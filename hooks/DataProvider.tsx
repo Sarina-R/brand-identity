@@ -17,18 +17,23 @@ interface DataContextType {
   data: ApiResponse | null;
   loading: boolean;
   locations: string[];
+  localeLogos: { [locale: string]: { monoLogo: string; monoLogoDark: string } };
 }
 
 const DataContext = createContext<DataContextType>({
   data: null,
   loading: true,
   locations: [],
+  localeLogos: {},
 });
 
 export function DataProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [locations, setLocations] = useState<string[]>([]);
+  const [localeLogos, setLocaleLogos] = useState<{
+    [locale: string]: { monoLogo: string; monoLogoDark: string };
+  }>({});
   const pathname = usePathname();
 
   useEffect(() => {
@@ -37,10 +42,20 @@ export function DataProvider({ children }: { children: ReactNode }) {
         const response = await axios.get(API_URLS.BRANDING);
         const result: LocaleData = response.data;
 
-        const allLocales = Object.keys(result).filter(
-          (locale) => locale !== "ca"
-        );
+        const allLocales = Object.keys(result).filter((locale) => locale);
         setLocations(allLocales);
+
+        const logos = allLocales.reduce((acc, locale) => {
+          const brand = result[locale]?.brand;
+          if (brand) {
+            acc[locale] = {
+              monoLogo: brand.monoLogo,
+              monoLogoDark: brand.monoLogoDark,
+            };
+          }
+          return acc;
+        }, {} as { [locale: string]: { monoLogo: string; monoLogoDark: string } });
+        setLocaleLogos(logos);
 
         const locale = pathname?.split("/")[1] || "";
         const selectedLocaleData = result[locale];
@@ -102,7 +117,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, [pathname]);
 
   return (
-    <DataContext.Provider value={{ data, loading, locations }}>
+    <DataContext.Provider value={{ data, loading, locations, localeLogos }}>
       {children}
     </DataContext.Provider>
   );

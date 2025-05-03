@@ -4,6 +4,8 @@ import { MDXRemoteSerializeResult } from "next-mdx-remote";
 export interface Brand {
   name: string;
   primaryColor: string;
+  monoLogo: string;
+  monoLogoDark: string;
   logo: string;
   darkLogo: string;
   font: Font;

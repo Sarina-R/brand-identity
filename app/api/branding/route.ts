@@ -24,6 +24,10 @@ const data = {
     brand: {
       name: "FIRA RoboWorld Cup 2025 Tehran",
       primaryColor: "#01acec",
+      monoLogo:
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//mono%20(2).png",
+      monoLogoDark:
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//mono%20(2).png",
       logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//fira-logo-color-horizontal-no-slogan.svg",
       darkLogo:
         "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//fira-wordmark-light-slogan.svg",
@@ -81,7 +85,7 @@ const data = {
         description: "FIRA RoboWorld Cup 2025 ",
         pattern:
           "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//18.png",
-        img: "https://iran.firaworldcup.org/wp-content/uploads/2024/12/IRAN-FIRA-2025-1-1448x2048.png",
+        img: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global//Screenshot%202025-05-03%20at%203.57.18%20PM.png",
         video: "",
         items: {
           group: "introduction",
@@ -627,6 +631,10 @@ const data = {
     brand: {
       name: "FIRA Cup 2025 Tehran",
       primaryColor: "#fdb813",
+      monoLogo:
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo%20(1).png",
+      monoLogoDark:
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo%20(1).png",
       logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//logo.svg",
       darkLogo:
         "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi//dark-logo.png",
@@ -1240,6 +1248,10 @@ const data = {
     brand: {
       name: "FIRA Cup 2025 Canada",
       primaryColor: "#d22b2b",
+      monoLogo:
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/mono.png",
+      monoLogoDark:
+        "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca/mono.png",
       logo: "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CAlogo..png",
       darkLogo:
         "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/ca//CaDarkLogo.png",
