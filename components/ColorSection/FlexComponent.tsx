@@ -29,7 +29,7 @@ const FlexComponent = ({ data }: { data: HarmonySection }) => {
               />
             )}
           </div>
-          <div className="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+          <div className="text-sm text-neutral-700 dark:text-neutral-300 leading-6">
             {data?.description && (
               <MDXRemote
                 {...(data.description as MDXRemoteSerializeResult)}

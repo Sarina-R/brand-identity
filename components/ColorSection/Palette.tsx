@@ -68,7 +68,7 @@ const PaletteComponent = ({ palette }: { palette: Palette }) => {
           )}
         </h2>
 
-        <div className="mb-8 text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+        <div className="mb-8 text-sm leading-6 text-neutral-700 dark:text-neutral-300">
           {palette?.description && (
             <MDXRemote
               {...(palette.description as MDXRemoteSerializeResult)}

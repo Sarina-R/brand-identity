@@ -47,7 +47,7 @@ const ActiveSectionDetails = ({
       <h3 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
         {activeSection}
       </h3>
-      <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+      <p className="text-sm leading-6 text-neutral-700 dark:text-neutral-300">
         {activeItem.description}
       </p>
     </motion.div>
@@ -175,7 +175,7 @@ const BrandManifesto = ({ section, primaryColor }: BrandPrismProps) => {
         </div>
       </div>
 
-      <div className="sm:px-6 px-4 text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm">
+      <div className="sm:px-6 px-4 text-neutral-700 dark:text-neutral-300 leading-6 text-sm">
         {section.items.MDXComponent && (
           <MDXRemote
             {...(section.items.MDXComponent as MDXRemoteSerializeResult)}

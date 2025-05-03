@@ -128,7 +128,7 @@ export const CustomTabs = ({
               >
                 {tab.title}
               </h3>
-              <div className="text-neutral-600 dark:text-neutral-400 leading-relaxed whitespace-pre-line">
+              <div className="text-neutral-600 dark:text-neutral-400 leading-6 whitespace-pre-line">
                 {tab.serializedDescription ? (
                   <MDXRemote
                     {...tab.serializedDescription}

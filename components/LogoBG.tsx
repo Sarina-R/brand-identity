@@ -57,7 +57,7 @@ const LogoBackground = ({ data }: Props) => {
         >
           In Background
         </motion.h2>
-        <ul className="list-disc pr-5 space-y-2 text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+        <ul className="list-disc pr-5 space-y-2 text-sm text-neutral-700 dark:text-neutral-300 leading-6">
           {data.listItems.map((item, i) => (
             <motion.li
               key={i}

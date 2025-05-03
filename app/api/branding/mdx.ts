@@ -16,7 +16,7 @@ export const BrandIdentityGlobal = `
             <h1 className="text-xl lg:text-5xl font-extrabold mb-4 lg:mb-8 leading-tight text-[#01acec]">
               Brand Identity
             </h1>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700">
               The FIRA brand is a symbol of excellence and innovation. Our
               visual identity reflects the dynamic and futuristic nature of
               robot sports, combining modern design elements with a sense of
@@ -32,23 +32,23 @@ export const BrandIdentityGlobal = `
             <h1 className="text-xl lg:text-5xl font-extrabold mb-4 lg:mb-8 leading-tight text-[#01acec]">
               Our Mission
             </h1>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700 mb-2">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700 mb-2">
               <span className="font-semibold">Innovation:</span> Pioneering
               advancements in robotics, export constantly pushing boundaries.
             </p>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700 mb-2">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700 mb-2">
               <span className="font-semibold">Excellence:</span> Striving for
               the highest standards in competitions and education.
             </p>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700 mb-2">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700 mb-2">
               <span className="font-semibold">Unity:</span> Bringing together a
               diverse global community, celebrating collaboration.
             </p>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700 mb-2">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700 mb-2">
               <span className="font-semibold">Inspiration:</span> Motivating the
               next generation of innovators and leaders in robotics.
             </p>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700">
               <span className="font-semibold">Integrity:</span> Upholding
               fairness, transparency, and respect in all activities.
             </p>
@@ -82,7 +82,7 @@ export const BrandIdentityGlobal = `
             <h1 className="text-xl lg:text-5xl font-extrabold mb-4 lg:mb-8 leading-tight text-[#01acec]">
               Our Vision
             </h1>
-            <p className="text-sm lg:text-lg leading-relaxed text-neutral-700">
+            <p className="text-sm lg:text-lg leading-6 text-neutral-700">
               At FIRA, we envision a world where robot sports inspire
               creativity, collaboration, and technological advancement. Our
               mission is to provide a platform for enthusiasts, engineers, and
@@ -102,7 +102,7 @@ export const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-
           className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
         <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Vision</h2>
-        <p className="leading-relaxed sm:text-sm text-xs">
+        <p className="leading-6 sm:text-sm text-xs">
           To be the leading global stage for robotics and artificial intelligence, shaping a world where technological innovation transforms industries, enriches lives, and fosters sustainable progress for humanity.
         </p>
       </div>
@@ -114,7 +114,7 @@ export const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-
           className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
         <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Mission</h2>
-        <p className="leading-relaxed sm:text-sm text-xs">
+        <p className="leading-6 sm:text-sm text-xs">
           To inspire and empower the global robotics community by creating a dynamic platform for innovation, collaboration, and excellence. FIRA CUP 2025 is committed to advancing technology, nurturing young talent, and pushing the boundaries of what robotics can achieve for a better future.
         </p>
       </div>
@@ -126,7 +126,7 @@ export const BrandIdentity = `<div className="flex flex-col lg:flex-row justify-
           className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
         />
         <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Target</h2>
-        <p className="leading-relaxed sm:text-sm text-xs">
+        <p className="leading-6 sm:text-sm text-xs">
           Develop robust relationships with customers across diverse market segments, encompassing individual consumers and beyond.
         </p>
       </div>
@@ -140,7 +140,7 @@ export const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 
             className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
           />
           <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Vision</h2>
-          <p className="leading-relaxed sm:text-sm text-xs">
+          <p className="leading-6 sm:text-sm text-xs">
             To position Canada as a global leader in robotics and intelligent automation, driving technological advancements that shape the future.
           </p>
         </div>
@@ -152,7 +152,7 @@ export const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 
             className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
           />
           <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Mission</h2>
-          <p className="leading-relaxed sm:text-sm text-xs">
+          <p className="leading-6 sm:text-sm text-xs">
             To foster innovation, collaboration, and excellence in robotics, AI, and automation by providing a global platform for researchers, engineers, and entrepreneurs.
           </p>
         </div>
@@ -164,14 +164,14 @@ export const BrandIdentityCA = `<div className="grid grid-cols-2 sm:grid-cols-2 
             className="w-15 h-15 py-2 mt-2 mx-auto mb-3 dark:invert"
           />
           <h2 className="sm:text-2xl text-lg font-bold sm:mb-4 mb-2">Target</h2>
-          <p className="leading-relaxed sm:text-sm text-xs">
+          <p className="leading-6 sm:text-sm text-xs">
            To position Canada as a global leader in robotics and AI by fostering talent, innovation, and industry collaboration through competitions, research, and strategic partnerships. 
           </p>
         </div>
       </div>`;
 
 export const Tagline = `<div className="mt-20 px-4 sm:px-8 lg:px-16">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-6">
       <div className="space-y-4">
         <h3 className="text-lg font-semibold ">"Enjoy Robots"</h3>
         <ul className="space-y-2 list-disc">
@@ -204,7 +204,7 @@ export const Tagline = `<div className="mt-20 px-4 sm:px-8 lg:px-16">
 // export const taglineMDXComponent = `
 //     <div className="flex flex-col md:flex-row gap-6">
 //     <div className="w-full md:w-1/2 flex flex-col justify-center">
-//         <p className="leading-relaxed text-neutral-700 dark:text-neutral-300">
+//         <p className="leading-6 text-neutral-700 dark:text-neutral-300">
 //           English is a West Germanic language in the Indo-European language family, whose speakers, called Anglophones, originated in early medieval England on the island of Great Britain.[4][5][6] The namesake of the language is the Angles, one of the Germanic peoples that migrated to Britain after its Roman occupiers left. English is the most spoken language in the world, primarily due to the global influences of the former British Empire (succeeded by the
 //         </p>
 //       </div>
@@ -291,7 +291,7 @@ export const ToneOfVoiceG = `
 export const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
         <div className="space-y-6">
           <h1 className="text-xl font-bold">Voice and Tone</h1>
-          <p className="text-neutral-700 dark:text-neutral-300 mx-auto leading-relaxed">
+          <p className="text-neutral-700 dark:text-neutral-300 mx-auto leading-6">
             Our brand voice combines professionalism and friendliness to
             prioritize exceptional customer service. It remains adaptable to
             different contexts and audiences.
@@ -315,7 +315,7 @@ export const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
               <h6 className="text-3xl font-extrabold mb-4 tracking-wide glow-text">
                 Friendly
               </h6>
-              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
+              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-6">
                 We endeavor to cultivate a hospitable and inclusive environment for our clients and partners, nurturing transparent communication and cooperative partnerships.
               </p>
             </div>
@@ -335,7 +335,7 @@ export const ToneOfVoice = `<div className="w-full px-6 py-10 space-y-16">
               <h6 className="text-3xl font-extrabold mb-4 tracking-wide glow-text">
                 Professional
               </h6>
-              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
+              <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-6">
                 FIRA CUP upholds a professional and formal tone in all communications, demonstrating our dedication to excellence and dependability.
               </p>
             </div>
@@ -423,7 +423,7 @@ export const Mascot = `<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-black mb-6">
             MASCOT
           </h2>
-          <p className="text-neutral-700 text-sm leading-relaxed">
+          <p className="text-neutral-700 text-sm leading-6">
             The mascot for the FIRA Cup 2025 in Iran is inspired by the Iranian
             cheetah, symbolizing speed, agility, and resilience. This robotic
             cheetah embodies the spirit of innovation and excellence that defines
@@ -447,7 +447,7 @@ export const MascotG = `<div className="space-y-24">
       alt="FIRA Mascot"
       className="w-full lg:w-1/2 h-full object-cover rounded-2xl"
     />
-    <div className="p-6 text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+    <div className="p-6 text-sm text-neutral-700 dark:text-neutral-300 leading-6">
       <h2 className="text-sm lg:text-sm font-bold text-[#01acec] uppercase tracking-wider mb-3">
         FIRA Mascot Concept
       </h2>
@@ -479,7 +479,7 @@ export const MascotG = `<div className="space-y-24">
       alt="Mascot Engagement"
       className="w-full lg:w-1/2 h-full object-cover rounded-2xl"
     />
-    <div className="p-6 text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
+    <div className="p-6 text-sm text-neutral-700 dark:text-neutral-300 leading-6">
       <h2 className="text-sm lg:text-sm font-bold text-[#01acec] uppercase tracking-wider mb-3">
         Mascot Engagement & Implementation
       </h2>
@@ -692,7 +692,7 @@ export const DesignPrinciplesCA = ` <div className="mt-20 px-4 sm:px-8 lg:px-16"
       <span className="">Enjoy Robots, Enjoy Life</span>
     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-neutral-600 dark:text-neutral-400 leading-6">
       <div className="space-y-4">
         <h3 className="text-lg font-semibold ">"Enjoy Robots"</h3>
         <ul className="space-y-2 list-disc">

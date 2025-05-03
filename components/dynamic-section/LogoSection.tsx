@@ -127,7 +127,7 @@ const LogoSection = ({
               </div>
             )}
             {section.items.desc && (
-              <div className="text-sm leading-relaxed whitespace-pre-line text-neutral-700 dark:text-neutral-300">
+              <div className="text-sm leading-6 whitespace-pre-line text-neutral-700 dark:text-neutral-300">
                 <MDXRemote
                   {...(section.items.desc as MDXRemoteSerializeResult)}
                   components={mdxComponents1}
@@ -138,7 +138,9 @@ const LogoSection = ({
 
           <motion.div variants={bounceFade}>
             <a href={download} download>
-              <Button>{downloadBtnText}</Button>
+              <Button className="lg:max-w-xs whitespace-normal break-keep lg:py-6">
+                {downloadBtnText}
+              </Button>
             </a>
           </motion.div>
         </motion.div>

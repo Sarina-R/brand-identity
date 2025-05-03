@@ -90,7 +90,7 @@ export default function CoBrandingLogoSection({ data }: CoBrandingProps) {
         >
           {mdxTitle && <MDXRemote {...mdxTitle} components={mdxComponents1} />}
         </h2>
-        <div className="text-neutral-700 dark:text-neutral-300 leading-relaxed text-sm">
+        <div className="text-neutral-700 dark:text-neutral-300 leading-6 text-sm">
           {mdxDesc && <MDXRemote {...mdxDesc} components={mdxComponents1} />}
         </div>
       </motion.div>

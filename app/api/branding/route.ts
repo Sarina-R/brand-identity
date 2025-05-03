@@ -326,12 +326,12 @@ const data = {
             title: "Use it alongside other brand logos",
             desc: "When using the FIRA logo next to other brand logos, here’s the deal: if the second logo is vertical, go with the vertical version of the FIRA logo; if it’s horizontal, stick with the horizontal FIRA one. To keep things balanced, make sure the height of FIRA’s logo matches the graphic part of the second logo in both cases. Now, if the second logo is just a logotype (no fancy graphics), use the horizontal FIRA logo. In that case, the height of both logotypes should be the same.<br/>Always slap the FIRA logo on the left and above the second logo. Putting it on the right or below other logos? Nope, not allowed.",
             svg: [
-              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/FIRA%20CUP%202025%20BRAND%20BOOK%20(12).svg",
-              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/6.svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global/co-branding/Copy%20of%20FIRA%20Brand%20Book%20(7).svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global/co-branding/Copy%20of%20FIRA%20Brand%20Book%20(2).svg",
             ],
             darkSvg: [
-              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/FIRA%20CUP%202025%20BRAND%20BOOK%20(13).svg",
-              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/harchi/co-branding/6.svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global/co-branding/Copy%20of%20FIRA%20Brand%20Book%20(6).svg",
+              "https://kbgnpdzggogidjwifiuq.supabase.co/storage/v1/object/public/global/co-branding/Copy%20of%20FIRA%20Brand%20Book%20(3).svg",
             ],
           },
         },

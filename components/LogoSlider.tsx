@@ -97,7 +97,7 @@ const LogoSlider = ({ versions }: LogoSectionProps) => {
         >
           Versions
         </motion.h2>
-        <ul className="space-y-3 text-sm text-neutral-700 dark:text-neutral-300">
+        <ul className="space-y-3 text-sm text-neutral-700 dark:text-neutral-300 leading-6">
           {mdxSources.map((mdx, i) => (
             <motion.li
               key={versions[i].id}

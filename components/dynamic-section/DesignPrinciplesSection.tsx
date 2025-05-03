@@ -162,7 +162,7 @@ const DesignPrinciplesSection = ({
             </h2>
           )}
           {section.items.desc && (
-            <div className="text-neutral-700 dark:text-neutral-400 leading-relaxed">
+            <div className="text-neutral-700 dark:text-neutral-400 leading-6">
               {typeof section.items.desc === "string" ? (
                 <p>{section.items.desc}</p>
               ) : (
